@@ -6,7 +6,7 @@ use pete::{Ptracer, Restart, Stop, Tracee};
 use lazy_static::lazy_static;
 
 fn main() -> Result<()> {
-    let cmd = Command::new("./fuzz");
+    let cmd = Command::new("./testCode");
 
     let mut ptracer = Ptracer::new();
     let _child = ptracer.spawn(cmd)?;

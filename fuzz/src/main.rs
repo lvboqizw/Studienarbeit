@@ -1,6 +1,5 @@
-mod syscall;
-
+mod programs;
 
 fn main() {
-    syscall::function();
+    programs::read_write();
 }
