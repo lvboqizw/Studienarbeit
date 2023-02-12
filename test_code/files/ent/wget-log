@@ -1,12 +1,0 @@
-URL transformed to HTTPS due to an HSTS policy
---2023-01-31 18:01:48--  https://www.fourmilab.ch/random/random.zip
-Resolving www.fourmilab.ch (www.fourmilab.ch)... 52.28.236.0, 2a05:d014:d43:3101:c6ee:ea42:3836:6cbf
-Connecting to www.fourmilab.ch (www.fourmilab.ch)|52.28.236.0|:443... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: 76200 (74K) [application/zip]
-Saving to: ‘random.zip’
-
-random.zip                               0%[                                                                          ]       0  --.-KB/s               random.zip                             100%[=========================================================================>]  74.41K  --.-KB/s    in 0.1s    
-
-2023-01-31 18:01:49 (701 KB/s) - ‘random.zip’ saved [76200/76200]
-
