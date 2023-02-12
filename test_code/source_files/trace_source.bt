@@ -1,0 +1,117 @@
+// -------------read---------------------
+tracepoint:syscalls:sys_enter_read /comm==""/ 
+{ 
+    @read_buf[tid] = args->buf;
+    @read_count[tid] = args->count;
+} 
+tracepoint:syscalls:sys_exit_read /comm==""/
+{
+    printf("read %s", str(@read_buf[tid]));
+    clear(@read_buf);
+    clear(@read_count);
+}
+    
+//-------------pread64------------------
+tracepoint:syscalls:sys_enter_pread64 /comm==""/ 
+{
+    @pread64_buf[tid] = args->buf;
+    @pread64_count[tid] = args->count;
+}
+tracepoint:syscalls:sys_exit_pread64 /comm==""/ 
+{
+    printf("pread64 %s", str(@pread64_buf[tid]));
+    clear(@pread64_buf);
+    clear(@pread64_count);
+}
+
+//--------------readv-------------------
+tracepoint:syscalls:sys_enter_readv /comm==""/ 
+{ 
+    @readv_buf[tid] = (args->vec)->iov_base;
+    @readv_count[tid] = (args->vec)->iov_len;
+}
+tracepoint:syscalls:sys_exit_readv /comm==""/
+{
+    printf("readv: %s", str(@readv_buf[tid]));
+    clear(@readv_buf);
+    clear(@readv_count);
+}
+
+//-------------preadv-------------------
+tracepoint:syscalls:sys_enter_preadv /comm==""/ 
+{
+    @preadv_buf[tid] = (args->vec)->iov_base;
+    @preadv_count[tid] = (args->vec)->iov_len;
+}
+tracepoint:syscalls:sys_exit_preadv /comm==""/
+{
+    printf("preadv: %s", str(@preadv_buf[tid]));
+    clear(@preadv_buf);
+    clear(@preadv_count);
+} 
+
+//--------------write-------------------
+tracepoint:syscalls:sys_enter_write /comm==""/ 
+{
+    @write_buf[tid] = args->buf;
+    @write_count[tid] = args->count;
+}
+tracepoint:syscalls:sys_exit_write /comm==""/
+{
+    printf("write %s", str(@write_buf[tid]));
+    clear(@write_buf);
+    clear(@write_count);
+}
+
+//---------------pwrite64-----------------
+tracepoint:syscalls:sys_enter_pwrite64 /comm==""/ 
+{ 
+    @pwrite64_buf[tid] = args->buf;
+    @pwrite64_count[tid] = args->count;
+}
+tracepoint:syscalls:sys_exit_pwrite64 /comm==""/
+{
+    printf("pwrite %s", str(@pwrite64_buf[tid]));
+    clear(@pwrite64_buf);
+    clear(@pwrite64_count);
+}
+
+//---------------pwritev-----------------
+tracepoint:syscalls:sys_enter_pwritev /comm==""/ 
+{ 
+    @pwritev_buf[tid] = (args->vec)->iov_base;
+    @pwritev_count[tid] = (args->vec)->iov_len;
+}
+tracepoint:syscalls:sys_exit_pwritev /comm==""/ 
+{
+    printf("pwritev: %s", str(@pwritev_buf[tid]));
+    clear(@pwritev_buf);
+    clear(@pwritev_count);
+}
+
+//----------------writev-----------------
+tracepoint:syscalls:sys_enter_writev /comm==""/ 
+{
+    @writev_buf[tid] = (args->vec)->iov_base;
+    @writev_count[tid] = (args->vec)->iov_len;
+}
+tracepoint:syscalls:sys_exit_writev /comm==""/ 
+{
+    printf("writev: %s", str(@writev_buf[tid]));
+    clear(@writev_buf);
+    clear(@writev_count);
+}
+
+//----------------pwritev2--------------
+tracepoint:syscalls:sys_enter_pwritev2 /comm==""/ 
+{
+    @pwritev2_buf[tid] = (args->vec)->iov_base;
+    @pwritev2_count[tid] = (args->vec)->iov_len;
+}
+tracepoint:syscalls:sys_exit_pwritev2 /comm==""/ 
+{
+    printf("pwritev2: %s", str(@pwritev2_buf[tid]));
+    clear(@pwritev2_buf);
+    clear(@pwritev2_count);
+}
+
