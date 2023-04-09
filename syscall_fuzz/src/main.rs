@@ -27,7 +27,7 @@ fn main()  {
     tracer::trace(String::from("generator"));
     // ------------------------------executor-----------------------------
     executor::run_executor();
-    fs::remove_file("files/trace.bt");
+    fs::remove_file("files/trace.bt").unwrap();
 
     tracer::stop_trace();
     // -----------------------------monitor------------------------------

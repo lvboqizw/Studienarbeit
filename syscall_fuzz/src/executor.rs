@@ -47,11 +47,6 @@ fn create_container(image_id: String) -> Command{
     container
 }
 
-fn determine_sgx_device() {
-    env::set_var("SGXDEVICE", "/dev/isgx");
-    env::set_var("MOUNT_SGXDEVICE", "--device=/dev/sgx");
-}
-
 /// Main function to run the functions in the modul. Use ptrace to traces the system calls of the child process, which is created 
 /// to run the container
 pub fn run_executor() {

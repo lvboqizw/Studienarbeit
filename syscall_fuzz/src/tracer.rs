@@ -9,7 +9,7 @@ fn create_trace_file(target: String) {
         .args([filter, "source_files/trace_source.bt".to_string()])
         .output()
         .unwrap();
-    trace_file.write(String::from_utf8(write_target.stdout).unwrap().as_bytes());
+    trace_file.write(String::from_utf8(write_target.stdout).unwrap().as_bytes()).unwrap();
 }
 
 pub fn trace(target: String) {
@@ -18,7 +18,7 @@ pub fn trace(target: String) {
     env::set_var("BPFTRACE_STRLEN", "200");
     let _output_file = File::create("files/output.json");
 
-    let tracer = Command::new("bpftrace")
+    let _tracer = Command::new("bpftrace")
         .args(["-f", "json", "-o", "files/output.json", "files/trace.bt"])
         .spawn()
         .expect("Failed to run bpftrace");
@@ -26,7 +26,7 @@ pub fn trace(target: String) {
 
 pub fn stop_trace() {
     // Stop the bpftrace tracer for the next run
-    let kill_bpftrace = Command::new("pkill")
+    let _kill_bpftrace = Command::new("pkill")
         .arg("bpftrace")
         .spawn()
         .unwrap();

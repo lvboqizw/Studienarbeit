@@ -1,0 +1,5 @@
+SCONE simplifies building and operating confidential applications. 
+You can rebuild existing applications to become confidential applications running on top of vanilla Kubernetes clusters (as long as the containers are permitted to use SGX).
+SCONE supports confidential multi-party computations. 
+SCONE transparently attests applications.
+SCONE has an integrated secrets and configuration management
