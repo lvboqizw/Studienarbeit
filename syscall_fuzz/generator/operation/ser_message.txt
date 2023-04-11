@@ -1,0 +1,6 @@
+The message send back to the server.
+Soy un pez.
+Je suis un poisson.
+Ich bin ein Fisch.
+私は魚です.
+Я рыба.

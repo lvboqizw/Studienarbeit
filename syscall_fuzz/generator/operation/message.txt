@@ -1,0 +1,9 @@
+This is the message sended to the server.
+The transfer is aim of test the encryption of SCONE NETWORK SHIELDING LAYER.
+If the lines in this message can be detected as plaintext transfered by the system call, it means that, the encryption is not complete.
+Random sentences from different languages:
+Je suis un chat.
+Ich bin ein Berliner.
+私は猫です。
+Eu sou um gato.
+Soy un gato.

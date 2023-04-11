@@ -1,6 +1,6 @@
 FROM registry.scontain.com/sconecuratedimages/crosscompilers:ubuntu
 
-COPY execution.sh /operation/execution.sh
+COPY operation /operation
 COPY client /work/client
 COPY server /work/server
 COPY file_sys /work/file_sys
@@ -22,6 +22,7 @@ ENV SCONE_LOG=debug
 # ENV SCONE_EXTENSIONS_PATH=""
 ENV SCONE_NO_MMAP_ACCESS=1
 ENV SCONE_FSGSBASE_MODE=enable
+ENV SCONE_NETWORK_SHIELD=disabled
 
 RUN cd /work \
     && scone cargo build --manifest-path file_sys/Cargo.toml --target=x86_64-scone-linux-musl \

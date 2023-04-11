@@ -1,0 +1,6 @@
+{
+    "rust-analyzer.linkedProjects": [
+        "./syscall_fuzz/generator/server/Cargo.toml",
+        "./syscall_fuzz/generator/client/Cargo.toml"
+    ]
+}
