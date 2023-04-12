@@ -24,10 +24,19 @@ pub fn trace(target: String) {
         .expect("Failed to run bpftrace");
 }
 
+pub fn test_trace() {
+    env::set_var("BPFTRACE_STRLEN", "200");
+    let _output_file = File::create("output.json").unwrap();
+    let _trace_status = Command::new("/home/wei/bpftrace/bin/bpftrace")
+        .args(["-f", "json", "-o", "files/output.json", "source_files/test_trace.bt"])
+        .spawn()
+        .expect("Failed to run bpftrace");
+}
+
 pub fn stop_trace() {
     // Stop the bpftrace tracer for the next run
     let _kill_bpftrace = Command::new("pkill")
-        .arg("bpftrace")
+        .arg("/home/wei/bpftrace/bin/bpftrace")
         .spawn()
         .unwrap();
 }

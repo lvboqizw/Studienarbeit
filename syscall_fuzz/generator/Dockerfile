@@ -31,4 +31,6 @@ RUN cd /work \
     && cp server/target/x86_64-scone-linux-musl/debug/server /operation/server \
     && scone cargo build --manifest-path client/Cargo.toml --target=x86_64-scone-linux-musl \
     && cp client/target/x86_64-scone-linux-musl/debug/client /operation/client \
-    && cd /operation && ./execution.sh
+    && cd /operation && ./fspf.sh
+
+CMD ["sh", "/operation/run_program.sh"]
