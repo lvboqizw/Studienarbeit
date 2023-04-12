@@ -1,4 +1,4 @@
-The message send back to the server.
+The message send back to the client.
 Soy un pez.
 Je suis un poisson.
 Ich bin ein Fisch.

@@ -1,4 +1,4 @@
-use std::{fs, io::Write, process::{Command, Output, Child}, env};
+use std::process::Command;
 
 fn create_image(name: &String) {
     let status = Command::new("docker")
@@ -14,7 +14,7 @@ fn create_image(name: &String) {
 /// Generate a container with file
 fn create_container(image_name: & String) -> String{
     let container_name = "container_gen";
-    let child = Command::new("docker")
+    let _child = Command::new("docker")
         .args(["run", "-d", 
             "--rm", 
             "--device=/dev/isgx", 
