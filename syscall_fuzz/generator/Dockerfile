@@ -1,6 +1,6 @@
 FROM registry.scontain.com/sconecuratedimages/crosscompilers:ubuntu
 
-COPY execution.sh /operation/execution.sh
+COPY operation /operation
 COPY client /work/client
 COPY server /work/server
 COPY file_sys /work/file_sys
@@ -12,7 +12,7 @@ ENV SCONE_MODE=hw
 # ENV SCONE_SYSLIBS=1
 # ENV SCONE_VERSION=1
 # ENV SCONE_FSPF_MUTABLE=0
-ENV SCONE_LOG=debug
+# ENV SCONE_LOG=debug
 # ENV SCONE_MIN_HEAP=20M
 # ENV SCONE_TCS=8
 # ENV SCONE_MPROTECT=0
@@ -22,6 +22,7 @@ ENV SCONE_LOG=debug
 # ENV SCONE_EXTENSIONS_PATH=""
 ENV SCONE_NO_MMAP_ACCESS=1
 ENV SCONE_FSGSBASE_MODE=enable
+ENV SCONE_NETWORK_SHIELD=disabled
 
 RUN cd /work \
     && scone cargo build --manifest-path file_sys/Cargo.toml --target=x86_64-scone-linux-musl \
@@ -30,4 +31,6 @@ RUN cd /work \
     && cp server/target/x86_64-scone-linux-musl/debug/server /operation/server \
     && scone cargo build --manifest-path client/Cargo.toml --target=x86_64-scone-linux-musl \
     && cp client/target/x86_64-scone-linux-musl/debug/client /operation/client \
-    && cd /operation && ./execution.sh
+    && cd /operation && ./fspf.sh
+
+CMD ["sh", "/operation/run_program.sh"]

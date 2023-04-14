@@ -16,10 +16,19 @@ pub fn trace(target: String) {
     create_trace_file(target);
     
     env::set_var("BPFTRACE_STRLEN", "200");
-    let _output_file = File::create("files/output.json");
+    let _output_file = File::create("files/output.json").unwrap();
 
     let _tracer = Command::new("bpftrace")
         .args(["-f", "json", "-o", "files/output.json", "files/trace.bt"])
+        .spawn()
+        .expect("Failed to run bpftrace");
+}
+
+pub fn test_trace() {
+    env::set_var("BPFTRACE_STRLEN", "200");
+    let _output_file = File::create("output.json").unwrap();
+    let _trace_status = Command::new("/home/wei/bpftrace/bin/bpftrace")
+        .args(["-f", "json", "-o", "files/output.json", "source_files/test_trace.bt"])
         .spawn()
         .expect("Failed to run bpftrace");
 }

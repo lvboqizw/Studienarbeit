@@ -1,4 +1,7 @@
-use std::fs;
+use std::fs::File;
+use std::process::Command;
+use std::thread;
+use std::time::Duration;
 use structopt::StructOpt;
 
 mod executor;
@@ -8,29 +11,37 @@ mod tracer;
 
 #[derive(StructOpt, Debug)]
 struct Opt {
-    /// Local container fuzzing
+    /// Use the system call generator to test the function of fuzzer
     #[structopt(short, long)]
-    local: bool,
+    test: bool,
 
     /// Fuzz a container in the kubernets
     #[structopt(short, long)]
-    kubernetes: bool,
+    app: bool,
 }
 
 fn main()  {
-    let opt = Opt::from_args();
+    // bpftrace need to run with root permission
+    sudo::escalate_if_needed().expect("Failed to sudo"); 
     
-    if !opt.local && !opt.kubernetes {
-        panic!("Please at least setup one option between local and kubernetes");
+    let opt = Opt::from_args();
+    if opt.test {
+        tracer::test_trace();
+        println!("bpftrace started, waiting for the container");
+        let container_name = executor::run_executor();
+        // Check whether the container are finished and stopped
+        let mut flag = String::from("true");
+        while !flag.eq("'false'\n") {
+            let is_running = Command::new("docker")
+                .args(["inspect", "--format", "'{{.State.Running}}'", container_name.as_str()])
+                .output()
+                .unwrap();
+            flag = String::from_utf8(is_running.clone().stdout).unwrap();
+        }
+        tracer::stop_trace();  
+        monitor::analyse();
+    } else {
+        panic!("Forget to give the fuzz type");
     }
-    sudo::escalate_if_needed().expect("Failed to sudo"); // bpftrace need to run with root permission
-    tracer::trace(String::from("generator"));
-    // ------------------------------executor-----------------------------
-    executor::run_executor();
-    fs::remove_file("files/trace.bt").unwrap();
-
-    tracer::stop_trace();
-    // -----------------------------monitor------------------------------
-    monitor::output_analysis();
     
 }

@@ -1,1 +1,5 @@
 syscall_fuzz/target
+syscall_fuzz/generator/client/target
+syscall_fuzz/generator/server/target
+syscall_fuzz/generator/file_sys/target
+syscall_fuzz/source_files/ent
