@@ -16,7 +16,7 @@ pub fn trace(target: String) {
     create_trace_file(target);
     
     env::set_var("BPFTRACE_STRLEN", "200");
-    let _output_file = File::create("files/output.json");
+    let _output_file = File::create("files/output.json").unwrap();
 
     let _tracer = Command::new("bpftrace")
         .args(["-f", "json", "-o", "files/output.json", "files/trace.bt"])
@@ -36,7 +36,7 @@ pub fn test_trace() {
 pub fn stop_trace() {
     // Stop the bpftrace tracer for the next run
     let _kill_bpftrace = Command::new("pkill")
-        .arg("/home/wei/bpftrace/bin/bpftrace")
+        .arg("bpftrace")
         .spawn()
         .unwrap();
 }

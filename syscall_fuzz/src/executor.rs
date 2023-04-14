@@ -22,7 +22,7 @@ fn create_container(image_name: & String) -> String{
             // "--network=host",
             "--name", &container_name,
             image_name.as_str()])
-        .spawn()
+        .status()
         .unwrap();
     container_name.to_string()
 }

@@ -1,3 +1,8 @@
 ./operation/file_sys
+
 ./operation/server &
-./operation/client 
+sleep 2
+if pgrep -x server > /dev/null
+then 
+    ./operation/client 
+fi

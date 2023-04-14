@@ -1,6 +1,6 @@
 use std::fs::File;
 use std::process::Command;
-use std::thread::sleep;
+use std::thread;
 use std::time::Duration;
 use structopt::StructOpt;
 
@@ -39,21 +39,9 @@ fn main()  {
             flag = String::from_utf8(is_running.clone().stdout).unwrap();
         }
         tracer::stop_trace();  
+        monitor::analyse();
     } else {
-        println!("Forget to give the fuzz type");
+        panic!("Forget to give the fuzz type");
     }
-
-    // if !opt.local && !opt.kubernetes {
-    //     panic!("Please at least setup one option between local and kubernetes");
-    // }
-    // sudo::escalate_if_needed().expect("Failed to sudo"); // bpftrace need to run with root permission
-    // tracer::trace(String::from("generator"));
-    // ------------------------------executor-----------------------------
-    
-    // fs::remove_file("files/trace.bt").unwrap();
-
-    // tracer::stop_trace();
-    // -----------------------------monitor------------------------------
-    // monitor::output_analysis();
     
 }
