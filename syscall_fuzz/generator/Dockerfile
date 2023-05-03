@@ -23,6 +23,8 @@ ENV SCONE_MODE=hw
 ENV SCONE_NO_MMAP_ACCESS=1
 ENV SCONE_FSGSBASE_MODE=enable
 ENV SCONE_NETWORK_SHIELD=disabled
+ENV SCONE_CAS_ADDR=scone-cas.cf
+ENV SCONE_LAS_ADDR=0.0.0.0
 
 RUN cd /work \
     && scone cargo build --manifest-path file_sys/Cargo.toml --target=x86_64-scone-linux-musl \
@@ -31,6 +33,7 @@ RUN cd /work \
     && cp server/target/x86_64-scone-linux-musl/debug/server /operation/server \
     && scone cargo build --manifest-path client/Cargo.toml --target=x86_64-scone-linux-musl \
     && cp client/target/x86_64-scone-linux-musl/debug/client /operation/client \
-    && cd /operation && ./fspf.sh
+    && cd /operation && ./fspf.sh \
+    && scone cas attest $SCONE_CAS_ADDR --only_for_testing-trust-any --only_for_testing-debug  --only_for_testing-ignore-signer -C -G -S
 
 CMD ["sh", "/operation/run_program.sh"]

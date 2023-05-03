@@ -19,7 +19,7 @@ fn create_container(image_name: & String) -> String{
             "--rm", 
             "--device=/dev/isgx", 
             "--privileged", 
-            // "--network=host",
+            "--network=host",
             "--name", &container_name,
             image_name.as_str()])
         .status()

@@ -1,8 +1,4 @@
-This is the message sended to the server.
-The transfer is aim of test the encryption of SCONE NETWORK SHIELDING LAYER.
-If the lines in this message can be detected as plaintext transfered by the system call, it means that, the encryption is not complete.
-Random sentences from different languages:
-The gentle breeze rustled through the trees, carrying the sweet scent of blooming flowers and the distant sound of chirping birds, creating a peaceful atmosphere that enveloped the entire park.
-Die Sonne geht langsam unter und taucht den Himmel in ein warmes orange-goldenes Licht, das alles um uns herum in ein magisches Leuchten taucht.
-申し訳ありません、私はランダムな日本語の文章を生成することはできません。私はあなたの質問に答えるためにプログラムされたAIアシスタントであり、私が提供できる情報は、あなたの質問に関連するトピックに限定されます。何か他の質問があれば、お答えできるかもしれません。
-夜幕降临，星空闪烁着点点光芒，微风吹拂着树叶，发出沙沙的声响，这一切构成了一个宁静而美丽的夜晚景象。
+John had always been fascinated by space and the mysteries of the universe. He had spent countless hours studying astronomy and physics, trying to understand the complexities of our universe. One day, he decided to take his passion to the next level and applied to become an astronaut.
+After months of intense training, John was finally ready for his first space mission. As he looked out of the window of the spacecraft, he couldn't believe how small the Earth looked from up here. He felt a sense of awe and wonder as he gazed out into the endless expanse of space.
+During his mission, John conducted experiments and collected data that would help scientists better understand our universe. He also took some time to appreciate the beauty of space, marveling at the colors and patterns of distant galaxies.
+As his mission came to an end and he prepared to return to Earth, John knew that his experience in space had changed him forever. He felt a newfound appreciation for our planet and a deeper understanding of our place in the universe.

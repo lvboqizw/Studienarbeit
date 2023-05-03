@@ -1,7 +1,4 @@
-use std::fs::File;
 use std::process::Command;
-use std::thread;
-use std::time::Duration;
 use structopt::StructOpt;
 
 mod executor;
