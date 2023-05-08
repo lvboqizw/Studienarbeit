@@ -13,32 +13,49 @@
 {"type": "printf", "data": "read Q 4\ne -1 0 0\ns -1 0 0\ns -1 0 0\ne -1 1 0\ns -1 1 0\ns -1 1 0\ne -1 2 0\ns -1 2 0\ns -1 2 0\ne -1 3 0\ns -1 3 0\ns -1 3 0\n"}
 {"type": "printf", "data": "writev [SCONE|WARN] src/enclave/dispatch.c:197:print_version"}
 {"type": "printf", "data": "writev "}
-{"type": "printf", "data": "preadv \u00035‘³¥ğ\u0013²\u0005\u0012\u0013•~\u0017Ëƒ¤W\nD\u0018=ü²\u000ekë\u0006\u0005˜„…\u0002:a\u001f•^Àú×z\u0012Ä¾Bk\u001d©Ò&\u0013¾c|c›¦[£!Ü\u0002Ów\u0017\\_VB—­\u0014IZ½‘JK_rGP´åß¿™Ì¿H\u0019ÂK×3#R`QİÕØÁ$[&ÓåüMãYû=f\u001aJ¦ƒæv¦\u001fúOÕ*†\u001aŸ‡\u0011Ò\u0001PÍÇuñÍ\u0019–F|w£şÃŠ¼3F"}
-{"type": "printf", "data": "pwritev \u00035‘³¥ğ\u0013²\u0005\u0012\u0013•~\u0017Ëƒ¤W\nD\u0018=ü²\u000ekë\u0006\u0005˜„…\u0002:a\u001f•^Àú×z\u0012Ä¾Bk\u001d©Ò&\u0013¾c|c›¦[£!Ü\u0002Ów\u0017\\_VB—­\u0014IZ½‘JK_rGP´åß¿™Ì¿H\u0019ÂK×3#R`QİÕØÁ$[&ÓåüMãYû=f\u001aJ¦ƒæv¦\u001fúOÕ*†\u001aŸ‡\u0011Ò\u0001PÍÇuñÍ\u0019–F|w£şÃŠ¼3F"}
-{"type": "printf", "data": "preadv \u00035‘³¥ğ\u0013²\u0005\u0012\u0013•~\u0017Ëƒ¤W\nD\u0018=ü²\u000ekë\u0006\u0005˜„…\u0002:a\u001f•^Àú×z\u0012Ä¾Bk\u001d©Ò&\u0013¾c|c›¦[£!Ü\u0002Ów\u0017\\_VB—­\u0014IZ½‘JK_rGP´åß¿™Ì¿H\u0019ÂK×3#R`QİÕØÁ$[&ÓåüMãYû=f\u001aJ¦ƒæv¦\u001fúOÕ*†\u001aŸ‡\u0011Ò\u0001PÍÇuñÍ\u0019–F|w£şÃŠ¼3F"}
-{"type": "printf", "data": "pwritev \u00035‘³¥ğ\u0013²\u0005\u0012\u0013•~\u0017Ëƒ¤W\nD\u0018=ü²\u000ekë\u0006\u0005˜„…\u0002:a\u001f•^Àú×z\u0012Ä¾Bk\u001d©Ò&\u0013¾c|c›¦[£!Ü\u0002Ów\u0017\\_VB—­\u0014IZ½‘JK_rGP´åß¿™Ì¿H\u0019ÂK×3#R`QİÕØÁ$[&ÓåüMãYû=f\u001aJ¦ƒæv¦\u001fúOÕ*†\u001aŸ‡\u0011Ò\u0001PÍÇuñÍ\u0019–F|w£şÃŠ¼3F"}
-{"type": "printf", "data": "preadv \u00035‘³¥ğ\u0013²\u0005\u0012\u0013•~\u0017Ëƒ¤W\nD\u0018=ü²\u000ekë\u0006\u0005˜„…\u0002:a\u001f•^Àú×z\u0012Ä¾Bk\u001d©Ò&\u0013¾c|c›¦[£!Ü\u0002Ów\u0017\\_VB—­\u0014IZ½‘JK_rGP´åß¿™Ì¿H\u0019ÂK×3#R`"}
-{"type": "printf", "data": "pwritev \u00035‘³¥ğ\u0013²\u0005\u0012\u0013•~\u0017Ëƒ¤W\nD\u0018=ü²\u000ekë\u0006\u0005˜„…\u0002:a\u001f•^Àú×z\u0012Ä¾Bk\u001d©Ò&\u0013¾c|c›¦[£!Ü\u0002Ów\u0017\\_VB—­\u0014IZ½‘JK_rGP´åß¿™Ì¿H\u0019ÂK×3#R`"}
-{"type": "printf", "data": "preadv \u00035‘³¥ğ\u0013²\u0005\u0012\u0013•~\u0017Ëƒ¤W\nD\u0018=ü²\u000ekë\u0006\u0005˜„…\u0002:a\u001f•^Àú×z\u0012Ä¾Bk\u001d©Ò&\u0013¾c|c›¦[£!Ü\u0002Ów\u0017\\_VB—­\u0014IZ½‘JK_rGP´åß¿™Ì¿H\u0019ÂK×3#R`"}
-{"type": "printf", "data": "pwritev \u00035‘³¥ğ\u0013²\u0005\u0012\u0013•~\u0017Ëƒ¤W\nD\u0018=ü²\u000ekë\u0006\u0005˜„…\u0002:a\u001f•^Àú×z\u0012Ä¾Bk\u001d©Ò&\u0013¾c|c›¦[£!Ü\u0002Ów\u0017\\_VB—­\u0014IZ½‘JK_rGP´åß¿™Ì¿H\u0019ÂK×3#R`"}
+{"type": "printf", "data": "preadv %¾\u0007\u0013ï‚\u0008Ì;ÚŠíd\u000eA±¡Küd|«\u0019¤n\u0017ràµœãU].‡NóË\u0018ñà\u0007Qøx±”0Q7¦á—ÍnÃÅËÈë(¬\u0001\u0005©\u00199éc_V€¡è‡ß/\u001a@‚Ó—\u001fv\"R\u001an\"•RUß9ì³ˆYI \u001b»9uèJ\u001d‡ı«UKÇ«Åµ\u0011|ÂC)<\u0016Rƒw²\u0010Â—Ü\t\u0007¸\u000b‹~ßÁz»\tÔ=:íû¤\u0002as…40B£ÂÕÏúK–å,:\u0015y\u0015¼n^dß\u0012\u001f®éÎ\u001f8÷\nŸ.Ğ7ª"}
+{"type": "printf", "data": "pwritev %¾\u0007\u0013ï‚\u0008Ì;ÚŠíd\u000eA±¡Küd|«\u0019¤n\u0017ràµœãU].‡NóË\u0018ñà\u0007Qøx±”0Q7¦á—ÍnÃÅËÈë(¬\u0001\u0005©\u00199éc_V€¡è‡ß/\u001a@‚Ó—\u001fv\"R\u001an\"•RUß9ì³ˆYI \u001b»9uèJ\u001d‡ı«UKÇ«Åµ\u0011|ÂC)<\u0016Rƒw²\u0010Â—Ü\t\u0007¸\u000b‹~ßÁz»\tÔ=:íû¤\u0002as…40B£ÂÕÏúK–å,:\u0015y\u0015¼n^dß\u0012\u001f®éÎ\u001f8÷\nŸ.Ğ7ª"}
+{"type": "printf", "data": "preadv %¾\u0007\u0013ï‚\u0008Ì;ÚŠíd\u000eA±¡Küd|«\u0019¤n\u0017ràµœãU].‡NóË\u0018ñà\u0007Qøx±”0Q7¦á—ÍnÃÅËÈë(¬\u0001\u0005©\u00199éc_V€¡è‡ß/\u001a@‚Ó—\u001fv\"R\u001an\"•RUß9ì³ˆYI \u001b»9uèJ\u001d‡ı«UKÇ«Åµ\u0011|ÂC)<\u0016Rƒw²\u0010Â—Ü\t\u0007¸\u000b‹~ßÁz»\tÔ=:íû¤\u0002as…40B£ÂÕÏúK–å,:\u0015y\u0015¼n^dß\u0012\u001f®éÎ\u001f8÷\nŸ.Ğ7ª"}
+{"type": "printf", "data": "pwritev %¾\u0007\u0013ï‚\u0008Ì;ÚŠíd\u000eA±¡Küd|«\u0019¤n\u0017ràµœãU].‡NóË\u0018ñà\u0007Qøx±”0Q7¦á—ÍnÃÅËÈë(¬\u0001\u0005©\u00199éc_V€¡è‡ß/\u001a@‚Ó—\u001fv\"R\u001an\"•RUß9ì³ˆYI \u001b»9uèJ\u001d‡ı«UKÇ«Åµ\u0011|ÂC)<\u0016Rƒw²\u0010Â—Ü\t\u0007¸\u000b‹~ßÁz»\tÔ=:íû¤\u0002as…40B£ÂÕÏúK–å,:\u0015y\u0015¼n^dß\u0012\u001f®éÎ\u001f8÷\nŸ.Ğ7ª"}
+{"type": "printf", "data": "preadv %¾\u0007\u0013ï‚\u0008Ì;ÚŠíd\u000eA±¡Küd|«\u0019¤n\u0017ràµœãU].‡NóË\u0018ñà\u0007Qøx±”0Q7¦á—ÍnÃÅËÈë(¬\u0001\u0005©\u00199éc_V€¡è‡ß/\u001a@‚Ó—\u001fv\"R\u001an\"•RUß9ì"}
+{"type": "printf", "data": "pwritev %¾\u0007\u0013ï‚\u0008Ì;ÚŠíd\u000eA±¡Küd|«\u0019¤n\u0017ràµœãU].‡NóË\u0018ñà\u0007Qøx±”0Q7¦á—ÍnÃÅËÈë(¬\u0001\u0005©\u00199éc_V€¡è‡ß/\u001a@‚Ó—\u001fv\"R\u001an\"•RUß9ì"}
+{"type": "printf", "data": "preadv %¾\u0007\u0013ï‚\u0008Ì;ÚŠíd\u000eA±¡Küd|«\u0019¤n\u0017ràµœãU].‡NóË\u0018ñà\u0007Qøx±”0Q7¦á—ÍnÃÅËÈë(¬\u0001\u0005©\u00199éc_V€¡è‡ß/\u001a@‚Ó—\u001fv\"R\u001an\"•RUß9ì"}
+{"type": "printf", "data": "pwritev %¾\u0007\u0013ï‚\u0008Ì;ÚŠíd\u000eA±¡Küd|«\u0019¤n\u0017ràµœãU].‡NóË\u0018ñà\u0007Qøx±”0Q7¦á—ÍnÃÅËÈë(¬\u0001\u0005©\u00199éc_V€¡è‡ß/\u001a@‚Ó—\u001fv\"R\u001an\"•RUß9ì"}
 {"type": "printf", "data": "readlink /operation/server"}
 {"type": "printf", "data": "readlink /operation/server"}
-{"type": "printf", "data": "readlink /dev/null"}
-{"type": "printf", "data": "readlink pipe:[1361723670]"}
-{"type": "printf", "data": "readlink pipe:[1361723671]"}
-{"type": "printf", "data": "readlink /\u0001"}
-{"type": "printf", "data": "recvfrom This is the message sended to the server.The transfer is aim of test the encryption of SCONE NETWORK SHIELDING LAYER.If the line"}
-{"type": "printf", "data": "recvfrom s in this message can be detected as plaintext transfered by the system call, it means that, the encryption is not complete.Rand"}
-{"type": "printf", "data": "recvfrom om sentences from different languages:The gentle breeze rustled through the trees, carrying the sweet scent of blooming flowers "}
-{"type": "printf", "data": "recvfrom and the distant sound of chirping birds, creating a peaceful atmosphere that enveloped the entire park.Die Sonne geht langsam un"}
-{"type": "printf", "data": "recvfrom ter und taucht den Himmel in ein warmes orange-goldenes Licht, das alles um uns herum in ein magisches Leuchten taucht.ç”³ã—è¨³"}
-{"type": "printf", "data": "recvfrom ã‚ã‚Šã¾ã›ã‚“ã€ç§ã¯ãƒ©ãƒ³ãƒ€ãƒ ãªæ—¥æœ¬èªã®æ–‡ç« ã‚’ç”Ÿæˆã™ã‚‹ã“ã¨ã¯ã§ãã¾ã›ã‚“ã€‚ç§ã¯ã‚ãªãŸã®è³ªå•ã«ç­"}
-{"type": "printf", "data": "recvfrom ”ãˆã‚‹ãŸã‚ã«ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã•ã‚ŒãŸAIã‚¢ã‚·ã‚¹ã‚¿ãƒ³ãƒˆã§ã‚ã‚Šã€ç§ãŒæä¾›ã§ãã‚‹æƒ…å ±ã¯ã€ã‚ãªãŸã®è³ªå•ã«é–"}
-{"type": "printf", "data": "recvfrom ¢é€£ã™ã‚‹ãƒˆãƒ”ãƒƒã‚¯ã«é™å®šã•ã‚Œã¾ã™ã€‚ä½•ã‹ä»–ã®è³ªå•ãŒã‚ã‚Œã°ã€ãŠç­”ãˆã§ãã‚‹ã‹ã‚‚ã—ã‚Œã¾ã›ã‚“ã€‚å¤œå¹•é"}
-{"type": "printf", "data": "recvfrom ™ä¸´ï¼Œæ˜Ÿç©ºé—ªçƒç€ç‚¹ç‚¹å…‰èŠ’ï¼Œå¾®é£å¹æ‹‚ç€æ ‘å¶ï¼Œå‘å‡ºæ²™æ²™çš„å£°å“ï¼Œè¿™ä¸€åˆ‡æ„æˆäº†ä¸€ä¸ªå®é™è€Œç¾ä¸½çš„"}
-{"type": "printf", "data": "recvfrom å¤œæ™šæ™¯è±¡ã€‚"}
-{"type": "printf", "data": "recvfrom \u0010p“8\u0008"}
-{"type": "printf", "data": "sendto The message send back to the client."}
-{"type": "printf", "data": "sendto ÎŸ Î®Î»Î¹Î¿Ï‚ Î´ÏÎµÎ¹ Î±ÏÎ³Î¬ ÎºÎ±Î¹ Î²Ï…Î¸Î¯Î¶ÎµÎ¹ Ï„Î¿Î½ Î¿Ï…ÏÎ±Î½ÏŒ ÏƒÎµ Î­Î½Î± Î¶ÎµÏƒÏ„ÏŒ Ï€Î¿ÏÏ„Î¿ÎºÎ±Î»Î¯-Ï‡ÏÏ…ÏƒÎ±Ï†Î­Î½Î¹Î¿ Ï†Ï‰Ï‚, Ï€Î¿Ï… Î²Î¬Ï†ÎµÎ¹ Ï„Î± Ï€Î¬Î½Ï„Î± Î³ÏÏÏ‰ Î¼Î±Ï‚ ÏƒÎµ"}
-{"type": "printf", "data": "sendto Ğ’ĞµÑ‡ĞµÑ€Ğ½Ğ¸Ğ¹ Ğ²ĞµÑ‚ĞµÑ€Ğ¾Ğº ÑˆĞµĞ»ĞµÑÑ‚Ğ¸Ñ‚ Ğ»Ğ¸ÑÑ‚ÑŒÑĞ¼Ğ¸ Ğ´ĞµÑ€ĞµĞ²ÑŒĞµĞ², Ğ½ĞµÑĞµÑ‚ Ğ°Ñ€Ğ¾Ğ¼Ğ°Ñ‚ Ñ†Ğ²ĞµÑ‚ÑƒÑ‰Ğ¸Ñ… Ñ†Ğ²ĞµÑ‚Ğ¾Ğ² Ğ¸ Ğ¾Ñ‚Ğ´Ğ°Ğ»ĞµĞ½Ğ½Ñ‹Ğ¹ Ğ·Ğ²ÑƒĞº Ñ‰ĞµĞ±ĞµÑ‚Ğ° Ğ¿Ñ‚Ğ¸Ñ†, ÑĞ¾Ğ"}
-{"type": "printf", "data": "sendto à¸à¸±à¸”à¸¥à¸¡à¹€à¸šà¸²à¹€à¸šà¸´à¹‰à¸¡à¸œà¹ˆà¸²à¸™à¹ƒà¸šà¹„à¸¡à¹‰ à¸à¸£à¹‰à¸­à¸¡à¸à¸±à¸šà¸à¸¥à¸´à¹ˆà¸™à¸«à¸­à¸¡à¸‚à¸­à¸‡à¸”à¸­à¸à¹„à¸¡à¹‰à¸—à¸µà¹ˆà¸šà¸²à¸™à¸­à¸­à¸à¹à¸¥à¸°à¹€à¸ªà¸µà¸¢à¸‡à¸™à¸"}
+{"type": "printf", "data": "readlink /operation/server"}
+{"type": "printf", "data": "readlink /operation/server"}
+{"type": "printf", "data": "sendto Ğa\u0001"}
+{"type": "printf", "data": "recvfrom Ğa€"}
+{"type": "printf", "data": "recvfrom \u0016\u0003\u0003"}
+{"type": "printf", "data": "recvfrom \u0017\u0003\u0003"}
+{"type": "printf", "data": "recvfrom "}
+{"type": "printf", "data": "recvfrom ¶\u0010\n³\u0010\rn\r"}
+{"type": "printf", "data": "sendto |<\u0001"}
+{"type": "printf", "data": "sendto | \u0001"}
+{"type": "printf", "data": "recvfrom |<€"}
+{"type": "printf", "data": "recvfrom |<€"}
+{"type": "printf", "data": "recvfrom | €"}
+{"type": "printf", "data": "recvfrom \u0016\u0003\u0003"}
+{"type": "printf", "data": "sendto ¸\u0003\u0012µ\u0003\n°\u0003\u0004\u0004ÿÿÿ\u0001"}
+{"type": "printf", "data": "recvfrom è\u0003\u001aå\u0003\u0008\u0001\u0012à\u0003\u0004\u0004ÿÿÿ\u0001"}
+{"type": "printf", "data": "recvfrom \u0017\u0003\u0003"}
+{"type": "printf", "data": "recvfrom \u0017\u0003\u0003"}
+{"type": "printf", "data": "sendto !\"\u001f\n\u001d\n\u00102ÂÓ,ÔñÈsb[¾eÙs§\u0002\u0010\u0001\u00193ÄQ¢pÀpø"}
+{"type": "printf", "data": "recvfrom å\u0008*â\u0008\nß\u0008\nÜ\u0008\u0002"}
+{"type": "printf", "data": "recvfrom \u0017\u0003\u0003"}
+{"type": "printf", "data": "sendto Ì\u0003\u0012É\u0003\n°\u0003\u0004\u0004ÿÿÿ\u0001"}
+{"type": "printf", "data": "recvfrom ä\u0008\u001aá\u0008\u0008\u0002\u0012Ü\u0008\u0002"}
+{"type": "printf", "data": "recvfrom \u0017\u0003\u0003\u0006#è\u0014'ıqMJ¡L —Ì5á–—\u001aë@~\u001ee\u001eû5«Ï\u000eô*2\u0015\u0018Ê\u0013‚`le¥î\u0007E\u001aë\u0013» ü4Íq™c­I\u000c"}
+{"type": "printf", "data": "sendto \u0002\u001a"}
+{"type": "printf", "data": "recvfrom \u0017\u0003\u0003"}
+{"type": "printf", "data": "readlink /=*b(u\nİ´\\—½u¤¯ĞÑ\u0003\u0005voÔï²RN] src/process/init.c:722:__scone_apply_secure_config(): Ignoring `SCONE_PWD` environment variable and host provided process working directory.\n\tApplying process working dir"}
+{"type": "printf", "data": "recvfrom \u0016\u0003\u0001"}
+{"type": "printf", "data": "sendto \u0014\u0003\u0003"}
+{"type": "printf", "data": "sendto \u0017\u0003\u0003"}
+{"type": "printf", "data": "sendto \u0017\u0003\u0003\u0001oˆmX-áÏ!3¼ÑD®L»óI‰¨|ã&Y\u001cáGì!I¼O\u0013Èë®;?Ú‚[,R/\u0017Ax>\u001d\u0001³»ÃVğLˆÆµ»\\\u0019Á\u0005u€~a\u0002]Dí{\u0006KèÜ'nMƒÚZ\u0002@\u001e—æÃ\u001eGÍ±;#gãxÖ&*’‡uJe9Zj\u0005\t)˜\u001eƒV\u001c©yyILÅty2#Ãg"}
+{"type": "printf", "data": "sendto \u0017\u0003\u0003"}
+{"type": "printf", "data": "recvfrom \u0014\u0003\u0003"}
+{"type": "printf", "data": "recvfrom \u0010€Ÿ¢¬"}
+{"type": "printf", "data": "sendto \u0017\u0003\u0003\u0001®\u0019\u0006ok \u0018ÙAAwì&Ş)åÚ-\u0002ã¸vÂ‘¼LŸïg­ËÀ}N\rÅ&·\u0015ª\u0018\u001b¾C™V\u0002ÆËò¦\u000bÂ \u0016æ5\u0012â±r\u0011·Ní¥|ùŸª%+Ùˆ\u001e–õësùn}‡\u0011—\u0002'j¡Á^Ó$Â7N›g\tñÙÿ\u0011ú•Ü0º7`vï\u0013ß\u0008:ø­\u0002«ë\\¢§\u0005ßÚ\u0017U8Ü\u0010‰?b\u0014yqëaxîoÃÉ×ËK¬\u0016šÌôİ¡sŸJü$Ï²|ZOg6ƒïÛ)6Y\nTs†¬¾£z\u0003w\u0005\u001c@\u0010c\n‚î"}
+{"type": "printf", "data": "sendto \u0017\u0003\u0003"}
