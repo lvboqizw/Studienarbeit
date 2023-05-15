@@ -1,52 +1,68 @@
-use std::{fs, path::Path, io, process::Command, thread};
 use syscalls::*;
 use libc::*;
+use std::ptr;
+use rand::Rng;
+
+const BUF_SIZE: usize = 200;
 
 pub fn file_rw() {
     let path = "/data/read_file.txt\0";
     let w_path = "/data/write_file.txt\0";
-    let buff = vec![b' '; 512];                     // the bpftrace buffer is limited at 512 bytes
+
+    let path_plain = "/operation/read_file.txt\0";
+    let w_path_plain = "/operation/write_file.txt\0";
+    let mut rng = rand::thread_rng();
+    let mut read_len: usize;
+    let mut buff = vec![b' '; BUF_SIZE];                     // the bpftrace buffer is limited at 200 bytes
+    let mut buff_plain = vec![b' '; BUF_SIZE];
+    let buff_ptr = buff.as_mut_ptr();
+    let buff_plain_ptr = buff_plain.as_mut_ptr();
     let flag = O_RDWR;
     let file_dis = unsafe{ syscall2(Sysno::open, path.as_ptr() as usize, flag as usize)}.unwrap();
     let write_dis = unsafe{ syscall2(Sysno::open, w_path.as_ptr() as usize, flag as usize)}.unwrap();
+    let file_plain = unsafe{ syscall2(Sysno::open, path_plain.as_ptr() as usize, flag as usize)}.unwrap();
+    let write_plain = unsafe{ syscall2(Sysno::open, w_path_plain.as_ptr() as usize, flag as usize)}.unwrap();
 
-    let read = unsafe { syscall3(Sysno::read, file_dis, buff.as_ptr() as usize,  buff.len())}.unwrap();
-    let write = unsafe{ syscall3(Sysno::write, write_dis, buff.as_ptr() as usize, read )}.unwrap();
+    /*read, write */
+    read_len = rng.gen_range(0..200);
+    //  read the file protected by fspf, the system call should be encrypted
+    let mut read: usize = unsafe { syscall3(Sysno::read, file_dis, buff.as_ptr() as usize,  read_len)}.unwrap();
+    //  read the unprotecetd file which contains the same content as protected file.
+    let mut read_plain: usize = unsafe { syscall3(Sysno::read, file_plain, buff_plain.as_ptr() as usize,  read_len)}.unwrap();
+    while read != 0 {
+        let _write = unsafe{ syscall3(Sysno::write, write_dis, buff.as_ptr() as usize, read)}.unwrap();
+        let _write_plain = unsafe{ syscall3(Sysno::write, write_plain, buff_plain.as_ptr() as usize, read_plain)}.unwrap();
+        unsafe{ptr::write_bytes(buff_ptr, 0, BUF_SIZE);}
+        unsafe{ptr::write_bytes(buff_plain_ptr, 0, BUF_SIZE);}
+        read_len = rng.gen_range(0..200);
+        read = unsafe { syscall3(Sysno::read, file_dis, buff.as_ptr() as usize,  read_len)}.unwrap();
+        read_plain = unsafe { syscall3(Sysno::read, file_plain, buff_plain.as_ptr() as usize,  read_len)}.unwrap();
+    }
 
-    let pread64 = unsafe { syscall4(Sysno::pread64, file_dis, buff.as_ptr() as usize, buff.len(), 0)}.unwrap();
-    let pwrite64 = unsafe { syscall4(Sysno::pwrite64, write_dis, buff.as_ptr() as usize, pread64, 0)}.unwrap();
+    /*  pread64, pwrite64 */
+    let mut offset = 0;
+    read_len = rng.gen_range(0..200);
+    let mut pread64: usize = unsafe { syscall4(Sysno::pread64, file_dis, buff.as_ptr() as usize, read_len, offset)}.unwrap();
+    while pread64 != 0 {
+        let _pwrite64 = unsafe { syscall4(Sysno::pwrite64, write_dis, buff.as_ptr() as usize, pread64, offset)}.unwrap();
+        unsafe{ptr::write_bytes(buff_ptr, 0, BUF_SIZE);}
+        offset += pread64;
+        read_len = rng.gen_range(0..200);
+        pread64 = unsafe { syscall4(Sysno::pread64, file_dis, buff.as_ptr() as usize, read_len, offset)}.unwrap();
+    }
 
-    let result = unsafe{ syscall1(Sysno::close, file_dis)}.unwrap();
-    let result = unsafe{ syscall1(Sysno::close, write_dis)}.unwrap();
+    let _result = unsafe{ syscall1(Sysno::close, file_dis)}.unwrap();
+    let _result = unsafe{ syscall1(Sysno::close, write_dis)}.unwrap();
 }
 
 pub fn file_rwv() {
-    let buff1 = vec![b' '; 100];
-    let buff2 = vec![b' '; 100];
-    let buff3 = vec![b' '; 100];
-    let buff4 = vec![b' '; 100];
-    let buff5 = vec![b' '; 100];
+    let mut buff = vec![b' '; BUF_SIZE];
+    let buff_ptr = buff.as_mut_ptr();
     let iovs1 = Iovec {
-        iov_base: buff1.as_ptr() as usize,
-        iov_len: 100,
+        _iov_base: buff.as_ptr() as usize,
+        _iov_len: BUF_SIZE,
     };
-    let iovs2 = Iovec {
-        iov_base: buff2.as_ptr() as usize,
-        iov_len: 100,
-    };
-    let iovs3 = Iovec {
-        iov_base: buff3.as_ptr() as usize,
-        iov_len: 100,
-    };
-    let iovs4 = Iovec {
-        iov_base: buff4.as_ptr() as usize,
-        iov_len: 100,
-    };
-    let iovs5 = Iovec {
-        iov_base: buff5.as_ptr() as usize,
-        iov_len: 100,
-    };
-    let mut iovs = vec![iovs1.clone(), iovs2.clone(), iovs3.clone(), iovs4.clone(), iovs5.clone()];
+    let iovs = vec![iovs1.clone()];
 
     let path = "/data/read_file.txt\0";
     let w_path = "/data/write_file.txt\0";
@@ -55,20 +71,31 @@ pub fn file_rwv() {
     let file_dis = unsafe{ syscall2(Sysno::open, path.as_ptr() as usize, flag as usize)}.unwrap();
     let write_dis = unsafe{ syscall2(Sysno::open, w_path.as_ptr() as usize, w_flag as usize)}.unwrap();
 
-    let readv = unsafe{ syscall3(Sysno::readv, file_dis, iovs.as_ptr() as usize, 5)}.unwrap();
-    let w_len = readv/buff1.len();
-    let writev = unsafe{ syscall3(Sysno::writev, write_dis, iovs.as_ptr() as usize, w_len)}.unwrap();
+    /*  readv, writev */
+    let mut readv = unsafe{ syscall3(Sysno::readv, file_dis, iovs.as_ptr() as usize, 1)}.unwrap();
+    while readv != 0 {
+        let _writev = unsafe{ syscall3(Sysno::writev, write_dis, iovs.as_ptr() as usize, 1)}.unwrap();
+        unsafe{ptr::write_bytes(buff_ptr, 0, BUF_SIZE);}
+        readv = unsafe{ syscall3(Sysno::readv, file_dis, iovs.as_ptr() as usize, 1)}.unwrap();
+    }
 
-    let preadv = unsafe{ syscall4(Sysno::preadv, file_dis, iovs.as_ptr() as usize, 5, 0)}.unwrap();
-    let pw_len = preadv/buff1.len();
-    let pwritev = unsafe{ syscall4(Sysno::pwritev, write_dis, iovs.as_ptr() as usize, pw_len, 0)}.unwrap();
 
-    let result = unsafe{ syscall1(Sysno::close, file_dis)}.unwrap();
-    let result = unsafe{ syscall1(Sysno::close, write_dis)}.unwrap();
+    /*  preadv, pwritev */
+    let mut offset = 0;
+    let mut preadv = unsafe{ syscall4(Sysno::preadv, file_dis, iovs.as_ptr() as usize, 1, offset)}.unwrap();
+    while preadv == 200 {
+        let _pwritev = unsafe{ syscall4(Sysno::pwritev, write_dis, iovs.as_ptr() as usize, 1, offset)}.unwrap();
+        unsafe{ptr::write_bytes(buff_ptr, 0, BUF_SIZE);}
+        offset += preadv;
+        preadv = unsafe{ syscall4(Sysno::preadv, file_dis, iovs.as_ptr() as usize, 1, offset)}.unwrap();
+    }
+
+    let _result = unsafe{ syscall1(Sysno::close, file_dis)}.unwrap();
+    let _result = unsafe{ syscall1(Sysno::close, write_dis)}.unwrap();
 }
 
 #[derive(Debug, Clone)]
 struct Iovec {
-    iov_base: usize,
-    iov_len: usize,
+    _iov_base: usize,
+    _iov_len: usize,
 }

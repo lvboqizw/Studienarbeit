@@ -40,15 +40,17 @@ pub fn analyse() {
         };
         let encrypted = buf_analyse(&sys);
         if !encrypted {
-            println!("The system call {} with buf{} is not encrypted.", sys.syscall, sys.buf);
+            println!("not encrypted:  {} with buf: {}.", sys.syscall, sys.buf);
+        } else {
+            println!("encrypted: {} with buf: {}.", sys.syscall, sys.buf);
         }
     }
     clean_files();
 }
 
 fn buf_analyse(sys: &Sys) -> bool {
-    let random = 127.5;
-    if sys.buf.len() <= 20 {
+    // let random = 127.5;
+    if sys.buf.len() <= 10 {
         return true;
     } else {
         let mut tmp_file = fs::File::create("files/tmp").unwrap();
@@ -61,7 +63,7 @@ fn buf_analyse(sys: &Sys) -> bool {
             .unwrap();
         // ------get encheck result----------
         let value = get_chi_square(result);
-        if f32::abs(random - value.mean) >= 15.0 {
+        if value.mean < 100.0 {
             return false;
         }
         return true;
