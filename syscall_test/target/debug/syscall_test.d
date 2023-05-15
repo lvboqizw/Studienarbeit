@@ -1,0 +1,1 @@
+/home/wei/Documents/Studienarbeit/syscall_test/target/debug/syscall_test: /home/wei/Documents/Studienarbeit/syscall_test/src/executor.rs /home/wei/Documents/Studienarbeit/syscall_test/src/main.rs /home/wei/Documents/Studienarbeit/syscall_test/src/monitor.rs /home/wei/Documents/Studienarbeit/syscall_test/src/tracer.rs
