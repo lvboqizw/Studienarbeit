@@ -1,8 +1,11 @@
-use std::{fs::File, io::Write, env};
+use std::os::unix::prelude::PermissionsExt;
+use std::{fs, fs::File, fs::Permissions, io::Write, env};
+
 use std::process::Command;
 
 fn create_trace_file(target: String) {
-    let mut trace_file = File::create("files/trace.bt").unwrap();
+    let path = "files/trace.bt";
+    let mut trace_file = File::create(path).unwrap();
     let mut filter = "s/comm==\"\"/comm==\"".to_string();
     filter = filter + target.as_str() + "\"/g";
     let write_target = Command::new("sed")
@@ -10,6 +13,9 @@ fn create_trace_file(target: String) {
         .output()
         .unwrap();
     trace_file.write(String::from_utf8(write_target.stdout).unwrap().as_bytes()).unwrap();
+
+    let permission = Permissions::from_mode(0x777);
+    fs::set_permissions(path, permission).unwrap();
 }
 
 pub fn trace(target: String) {
@@ -18,7 +24,7 @@ pub fn trace(target: String) {
     env::set_var("BPFTRACE_STRLEN", "200");
     let _output_file = File::create("files/output.json").unwrap();
 
-    let _tracer = Command::new("bpftrace")
+    let _tracer = Command::new("/home/wei/bpftrace/bin/bpftrace")
         .args(["-f", "json", "-o", "files/output.json", "files/trace.bt"])
         .spawn()
         .expect("Failed to run bpftrace");
