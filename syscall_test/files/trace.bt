@@ -1,10 +1,10 @@
 // -------------read---------------------
-tracepoint:syscalls:sys_enter_read /comm=="file_sys"/ 
+tracepoint:syscalls:sys_enter_read /comm=="threshold"/ 
 { 
     @read_buf[tid] = args->buf;
     @read_count[tid] = args->count;
 } 
-tracepoint:syscalls:sys_exit_read /comm=="file_sys"/
+tracepoint:syscalls:sys_exit_read /comm=="threshold"/
 {
     printf("read %s", str(@read_buf[tid], @read_count[tid]));
     clear(@read_buf);
@@ -12,12 +12,12 @@ tracepoint:syscalls:sys_exit_read /comm=="file_sys"/
 }
     
 //-------------pread64------------------
-tracepoint:syscalls:sys_enter_pread64 /comm=="file_sys"/ 
+tracepoint:syscalls:sys_enter_pread64 /comm=="threshold"/ 
 {
     @pread64_buf[tid] = args->buf;
     @pread64_count[tid] = args->count;
 }
-tracepoint:syscalls:sys_exit_pread64 /comm=="file_sys"/ 
+tracepoint:syscalls:sys_exit_pread64 /comm=="threshold"/ 
 {
     printf("pread64 %s", str(@pread64_buf[tid], @pread64_count[tid]));
     clear(@pread64_buf);
@@ -25,12 +25,12 @@ tracepoint:syscalls:sys_exit_pread64 /comm=="file_sys"/
 }
 
 //--------------readv-------------------
-tracepoint:syscalls:sys_enter_readv /comm=="file_sys"/ 
+tracepoint:syscalls:sys_enter_readv /comm=="threshold"/ 
 { 
     @readv_buf[tid] = (args->vec)->iov_base;
     @readv_count[tid] = (args->vec)->iov_len;
 }
-tracepoint:syscalls:sys_exit_readv /comm=="file_sys"/
+tracepoint:syscalls:sys_exit_readv /comm=="threshold"/
 {
     printf("readv %s", str(@readv_buf[tid], @readv_count[tid]));
     clear(@readv_buf);
@@ -38,12 +38,12 @@ tracepoint:syscalls:sys_exit_readv /comm=="file_sys"/
 }
 
 //-------------preadv-------------------
-tracepoint:syscalls:sys_enter_preadv /comm=="file_sys"/ 
+tracepoint:syscalls:sys_enter_preadv /comm=="threshold"/ 
 {
     @preadv_buf[tid] = (args->vec)->iov_base;
     @preadv_count[tid] = (args->vec)->iov_len;
 }
-tracepoint:syscalls:sys_exit_preadv /comm=="file_sys"/
+tracepoint:syscalls:sys_exit_preadv /comm=="threshold"/
 {
     printf("preadv %s", str(@preadv_buf[tid], @preadv_count[tid]));
     clear(@preadv_buf);
@@ -51,12 +51,12 @@ tracepoint:syscalls:sys_exit_preadv /comm=="file_sys"/
 } 
 
 //--------------write-------------------
-tracepoint:syscalls:sys_enter_write /comm=="file_sys"/ 
+tracepoint:syscalls:sys_enter_write /comm=="threshold"/ 
 {
     @write_buf[tid] = args->buf;
     @write_count[tid] = args->count;
 }
-tracepoint:syscalls:sys_exit_write /comm=="file_sys"/
+tracepoint:syscalls:sys_exit_write /comm=="threshold"/
 {
     printf("write %s", str(@write_buf[tid], @write_count[tid]));
     clear(@write_buf);
@@ -64,12 +64,12 @@ tracepoint:syscalls:sys_exit_write /comm=="file_sys"/
 }
 
 //---------------pwrite64-----------------
-tracepoint:syscalls:sys_enter_pwrite64 /comm=="file_sys"/ 
+tracepoint:syscalls:sys_enter_pwrite64 /comm=="threshold"/ 
 { 
     @pwrite64_buf[tid] = args->buf;
     @pwrite64_count[tid] = args->count;
 }
-tracepoint:syscalls:sys_exit_pwrite64 /comm=="file_sys"/
+tracepoint:syscalls:sys_exit_pwrite64 /comm=="threshold"/
 {
     printf("pwrite %s", str(@pwrite64_buf[tid], @pwrite64_count[tid]));
     clear(@pwrite64_buf);
@@ -77,12 +77,12 @@ tracepoint:syscalls:sys_exit_pwrite64 /comm=="file_sys"/
 }
 
 //---------------pwritev-----------------
-tracepoint:syscalls:sys_enter_pwritev /comm=="file_sys"/ 
+tracepoint:syscalls:sys_enter_pwritev /comm=="threshold"/ 
 { 
     @pwritev_buf[tid] = (args->vec)->iov_base;
     @pwritev_count[tid] = (args->vec)->iov_len;
 }
-tracepoint:syscalls:sys_exit_pwritev /comm=="file_sys"/ 
+tracepoint:syscalls:sys_exit_pwritev /comm=="threshold"/ 
 {
     printf("pwritev %s", str(@pwritev_buf[tid], @pwritev_count[tid]));
     clear(@pwritev_buf);
@@ -90,12 +90,12 @@ tracepoint:syscalls:sys_exit_pwritev /comm=="file_sys"/
 }
 
 //----------------writev-----------------
-tracepoint:syscalls:sys_enter_writev /comm=="file_sys"/ 
+tracepoint:syscalls:sys_enter_writev /comm=="threshold"/ 
 {
     @writev_buf[tid] = (args->vec)->iov_base;
     @writev_count[tid] = (args->vec)->iov_len;
 }
-tracepoint:syscalls:sys_exit_writev /comm=="file_sys"/ 
+tracepoint:syscalls:sys_exit_writev /comm=="threshold"/ 
 {
     printf("writev %s", str(@writev_buf[tid], @writev_count[tid]));
     clear(@writev_buf);
@@ -103,12 +103,12 @@ tracepoint:syscalls:sys_exit_writev /comm=="file_sys"/
 }
 
 //----------------pwritev2--------------
-tracepoint:syscalls:sys_enter_pwritev2 /comm=="file_sys"/ 
+tracepoint:syscalls:sys_enter_pwritev2 /comm=="threshold"/ 
 {
     @pwritev2_buf[tid] = (args->vec)->iov_base;
     @pwritev2_count[tid] = (args->vec)->iov_len;
 }
-tracepoint:syscalls:sys_exit_pwritev2 /comm=="file_sys"/ 
+tracepoint:syscalls:sys_exit_pwritev2 /comm=="threshold"/ 
 {
     printf("pwritev2 %s", str(@pwritev2_buf[tid], @pwritev2_count[tid]));
     clear(@pwritev2_buf);
@@ -116,12 +116,12 @@ tracepoint:syscalls:sys_exit_pwritev2 /comm=="file_sys"/
 }
 
 //---------------recvfrom------------------
-tracepoint:syscalls:sys_enter_recvfrom /comm=="file_sys"/
+tracepoint:syscalls:sys_enter_recvfrom /comm=="threshold"/
 {
     @recvfrom_buf[tid] = args->ubuf;
     @recvfrom_count[tid] = args->size;
 }
-tracepoint:syscalls:sys_exit_recvfrom /comm=="file_sys"/
+tracepoint:syscalls:sys_exit_recvfrom /comm=="threshold"/
 {
     printf("recvfrom %s", str(@recvfrom_buf[tid], @recvfrom_count[tid]));
     clear(@recvfrom_buf);
@@ -129,12 +129,12 @@ tracepoint:syscalls:sys_exit_recvfrom /comm=="file_sys"/
 }
 
 //----------------recvmsg--------------
-tracepoint:syscalls:sys_enter_recvmsg /comm=="file_sys"/
+tracepoint:syscalls:sys_enter_recvmsg /comm=="threshold"/
 {
     @recvmsg_buf[tid] = (args->msg)->msg_iov;
     @recvmsg_count[tid] = (args->msg)->msg_iovlen;
 }
-tracepoint:syscalls:sys_exit_recvmsg /comm=="file_sys"/
+tracepoint:syscalls:sys_exit_recvmsg /comm=="threshold"/
 {
     printf("recvmsg %s", str(@recvmsg_buf[tid], @recvmsg_count[tid]));
     clear(@recvmsg_buf);
@@ -142,12 +142,12 @@ tracepoint:syscalls:sys_exit_recvmsg /comm=="file_sys"/
 }
 
 //----------------mq_timedreceive-----------
-tracepoint:syscalls:sys_enter_mq_timedreceive /comm=="file_sys"/
+tracepoint:syscalls:sys_enter_mq_timedreceive /comm=="threshold"/
 {
     @mq_timedreceive_buf[tid] = args->u_msg_ptr;
     @mq_timedreceive_count[tid] = args->msg_len;
 }
-tracepoint:syscalls:sys_exit_mq_timedreceive /comm=="file_sys"/
+tracepoint:syscalls:sys_exit_mq_timedreceive /comm=="threshold"/
 {
     printf("mq_timedreceive %s", str(@mq_timedreceive_buf[tid], @mq_timedreceive_count[tid]));
     clear(@mq_timedreceive_buf);
@@ -155,12 +155,12 @@ tracepoint:syscalls:sys_exit_mq_timedreceive /comm=="file_sys"/
 }
 
 //-----------------readlink------------------
-tracepoint:syscalls:sys_enter_readlink /comm=="file_sys"/
+tracepoint:syscalls:sys_enter_readlink /comm=="threshold"/
 {
     @readlink_buf[tid] = args->buf;
     @readlink_count[tid] = args->bufsiz;
 }
-tracepoint:syscalls:sys_exit_readlink /comm=="file_sys"/
+tracepoint:syscalls:sys_exit_readlink /comm=="threshold"/
 {
     printf("readlink %s", str(@readlink_buf[tid], @readlink_count[tid]));
     clear(@readlink_buf);
@@ -168,12 +168,12 @@ tracepoint:syscalls:sys_exit_readlink /comm=="file_sys"/
 }
 
 //----------------readlinkat-----------------
-tracepoint:syscalls:sys_enter_readlinkat /comm=="file_sys"/
+tracepoint:syscalls:sys_enter_readlinkat /comm=="threshold"/
 {
     @readlinkat_buf[tid] = args->buf;
     @readlinkat_count[tid] = args->bufsiz;
 }
-tracepoint:syscalls:sys_exit_readlinkat /comm=="file_sys"/
+tracepoint:syscalls:sys_exit_readlinkat /comm=="threshold"/
 {
     printf("readlinkat %s", str(@readlinkat_buf[tid], @readlinkat_count[tid]));
     clear(@readlinkat_buf);
@@ -181,12 +181,12 @@ tracepoint:syscalls:sys_exit_readlinkat /comm=="file_sys"/
 }
 
 //---------------sendto----------------------
-tracepoint:syscalls:sys_enter_sendto /comm=="file_sys"/
+tracepoint:syscalls:sys_enter_sendto /comm=="threshold"/
 {
     @sendto_buf[tid] = args->buff;
     @sendto_count[tid] = args->len;
 }
-tracepoint:syscalls:sys_exit_sendto /comm=="file_sys"/
+tracepoint:syscalls:sys_exit_sendto /comm=="threshold"/
 {
     printf("sendto %s", str(@sendto_buf[tid], @sendto_count[tid]));
     clear(@sendto_buf);
@@ -194,12 +194,12 @@ tracepoint:syscalls:sys_exit_sendto /comm=="file_sys"/
 }
 
 //-------------sendmsg----------------------
-tracepoint:syscalls:sys_enter_sendmsg /comm=="file_sys"/
+tracepoint:syscalls:sys_enter_sendmsg /comm=="threshold"/
 {
     @sendmsg_buf[tid] = ((args->msg)->msg_iov)->iov_base;
     @sendmsg_count[tid] = (args->msg)->msg_iovlen;
 }
-tracepoint:syscalls:sys_exit_sendmsg /comm=="file_sys"/
+tracepoint:syscalls:sys_exit_sendmsg /comm=="threshold"/
 {
     printf("sendmsg %s", str(@sendmsg_buf[tid], @sendmsg_count[tid]));
     clear(@sendmsg_buf);

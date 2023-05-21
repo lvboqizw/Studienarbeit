@@ -1,4 +1,4 @@
-use std::{fs, process::{Command, Output}, path::Path, io::{BufRead, Write, BufReader}, thread};
+use std::{fs, process::{Command, Output}, path::Path, io::{BufRead, Write, BufReader}};
 use serde::{Serialize, Deserialize};
 use serde_json;
 use encoding_rs_io::{self, DecodeReaderBytesBuilder};
@@ -18,7 +18,7 @@ struct Sys {
     buf: String,
 }
 
-pub fn analyse() {
+pub fn analyse(threshold: bool) {
     install_ent();
 
     let file = fs::File::open("files/output.json").unwrap();
@@ -38,23 +38,23 @@ pub fn analyse() {
             syscall: v[0].to_string(),
             buf: v[1].to_string()
         };
-        let encrypted = buf_analyse(&sys);
-        if !encrypted {
-            println!("not encrypted:  {} with buf: {}.", sys.syscall, sys.buf);
+        let encrypted = buf_analyse(&sys, threshold);
+        if threshold {
+            println!("syscall: {}, message: {}", sys.syscall, sys.buf);
         } else {
-            println!("encrypted: {} with buf: {}.", sys.syscall, sys.buf);
+            if !encrypted {
+                println!("The system call: {} is not encrypted, with message: {}.", sys.syscall, sys.buf);
+            }
         }
     }
     clean_files();
 }
 
-fn buf_analyse(sys: &Sys) -> bool {
-    // let random = 127.5;
-    if sys.buf.len() <= 10 {
+fn buf_analyse(sys: &Sys, threshold: bool) -> bool {
+    if sys.buf.len() <= 1 {
         return true;
     } else {
         let mut tmp_file = fs::File::create("files/tmp").unwrap();
-        // println!("{:?}", sys.buf);
         tmp_file.write(sys.buf.as_bytes()).unwrap();
 
         let result = Command::new("/usr/bin/ent")
@@ -63,8 +63,13 @@ fn buf_analyse(sys: &Sys) -> bool {
             .unwrap();
         // ------get encheck result----------
         let value = get_chi_square(result);
-        if value.mean < 100.0 {
-            return false;
+        if threshold {
+            println!("Entropy: {}, Chi Square: {}, Arithmetic Mean: {}, Monte Carlo Value: {}, Serial Correlation Coefficient: {}", 
+            value.entropy, value.chi_square, value.mean, value.monte_carlo_pi, value.serial_correlattion);
+        } else {
+            if value.mean < 100.0 && value.monte_carlo_pi == 4.0 {
+                return false;
+            }
         }
         return true;
     }
@@ -94,7 +99,6 @@ fn get_chi_square(result: Output) -> Value {
     let monte_carlo_pi = monte_carlo_pi_s.parse::<f32>().unwrap();
     let serial_correlation_s = v_data[6].to_string();   // close to zero -> random
     let serial_correlattion = serial_correlation_s.parse::<f32>().unwrap();
-    println!("bytes: {}, entropy: {}, chi_square: {}, mean_s: {}, monte_carlo_pi_s: {}, serial: {}", _file_bytes_s, entropy_s, chi_square_s, mean_s, monte_carlo_pi_s, serial_correlation_s);
     let value = Value {
         entropy,
         chi_square,

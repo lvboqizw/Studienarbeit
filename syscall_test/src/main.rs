@@ -59,7 +59,7 @@ fn main()  {
             flag = String::from_utf8(is_running.clone().stdout).unwrap();
         }
         tracer::stop_trace();  
-        monitor::analyse();
+        monitor::analyse(opt.threshold);
     } else if opt.app != None {
         println!("test application {}", opt.app.unwrap());
     } else {
