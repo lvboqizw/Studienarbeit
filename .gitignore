@@ -1,5 +1,6 @@
-syscall_fuzz/target
-syscall_fuzz/generator/client/target
-syscall_fuzz/generator/server/target
-syscall_fuzz/generator/file_sys/target
-syscall_fuzz/source_files/ent
+syscall_test/target
+syscall_test/generator/client/target
+syscall_test/generator/server/target
+syscall_test/generator/file_sys/target
+syscall_test/generator/threshold/target
+syscall_test/source_files/ent
