@@ -6,7 +6,7 @@ tracepoint:syscalls:sys_enter_read /comm=="threshold"/
 } 
 tracepoint:syscalls:sys_exit_read /comm=="threshold"/
 {
-    printf("read %s", str(@read_buf[tid], @read_count[tid]));
+    printf("read %d %s", args->ret, str(@read_buf[tid], @read_count[tid]));
     clear(@read_buf);
     clear(@read_count);
 }
@@ -45,7 +45,7 @@ tracepoint:syscalls:sys_enter_preadv /comm=="threshold"/
 }
 tracepoint:syscalls:sys_exit_preadv /comm=="threshold"/
 {
-    printf("preadv %s", str(@preadv_buf[tid], @preadv_count[tid]));
+    printf("preadv %d %s", args->ret, str(@preadv_buf[tid], @preadv_count[tid]));
     clear(@preadv_buf);
     clear(@preadv_count);
 } 
@@ -58,7 +58,7 @@ tracepoint:syscalls:sys_enter_write /comm=="threshold"/
 }
 tracepoint:syscalls:sys_exit_write /comm=="threshold"/
 {
-    printf("write %s", str(@write_buf[tid], @write_count[tid]));
+    printf("write %d %s", args->ret, str(@write_buf[tid], @write_count[tid]));
     clear(@write_buf);
     clear(@write_count);
 }
@@ -97,7 +97,7 @@ tracepoint:syscalls:sys_enter_writev /comm=="threshold"/
 }
 tracepoint:syscalls:sys_exit_writev /comm=="threshold"/ 
 {
-    printf("writev %s", str(@writev_buf[tid], @writev_count[tid]));
+    printf("writev %d %s", args->ret, str(@writev_buf[tid], @writev_count[tid]));
     clear(@writev_buf);
     clear(@writev_count);
 }
@@ -162,7 +162,7 @@ tracepoint:syscalls:sys_enter_readlink /comm=="threshold"/
 }
 tracepoint:syscalls:sys_exit_readlink /comm=="threshold"/
 {
-    printf("readlink %s", str(@readlink_buf[tid], @readlink_count[tid]));
+    printf("readlink %d %s", args->ret, str(@readlink_buf[tid], @readlink_count[tid]));
     clear(@readlink_buf);
     clear(@readlink_count);
 }
