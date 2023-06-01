@@ -15,8 +15,9 @@ struct Value {
 #[derive(Deserialize, Serialize, Debug)]
 struct Sys {
     syscall: String,
-    buf: String,
+    fd: String,
     ret: String,
+    buf: String,
 }
 
 pub fn analyse(threshold: bool) {
@@ -34,20 +35,23 @@ pub fn analyse(threshold: bool) {
         let v: serde_json::Value = serde_json::from_str(l.as_str()).unwrap();
         let data = v["data"].to_string();
         
-        let v: Vec<&str> = data.splitn(3, " ").collect();
+        let v: Vec<&str> = data.splitn(4, " ").collect();
         let sys = Sys {
             syscall: v[0].to_string(),
-            buf: v[2].to_string(),
-            ret: v[1].to_string()
+            fd: v[1].to_string(),
+            ret: v[2].to_string(),
+            buf: v[3].to_string()
+            
         };
-        let encrypted = buf_analyse(&sys, threshold);
-        if threshold {
-            println!("syscall: {}, read length: {}, message: {}", sys.syscall, sys.ret, sys.buf);
-        } else {
-            if !encrypted {
-                println!("The system call: {} is not encrypted, with message: {}.", sys.syscall, sys.buf);
-            }
-        }
+        println!("{:?}", sys);
+        // let encrypted = buf_analyse(&sys, threshold);
+        // if threshold {
+        //     println!("syscall: {}, read length: {}, message: {}", sys.syscall, sys.ret, sys.buf);
+        // } else {
+        //     if !encrypted {
+        //         println!("The system call: {} is not encrypted, with message: {}.", sys.syscall, sys.buf);
+        //     }
+        // }
     }
     clean_files();
 }

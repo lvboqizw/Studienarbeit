@@ -3,12 +3,14 @@ tracepoint:syscalls:sys_enter_read /comm=="file_sys"/
 { 
     @read_buf[tid] = args->buf;
     @read_count[tid] = args->count;
+    @read_fd[tid] = args->fd;
 } 
 tracepoint:syscalls:sys_exit_read /comm=="file_sys"/
 {
-    printf("read %s", str(@read_buf[tid], @read_count[tid]));
+    printf("read %d %d %s", @read_fd[tid], args->ret, str(@read_buf[tid], @read_count[tid]));
     clear(@read_buf);
     clear(@read_count);
+    clear(@read_fd);
 }
     
 //-------------pread64------------------
@@ -16,12 +18,14 @@ tracepoint:syscalls:sys_enter_pread64 /comm=="file_sys"/
 {
     @pread64_buf[tid] = args->buf;
     @pread64_count[tid] = args->count;
+    @pread64_fd[tid] = args->fd;
 }
 tracepoint:syscalls:sys_exit_pread64 /comm=="file_sys"/ 
 {
-    printf("pread64 %s", str(@pread64_buf[tid], @pread64_count[tid]));
+    printf("pread64 %d %d %s", @pread64_fd[tid], args->ret, str(@pread64_buf[tid], @pread64_count[tid]));
     clear(@pread64_buf);
     clear(@pread64_count);
+    clear(@pread64_fd);
 }
 
 //--------------readv-------------------
@@ -29,12 +33,14 @@ tracepoint:syscalls:sys_enter_readv /comm=="file_sys"/
 { 
     @readv_buf[tid] = (args->vec)->iov_base;
     @readv_count[tid] = (args->vec)->iov_len;
+    @readv_fd[tid] = args->fd;
 }
 tracepoint:syscalls:sys_exit_readv /comm=="file_sys"/
 {
-    printf("readv %s", str(@readv_buf[tid], @readv_count[tid]));
+    printf("readv %d %d %s", @readv_fd[tid], args->ret,  str(@readv_buf[tid], @readv_count[tid]));
     clear(@readv_buf);
     clear(@readv_count);
+    clear(@readv_fd);
 }
 
 //-------------preadv-------------------
@@ -42,12 +48,14 @@ tracepoint:syscalls:sys_enter_preadv /comm=="file_sys"/
 {
     @preadv_buf[tid] = (args->vec)->iov_base;
     @preadv_count[tid] = (args->vec)->iov_len;
+    @preadv_fd[tid] = args->fd;
 }
 tracepoint:syscalls:sys_exit_preadv /comm=="file_sys"/
 {
-    printf("preadv %s", str(@preadv_buf[tid], @preadv_count[tid]));
+    printf("preadv %d %d %s", @preadv_fd[tid], args->ret, str(@preadv_buf[tid], @preadv_count[tid]));
     clear(@preadv_buf);
     clear(@preadv_count);
+    clear(@preadv_fd);
 } 
 
 //--------------write-------------------
@@ -55,12 +63,14 @@ tracepoint:syscalls:sys_enter_write /comm=="file_sys"/
 {
     @write_buf[tid] = args->buf;
     @write_count[tid] = args->count;
+    @write_fd[tid] = args->fd;
 }
 tracepoint:syscalls:sys_exit_write /comm=="file_sys"/
 {
-    printf("write %s", str(@write_buf[tid], @write_count[tid]));
+    printf("write %d %d %s", @write_fd[tid], args->ret, str(@write_buf[tid], @write_count[tid]));
     clear(@write_buf);
     clear(@write_count);
+    clear(@write_fd);
 }
 
 //---------------pwrite64-----------------
@@ -68,12 +78,14 @@ tracepoint:syscalls:sys_enter_pwrite64 /comm=="file_sys"/
 { 
     @pwrite64_buf[tid] = args->buf;
     @pwrite64_count[tid] = args->count;
+    @pwrite64_fd[tid] = args->fd;
 }
 tracepoint:syscalls:sys_exit_pwrite64 /comm=="file_sys"/
 {
-    printf("pwrite %s", str(@pwrite64_buf[tid], @pwrite64_count[tid]));
+    printf("pwrite %d %d %s", @pwrite64_fd[tid], args->ret, str(@pwrite64_buf[tid], @pwrite64_count[tid]));
     clear(@pwrite64_buf);
     clear(@pwrite64_count);
+    clear(@pwrite64_fd);
 }
 
 //---------------pwritev-----------------
@@ -81,12 +93,14 @@ tracepoint:syscalls:sys_enter_pwritev /comm=="file_sys"/
 { 
     @pwritev_buf[tid] = (args->vec)->iov_base;
     @pwritev_count[tid] = (args->vec)->iov_len;
+    @pwritev_fd[tid] = args->fd;
 }
 tracepoint:syscalls:sys_exit_pwritev /comm=="file_sys"/ 
 {
-    printf("pwritev %s", str(@pwritev_buf[tid], @pwritev_count[tid]));
+    printf("pwritev %d %d %s", @pwritev_fd[tid], args->ret, str(@pwritev_buf[tid], @pwritev_count[tid]));
     clear(@pwritev_buf);
     clear(@pwritev_count);
+    clear(@pwritev_fd);
 }
 
 //----------------writev-----------------
@@ -94,12 +108,14 @@ tracepoint:syscalls:sys_enter_writev /comm=="file_sys"/
 {
     @writev_buf[tid] = (args->vec)->iov_base;
     @writev_count[tid] = (args->vec)->iov_len;
+    @writev_fd[tid] = args->fd;
 }
 tracepoint:syscalls:sys_exit_writev /comm=="file_sys"/ 
 {
-    printf("writev %s", str(@writev_buf[tid], @writev_count[tid]));
+    printf("writev %d %d %s", @writev_fd[tid], args->ret, str(@writev_buf[tid], @writev_count[tid]));
     clear(@writev_buf);
     clear(@writev_count);
+    clear(@writev_fd);
 }
 
 //----------------pwritev2--------------
@@ -107,12 +123,14 @@ tracepoint:syscalls:sys_enter_pwritev2 /comm=="file_sys"/
 {
     @pwritev2_buf[tid] = (args->vec)->iov_base;
     @pwritev2_count[tid] = (args->vec)->iov_len;
+    @pwritev2_fd[tid] = args->fd;
 }
 tracepoint:syscalls:sys_exit_pwritev2 /comm=="file_sys"/ 
 {
-    printf("pwritev2 %s", str(@pwritev2_buf[tid], @pwritev2_count[tid]));
+    printf("pwritev2 %d %d %s", @pwritev2_fd[tid], args->ret, str(@pwritev2_buf[tid], @pwritev2_count[tid]));
     clear(@pwritev2_buf);
     clear(@pwritev2_count);
+    clear(@pwritev2_fd);
 }
 
 
@@ -121,12 +139,14 @@ tracepoint:syscalls:sys_enter_recvfrom /comm=="server"/
 {
     @recvfrom_buf[tid] = args->ubuf;
     @recvfrom_count[tid] = args->size;
+    @recvfrom_fd[tid] = args->fd;
 }
 tracepoint:syscalls:sys_exit_recvfrom /comm=="server"/
 {
-    printf("recvfrom %s", str(@recvfrom_buf[tid], @recvfrom_count[tid]));
+    printf("recvfrom %d %d %s", @recvfrom_fd[tid], args->ret, str(@recvfrom_buf[tid], @recvfrom_count[tid]));
     clear(@recvfrom_buf);
     clear(@recvfrom_count);
+    clear(@recvfrom_fd);
 }
 
 //----------------recvmsg--------------
@@ -134,64 +154,68 @@ tracepoint:syscalls:sys_enter_recvmsg /comm=="server"/
 {
     @recvmsg_buf[tid] = (args->msg)->msg_iov;
     @recvmsg_count[tid] = (args->msg)->msg_iovlen;
+    @recvmsg_fd[tid] = args->fd;
 }
 tracepoint:syscalls:sys_exit_recvmsg /comm=="server"/
 {
-    printf("recvmsg %s", str(@recvmsg_buf[tid], @recvmsg_count[tid]));
+    printf("recvmsg %d %d %s", @recvmsg_fd[tid], args->ret, str(@recvmsg_buf[tid], @recvmsg_count[tid]));
     clear(@recvmsg_buf);
     clear(@recvmsg_count);
+    clear(@recvmsg_fd);
 }
 
 //----------------mq_timedreceive-----------
-tracepoint:syscalls:sys_enter_mq_timedreceive /comm=="server"/
-{
-    @mq_timedreceive_buf[tid] = args->u_msg_ptr;
-    @mq_timedreceive_count[tid] = args->msg_len;
-}
-tracepoint:syscalls:sys_exit_mq_timedreceive /comm=="server"/
-{
-    printf("mq_timedreceive %s", str(@mq_timedreceive_buf[tid], @mq_timedreceive_count[tid]));
-    clear(@mq_timedreceive_buf);
-    clear(@mq_timedreceive_count);
-}
+//tracepoint:syscalls:sys_enter_mq_timedreceive /comm=="server"/
+//{
+//    @mq_timedreceive_buf[tid] = args->u_msg_ptr;
+//    @mq_timedreceive_count[tid] = args->msg_len;
+//}
+//tracepoint:syscalls:sys_exit_mq_timedreceive /comm=="server"/
+//{
+//    printf("mq_timedreceive %s", str(@mq_timedreceive_buf[tid], @mq_timedreceive_count[tid]));
+//    clear(@mq_timedreceive_buf);
+//    clear(@mq_timedreceive_count);
+//}
 
 //-----------------readlink------------------
-tracepoint:syscalls:sys_enter_readlink /comm=="server"/
-{
-    @readlink_buf[tid] = args->buf;
-    @readlink_count[tid] = args->bufsiz;
-}
-tracepoint:syscalls:sys_exit_readlink /comm=="server"/
-{
-    printf("readlink %s", str(@readlink_buf[tid], @readlink_count[tid]));
-    clear(@readlink_buf);
-    clear(@readlink_count);
-}
+//tracepoint:syscalls:sys_enter_readlink /comm=="server"/
+//{
+//    @readlink_buf[tid] = args->buf;
+//    @readlink_count[tid] = args->bufsiz;
+//}
+//tracepoint:syscalls:sys_exit_readlink /comm=="server"/
+//{
+//    printf("readlink %d %s", args->ret, str(@readlink_buf[tid], @readlink_count[tid]));
+//    clear(@readlink_buf);
+//   clear(@readlink_count);
+//}
 
 //----------------readlinkat-----------------
-tracepoint:syscalls:sys_enter_readlinkat /comm=="server"/
-{
-    @readlinkat_buf[tid] = args->buf;
-    @readlinkat_count[tid] = args->bufsiz;
-}
-tracepoint:syscalls:sys_exit_readlinkat /comm=="server"/
-{
-    printf("readlinkat %s", str(@readlinkat_buf[tid], @readlinkat_count[tid]));
-    clear(@readlinkat_buf);
-    clear(@readlinkat_count);
-}
+//tracepoint:syscalls:sys_enter_readlinkat /comm=="server"/
+//{
+//    @readlinkat_buf[tid] = args->buf;
+//    @readlinkat_count[tid] = args->bufsiz;
+//}
+//tracepoint:syscalls:sys_exit_readlinkat /comm=="server"/
+//{
+//    printf("readlinkat %s", str(@readlinkat_buf[tid], @readlinkat_count[tid]));
+//    clear(@readlinkat_buf);
+//    clear(@readlinkat_count);
+//}
 
 //---------------sendto----------------------
 tracepoint:syscalls:sys_enter_sendto /comm=="server"/
 {
     @sendto_buf[tid] = args->buff;
     @sendto_count[tid] = args->len;
+    @sendto_fd[tid] = args->fd;
 }
 tracepoint:syscalls:sys_exit_sendto /comm=="server"/
 {
-    printf("sendto %s", str(@sendto_buf[tid], @sendto_count[tid]));
+    printf("sendto %d %d %s", @sendto_fd[tid], args->ret, str(@sendto_buf[tid], @sendto_count[tid]));
     clear(@sendto_buf);
     clear(@sendto_count);
+    clear(@sendto_fd);
 }
 
 //-------------sendmsg----------------------
@@ -199,10 +223,12 @@ tracepoint:syscalls:sys_enter_sendmsg /comm=="server"/
 {
     @sendmsg_buf[tid] = ((args->msg)->msg_iov)->iov_base;
     @sendmsg_count[tid] = (args->msg)->msg_iovlen;
+    @sendmsg_fd[tid] = args->fd;
 }
 tracepoint:syscalls:sys_exit_sendmsg /comm=="server"/
 {
-    printf("sendmsg %s", str(@sendmsg_buf[tid], @sendmsg_count[tid]));
+    printf("sendmsg %d %d %s", @sendmsg_fd[tid], args->ret, str(@sendmsg_buf[tid], @sendmsg_count[tid]));
     clear(@sendmsg_buf);
     clear(@sendmsg_count);
+    clear(@sendmsg_fd);
 }
