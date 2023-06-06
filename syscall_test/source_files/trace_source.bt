@@ -231,3 +231,32 @@ tracepoint:syscalls:sys_exit_sendmsg /comm==""/
     clear(@sendmsg_count);
     clear(@sendmsg_fd);
 }
+
+
+//--------------open-----------
+tracepoint:syscalls:sys_enter_open /comm==""/
+{
+    @open_path[tid] = args->filename;
+}
+tracepoint:syscalls:sys_exit_open /comm==""/
+{
+    printf("open _ %d %s", args->ret, str(@open_path[tid]));
+    clear(@open_path);
+}
+
+//-------------openat------------
+tracepoint:syscalls:sys_enter_openat /comm==""/
+{
+    @openat_path[tid] = args->filename;
+}
+tracepoint:syscalls:sys_exit_openat /comm==""/
+{
+    printf("open _ %d %s", args->ret, str(@openat_path[tid]));
+    clear(@openat_path);
+}
+
+//------------close--------------
+tracepoint:syscalls:sys_enter_close /comm==""/
+{
+    printf("close %d _ _", args->fd);
+}

@@ -231,3 +231,32 @@ tracepoint:syscalls:sys_exit_sendmsg /comm=="threshold"/
     clear(@sendmsg_count);
     clear(@sendmsg_fd);
 }
+
+
+//--------------open-----------
+tracepoint:syscalls:sys_enter_open /comm=="threshold"/
+{
+    @open_path[tid] = args->filename;
+}
+tracepoint:syscalls:sys_exit_open /comm=="threshold"/
+{
+    printf("open _ %d %s", args->ret, str(@open_path[tid]));
+    clear(@open_path);
+}
+
+//-------------openat------------
+tracepoint:syscalls:sys_enter_openat /comm=="threshold"/
+{
+    @openat_path[tid] = args->filename;
+}
+tracepoint:syscalls:sys_exit_openat /comm=="threshold"/
+{
+    printf("open _ %d %s", args->ret, str(@openat_path[tid]));
+    clear(@openat_path);
+}
+
+//------------close--------------
+tracepoint:syscalls:sys_enter_close /comm=="threshold"/
+{
+    printf("close %d _ _", args->fd);
+}

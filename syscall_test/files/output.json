@@ -1,87 +1,131 @@
-{"type": "attached_probes", "data": {"probes": 26}}
+{"type": "attached_probes", "data": {"probes": 31}}
+{"type": "printf", "data": "close 4 _ _"}
+{"type": "printf", "data": "open _ 4 /proc/7/mem"}
 {"type": "printf", "data": "write 4 1 \u0001"}
+{"type": "printf", "data": "close 4 _ _"}
+{"type": "printf", "data": "open _ 4 /proc/7/mem"}
 {"type": "printf", "data": "write 4 1 \u0001"}
+{"type": "printf", "data": "close 4 _ _"}
+{"type": "printf", "data": "open _ 4 /proc/7/mem"}
 {"type": "printf", "data": "write 4 1 \u0001"}
+{"type": "printf", "data": "close 4 _ _"}
+{"type": "printf", "data": "open _ 4 /proc/7/mem"}
 {"type": "printf", "data": "write 4 1 \u0001"}
+{"type": "printf", "data": "close 4 _ _"}
+{"type": "printf", "data": "open _ 4 /proc/7/mem"}
 {"type": "printf", "data": "write 4 1 \u0001"}
+{"type": "printf", "data": "close 4 _ _"}
+{"type": "printf", "data": "open _ 4 /proc/7/mem"}
 {"type": "printf", "data": "write 4 1 \u0001"}
+{"type": "printf", "data": "close 4 _ _"}
+{"type": "printf", "data": "open _ 4 /proc/7/mem"}
 {"type": "printf", "data": "write 4 1 \u0001"}
+{"type": "printf", "data": "close 4 _ _"}
+{"type": "printf", "data": "open _ 4 /proc/7/mem"}
 {"type": "printf", "data": "write 4 1 \u0001"}
+{"type": "printf", "data": "close 4 _ _"}
+{"type": "printf", "data": "open _ 4 /etc/sgx-musl.conf"}
 {"type": "printf", "data": "read 4 112 Q 4\ne -1 0 0\ns -1 0 0\ns -1 0 0\ne -1 1 0\ns -1 1 0\ns -1 1 0\ne -1 2 0\ns -1 2 0\ns -1 2 0\ne -1 3 0\ns -1 3 0\ns -1 3 0\n"}
 {"type": "printf", "data": "read 4 0 Q 4\ne -1 0 0\ns -1 0 0\ns -1 0 0\ne -1 1 0\ns -1 1 0\ns -1 1 0\ne -1 2 0\ns -1 2 0\ns -1 2 0\ne -1 3 0\ns -1 3 0\ns -1 3 0\n"}
+{"type": "printf", "data": "close 4 _ _"}
+{"type": "printf", "data": "open _ 4 /etc/sgx-musl.conf"}
 {"type": "printf", "data": "read 4 112 Q 4\ne -1 0 0\ns -1 0 0\ns -1 0 0\ne -1 1 0\ns -1 1 0\ns -1 1 0\ne -1 2 0\ns -1 2 0\ns -1 2 0\ne -1 3 0\ns -1 3 0\ns -1 3 0\n"}
 {"type": "printf", "data": "read 4 0 Q 4\ne -1 0 0\ns -1 0 0\ns -1 0 0\ne -1 1 0\ns -1 1 0\ns -1 1 0\ne -1 2 0\ns -1 2 0\ns -1 2 0\ne -1 3 0\ns -1 3 0\ns -1 3 0\n"}
+{"type": "printf", "data": "close 4 _ _"}
 {"type": "printf", "data": "writev 2 179 [SCONE|WARN] src/enclave/dispatch.c:197:print_version"}
 {"type": "printf", "data": "writev 2 0 "}
-{"type": "printf", "data": "preadv 8 109 {–09\u0006îÊ¿½æ4‹õˆHæIp¬ô\u0016J’f\u0002î6ö·#ÌA\u001f}C\u0012¡\u001aaØ™†gpî\u0003±†\rsæÿ’ïèğË\u0004ÅmqÈ-P\u0019A­\u000chÙî3ís•yŠ/,C\u0016È>\u0007KÂD™Tf‚—›z_’¬Á"}
-{"type": "printf", "data": "preadv 9 109 TU Dresden (for German: Technische UniversitÃ¤t Dresden, abbreviated as TUD and often wrongly[3] translated a"}
-{"type": "printf", "data": "preadv 8 89 Â[Ê0)zŒÌ\u0018¨uB¦ğÔ\u0002?,òj&\u0015½¦ÆàóXrâÌ\u001fÆóä £¿½hÒÊµ@;oCD3.™í\u0006"}
-{"type": "printf", "data": "preadv 9 89 s \"Dresden University of Technology\") is a public research university, the largest instit"}
-{"type": "printf", "data": "preadv 8 81 3##ÅgP‰y|\t+$Ãä\u001fOÉ#1ôß¤¼É}›ózHwÔä,\u0013Áâ\u0011.ã#è½^Ã,—ÀmĞÈ;¿\\]\u0016ôšJHMĞÂã"}
-{"type": "printf", "data": "preadv 9 81 ute of higher education in the city of Dresden, the largest university in Saxony "}
-{"type": "printf", "data": "preadv 8 141 ½¬¬‡r‡Á·7\"\u0007¿'¬ÇBT¦\u0018\u0017eˆ›S\u0008lı#¡*tí»\u000c6\u001a\u001dlvíÎÛüz?ĞŠ\u0018Ç<lŠü\u000f=ón®¨ÂÚÓ\t\u000c$ˆ?/ùÄàÂÎ\u0015ù\u000c²oÔ<M˜\u001aƒ\u001bqe\u0004µ\u0003`‡ç'O’ıN£\u0008bÔ\u0018\u001e’”{†ê\u0017ª–\u0008º«\u001b7½\u0002\u0010|j\rÇggtz¦\u0003Ú8áNü\n\r±ì—"}
-{"type": "printf", "data": "preadv 9 141 and one of the 10 largest universities in Germany with 32,389 students as of 2018.[4]\nThe name Technische UniversitÃ¤t Dresden has only been "}
-{"type": "printf", "data": "preadv 8 4 üÿè\u0017"}
-{"type": "printf", "data": "preadv 9 4 used"}
-{"type": "printf", "data": "preadv 8 148 ¡ìïi{rÕK]›Lf¢„Z>+NáÀS\u0014ÃÂî$/\u000cı>\u0019†ÿÿ§0ÜM\u0014§¸t/êXÙe\t™¤e¦ÍÓ’ş«»\u0013Yì¨ú\u0002,BKÅM\tç6YşìÅé7‚”åNÊù\r :¤D\u0006–Ëµû‚æ(ŠÁÆj–Í\u001f+ÅG\u0005~ÄŞª|{ \u0003E9â¨@Sÿ$Rz\u0017‘zÁ:Áî\u00041²‡â\u001e_×\u0001÷ \u0006\u001em"}
-{"type": "printf", "data": "preadv 9 148  since 1961; the history of the university, however, goes back nearly 200 years to 1828. This makes it one of the oldest colleges of technology in G"}
-{"type": "printf", "data": "preadv 8 192 ¯šŠŸ0%Y\"sÒäu\u0019b7VEX1¦U\u0007—ãtSÈ\u0002dc¾i\u0015ºQÀ\u00177X\u000c©'îÏ\\rá:@.gÒÄ€·diòİ</FÀ)p²'Ş`o‹Ùº\u00021 ü\u0002Ôƒª\t/ÆöÓ\"\u001a\u0010Ÿ7×#\u00064‹—'>¥¯‡Ø\u0012Šuô“5&v)h\u0002²×\\\u0007\u0014\u0018tÛ\u000bŞ#£…½İÊ;Ñ¥Şh9vp€]d—¨¥İâ­n7^|X¦;Äw”ºA3>1gúWI„g0’µ\u0006.\u00053ğ_ÊÏÓÊÿ$Ån"}
-{"type": "printf", "data": "preadv 9 192 ermany, and one of the country's oldest universities, which in German today refers to institutes of higher education that cover the entire curriculum. The university is a member of TU9, a cons"}
-{"type": "printf", "data": "preadv 8 52 ^G<Ğ\u001e”™£Ï\u000cÓé±¾$Â\u000cß­ê¯º1q.\u0010şup\"'I=Y?µ§\u0004\u001bÊşÎ5ª\u0007¶Åô\u0007õ"}
-{"type": "printf", "data": "preadv 9 52 ortium of the nine leading German Institutes of Tech"}
-{"type": "printf", "data": "preadv 8 9 ›¿fæXã½ş"}
-{"type": "printf", "data": "preadv 9 9 nology. T"}
-{"type": "printf", "data": "preadv 8 46 ±\u001e¡V4‡!NçÎEIÿI…Ë‰f\u001b¼®ûDÌvş#ê¹gµ\u0007-Oàßá®\u0015,„»\u0018"}
-{"type": "printf", "data": "preadv 9 46 he university is one of eleven German universi"}
-{"type": "printf", "data": "preadv 8 181 Š00-r¬Î\u0017Ueã¬Ò\u001fĞpQŞq\u001e \u0019¼Ğ*óKÙë§µç6=­R¿GF¾ñÈx\u0016ï­dÕXl3¹`¯§Ì×–_ÍéB‘ærPor¨òôcˆ_JŞ@£\u000eûbQVtí\u0017™®6\u001a\"\u0004À\u000e¢ú›\u0006ãU`ÿ.Yœ\u00027\u000c<¬ŞL™Ç³½F§ú»gé,aßš\r\u0019jw\ré†ÀŞÃú‡¢ÜdÎµ©¨\u0008µ\"˜ÖKiÎ7\nÅ\u0006ıO1^—\u001bfCCx\n6!§¢ü@àÏÚp"}
-{"type": "printf", "data": "preadv 9 181 ties which succeeded in the Excellence Initiative in 2012, thus getting the title of a \"University of Excellence\". The TU Dresden succeeded in all three rounds of the German Univers"}
-{"type": "printf", "data": "preadv 8 3 ¹®l"}
-{"type": "printf", "data": "preadv 9 3 iti"}
-{"type": "printf", "data": "preadv 8 69 Ù[T(ÀÏkD3\u0017¦qA@Ûb«Nó™\u0007{|ş\u0016\u0003\u000697\u0019\u0016\"ãÓ\u0019®&;¢\u001dó½\\ÅŒâÍp&;ñüZJJó\u000cngß\u001eï¸øc°&B\u0012"}
-{"type": "printf", "data": "preadv 9 69 es Excellence Initiative (Future Concept, Graduate Schools, Clusters "}
-{"type": "printf", "data": "preadv 8 110 •\u0005×î´ ÜL\u0019ß‹æŸ\u0008\u000eKíÅ&šæÊÊçÉÛ³i5n¬²ıqmòÅ>A(ğ–‰Ì\u000bƒ\n \u0001\u0015¢”ğê“ĞzLŒ>±¹ù¢\u0015Å¼ŸÂ¹ÿ\u0016~48øøR\u0002À"}
-{"type": "printf", "data": "preadv 9 110 of Excellence).\n\nIn 1828, with emerging industrialization, the Saxon Technical School was founded to educate s"}
-{"type": "printf", "data": "preadv 8 14 \u0011\u0002î‡ yA\u001bK\u0017\u0014Ş,Q"}
-{"type": "printf", "data": "preadv 9 14 killed workers"}
-{"type": "printf", "data": "preadv 8 3 cg·"}
-{"type": "printf", "data": "preadv 9 3  in"}
-{"type": "printf", "data": "preadv 8 60 Lø \u0018qà^Ó–Í«4@\u000e8ÅY\u0003•ù1÷P.\u0008ÏlÍe8é\u0006ÈKÀl¢pGY—rÓKò* Îö%kˆ&îáï"}
-{"type": "printf", "data": "preadv 9 60  technological subjects such as mechanics, mechanical engine"}
-{"type": "printf", "data": "preadv 8 192 `B„0eå‹$íFïŸJ\u000e!&ºWÌ=#lVFyCI\u0006xºÍ¡“ñ'=…Ò®\tXˆ–$\u001dÎïXq>@<Nt\u0004]M{9ÔÕÿøÂÏ«A-¢qmlkn+>4ƒ§ìÉfz7¢Ì-¡¼ä^\u0015\u0018I—\u000bT$Ö}\u001eu\u0010tö\u001d¨‹­Ös»eC©`ı\u0002,"}
-{"type": "printf", "data": "preadv 9 192 ering and ship construction. In 1871, the year the German Empire was founded, the institute was renamed the Royal Saxon Polytechnic Institute (KÃ¶niglich-SÃ¤chsisches Polytechnikum). At that t"}
-{"type": "printf", "data": "preadv 8 76 \"Ì,´w\r„ñ\u000f ñ\u0004sí\u0017\u000fá”š\n¾+t_\u000ePK)„ªw/òÀòíek|×à2ËÂ¦Î(¦§‘)!¸4\u001c÷Y\u0013%bgqş>Qu"}
-{"type": "printf", "data": "preadv 9 76 ime, subjects not connected with technology, such as history and languages, "}
-{"type": "printf", "data": "preadv 8 53 7„‚¢4D\tCú\u001fmlJ°Ï¼¡.“ÉH¶Ÿ\u001bÈXü]Û¨PİÄİ£h¨\rÓîÊ–6Áq]K\u001e"}
-{"type": "printf", "data": "preadv 9 53 were introduced. By the end of the 19th century the i"}
-{"type": "printf", "data": "preadv 8 189 ‹<×W\t$¡·—{æÇ¤ª\u0015}A\u00175¡\u0005m‹ÆåõÜgê›|Z«\u0010?SîHºE\u0002po´3\u001dí\u001b¶\u0017åX£\ršn¤å?z»*Ä³QãÔ¨/\\es_¢u\u0012©\u000eÄ@]2CÈ”¦YĞ…Zƒ*—£\\\u0018\u0004ŒÖÉ5\t~é¾¿ÇLŸpzA\u0017ÂnÓ tÈ‡Z`\u0014\u001d!\u0014·Dc¬^×\u0004ÔL`²#`‡w}#2²²¿O\u0015¹\u0010÷x¶ÏÔ¢’ÎKA\u0015Õrøú,}N5\u0014\u00057§êöb¹\u0001¢_"}
-{"type": "printf", "data": "preadv 9 189 nstitute had developed into a university covering all disciplines. In 1961 it was given its present name, Technische UniversitÃ¤t Dresden (TU Dresden).\nUpon German reunification in 1990, th"}
-{"type": "printf", "data": "preadv 8 92 O\u000c/Fûº@Ä‡a-'\ræË|¥Qov,_\u0017¬fñÕ†±”úk\u0018ÒÇè›o¥Êê&Eà”Øí\u00158@FÉ{Û\tä(_ppô\u0013bYŸ¼bB·Å‡Œ,èCçÔ‰Füm•Õ}\u0019\u0013DØB"}
-{"type": "printf", "data": "preadv 9 92 e university had already integrated the College of Forestry (Forstliche Hochschule), formerl"}
-{"type": "printf", "data": "preadv 8 152 qIK+=@í\u0015ª\u0010¡\rRV+·\u000fJKÔ\u0010Œ¡{$KÜ¹\n½OÀW„ñScFÆ÷ù=\u0004¥Ù\u0010°›dO\u001bíİ<ÃV·ubÎ:ønM9V:,|P\u000e\u001du\u00169>V\u001b4\u0019ı\u0008@Ãª¤=ÔjHÂÙÛÛ æÕHĞCèP›\u0014væ„3\u001b7°äp­Å½€f¯)ÚUã¥ø©Ãåã\u001dZ0\u00188\u0010\u001cËÙp-\u0002¼D ‚€Ì"}
-{"type": "printf", "data": "preadv 9 152 y the Royal Saxony Academy of Forestry, in the nearby small town of Tharandt. This was followed by the integration of the Dresden College of Engineering"}
-{"type": "printf", "data": "preadv 8 77 ĞWwÑü\u0018è\u0012Ğû?–oÇ¢\u0012\u0018†Ë/Xzg*#|\n‰\u0006‰[“Ê1ô¨7ı>>hààp\u0013°ßII>"}
-{"type": "printf", "data": "preadv 9 77  (Ingenieurshochschule Dresden), the Friedrich List College of Transport (Hoc"}
-{"type": "printf", "data": "preadv 8 80 ¥®¹£Ğê¹™\u0014\u000cŒög€½ö—/œé\u000cUÆt\u001d\u0002u!”jí¢èâ`\u001416\u0010ñ')!´…V³ë½9Í!3åX¹Íz0)\u0008 w-¶o¬B¶2á…+ ğî‘@"}
-{"type": "printf", "data": "preadv 9 80 hschule fÃ¼r Verkehrswesen) the faculty of transport science, and the \"Carl-Gust"}
-{"type": "printf", "data": "preadv 8 131 ¦\u001c9Ò§N´45v¸¡ßí©£g\nóÆ\\2\u0018Š"}
-{"type": "printf", "data": "preadv 9 131 av Carus\" Medical Academy (Medizinische Akademie or MedAk for short), the medical faculty. Some faculties were newly founded: the f"}
-{"type": "printf", "data": "preadv 8 1 z"}
-{"type": "printf", "data": "preadv 9 1 a"}
-{"type": "printf", "data": "preadv 8 83 \u0017±ê\u001ezD:sµQ»A÷êŠcÇı;1JŠ­©Ş+‚°ìšÊvÒ%í˜Ğ%è²Ü»\u001f¾\\\u0017Ş»ó¾\u0008‰x¹ÑaMİŸqÃ(>ŒŒŞ¤‹ş:@HIĞW\u0004"}
-{"type": "printf", "data": "preadv 9 83 culties of Information Technology (1991), Law (1991), Education (1993) and Economic"}
-{"type": "printf", "data": "preadv 8 64 £TÕµb0m}pyzI¹\u0014§[ €l…ÁÀéÛRùNÊØELùP»¹÷µ\u000c¡:6Š\u0015â“Á\u000feÄ˜®©%j=l,êZŸWÑñ"}
-{"type": "printf", "data": "preadv 9 64 s (1993).\nIn 2009 TU Dresden, all Dresden institutes of the Frau"}
-{"type": "printf", "data": "preadv 8 3 \u000eß¯"}
-{"type": "printf", "data": "preadv 9 3 nho"}
-{"type": "printf", "data": "preadv 8 193 üºÆ³\u0012lØüüëhgÌ#M¯ö×_¦òŒ9ÃT¸Vnd\u001dúM<uTuÉ«û¥…k\n·Ô~\u001fÿõs¥Î#$åğD­€Ø›·‘\u001bÿõ È\u000bÆYk\u001fÌÃ¼Ø\u001f\u0006^\u00015W:gşñ\u0017ï}—z¾5Ìs\u0011¦ï\u00084\u001d‚\u0004‡8D½td¦XOÒü\u0015/N9zºéP‹Á–ÑEq}\u0006q1ı5Jü‡ÄC·ƒÚ\u0013Û”œÔThq5\u0013\u0010¯8¿É,\u0004ÏÇ G÷Iy¤i\u000f_V»c\u0016 Ò€œ¾h\u00070[=+"}
-{"type": "printf", "data": "preadv 9 193 fer Society, the Gottfried Wilhelm Leibniz Scientific Community and the Max Planck Society and Forschungszentrum Dresden-Rossendorf, soon incorporated into the Helmholtz Association of German R"}
-{"type": "printf", "data": "preadv 8 179 ¾ŒôÑ¸\u0014¾7\u0002şi·\u0006vPz\u001fÀ ûšÅô8\u000e<¶©l\u000bç×œ~×˜\r‹zÿ\u000eM‹¦\u0013h\u0017´Õ~t+‘¢öµ*ÛŒbÜ—ˆQÓ|[9(X™L¤«‰Q\u000beÓr‚\\b{\u001d\u000fW\\…0~z•.\u0013\u000fĞÉ*ÄTˆ´Çb¢~ ù¤zÉY, F»·>&\u0011Y«˜élŠEÀ\u0003Í$Ï¶1:|R¿oÖ¿‚ À}\u000eT:y¥ë Ušü\u0015SRÁ<Aµ\u0013s"}
-{"type": "printf", "data": "preadv 9 179 esearch Centres, published a joint letter of intent with the name DRESDEN-Konzept â€“ Dresden Research and Education Synergies for the Development of Excellence and Novelty, which"}
-{"type": "printf", "data": "preadv 8 135 T6ú\u0015\u0007‘Ñ\u000fçšØ\u0006/®±×q†Šïˆ$;8\u0004˜ÏG¨÷ô¼vêˆ\u001bfˆ™ Ğ\u0013^óæŞ.œ^\u0018œ’•Ó\u0019 «U}¾Uå·¬´PVéz¼¤¡Ór|<\u0007\u0005†¡‹î‘ôÛs°æcàø\u0010† \u000bV¦{ø¯¼«—ìÇ\u0005ü=±\u0010>‚o¿\u000ePˆ\u001b8©û=\u0013í\u001d]øùı\u000c¸lã"}
-{"type": "printf", "data": "preadv 9 135  points out worldwide elite aspirations, which was recognized as the first time that all four big post-gradual elite institutions decla"}
-{"type": "printf", "data": "preadv 8 31 Ú+:Û‡1óÇ~í’uÀ&mA\t'hsÀ£K\u001dJ\u0008/"}
-{"type": "printf", "data": "preadv 9 31 red campus co-operation with a "}
-{"type": "printf", "data": "preadv 8 11 fBo˜úª:+Û$co-operation with a irations, which "}
-{"type": "printf", "data": "preadv 9 11 university.co-operation with a irations, which "}
-{"type": "printf", "data": "preadv 8 0 university.co-oper"}
-{"type": "printf", "data": "preadv 9 0 university.co-oper"}
+{"type": "printf", "data": "open _ 4 /operation/threshold"}
+{"type": "printf", "data": "close 4 _ _"}
+{"type": "printf", "data": "open _ 4 /"}
+{"type": "printf", "data": "open _ 5 /"}
+{"type": "printf", "data": "open _ 6 /proc"}
+{"type": "printf", "data": "open _ 7 /dev"}
+{"type": "printf", "data": "open _ 8 data-original/test_files"}
+{"type": "printf", "data": "open _ 9 data-original/test_files/ger.txt"}
+{"type": "printf", "data": "preadv 9 84 Die TU Dresden (deutsch: Technische UniversitÃ¤t Dresden, abgekÃ¼rzt TUD und oft fÃ¤"}
+{"type": "printf", "data": "preadv 9 37 lschlich[3] mit \"Technische Universit"}
+{"type": "printf", "data": "preadv 9 84 Ã¤t Dresden\" Ã¼bersetzt) ist eine Ã¶ffentliche ForschungsuniversitÃ¤t, die grÃ¶ÃŸte "}
+{"type": "printf", "data": "preadv 9 188 Hochschule der Stadt Dresden, die grÃ¶ÃŸte UniversitÃ¤t Sachsens und eine der 10 grÃ¶ÃŸten UniversitÃ¤ten Deutschlands mit 32.389 Studierenden (Stand 2018)[4].\n\nDer Name Technische Univers"}
+{"type": "printf", "data": "preadv 9 9 itÃ¤t Dre"}
+{"type": "printf", "data": "preadv 9 85 sden wird erst seit 1961 verwendet, die Geschichte der Hochschule reicht jedoch fast "}
+{"type": "printf", "data": "preadv 9 63 200 Jahre bis ins Jahr 1828 zurÃ¼ck. Damit ist sie eine der Ã¤l"}
+{"type": "printf", "data": "preadv 9 138 testen Technischen Hochschulen in Deutschland und eine der Ã¤ltesten UniversitÃ¤ten des Landes, was im heutigen Sprachgebrauch eine Hochsc"}
+{"type": "printf", "data": "preadv 9 3 hul"}
+{"type": "printf", "data": "preadv 9 77 e fÃ¼r alle StudiengÃ¤nge bedeutet. Die UniversitÃ¤t ist Mitglied der TU9, ei"}
+{"type": "printf", "data": "preadv 9 54 nes Zusammenschlusses der neun fÃ¼hrenden deutschen Te"}
+{"type": "printf", "data": "preadv 9 76 chnischen Hochschulen. Die UniversitÃ¤t ist eine von elf deutschen Universit"}
+{"type": "printf", "data": "preadv 9 64 Ã¤ten, die 2012 in der Exzellenzinitiative erfolgreich waren und"}
+{"type": "printf", "data": "preadv 9 131  damit den Titel \"ExzellenzuniversitÃ¤t\" erhalten haben. Die TU Dresden war in allen drei Runden der Exzellenzinitiative der deutsc"}
+{"type": "printf", "data": "preadv 9 124 hen Hochschulen (Zukunftskonzept, Graduiertenschulen, Exzellenzcluster) erfolgreich.\n\nGeschichte\nIm Jahr 1828, mit der aufko"}
+{"type": "printf", "data": "preadv 9 35 mmenden Industrialisierung, wurde d"}
+{"type": "printf", "data": "preadv 9 157 ie SÃ¤chsische Technische Schule gegrÃ¼ndet, um Facharbeiter in technischen FÃ¤chern wie Mechanik, Maschinenbau und Schiffbau auszubilden. Im Jahr 1871, dem "}
+{"type": "printf", "data": "preadv 9 187 Jahr der GrÃ¼ndung des Deutschen Reiches, wurde das Institut in KÃ¶niglich-SÃ¤chsisches Polytechnikum umbenannt. Zu dieser Zeit wurden auch nichttechnische FÃ¤cher wie Geschichte und Spra"}
+{"type": "printf", "data": "preadv 9 91 chen eingefÃ¼hrt. Bis zum Ende des 19. Jahrhunderts entwickelte sich das Institut zu einer "}
+{"type": "printf", "data": "preadv 9 165 UniversitÃ¤t, die alle Disziplinen umfasste. Im Jahr 1961 erhielt sie ihren heutigen Namen, Technische UniversitÃ¤t Dresden (TU Dresden).\n\nBei der deutschen Wiederve"}
+{"type": "printf", "data": "preadv 9 125 reinigung 1990 hatte die UniversitÃ¤t bereits die Forstliche Hochschule, ehemals KÃ¶niglich SÃ¤chsische Akademie fÃ¼r Forstwi"}
+{"type": "printf", "data": "preadv 9 17 rtschaft, in der "}
+{"type": "printf", "data": "preadv 9 146 nahe gelegenen Kleinstadt Tharandt integriert. Es folgten die Eingliederung der Ingenieurshochschule Dresden, der Hochschule fÃ¼r Verkehrswesen \"F"}
+{"type": "printf", "data": "preadv 9 196 riedrich List\", der FakultÃ¤t Verkehrswissenschaften, und der Medizinischen Akademie \"Carl-Gustav Carus\", kurz MedAk, der medizinischen FakultÃ¤t. Einige FakultÃ¤ten wurden neu gegrÃ¼ndet: die Fak"}
+{"type": "printf", "data": "preadv 9 117 ultÃ¤ten fÃ¼r Informatik (1991), Rechtswissenschaften (1991), PÃ¤dagogik (1993) und Wirtschaftswissenschaften (1993). der medizinischen FakultÃ¤t. Ein"}
+{"type": "printf", "data": "preadv 9 0 ultÃ¤ten fÃ¼r Informatik (1991), Rechtswissenschaften (1991), PÃ¤dagogik (1993) und Wirtschaftswissenschaften (1993). der medizinischen FakultÃ¤t. Einige FakultÃ¤ten wurden neu gegrÃ¼ndet"}
+{"type": "printf", "data": "close 9 _ _"}
+{"type": "printf", "data": "open _ 9 data-original/test_files/chi.txt"}
+{"type": "printf", "data": "preadv 9 15 å¾·ç´¯æ–¯é¡¿å·¥"}
+{"type": "printf", "data": "preadv 9 188 ä¸šå¤§å­¦ï¼ˆå¾·è¯­ï¼šTechnische UniversitÃ¤t Dresdenï¼Œç¼©å†™ä¸ºTUDï¼Œç»å¸¸è¢«é”™è¯¯åœ°[3]ç¿»è¯‘ä¸º \"å¾·ç´¯æ–¯é¡¿æŠ€æœ¯å¤§å­¦\"ï¼‰æ˜¯ä¸€æ‰€å…¬ç«‹ç ”ç©¶å‹å¤§å­¦ï¼Œæ˜¯å¾·ç´¯æ–¯é¡¿å¸‚æœ€å¤§ç"}
+{"type": "printf", "data": "preadv 9 121 š„é«˜ç­‰æ•™è‚²æœºæ„ï¼Œæ˜¯è¨å…‹æ£®å·æœ€å¤§çš„å¤§å­¦ï¼Œä¹Ÿæ˜¯å¾·å›½åå¤§å¤§å­¦ä¹‹ä¸€ï¼Œæˆªè‡³2018å¹´æœ‰32389åå­¦ç”Ÿ[4"}
+{"type": "printf", "data": "preadv 9 13 ] ã€‚\n\nå¾·ç´¯"}
+{"type": "printf", "data": "preadv 9 45 æ–¯é¡¿å·¥ä¸šå¤§å­¦è¿™ä¸ªåå­—ä»1961å¹´æ‰å¼"}
+{"type": "printf", "data": "preadv 9 53 €å§‹ä½¿ç”¨ï¼›ä½†è¯¥å¤§å­¦çš„å†å²å¯ä»¥è¿½æº¯åˆ°è¿‘2"}
+{"type": "printf", "data": "preadv 9 166 00å¹´å‰çš„1828å¹´ã€‚è¿™ä½¿å®ƒæˆä¸ºå¾·å›½æœ€å¤è€çš„æŠ€æœ¯å­¦é™¢ä¹‹ä¸€ï¼Œä¹Ÿæ˜¯è¯¥å›½æœ€å¤è€çš„å¤§å­¦ä¹‹ä¸€ï¼Œåœ¨ä»Šå¤©çš„å¾·è¯­ä¸­ï¼Œå®ƒæŒ‡çš„æ˜¯æ¶µç›–æ•´ä¸ªè¯¾ç"}
+{"type": "printf", "data": "preadv 9 134 ¨‹çš„é«˜ç­‰æ•™è‚²æœºæ„ã€‚è¯¥å¤§å­¦æ˜¯TU9çš„æˆå‘˜ï¼ŒTU9æ˜¯å¾·å›½ä¹æ‰€ä¸»è¦æŠ€æœ¯å­¦é™¢çš„è”åˆä½“ã€‚è¯¥æ ¡æ˜¯2012å¹´æˆåŠŸè·å¾— \""}
+{"type": "printf", "data": "preadv 9 131 å“è¶Šè®¡åˆ’ \"çš„11æ‰€å¾·å›½å¤§å­¦ä¹‹ä¸€ï¼Œå› æ­¤è·å¾—äº† \"å“è¶Šå¤§å­¦ \"çš„ç§°å·ã€‚å¾·ç´¯æ–¯é¡¿å¤§å­¦åœ¨å¾·å›½å¤§å­¦å“è¶Šè®¡åˆ’"}
+{"type": "printf", "data": "preadv 9 177 çš„æ‰€æœ‰ä¸‰è½®æ´»åŠ¨ä¸­éƒ½è·å¾—äº†æˆåŠŸï¼ˆæœªæ¥æ¦‚å¿µã€ç ”ç©¶ç”Ÿé™¢ã€å“è¶Šé›†ç¾¤ï¼‰ã€‚\n\nå†å²æ²¿é©\n1828å¹´ï¼Œéšç€å·¥ä¸šåŒ–çš„å…´èµ·ï¼Œè¨å…‹æ£®æŠ€æœ¯å­¦æ ¡æˆç«‹ï¼Œä¸"}
+{"type": "printf", "data": "preadv 9 12 ºæŠ€æœ¯å·¥äº"}
+{"type": "printf", "data": "preadv 9 5 ºæä"}
+{"type": "printf", "data": "preadv 9 123 ¾›æŠ€æœ¯å­¦ç§‘çš„æ•™è‚²ï¼Œå¦‚æœºæ¢°å­¦ã€æœºæ¢°å·¥ç¨‹å’Œèˆ¹èˆ¶å»ºé€ ã€‚1871å¹´ï¼Œåœ¨å¾·æ„å¿—å¸å›½æˆç«‹çš„é‚£ä¸€å¹´ï¼Œè¯¥"}
+{"type": "printf", "data": "preadv 9 77 å­¦é™¢æ›´åä¸ºè¨å…‹æ£®çš‡å®¶ç†å·¥å­¦é™¢ï¼ˆKÃ¶niglich-SÃ¤chsisches Polytech"}
+{"type": "printf", "data": "preadv 9 1 n"}
+{"type": "printf", "data": "preadv 9 49 ikumï¼‰ã€‚å½“æ—¶ï¼Œä¸æŠ€æœ¯æ— å…³çš„ç§‘ç›®ï¼Œå¦‚"}
+{"type": "printf", "data": "preadv 9 134 å†å²å’Œè¯­è¨€ï¼Œä¹Ÿè¢«å¼•å…¥ã€‚åˆ°19ä¸–çºªæœ«ï¼Œè¯¥å­¦é™¢å·²å‘å±•æˆä¸ºä¸€æ‰€æ¶µç›–æ‰€æœ‰å­¦ç§‘çš„å¤§å­¦ã€‚1961å¹´ï¼Œå®ƒè¢«èµ‹äºˆäº"}
+{"type": "printf", "data": "preadv 9 3 †ç"}
+{"type": "printf", "data": "preadv 9 3 °åœ"}
+{"type": "printf", "data": "preadv 9 25 ¨çš„åå­—--å¾·ç´¯æ–¯é¡¿æ"}
+{"type": "printf", "data": "preadv 9 125 Š€æœ¯å¤§å­¦ï¼ˆTU Dresdenï¼‰ã€‚\n\n1990å¹´å¾·å›½ç»Ÿä¸€åï¼Œè¯¥å¤§å­¦å·²å°†ä½äºé™„è¿‘å°é•‡å¡”å…°ç‰¹çš„æ—ä¸šå­¦é™¢ï¼ˆForstlic"}
+{"type": "printf", "data": "preadv 9 66 he Hochschuleï¼‰ï¼ˆå‰èº«ä¸ºè¨å…‹æ£®å·çš‡å®¶æ—ä¸šå­¦é™¢ï¼‰åˆå¹"}
+{"type": "printf", "data": "preadv 9 161 ¶ã€‚éšåï¼Œå¾·ç´¯æ–¯é¡¿å·¥ç¨‹å­¦é™¢ï¼ˆIngenieurshochschule Dresdenï¼‰ã€å¼—é‡Œå¾·é‡Œå¸Œ-åˆ©æ–¯ç‰¹äº¤é€šå­¦é™¢ï¼ˆHochschule fÃ¼r Verkehrswesenï¼‰å’Œå¡å°”-å¤æ–"}
+{"type": "printf", "data": "preadv 9 34 ¯å¡”å¤«-å¡æ´›æ–¯åŒ»å­¦é™¢ï¼ˆMediz"}
+{"type": "printf", "data": "preadv 9 11 inische Aka"}
+{"type": "printf", "data": "preadv 9 170 demieæˆ–ç®€ç§°MedAkï¼‰çš„åŒ»å­¦ç³»ä¹Ÿè¢«æ•´åˆã€‚ä¸€äº›å­¦é™¢æ˜¯æ–°æˆç«‹çš„ï¼šä¿¡æ¯æŠ€æœ¯å­¦é™¢ï¼ˆ1991å¹´ï¼‰ã€æ³•å­¦é™¢ï¼ˆ1991å¹´ï¼‰ã€æ•™è‚²å­¦é™¢ï¼ˆ1993å¹´ï¼‰å’Œç»æ"}
+{"type": "printf", "data": "preadv 9 24 µå­¦é™¢ï¼ˆ1993å¹´ï¼‰ã€‚„åŒ»å­¦ç³»ä¹Ÿè¢«æ•´åˆã€‚ä¸€äº›å­¦é™¢æ˜¯æ–°æˆç«‹çš„ï¼šä¿¡æ¯æŠ€æœ¯å­¦é™¢ï¼ˆ1991å¹´ï¼‰ã€æ³•å­¦é™¢"}
+{"type": "printf", "data": "preadv 9 0 µå­¦é™¢ï¼ˆ1993å¹´ï¼‰ã€‚„åŒ»å­¦ç³»ä¹Ÿè¢«æ•´åˆã€‚ä¸€äº›å­¦é™¢æ˜¯æ–°æˆç«‹çš„ï¼šä¿¡æ¯æŠ€æœ¯å­¦é™¢ï¼ˆ1991å¹´ï¼‰ã€æ³•å­¦é™¢ï¼ˆ1991å¹´ï¼‰ã€æ•™è‚²å­¦é™¢ï¼ˆ1993å¹´ï¼‰å’Œç"}
+{"type": "printf", "data": "close 9 _ _"}
+{"type": "printf", "data": "open _ 9 data-original/test_files/eng.txt"}
+{"type": "printf", "data": "preadv 9 6 TU Dre"}
+{"type": "printf", "data": "preadv 9 70 sden (for German: Technische UniversitÃ¤t Dresden, abbreviated as TUD "}
+{"type": "printf", "data": "preadv 9 136 and often wrongly[3] translated as \"Dresden University of Technology\") is a public research university, the largest institute of higher "}
+{"type": "printf", "data": "preadv 9 196 education in the city of Dresden, the largest university in Saxony and one of the 10 largest universities in Germany with 32,389 students as of 2018.[4]\n\nThe name Technische UniversitÃ¤t Dresden h"}
+{"type": "printf", "data": "preadv 9 198 as only been used since 1961; the history of the university, however, goes back nearly 200 years to 1828. This makes it one of the oldest colleges of technology in Germany, and one of the country's "}
+{"type": "printf", "data": "preadv 9 126 oldest universities, which in German today refers to institutes of higher education that cover the entire curriculum. The univ"}
+{"type": "printf", "data": "preadv 9 192 ersity is a member of TU9, a consortium of the nine leading German Institutes of Technology. The university is one of eleven German universities which succeeded in the Excellence Initiative in"}
+{"type": "printf", "data": "preadv 9 9  2012, th"}
+{"type": "printf", "data": "preadv 9 56 us getting the title of a \"University of Excellence\". Th"}
+{"type": "printf", "data": "preadv 9 56 e TU Dresden succeeded in all three rounds of the German"}
+{"type": "printf", "data": "preadv 9 100  Universities Excellence Initiative (Future Concept, Graduate Schools, Clusters of Excellence).\n\nHis"}
+{"type": "printf", "data": "preadv 9 45 tory\nIn 1828, with emerging industrialization"}
+{"type": "printf", "data": "preadv 9 176 , the Saxon Technical School was founded to educate skilled workers in technological subjects such as mechanics, mechanical engineering and ship construction. In 1871, the year"}
+{"type": "printf", "data": "preadv 9 65  the German Empire was founded, the institute was renamed the Roy"}
+{"type": "printf", "data": "preadv 9 19 al Saxon Polytechni"}
+{"type": "printf", "data": "preadv 9 101 c Institute (KÃ¶niglich-SÃ¤chsisches Polytechnikum). At that time, subjects not connected with techno"}
+{"type": "printf", "data": "preadv 9 21 logy, such as history"}
+{"type": "printf", "data": "preadv 9 130  and languages, were introduced. By the end of the 19th century the institute had developed into a university covering all discipl"}
+{"type": "printf", "data": "preadv 9 181 ines. In 1961 it was given its present name, Technische UniversitÃ¤t Dresden (TU Dresden).\n\nUpon German reunification in 1990, the university had already integrated the College of F"}
+{"type": "printf", "data": "preadv 9 118 orestry (Forstliche Hochschule), formerly the Royal Saxony Academy of Forestry, in the nearby small town of Tharandt. "}
+{"type": "printf", "data": "preadv 9 42 This was followed by the integration of th"}
+{"type": "printf", "data": "preadv 9 184 e Dresden College of Engineering (Ingenieurshochschule Dresden), the Friedrich List College of Transport (Hochschule fÃ¼r Verkehrswesen) the faculty of transport science, and the \"Carl"}
+{"type": "printf", "data": "preadv 9 103 -Gustav Carus\" Medical Academy (Medizinische Akademie or MedAk for short), the medical faculty. Some fa"}
+{"type": "printf", "data": "preadv 9 59 culties were newly founded: the faculties of Information Te"}
+{"type": "printf", "data": "preadv 9 43 chnology (1991), Law (1991), Education (199"}
+{"type": "printf", "data": "preadv 9 24 3) and Economics (1993).91), Education (199f Information TedAk for short"}
+{"type": "printf", "data": "preadv 9 0 3) and Economics (1993).91), Education (199f Information TedAk fo"}
+{"type": "printf", "data": "close 9 _ _"}
+{"type": "printf", "data": "close 8 _ _"}
