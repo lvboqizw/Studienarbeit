@@ -1,4 +1,6 @@
 {"type": "attached_probes", "data": {"probes": 31}}
+{"type": "printf", "data": "open _ -2 /opt/scone/lib/sgx_white_list_cert.bin"}
+{"type": "printf", "data": "open _ 4 /dev/isgx"}
 {"type": "printf", "data": "close 4 _ _"}
 {"type": "printf", "data": "open _ 4 /proc/7/mem"}
 {"type": "printf", "data": "write 4 1 \u0001"}
@@ -40,92 +42,166 @@
 {"type": "printf", "data": "open _ 5 /"}
 {"type": "printf", "data": "open _ 6 /proc"}
 {"type": "printf", "data": "open _ 7 /dev"}
-{"type": "printf", "data": "open _ 8 data-original/test_files"}
-{"type": "printf", "data": "open _ 9 data-original/test_files/ger.txt"}
-{"type": "printf", "data": "preadv 9 84 Die TU Dresden (deutsch: Technische UniversitÃ¤t Dresden, abgekÃ¼rzt TUD und oft fÃ¤"}
-{"type": "printf", "data": "preadv 9 37 lschlich[3] mit \"Technische Universit"}
-{"type": "printf", "data": "preadv 9 84 Ã¤t Dresden\" Ã¼bersetzt) ist eine Ã¶ffentliche ForschungsuniversitÃ¤t, die grÃ¶ÃŸte "}
-{"type": "printf", "data": "preadv 9 188 Hochschule der Stadt Dresden, die grÃ¶ÃŸte UniversitÃ¤t Sachsens und eine der 10 grÃ¶ÃŸten UniversitÃ¤ten Deutschlands mit 32.389 Studierenden (Stand 2018)[4].\n\nDer Name Technische Univers"}
-{"type": "printf", "data": "preadv 9 9 itÃ¤t Dre"}
-{"type": "printf", "data": "preadv 9 85 sden wird erst seit 1961 verwendet, die Geschichte der Hochschule reicht jedoch fast "}
-{"type": "printf", "data": "preadv 9 63 200 Jahre bis ins Jahr 1828 zurÃ¼ck. Damit ist sie eine der Ã¤l"}
-{"type": "printf", "data": "preadv 9 138 testen Technischen Hochschulen in Deutschland und eine der Ã¤ltesten UniversitÃ¤ten des Landes, was im heutigen Sprachgebrauch eine Hochsc"}
-{"type": "printf", "data": "preadv 9 3 hul"}
-{"type": "printf", "data": "preadv 9 77 e fÃ¼r alle StudiengÃ¤nge bedeutet. Die UniversitÃ¤t ist Mitglied der TU9, ei"}
-{"type": "printf", "data": "preadv 9 54 nes Zusammenschlusses der neun fÃ¼hrenden deutschen Te"}
-{"type": "printf", "data": "preadv 9 76 chnischen Hochschulen. Die UniversitÃ¤t ist eine von elf deutschen Universit"}
-{"type": "printf", "data": "preadv 9 64 Ã¤ten, die 2012 in der Exzellenzinitiative erfolgreich waren und"}
-{"type": "printf", "data": "preadv 9 131  damit den Titel \"ExzellenzuniversitÃ¤t\" erhalten haben. Die TU Dresden war in allen drei Runden der Exzellenzinitiative der deutsc"}
-{"type": "printf", "data": "preadv 9 124 hen Hochschulen (Zukunftskonzept, Graduiertenschulen, Exzellenzcluster) erfolgreich.\n\nGeschichte\nIm Jahr 1828, mit der aufko"}
-{"type": "printf", "data": "preadv 9 35 mmenden Industrialisierung, wurde d"}
-{"type": "printf", "data": "preadv 9 157 ie SÃ¤chsische Technische Schule gegrÃ¼ndet, um Facharbeiter in technischen FÃ¤chern wie Mechanik, Maschinenbau und Schiffbau auszubilden. Im Jahr 1871, dem "}
-{"type": "printf", "data": "preadv 9 187 Jahr der GrÃ¼ndung des Deutschen Reiches, wurde das Institut in KÃ¶niglich-SÃ¤chsisches Polytechnikum umbenannt. Zu dieser Zeit wurden auch nichttechnische FÃ¤cher wie Geschichte und Spra"}
-{"type": "printf", "data": "preadv 9 91 chen eingefÃ¼hrt. Bis zum Ende des 19. Jahrhunderts entwickelte sich das Institut zu einer "}
-{"type": "printf", "data": "preadv 9 165 UniversitÃ¤t, die alle Disziplinen umfasste. Im Jahr 1961 erhielt sie ihren heutigen Namen, Technische UniversitÃ¤t Dresden (TU Dresden).\n\nBei der deutschen Wiederve"}
-{"type": "printf", "data": "preadv 9 125 reinigung 1990 hatte die UniversitÃ¤t bereits die Forstliche Hochschule, ehemals KÃ¶niglich SÃ¤chsische Akademie fÃ¼r Forstwi"}
-{"type": "printf", "data": "preadv 9 17 rtschaft, in der "}
-{"type": "printf", "data": "preadv 9 146 nahe gelegenen Kleinstadt Tharandt integriert. Es folgten die Eingliederung der Ingenieurshochschule Dresden, der Hochschule fÃ¼r Verkehrswesen \"F"}
-{"type": "printf", "data": "preadv 9 196 riedrich List\", der FakultÃ¤t Verkehrswissenschaften, und der Medizinischen Akademie \"Carl-Gustav Carus\", kurz MedAk, der medizinischen FakultÃ¤t. Einige FakultÃ¤ten wurden neu gegrÃ¼ndet: die Fak"}
-{"type": "printf", "data": "preadv 9 117 ultÃ¤ten fÃ¼r Informatik (1991), Rechtswissenschaften (1991), PÃ¤dagogik (1993) und Wirtschaftswissenschaften (1993). der medizinischen FakultÃ¤t. Ein"}
-{"type": "printf", "data": "preadv 9 0 ultÃ¤ten fÃ¼r Informatik (1991), Rechtswissenschaften (1991), PÃ¤dagogik (1993) und Wirtschaftswissenschaften (1993). der medizinischen FakultÃ¤t. Einige FakultÃ¤ten wurden neu gegrÃ¼ndet"}
+{"type": "printf", "data": "open _ 8 data/test_files"}
+{"type": "printf", "data": "open _ 9 data/test_files/french"}
+{"type": "printf", "data": "preadv 9 24 ¹ï5\u0019eÏ«Æk4—óê(gÆá–ÏÎ"}
+{"type": "printf", "data": "preadv 9 194 Va\u0010Ì?#¬ÏĞß+\u0010£îi[U³msH`)aò[ÏÓLÄ±Ê«á\u0006\u0012©]>‚Ëk\nJq]mıUË\u0008ø\u0017ğl^e½äµ\u0008ß]±”Š\u0013º¥„ˆ]ô\u0014ËçâˆÌ+Ïv4À\u0006†\u001d99n–d¿ `ã\r‡¯\u0008\tòvîOÅCŠ?v\u0003‘\u0008\u0017àùáÀªÁ[Ğ_1 ¥4•+kDåÒ>t\u0015‰3œRÍgF•Ù»Ê¾‚Y7TL¢©u@Â\u001cî½ãzråö‡Ğ°ô'Î²Ì\\9ˆ/5÷à‘ÆSwy\u0005\u0011ò"}
+{"type": "printf", "data": "preadv 9 195 Ûl­c\"ıò($\u001b•öë@Ÿ>H‡*\t>¢O8jK§Cnù²\u000cåõ‰¤\u0001g\u001a¾jîáÚpôKÁì‚%!ßç¦a\u0001™»ç’—”–‹T™\u0012_àØø“\u0016ìå"}
+{"type": "printf", "data": "preadv 9 197 \u001a\u0017:÷ö–âaı‰ƒ'M¼\u0014äRöÀ½gŒ@çí#\u001eeã\u0014A\u001a½<ıú¯œQdÈ†Ô)^CÕÓH’~¸QWìYÊŒ3óùûoÅĞÙ¿\u0001å_‚|T:‡\u000fe\u0006™\u0004yûûT\\©%\nĞÚŸ=ÀÒg°\r|êà2¨òµ5mrN»Vè`Å\u0010\"„ı¦N\u000fõµ ’¥Ôe¯\u0012²i‘^ÅÅíÙ\u0012A¹ƒá:wä\u001cÆ•İ² ñÉ:A°šYGªµögò\u000c ½´vñs\u0003(wúØ<\u001fåÁHá\u0013ğ:&¬è4c/õ"}
+{"type": "printf", "data": "preadv 9 42 ú¢ç‘@ÕéuÇ^|ü)t\u0007¯\u001d|—µ\u000e”›†G&“ŒÉ€\u0019–’ó-I–X#›"}
+{"type": "printf", "data": "preadv 9 15 ‰^øÎÑÖ7A\u0010‰§­Ød–"}
+{"type": "printf", "data": "preadv 9 161 \u001eı\u001a’\u001f$kp'ç]ezlÕ°ñœÔÅ]\u001b]—iµY\u0016ÛyØ&õøE\u001c\u0002é;SsÃ±4\u000f®ß¬ÎT$ÜZaR”}\u000bÉµ=P†{F\u001e\u0006b8Â\u001eaà÷= ¤R\r¢Ñy\u0016çÒŒ\u00175Óf_ÛGc/\t\u0015gï\"%\u0015Té\u0004&¾($Àáíò\t¬¼ì÷ˆ‡İ˜mÁgi×\u0017~*\u000bè1f”ğé­šOé©ÉŞËœnA\u0003´¦®ÀĞÿ,Ÿ\u0017"}
+{"type": "printf", "data": "preadv 9 75 ûÖ&óé%AÂ“\n'îåQf¼½Ÿ\u000f$0"}
+{"type": "printf", "data": "preadv 9 83 ¨¶KK£­CXêlRæ¼}åùUÃıjÔş\nfs<åÙÓP{lçvKè\u001eBÉ§©õÉEÆ\u000er\u0006TáëWR\u001e›Ô'²š\r\u0014úØw\u0019P!m\u0002º \n\u0008µkİ„İV"}
+{"type": "printf", "data": "preadv 9 33 ’OáH÷#yÊr¯O‡kùôgoù[_\u0012B7c\u0008H q\u0005Ùy\u0003"}
+{"type": "printf", "data": "preadv 9 35 g¼¸kLœÂêgægÜÎîE<%¶±°Æ¡ş1\"0£+ Èp'ZÛ\u0004"}
+{"type": "printf", "data": "preadv 9 76 â}—ìÇ›©Á\tz(ÄãgYÈe\u0005mOë\u0017m”y\u0003—º*?,ÕI«gÃÌµf¨„_-S\"\u00180y:uÁş÷¾4ã\u0005!\u001b/9¥¦Çûån‘–m0â\u0013"}
+{"type": "printf", "data": "preadv 9 102 Ò\u0004ÏM@=Ï”^\u0018ft¢\u00067iq$³ÒF§cûkåNY\u0018ßûaÄòT^‚Â;A\u0019KÆm\u0019¸ˆe«˜\u000b³õ\u0015„ºŞ>U»B/7L\u0007\u00183'd'\u0006¦”'‡¿2p_.bÓ\u001b+Ã\u0007EÀy \u0014d›Á¡`Ñ šf"}
+{"type": "printf", "data": "preadv 9 138 I\u0003¢U:GØë‘“O|\u001cä\u001a##çh8\u0015£û°ÂŒ{S›kª\u0019ğ¾\u0011›³é%\u0001éepÍñÊ®•¡ØÙ±×F/Î²\t\u0012óÍ†VŠQ«\u0003LğA\u0007‘ô’S»uˆ`D¬Är'\u0010äçôÚ7ºöxs@\u0008'kÉ0\u0001©\u0003UƒY?Š\u000fo€owË†êø™³,@4ÚøP¢±_j0ïT"}
+{"type": "printf", "data": "preadv 9 41 Ë£º?!ÏV\u001e/m"}
+{"type": "printf", "data": "preadv 9 104 {Üe\ng\u001c”ßA›¿\u0017 kè·{6\u0008€\u000e9+¸\u0004\u0007ŞŒda#Ruáï×ÚÏÉ‰TÓ\u0018}Q\u001d\\ZR‘3rì\u0018£9ûR\u001c÷ùá¾Ñ¦=ñc˜Ÿ€2I£Õ\u0005ÛÖ\r\u0014t\"*HAÀŞ\u0011iÔ@\u0012W /©QöÊ"}
+{"type": "printf", "data": "preadv 9 58 \u0005ªìA^—sú\u0013gÜ˜Í¼ı€\u000få\u0003­\u0015È€±>Í»9|İú\u0003İ\u001a™ŞãNFËş˜/WÀ1Œ”IÀ7\u0008\u001dWn\u001eK×"}
+{"type": "printf", "data": "preadv 9 88 ô7J‹¢\u001bôJ\u0014Nf¢lŸäÌşßf÷»wòÚ%ÂV&¾ cxî\r1\u0016àÚª°,•…Ô÷·¡ü”Xó-\u0001pıÇc‹P¦©w;§@#\n^¯û'}RiÉiÙnz\u0012\u0012)$\u001d"}
+{"type": "printf", "data": "preadv 9 191 Á³–é_4DÄ×[ÆYVbÖúwU|‰\nË›¢¾´\u0017J7™J¦7“h´ĞÚ#Î\u0004RĞ\u001cº\u0017l<^\u0004ËºÖàØkÎ\u0002e>G2i:@\u0019ºa\u0010¬¯äëÒ\u001eš\"pøğëïƒ¥Æm°«`\u0005m0ZNè¨ç¶²c\t\rûWc‘EÎSa\"pkp‰\u001eïÌ+ã3ÕØ¯;n=C÷G*Ì-JH‚ÂÁè×ÌççWÔHƒ¯61Ûß5‰¶Î\u0006i@T“y¾÷“ˆ%w¨ÌÛ\u001e©¡ÇÅİ\u0019ÕÑ=<Ô"}
+{"type": "printf", "data": "preadv 9 12 C‡û­8ë{. \u0016î@"}
+{"type": "printf", "data": "preadv 9 125 ³gmÙ>#Y†\"^3­I‚V6g˜\u001dl¸¾\n\u001eYÙğ»Û\u0012  Ú\u0005¡ÖÏÄüVÏ,=ÂNÅeÊŠò¨\u0018BšÒæTæÜDA\rúÎ¥8}Öcşù\u0012é¥I«A%Ş!ëél EëKúÿ\u0016±Ëx\u000cp@Æ•®µQÊ„º±3ùdò+X\u001fÂQ:QCŸ\u000c}·®¶W"}
+{"type": "printf", "data": "preadv 9 140 œÍ0”2GIüb!Úˆlä÷mƒUˆÌ\u0008\u000e”ï¦Û•ŞÄŞUŸH’ÿ¬yoİ¼^çÅÇµ’/\r|D\u0013\u001e\u0008Œø­á•­Tò5vB\u001cYÆyù²ÙğËeË<ÉÚhj\u0017-V•\u0008ºá^rÇ%ßêus\u0010c&…B\u0004ŒJ¤\u0004û!e\r@EZ\u0002\u0019Mr\u001e\u00044Î½øb¢\tAá}$³ÒeLÈñ"}
+{"type": "printf", "data": "preadv 9 77 Àâ\u0003\u001d=•i4:§Há´7cYÖªrù»S¡œ\u0014\u001cX¼°ô&MÂ£\u0013³\u00043Ê\u0012\u001fÄ\u001aU¶ˆNÔîyÏ?¼\u0017\u001cº¾‰Ót[¥\u0010^C]º7&Ùˆ–\"şCÊ"}
+{"type": "printf", "data": "preadv 9 63 UÔ‘W#at´¹KÑÍQ\u0007ÙX:ˆÊ×ç\u0011èÁâ\u001aw\u0018 mã“ù—/°²1>\u0015\rl}»¸3®B²[È\u0008gü \u0019V"}
+{"type": "printf", "data": "preadv 9 137 I\u000b çi˜Õ.\u0007ãÍë·ù<\u0019®¦\u0018,ÿWş$ı¬\u001a’±ËIH|ĞÒäµÓ•„Ú“&„ø[Aç\n²ÉŒæ õŠSá\u00128\u0002h$•Ş\u0013\u0004\u001b;¿;À­AùÀş=6}óç[;´8OX™ãi\u000bµäs¨`sxP¡\u001b]`“›Ú·\u0002\u0011BøÇ\u0006ğ0\u0006½Ã\u0007×¤ìş\u0003éeö­HÇ«©„"}
+{"type": "printf", "data": "preadv 9 67 \u0015÷™ÿ\\®\u0008&8’½ÂÙóß\u0003Ô\u0015«Ÿ¨E\u0016>nÄ\u0012Ÿøş¹¬\"\u0006\u0019àm“RàGŒ\r£\u001d>ş\u0007ZÑ\u0008\u000b³FõzI{º1¦\u0003%A\u0013"}
+{"type": "printf", "data": "preadv 9 43 Šƒ§Ã¹qj-á<½\u001a\tğ µ*šs=LPséö\u0019ƒÙJD¿\u0014\u0003H-Øİ\rNp"}
+{"type": "printf", "data": "preadv 9 23 I\u0003…¡Ú\u001a)EMt\u0002.—˜ß\u000e”™Òi)\u0003Y"}
+{"type": "printf", "data": "preadv 9 26 Â´"}
+{"type": "printf", "data": "preadv 9 21 -Ü¢õ‰ESå}pê\u0008\u001a2AEÿD¸\u0016'1JŒÑƒÙJD¿\u0014\u0003H-Øİ\rNp£\u001d>ş\u0007ZÑ\u0008\u000b³FõzI{º1¦\u0003%A\u0013\u0004\u001b;¿;À­AùÀş=6}óç[;´8OX™ãi\u000bµäs¨`sxP¡\u001b]`“›Ú·\u0002\u0011BøÇ\u0006ğ0\u0006½Ã\u0007×¤ìş\u0003éeö­HÇ«©„ÈñH‚ÂÁè×ÌççWÔHƒ¯61Ûß5‰¶Î\u0006i@T“y¾÷“ˆ%w¨ÌÛ\u001e©¡ÇÅİ\u0019ÕÑ"}
+{"type": "printf", "data": "preadv 9 0 -Ü¢õ‰ESå}pê\u0008\u001a2AEÿD¸\u0016'1JŒÑƒÙJD¿\u0014\u0003H-Øİ\rNp£\u001d>ş\u0007ZÑ\u0008\u000b³FõzI{º1¦\u0003%A\u0013\u0004\u001b;¿;À­AùÀş=6}óç[;´8OX™ãi"}
 {"type": "printf", "data": "close 9 _ _"}
-{"type": "printf", "data": "open _ 9 data-original/test_files/chi.txt"}
-{"type": "printf", "data": "preadv 9 15 å¾·ç´¯æ–¯é¡¿å·¥"}
-{"type": "printf", "data": "preadv 9 188 ä¸šå¤§å­¦ï¼ˆå¾·è¯­ï¼šTechnische UniversitÃ¤t Dresdenï¼Œç¼©å†™ä¸ºTUDï¼Œç»å¸¸è¢«é”™è¯¯åœ°[3]ç¿»è¯‘ä¸º \"å¾·ç´¯æ–¯é¡¿æŠ€æœ¯å¤§å­¦\"ï¼‰æ˜¯ä¸€æ‰€å…¬ç«‹ç ”ç©¶å‹å¤§å­¦ï¼Œæ˜¯å¾·ç´¯æ–¯é¡¿å¸‚æœ€å¤§ç"}
-{"type": "printf", "data": "preadv 9 121 š„é«˜ç­‰æ•™è‚²æœºæ„ï¼Œæ˜¯è¨å…‹æ£®å·æœ€å¤§çš„å¤§å­¦ï¼Œä¹Ÿæ˜¯å¾·å›½åå¤§å¤§å­¦ä¹‹ä¸€ï¼Œæˆªè‡³2018å¹´æœ‰32389åå­¦ç”Ÿ[4"}
-{"type": "printf", "data": "preadv 9 13 ] ã€‚\n\nå¾·ç´¯"}
-{"type": "printf", "data": "preadv 9 45 æ–¯é¡¿å·¥ä¸šå¤§å­¦è¿™ä¸ªåå­—ä»1961å¹´æ‰å¼"}
-{"type": "printf", "data": "preadv 9 53 €å§‹ä½¿ç”¨ï¼›ä½†è¯¥å¤§å­¦çš„å†å²å¯ä»¥è¿½æº¯åˆ°è¿‘2"}
-{"type": "printf", "data": "preadv 9 166 00å¹´å‰çš„1828å¹´ã€‚è¿™ä½¿å®ƒæˆä¸ºå¾·å›½æœ€å¤è€çš„æŠ€æœ¯å­¦é™¢ä¹‹ä¸€ï¼Œä¹Ÿæ˜¯è¯¥å›½æœ€å¤è€çš„å¤§å­¦ä¹‹ä¸€ï¼Œåœ¨ä»Šå¤©çš„å¾·è¯­ä¸­ï¼Œå®ƒæŒ‡çš„æ˜¯æ¶µç›–æ•´ä¸ªè¯¾ç"}
-{"type": "printf", "data": "preadv 9 134 ¨‹çš„é«˜ç­‰æ•™è‚²æœºæ„ã€‚è¯¥å¤§å­¦æ˜¯TU9çš„æˆå‘˜ï¼ŒTU9æ˜¯å¾·å›½ä¹æ‰€ä¸»è¦æŠ€æœ¯å­¦é™¢çš„è”åˆä½“ã€‚è¯¥æ ¡æ˜¯2012å¹´æˆåŠŸè·å¾— \""}
-{"type": "printf", "data": "preadv 9 131 å“è¶Šè®¡åˆ’ \"çš„11æ‰€å¾·å›½å¤§å­¦ä¹‹ä¸€ï¼Œå› æ­¤è·å¾—äº† \"å“è¶Šå¤§å­¦ \"çš„ç§°å·ã€‚å¾·ç´¯æ–¯é¡¿å¤§å­¦åœ¨å¾·å›½å¤§å­¦å“è¶Šè®¡åˆ’"}
-{"type": "printf", "data": "preadv 9 177 çš„æ‰€æœ‰ä¸‰è½®æ´»åŠ¨ä¸­éƒ½è·å¾—äº†æˆåŠŸï¼ˆæœªæ¥æ¦‚å¿µã€ç ”ç©¶ç”Ÿé™¢ã€å“è¶Šé›†ç¾¤ï¼‰ã€‚\n\nå†å²æ²¿é©\n1828å¹´ï¼Œéšç€å·¥ä¸šåŒ–çš„å…´èµ·ï¼Œè¨å…‹æ£®æŠ€æœ¯å­¦æ ¡æˆç«‹ï¼Œä¸"}
-{"type": "printf", "data": "preadv 9 12 ºæŠ€æœ¯å·¥äº"}
-{"type": "printf", "data": "preadv 9 5 ºæä"}
-{"type": "printf", "data": "preadv 9 123 ¾›æŠ€æœ¯å­¦ç§‘çš„æ•™è‚²ï¼Œå¦‚æœºæ¢°å­¦ã€æœºæ¢°å·¥ç¨‹å’Œèˆ¹èˆ¶å»ºé€ ã€‚1871å¹´ï¼Œåœ¨å¾·æ„å¿—å¸å›½æˆç«‹çš„é‚£ä¸€å¹´ï¼Œè¯¥"}
-{"type": "printf", "data": "preadv 9 77 å­¦é™¢æ›´åä¸ºè¨å…‹æ£®çš‡å®¶ç†å·¥å­¦é™¢ï¼ˆKÃ¶niglich-SÃ¤chsisches Polytech"}
-{"type": "printf", "data": "preadv 9 1 n"}
-{"type": "printf", "data": "preadv 9 49 ikumï¼‰ã€‚å½“æ—¶ï¼Œä¸æŠ€æœ¯æ— å…³çš„ç§‘ç›®ï¼Œå¦‚"}
-{"type": "printf", "data": "preadv 9 134 å†å²å’Œè¯­è¨€ï¼Œä¹Ÿè¢«å¼•å…¥ã€‚åˆ°19ä¸–çºªæœ«ï¼Œè¯¥å­¦é™¢å·²å‘å±•æˆä¸ºä¸€æ‰€æ¶µç›–æ‰€æœ‰å­¦ç§‘çš„å¤§å­¦ã€‚1961å¹´ï¼Œå®ƒè¢«èµ‹äºˆäº"}
-{"type": "printf", "data": "preadv 9 3 †ç"}
-{"type": "printf", "data": "preadv 9 3 °åœ"}
-{"type": "printf", "data": "preadv 9 25 ¨çš„åå­—--å¾·ç´¯æ–¯é¡¿æ"}
-{"type": "printf", "data": "preadv 9 125 Š€æœ¯å¤§å­¦ï¼ˆTU Dresdenï¼‰ã€‚\n\n1990å¹´å¾·å›½ç»Ÿä¸€åï¼Œè¯¥å¤§å­¦å·²å°†ä½äºé™„è¿‘å°é•‡å¡”å…°ç‰¹çš„æ—ä¸šå­¦é™¢ï¼ˆForstlic"}
-{"type": "printf", "data": "preadv 9 66 he Hochschuleï¼‰ï¼ˆå‰èº«ä¸ºè¨å…‹æ£®å·çš‡å®¶æ—ä¸šå­¦é™¢ï¼‰åˆå¹"}
-{"type": "printf", "data": "preadv 9 161 ¶ã€‚éšåï¼Œå¾·ç´¯æ–¯é¡¿å·¥ç¨‹å­¦é™¢ï¼ˆIngenieurshochschule Dresdenï¼‰ã€å¼—é‡Œå¾·é‡Œå¸Œ-åˆ©æ–¯ç‰¹äº¤é€šå­¦é™¢ï¼ˆHochschule fÃ¼r Verkehrswesenï¼‰å’Œå¡å°”-å¤æ–"}
-{"type": "printf", "data": "preadv 9 34 ¯å¡”å¤«-å¡æ´›æ–¯åŒ»å­¦é™¢ï¼ˆMediz"}
-{"type": "printf", "data": "preadv 9 11 inische Aka"}
-{"type": "printf", "data": "preadv 9 170 demieæˆ–ç®€ç§°MedAkï¼‰çš„åŒ»å­¦ç³»ä¹Ÿè¢«æ•´åˆã€‚ä¸€äº›å­¦é™¢æ˜¯æ–°æˆç«‹çš„ï¼šä¿¡æ¯æŠ€æœ¯å­¦é™¢ï¼ˆ1991å¹´ï¼‰ã€æ³•å­¦é™¢ï¼ˆ1991å¹´ï¼‰ã€æ•™è‚²å­¦é™¢ï¼ˆ1993å¹´ï¼‰å’Œç»æ"}
-{"type": "printf", "data": "preadv 9 24 µå­¦é™¢ï¼ˆ1993å¹´ï¼‰ã€‚„åŒ»å­¦ç³»ä¹Ÿè¢«æ•´åˆã€‚ä¸€äº›å­¦é™¢æ˜¯æ–°æˆç«‹çš„ï¼šä¿¡æ¯æŠ€æœ¯å­¦é™¢ï¼ˆ1991å¹´ï¼‰ã€æ³•å­¦é™¢"}
-{"type": "printf", "data": "preadv 9 0 µå­¦é™¢ï¼ˆ1993å¹´ï¼‰ã€‚„åŒ»å­¦ç³»ä¹Ÿè¢«æ•´åˆã€‚ä¸€äº›å­¦é™¢æ˜¯æ–°æˆç«‹çš„ï¼šä¿¡æ¯æŠ€æœ¯å­¦é™¢ï¼ˆ1991å¹´ï¼‰ã€æ³•å­¦é™¢ï¼ˆ1991å¹´ï¼‰ã€æ•™è‚²å­¦é™¢ï¼ˆ1993å¹´ï¼‰å’Œç"}
+{"type": "printf", "data": "open _ 9 data/test_files/polish"}
+{"type": "printf", "data": "preadv 9 73 Ë\u000f¬\u0005¤.Š`í¶JEù\u0006|*_\u0005\u0002K45\u0010oùäõvtÒL­¥¤Š`AŸØï¨n¥¨\u0006Ù\\:ù# Ö¾ğÎ\u0003Eœ§ŠùÌö0yrıƒ4Õ»"}
+{"type": "printf", "data": "preadv 9 166 ã]»fP… BãÃ\u0002ü\u0013p½nò\u001b\u00156á@SZ‚^_b…\u0018„\u00161&“ôòÇ•ÙF­\u0008Û·\u0003ì}\u0017Ãc*9R\r8¸‰,õÜ¤+Á-SÂ\u0006Èİ\u0007šv€êN´ËİúÍé\u001d³×"}
+{"type": "printf", "data": "preadv 9 108 û\\Ì\u0012r¹ôÁgyCV°\u0016 vıØDÑ¦µ\"\u001f§¶\u0018£îØ+ã‰†íØ\u0010¥\u0010¿¿\u0013¥â¨¿´ùHP©\u0015TNŞ¾İ‰UïÇÎjÌ½$\"xÖº:\u000b*Hn\"\u001bÅ=vâR‘A»$ôV|\u0018îœ¯­Êïrf¥ò\u001d|î\""}
+{"type": "printf", "data": "preadv 9 176 gÀ„ır’+ná“øÛõós×hy\u0008\u0012oª¥5&k^\u000b÷Ô5çû²·\n——\u0011Ù<Íƒ#,\u000cE|t¸²ŠÚ5Ö¡\u0003dlÀ’ôÿEhB„B$pı©¥™¼´\u0005;,Æ\t|Æ~\u0001d&\u0013« ÌJyİbü4°*ó<\u001aê\u0006Œ(\u0013ˆøtÙ™©föO2\u0004"}
+{"type": "printf", "data": "preadv 9 76 œ\u0005\u000c·’Œ\u0002\u0006Û@\u0004â Ğ¬óz³ÃİğÉã©Š\u001dÿÃ\u0003\u0003™Y9ÜwBğÙ'ÑC×\u001f%Qlæ³úÁqPM¥-ûW\u0010½qÑó@1zLˆ÷åß‚İ’¹Ò"}
+{"type": "printf", "data": "preadv 9 26 ¾\u000f\u000e$0´…#\u0002ôş\u0015•\u001a»F.\u000eeHGåXÈÔ"}
+{"type": "printf", "data": "preadv 9 106 EÑ­ÏØy-¡\n*\nBs˜]×e±\u0003e‡\u000b\u000cme+s!@ó\u001c´°E^Ê¦\n·\t\u0018\u0001‹šB×ÏnÚMÿ¸È‘ÙÛÿ¾ºpbUà“.\u001cjI_ïI’Dœy¦%‡Úlc¯«\\Œ++E;Y¢\u0005:Fw=¬ph_z*"}
+{"type": "printf", "data": "preadv 9 26 Kşé\u001fljh?9Æ×\u0010¨.´uÃMy\"­z\u0001Bs\t"}
+{"type": "printf", "data": "preadv 9 75 Å\u000bN"}
+{"type": "printf", "data": "preadv 9 26 ñ…jtê=ğíÖ\u0010SÆä\u001d´©»\u0019•*¹Û83Ôí"}
+{"type": "printf", "data": "preadv 9 124 t]¦ğƒ±'9K]’ğ¤ı}à\u0019ÇŒ\u0011¸TßÌ\u0017G „\u0003ôTW\tƒãE†¨‡\u0005×\"Á¸\u0016‘#7,Ğ\n\u0007ß›’’á~4\rÉ‘cËvù3²N@iQE¬Ş6öº¬\u0008i\u0013ğü¯õ÷[¶\u0001Í\u001aÿoy\u000cë"}
+{"type": "printf", "data": "preadv 9 102 ;\u000e º­G×Œä\u0002fÑƒy\u000fœÃW>\u0001]Fgm‚\u0017#t@¼µWé\u0017¾çĞÒ•_–|ƒ,glºp\u0003ˆ½\u0013o\u001dnÃœç®¢†#ÊPi½I½¤$\u001fÈ!%êHu(ñ) ÁJ»\u001c\u0014äÏ?V#\u0018Ö\"MCæC\u001a"}
+{"type": "printf", "data": "preadv 9 0 "}
 {"type": "printf", "data": "close 9 _ _"}
-{"type": "printf", "data": "open _ 9 data-original/test_files/eng.txt"}
-{"type": "printf", "data": "preadv 9 6 TU Dre"}
-{"type": "printf", "data": "preadv 9 70 sden (for German: Technische UniversitÃ¤t Dresden, abbreviated as TUD "}
-{"type": "printf", "data": "preadv 9 136 and often wrongly[3] translated as \"Dresden University of Technology\") is a public research university, the largest institute of higher "}
-{"type": "printf", "data": "preadv 9 196 education in the city of Dresden, the largest university in Saxony and one of the 10 largest universities in Germany with 32,389 students as of 2018.[4]\n\nThe name Technische UniversitÃ¤t Dresden h"}
-{"type": "printf", "data": "preadv 9 198 as only been used since 1961; the history of the university, however, goes back nearly 200 years to 1828. This makes it one of the oldest colleges of technology in Germany, and one of the country's "}
-{"type": "printf", "data": "preadv 9 126 oldest universities, which in German today refers to institutes of higher education that cover the entire curriculum. The univ"}
-{"type": "printf", "data": "preadv 9 192 ersity is a member of TU9, a consortium of the nine leading German Institutes of Technology. The university is one of eleven German universities which succeeded in the Excellence Initiative in"}
-{"type": "printf", "data": "preadv 9 9  2012, th"}
-{"type": "printf", "data": "preadv 9 56 us getting the title of a \"University of Excellence\". Th"}
-{"type": "printf", "data": "preadv 9 56 e TU Dresden succeeded in all three rounds of the German"}
-{"type": "printf", "data": "preadv 9 100  Universities Excellence Initiative (Future Concept, Graduate Schools, Clusters of Excellence).\n\nHis"}
-{"type": "printf", "data": "preadv 9 45 tory\nIn 1828, with emerging industrialization"}
-{"type": "printf", "data": "preadv 9 176 , the Saxon Technical School was founded to educate skilled workers in technological subjects such as mechanics, mechanical engineering and ship construction. In 1871, the year"}
-{"type": "printf", "data": "preadv 9 65  the German Empire was founded, the institute was renamed the Roy"}
-{"type": "printf", "data": "preadv 9 19 al Saxon Polytechni"}
-{"type": "printf", "data": "preadv 9 101 c Institute (KÃ¶niglich-SÃ¤chsisches Polytechnikum). At that time, subjects not connected with techno"}
-{"type": "printf", "data": "preadv 9 21 logy, such as history"}
-{"type": "printf", "data": "preadv 9 130  and languages, were introduced. By the end of the 19th century the institute had developed into a university covering all discipl"}
-{"type": "printf", "data": "preadv 9 181 ines. In 1961 it was given its present name, Technische UniversitÃ¤t Dresden (TU Dresden).\n\nUpon German reunification in 1990, the university had already integrated the College of F"}
-{"type": "printf", "data": "preadv 9 118 orestry (Forstliche Hochschule), formerly the Royal Saxony Academy of Forestry, in the nearby small town of Tharandt. "}
-{"type": "printf", "data": "preadv 9 42 This was followed by the integration of th"}
-{"type": "printf", "data": "preadv 9 184 e Dresden College of Engineering (Ingenieurshochschule Dresden), the Friedrich List College of Transport (Hochschule fÃ¼r Verkehrswesen) the faculty of transport science, and the \"Carl"}
-{"type": "printf", "data": "preadv 9 103 -Gustav Carus\" Medical Academy (Medizinische Akademie or MedAk for short), the medical faculty. Some fa"}
-{"type": "printf", "data": "preadv 9 59 culties were newly founded: the faculties of Information Te"}
-{"type": "printf", "data": "preadv 9 43 chnology (1991), Law (1991), Education (199"}
-{"type": "printf", "data": "preadv 9 24 3) and Economics (1993).91), Education (199f Information TedAk for short"}
-{"type": "printf", "data": "preadv 9 0 3) and Economics (1993).91), Education (199f Information TedAk fo"}
+{"type": "printf", "data": "open _ 9 data/test_files/turkish"}
+{"type": "printf", "data": "preadv 9 34 ¢ŠÙâ96À ÂùÕ³Œ$‰–\u0006İÿ¢òzB f?\u0005ø±>&ç>"}
+{"type": "printf", "data": "preadv 9 0 "}
+{"type": "printf", "data": "close 9 _ _"}
+{"type": "printf", "data": "open _ 9 data/test_files/english"}
+{"type": "printf", "data": "preadv 9 136 BuFç.TÑ+_DŠ]Ep(¿™\u0015£.\"§713°â‡ë§Èn_-+t½\u0019b5HüW<SÏñ\u0005\u000eıÎYıhÇ»(\u0011¦Vô÷‡\u000b™F€Ñ%ØTÕ&é²Ğ\\ıáĞ_h<’ Ï¡\u001arB\"Ş‡ŞÁ´‘Æ\u0018O/fĞÄ²»WP˜\u001a\u0001Ê\nö\u0010M\u0019ökNí\u0010á(õ\u000f\u0008"}
+{"type": "printf", "data": "preadv 9 101 \u001bµ¡Dî>å\u0013ØOSlõƒÑï'+Î&ğ\u00145õ·\u000b8eåJ0MaQ6¼›ÿ+¾èá­)\u0007®Ğ{‘\u000c–!\r#ı_V-Q¸z\u0012\u0018é×Î\u0004‹Kş¯}VJ\u001eı[Ôuı@D“^¤ñGy/2îƒ\u0017H\u0001:å‘‚"}
+{"type": "printf", "data": "preadv 9 102 _d•>ÏˆJñDxà\u0016;\u0010ø’Mı$®‡ŠRİ¦é7~ÄI$¹ÇC`Âa>\t2æéVOÊå+ÕtW3˜U±ÈÕ½\u000c½˜umÎ¹Ş\u00053Á¬™2&Y¦\u0004~©ì—a#M\u000bÍ-İºÎ¤WT‹K_3šßY_\u0016"}
+{"type": "printf", "data": "preadv 9 153  %H\u0008iAS\"e}u¦\u001f®·[\u000eõ\u0016à€p¢ÍäŠÏv~œ·\nQ\u0001cgùŞ²tüå&Ç¥-`´¨\u001e?R´Ó\u0005ÊÁ§6Äã*•ï\u0017b:¤/¡îù¨VM©Ër÷\u000fi°Ro;\rÈ´Ö\u00085Ø]¥‰n\u0004êólÀ¨ÄÂ}^ÁĞãÛº™Ó3”ß‘"}
+{"type": "printf", "data": "preadv 9 75 9¬Ö­´Ûéd8Æõ\u001bÆQ„‚*\u0012xtX\\S^€^ZÔL\u0010Úë„ŒN‹sHĞ\u0016D\u00046ô¦\u0004\"Ô€ŠsIÓŞA>\u0014Ö¶UÃÕyÄ\u0019\u0018\u001cPîkœÍM\u0001"}
+{"type": "printf", "data": "preadv 9 95 lûÀ\\2TCŞúR“J,\u0019¯l\u0001¨\u0006ŞÕ‡JA\\•õ—Ø˜¼?qÆªöOËQÅ#‡Š¸“yIpNş\u001aŒÑT¸3#\u0004¥Cô“ˆ¥\u0005´\u0014’'¾~ÑO\u0007'ß\u0001‚t\u001dûû.îìûn„ÚDfƒ\u001a"}
+{"type": "printf", "data": "preadv 9 149 \u0019ºª‚Š¹†¡ê­U\u001e˜%ìá·ƒO€­'D9“·r];\\B¥İ›Z$‚Ğñh¿İÆ\u0016»•´î¬-«W\u0005"}
+{"type": "printf", "data": "preadv 9 8 Hsä[\u0004·ª"}
+{"type": "printf", "data": "preadv 9 170 ‡¾Ò\u0014\u000cõB+·à„¥À|8‘¹g)&\u000f)(^~9PNˆ!ëcô\n;\u0002í\u0013B§JòÇmÅ7¼Z.íh2tØÍ\u0013[¾T¿Í·±ë~1üŸ:´¢\n…\u000eG(\u0010_7\u0011í\u000erpkrÉeÊ¥0ö£ê¸ß2p¬o®fşã‚âù»şÕìÏ}\u0017oŠàÒ@Ë\u0002#·šŸì\u0012!§ßaáë\u0016z'cÁ5\u000b\r.]IR„ö££üD‚:N·ùèŒ@éú#¦­"}
+{"type": "printf", "data": "preadv 9 159 \u001eH­¨£¶ªqÔf'4OÁ\u001cT™yWó.v³,G’`\u001b\u0003¯ù@)ÿŸú™åì/VHP_#¶äÉ*I\"Ú€U\u000bOŸãüÆ3å‡'Ñé!¹›iÛ[\u001b\u0006“|!ßì\u0016…^²,ÎQõÓä)A^Ñ¹b\u0008\u0010èÂÅ´¥Ÿ‚4 =ÏéÔxÛˆ’tõÄ 7<Õ¾îq=ë÷\u0008I\u0017\u001e“QÁ\u001aQ§r6¾\u0019?k#NşOÍÿĞ\u0005JóA\u0011ã"}
+{"type": "printf", "data": "preadv 9 110 ‰ˆ\u0013¸¾Éı=Ù­Ó{ÚÌf³\u0003LüğâÓ\u0016nÿ³E úo—iãÅJa2V2t†-™À©„O¦e¦ñŸÂ<Î~ºñ0kz·\"¼ğã÷\u0017uİ@0“â¾|Òm´›Ü¥`…*tå+à\u0003mÍ>\u0007¹6ù5z)\u0018jzõV¥š<\u0002"}
+{"type": "printf", "data": "preadv 9 187 ØÆÅ\u0012B\tî8Êâ\rÖ‡\rÃù_—©ğ¢:˜bk±Ü\\3µa†\u000cåÄƒÊÙ{ªLE\u0004\rÊO6H\u000f¼'Ä}7\u0001\u000e\u0001\u001c§\"½:Û°Õ(¾Nî‰lLó¼Ç[\r\u0013¢¥ğ½'»C…÷~\u0014‹YÍSÌ†ßòZzòßK<ÿen\u0006L‡\u0010GÑ¦÷¼M„Ë$\u000cZ\u001cÍK–µÎ\u0002ˆÚ‹mä\u000b:?/~•\u0016åÕ˜Xm\u001bû×ğ\u001fÔ‘°\u000fôê„báf”¦\rÍ5â¦z \u0001ÙÍ=i\u001b\u0006âéÕÓ/Râ"}
+{"type": "printf", "data": "preadv 9 56 4<!¶Ş-A\u001a^aÚ*m9ó÷Î†,"}
+{"type": "printf", "data": "preadv 9 112 å¥¼;€f lvE„ƒ^âŞk—¥\u0006`~W÷3îwh*>\u0006`JòÌÒŸ®J'h›\u0013ÇÒàu t»\u00159\u00042&PW]\nŸù¬LŸ8\u000c{ıÊË\u0004 #ºø‹zÕ‹¸ä–Jû?êÄYrkx\na\nb¨q›êŒàBÖ¤±2ÙÅ®"}
+{"type": "printf", "data": "preadv 9 68 ´=‘Èa×‹:Oš\u001f¸¸ä\u0005z8°OQ'™,¡äı%\u0006ªE, Úùø¯ÅÜş>ËUH1w¢\u001c@±D(²’O¿îS\u0013<'\ti¿*æ<"}
+{"type": "printf", "data": "preadv 9 143 ¡ì"}
+{"type": "printf", "data": "preadv 9 48 şeDp@~ê0|Î ¾?„£&\u001aáñò\u001e¾/\u000315_ôá“\u0003'\u0004«5¤Ü1KÎ lÈ†–›"}
+{"type": "printf", "data": "preadv 9 176 Œ†ø€Æ\u0016N­‰#–w\u000c8V@GG3\u0016jxØûb¹•ÁH!±\u0005õ%Db“+M\u0004\u0019×Æ\u001c’L$ÎY\\ò¶‡şŞ‘Ù\\’)ÄìyoOÇUîp\u000b¹şÏî‹ønV Ï±Ì\u0017dæÂ«{4\u0002\t“\u001d…Ëé÷\u001cªù\u000b?ìá±‹æJ÷Æ\ry×Y-)DNtĞYœ\u0017ƒÑH©¾‹òÈÿ·ÅmÂgšËÏå>\t&ï39ğuå£\u0006-\u0012?w†\u0011`Şgã‡P^ÃZ\u0001»=Vã>"}
+{"type": "printf", "data": "preadv 9 89 \u0003*&W0\u0001\u0008¼hÚÔab$Mš\u0006\u0013nšD÷â±\u000e‹\u0008iµ\u0017Úƒ"}
+{"type": "printf", "data": "preadv 9 89 \nÃİËù9\u0018Œ¾/\u000cÆ\u0017ò‰q\u0003&uc%i +C‡\u0019xN/:\u0008¾1Şµ‹œùß;½É{©•\u001dˆvÚsz!\u0014†Ú<\u0017\u0010\u0016·¢G>¤¦Oƒ`\u00067(\r„Fï\"GôğKİ½O"}
+{"type": "printf", "data": "preadv 9 148 ¹&F?Ó*Ë=Wˆãk4‰s\u0012üêÕ\u001d\u0013€\u0018C›š·óá+Cà!N\u000fŸĞ´´‰»º/kÇª¡š^É-ş#ê¬tÃßO\u0015\u000eœÄçEmªó†©‹`\u0001Şû8ç¸Òr^K–%\u000c%K9İcõr\u0008Ñï\u0010’‰½µp~8øÿ‡ğé\u0010Õ¨ĞY\rŞfÖ\u0018jh©±éû–Ï<\u000eá¼T’è%ü\u0010 *§œ"}
+{"type": "printf", "data": "preadv 9 82 \u0015×™D?\u001b¼Y7T6Ş_P\u001c¸â€\u0018QUnã \u0016¯M×¦\u000eªò"}
+{"type": "printf", "data": "preadv 9 0 \u0015×™D?\u001b¼Y7T6Ş_P\u001c¸â€\u0018QUnã \u0016¯M×¦\u000eªò"}
+{"type": "printf", "data": "close 9 _ _"}
+{"type": "printf", "data": "open _ 9 data/test_files/spanish"}
+{"type": "printf", "data": "preadv 9 18 \"‹úÉì\u000f£~*×¹ÖX\u000chk·8"}
+{"type": "printf", "data": "preadv 9 125 BÅéOÀ2f‡\u001a‰o6½á\u001dw\r†wqFàº´X\u0016¯"}
+{"type": "printf", "data": "preadv 9 5 1‚3Àß"}
+{"type": "printf", "data": "preadv 9 73 5øEã*Ø¨>†bÒÂ1a'tR‡û©¼]Ÿ±ö\u0013>Ë\u0002\u0010>uWØH¹:CO@cŒkiq\u0012dæHñÏ\u000eñş?UÿíÜCóša4½£Ä½Ë”"}
+{"type": "printf", "data": "preadv 9 1 s"}
+{"type": "printf", "data": "preadv 9 192 \u0010‹¡åï…òH\u0008d÷óÉŞG-Ô[c§Ä[•dí\u0008\\ÎM»t7b\u00151!rØ<ó_kaÄd`ú\u0010\u000bÜW\u001f‡¾G+YÈ.UŸ\u000f3%\\Ó&ŸÉŞp\u001fäøû0Uß\t/u'Š¿8€-Ñëÿ\u0018%˜LòõÙ2N¸ÿCÅ¥N\u0005©÷¡\"@Ú2\u000f\u0001_¶ ?lZv\u0014mf½:ó1b_ö¨au–,\u0019è•?J‡ğµ\u0017g…}ì¥\nİ\u000c‹Û‰\u0004q,vœA\\ÚA¹Ö”S\u001a ‚ÀP+1UGEĞ"}
+{"type": "printf", "data": "preadv 9 175 t,íüÓ*’\u0008`RĞq¾¿ÁjÅ£æXXúzNËº;_7ó\u0007Šà0bE®›Œ=$°¯0¨ÏgVs¼zÒØ•1¥\u0003†ñ]hÁğ'Cu(4ŞQ=(¨k®(gâĞwCşà_ß* B³‘èP;¤„ë İñíq\u000e‚d‰'5õí\u0003O\u0011°×…nüãH‘ªÔ&;µv0ÊÂÉ,jÆté°\u0002¶\u0003ğpÉ;–¨Úš–\u0015ƒ/GÀiˆ[ı<\tm;ü)¾\u0014ô-=)"}
+{"type": "printf", "data": "preadv 9 176 jJoŸS\u0017¦bòdn¥ÉÍc\u0019R¿Y3³±\u0016JŠö]CÅº&³\u000cØjÀ\u0012Ö\u00182*Æ÷\\=yÁtËIˆ¡ı?ş¾€¶ä\\×öjÑ¿\u0016ã:\u001cüc\u0018#Õï˜~ïgÈbm¾\u000cö\"\u0016Ó\\LÛXÜº£Çt\u0013q"}
+{"type": "printf", "data": "preadv 9 14 mø\u0018Xæë\u000eyc~\u0011ï/"}
+{"type": "printf", "data": "preadv 9 139 Kô^T£ëÚŒ&Şé‹Ë\u001d!‘apTH\u001dĞt\nWğ¼d\u001eN`Ó-u6³oÃ\u0019µ[x?DZ±ÁE¨~Ÿ^Z\u0015sÕÏÆÌsH(ü·»\u0010©k\u0018\u0011°ë\u000c1¯¿ÉØ\u0006ô&27¦ªrJ¶ajzÉŞ\u0015à`üOÇe\u001a~(\u001e"}
+{"type": "printf", "data": "preadv 9 90 p\u0003)ÔãQÎ‚ƒ\u0019`(ƒJûq…f/L¿\u0018‚‹£¢\u0018\"<á3¶ŒpWîÕA³\"\u001e’‚È…>vşæ\u001b¼º˜=Œ¿=¸g}(–¥¦rbş>…œz¸\u0001ZMä™L,2rI\u0001\u001dÇ;\\§"}
+{"type": "printf", "data": "preadv 9 133 Î¡7°øò`ÎƒãÑ=½)ëát%\u001aß\u0012ë~8CÊª?DšhØçx+‡«ív?]_º_8($†ªÏKd\u0013½"}
+{"type": "printf", "data": "preadv 9 110 ÷§r­\u0011¯Fá5ö}î\u0005’@9~±˜õûJÀóÅF)\u001bjó\tû*aüÒÜnî<³f/òhGşÕÌ}\u0003¨\u000e¿cÀ.¨lO\u0011RjD¶\u00056Ûæb‘\tñí6Ï9Q4\u0003~“œ\u0010\u0003¦|_è&Ğ\u0010Mì¶U_s–—\u000cÁÚßÖì¾Õ0"}
+{"type": "printf", "data": "preadv 9 36 èô›·zØcµ+vvÌÈN\u0016\u0019s·@h€ù[ù‹Ç¶\n\u001a0/Šg"}
+{"type": "printf", "data": "preadv 9 164 B|½^ê{uÓ‹Ğ6¥İ\u001cäC”¡+iÊ\u0006àçãŒp˜õc\u0010\u000b?Ë,İå'_L\rö`Úşş9@|…Ş$“üºh¯F6¦wqı>‚Â¿ÈÂÂ6tâÆLö¯ı\u0006Sm€O`ùPò}§‰l÷±ZbçZ¤”½5pQ8\u0013-™9\u0019\u0005pK?CQ~\u0008gèJçıßØd£óy»8Â\n¨÷§V\u000ec?àwk\\æ\u0005Ÿ¯\u000c\u00183\u0018_=Ä+4·Ej"}
+{"type": "printf", "data": "preadv 9 89 TòçŒš/ŒDO[.\u0013u7à‡AFü~Û„ÙÖ%\u0005pñĞt-azçĞÉßƒàÉ?å`[yÿÏÖ 5\u0019ÎÖµ²ß»AĞ\u0017:Ë3FŠ¥\u0008´Ç\u0004hîÕã\u0014TåR}^z˜¨êù¶©"}
+{"type": "printf", "data": "preadv 9 103 î\u001dNÔÄ‹¶;ÏØíİ\u0018òY—Ü\u0017Äjİ»~¼\u001fÌúÈ\u000b"}
+{"type": "printf", "data": "preadv 9 45 ãæ¨\t5\u000cæg\u001cêœ;,mvÒFMMÛØ¼êŠ®iš{ÀÑ\u001f_œs@ÀŸ:ûƒ\u0004Ñrş"}
+{"type": "printf", "data": "preadv 9 69 õƒ4æÁÁË|\u0012»9E ;†î}\u0002üòW²Èb\u0010&G²¶«}§\u0019AßùYbù&l¬KÕEÆ°wF¾’±øC7yBvZ\u000b¨\u0015h{qš„"}
+{"type": "printf", "data": "preadv 9 5 ğÕr ."}
+{"type": "printf", "data": "preadv 9 28 \u001e\u0010à5†Î™‰Cø“ğŞi8™¸ç\núÈÁ‹B¿Ù´"}
+{"type": "printf", "data": "preadv 9 116 ¿æG…áù1šé¶\u0019U–O\u0011²ÍÏ<R‚\u001cQ‹ß»1ÿÀü.i\u0011…Ç¤]ä;¬ã×?ÇÓB)\u0015ÌT\u000b\tÂå\u0014‹W¯?ñK×€á\u0002;ÚDã³\u0007¾ÅóôDq×\u0005²\u0013à\u0003"}
+{"type": "printf", "data": "preadv 9 185 \u0017xÍÔ‹Æ•Ğ9\u000e©X›É‹:\néyRHÀÉó[Ø¥ eîİ|à¾¢'7¹®\n\u001bOà´¹şô@ˆ²âz¡\u0013ÁˆÙÌTâ\u0013ãÅìNğCû¾Ãˆ¿íA\u0018gÃ‡ú“9şá6}\u0013\u0014ı=Ø8v‘Ã¼\u001bqbæ\u000eNF)á|fz\u0013ƒå†eú.`üô\u0011§š\u001e°\u0012Úß1\u0013\u001eb×±\u001c%d[>ï×—…~m\u0005ép¿©\u0015?Ò\u0017ã\u000c¹›¬õ†šn¾ß~09Öw²\u0017vyÁ¾ÍÕøÎa+Û1`·"}
+{"type": "printf", "data": "preadv 9 175 ½ÔÿX=\u000c\u0017¼(é2„Xù+\u000fFMÚ\u0004I#ÂWc\u000b\nÑ—ÃÖQaİfç!wq#WÍ\u00058QÈa\u001bDÖZ^Y…Ÿÿ\u0001\u0003\u001euËÍ1\rwO²5¬n“S™¬Ysh!\u001e\u0011\u0004È¹:âErªÁpğ"}
+{"type": "printf", "data": "preadv 9 26 ½È×óVáº\u0011qj•S}7\u0014Ğ1I^X}\u0005ÚNÎë"}
+{"type": "printf", "data": "preadv 9 114 AšL=(ø:?H¶\u0016G\u001bÔ‡ÅZ\u0002¯6K2®4ı.Çg}7ÿù\u0004şÛÁ{ŒÄV»r\u0002š†äÚûClŞqı%¹qO½§ÁÄœ\t\u001bö³UÒÂfÔË\\òj¯FUïKL\u0001~K\\\u001d®A\u0002şÛÍ›sõ@H­Í\u0013°–Ó\u001dj¼.8qÜ"}
+{"type": "printf", "data": "preadv 9 29 ï7\u0007Œ\u0017q„¤\u0015(ø5³õû švw’«M5¹À¬ªó\u001d}7ÿù\u0004"}
+{"type": "printf", "data": "preadv 9 0 ï7\u0007Œ\u0017q„¤\u0015(ø5³õû švw’«M5¹À¬ªó\u001d}7ÿù\u0004şÛÁ{ŒÄV»r\u0002š†äÚûClŞqı%¹qO½§ÁÄœ\t\u001bö³UÒÂfÔË\\òj¯FUïKL\u0001~K\\\u001d®A\u0002şÛÍ›sõ@H­Í\u0013°–Ó\u001dj"}
+{"type": "printf", "data": "close 9 _ _"}
+{"type": "printf", "data": "open _ 9 data/test_files/portuguese"}
+{"type": "printf", "data": "preadv 9 77 Uîw=ÔÃâí\u0008açj¿\u00082ß\u0005ÁÜ7èÜX»Zm\u0016¯C†~m(÷£(á¥•|:lìò÷ĞñÍt·É&y¥ö¼Qõ¤™9§'MN¼QÃ–U?D\u0016Ær"}
+{"type": "printf", "data": "preadv 9 94 cÆ•™«=ºƒk\u000f\u0007{ºÎV*|\u0013a\u000f³\u0018¡Šˆê–xÛwl4A—Ä‰›[òO|_KÒó††;-\u0005Ï\u0001¡³ø–Ì\t(\u0001\tLXÁ\u0018àqè·®¯‘=\u001b\u0012j\u0002L:$şOkfqØPlÅÓ+"}
+{"type": "printf", "data": "preadv 9 161 J‰\\\u0004Ll\u001aKQå¡#Ÿ”Ô\\ÿ\u001a\nƒ%¿ôü:ï÷ô2|èO&ö¯Ì6Š ºûà5\u001ex\u001b\u0004..ùN˜A»;­êì(g¦úÑQ‹\u000f\"‚=\u0006ó²rÚ&¿ã#=gŞJºô—X{(ÇŠG@™y\u0017@\u0006CòõßD–iÕ´Ó;‚ÿù·\u0005Ú,×¼fÖé’X„XîN–¨\\•RlÌ«Mÿ\u001d`x®4kY<Ûo§õ¶íQ–«”6?"}
+{"type": "printf", "data": "preadv 9 174 ıÖ{;Wk?0\u0001\u0016|ğ»\u0016øvöĞÚíœÑãå«Q…‡rò»®àşwñ'}0f()Ë‡3C\u001b˜f‹W‹²ak\u001a°šC¦Á1“6ÏÜnˆr\tpzÊ&/D©\n\u0007¹,j‚ZØó˜6½¦Û¬\u000b8ÑT%"}
+{"type": "printf", "data": "preadv 9 4 >0õ\u0010"}
+{"type": "printf", "data": "preadv 9 135 8\u0015\u0017?ÍßO\"\u000fÉŸ£ª\r\u0006\u0007…ˆØ±\u001eMˆ| »:H"}
+{"type": "printf", "data": "preadv 9 118 ã‚À\u001a¨ö:—E‡Hé\u0001\u001b\u0001é½¢û•¸¶³®ĞB\\~„­s°§ƒQ¨\u0015 Ñ)¦¢(œôP'x\u0005+şEÓÏÃ^–C'Pw±åÉi$M&ºUl¬ûøõ4×\u0004^\u0003Ùû¥Ulå<çC±‚ga"}
+{"type": "printf", "data": "preadv 9 28 ÜL>3ÂÔâ\u0003wºQ}Œë®ÍÛÓ\u0006Q+ZÕ¦\rÅ"}
+{"type": "printf", "data": "preadv 9 47 Ÿ‚Ÿ\u0015X£Û¿ÿp\u0010\u000cÔ$Ê±×ì™…Òÿ?;³=ê¿[ş\u0017İÚ;ıæd!Òq6ù\u000e€"}
+{"type": "printf", "data": "preadv 9 10 %\tä.-Ig1Ñ"}
+{"type": "printf", "data": "preadv 9 183 éo´ŞĞË¤l?…Ÿ\u001a¼Î¥à-\u000e\u0002¿¢\u001d}\u000c!\u0004ÓQï\u0012jd³ãŞÁÒİ\u0001·Úêğ%Qú}ØäK\u0015a¾*'dI\u0008æ0 8‰•—Ü¥ KM.ØEj\u0001«–"}
+{"type": "printf", "data": "preadv 9 4 \u0013a\u0004Á"}
+{"type": "printf", "data": "preadv 9 199 Pß<\u0015£¿\u000b\u001e\u0004ÛÏ§n\u0011"}
+{"type": "printf", "data": "preadv 9 3 œDH"}
+{"type": "printf", "data": "preadv 9 98 fÍèN³â•èî½rg[­f\"‡‰µ"}
+{"type": "printf", "data": "preadv 9 193 Û÷%S’q××…å3M\u0018Ó—c"}
+{"type": "printf", "data": "preadv 9 115 ÔÜÉ ù0ıQ­\u000bK\u000b.u+a‘µÕó\"j\u0002‡Z%/º‹ŞV¨sIÁ»÷ Mc{ZÉî\u0004wÕ]!j¨›ôÊÑŒbu\t3bÚ¡Óıº¥7$„§>"}
+{"type": "printf", "data": "preadv 9 186 \u0015\u001bÚ\u0014\u0010Rûa2İà\u001eûz˜-ú;\u0008²=\u001cŞ´Û\u0005¬¨eğÇYÕ.—H…±Ä4¸\u000eä#ké¼×¾T½:<k ígı!{ÅŸ\u00068Y\u0001\u0019ÛÛøreş—vç°ÿeN"}
+{"type": "printf", "data": "preadv 9 171 RàŠ\u0014~O\u0019û€#Œ7\u0010DRV£\u000fÀıl\\Åô±¸kAş°şn\u0013ñîŠ/®B\u0007hğ¼]\u001bz`øú1Õ\u001bÎ^Z˜ÁxŠ\\úØÊ§O=L\u0015\u0015ê\u0010d\rRi›•®"}
+{"type": "printf", "data": "preadv 9 75 m›•ÒVoJ£èYèåu:ØÄ±²ùGËJíw‡%;§«\u0017ÑbaVYÌ|§ÖèWb“Å)@\u0014”¾k—‹\u0013¥Âa\u000eÍX­·ë\u0014Å\u0007ï{²ë£©²"}
+{"type": "printf", "data": "preadv 9 43 %¶Áß&ƒ=¡£ø6…E\u000bªiÂ9ÆŞäQ\u0007«öÇ‘Cñwcç¡7±Î\u001dtíàc\u001f"}
+{"type": "printf", "data": "preadv 9 198 î\u00047(eğº)\u0007Ì:4ßïK\u0001d)Eş0Û­Â¸k\u0010æ+\u0007®ÈK7¾mZŸG_+Á=7œ0.½ïm\u000ee…¹w0\u001fP‹~Uÿ.Ç`æ;í™´CÅŸ…æ¤ú©nx¸§\u0016ruí]ªíw=\u0016\u0005\u0015ë!8@S‡G^ß?+\u0003ec‹¤…‰hë3X\u0005G%¾g\u000eÚcø\nXˆCÿÔ„,mAğŒ[@Ë£\u001eO™]&clk\u0007^±5×#0\u001dR*,ï ¤\u000bdgYœg’…E6¬Ôúæ\u001eá&­2Gsí\u00174ğı~œ\u000fü\u00087"}
+{"type": "printf", "data": "preadv 9 54 iÃvßÉ_±h!ÉÓé‘íĞ#\u0018û!UH€tAK\u0010×+Jã]´2:é=¢$Q7Š\u001dëwÍQÁ\u001eX^~"}
+{"type": "printf", "data": "preadv 9 43 Ú³DÁ$éşA\\Hœ¶e\u0004\u0007,,¼\u001b\u0008Ş¦ù:\t\u0017<¼œêØ“¦#â"}
+{"type": "printf", "data": "preadv 9 0 Ú³DÁ$éşA\\Hœ¶e\u0004\u0007,,¼\u001b\u0008Ş¦ù:\t\u0017<¼œêØ“¦#â"}
+{"type": "printf", "data": "close 9 _ _"}
+{"type": "printf", "data": "open _ 9 data/test_files/german"}
+{"type": "printf", "data": "preadv 9 49 ³’\u0018W#\u000fß_»`Å%Çg\u000f5v&y%µl>™Ç¯ÓÅµ+;ÃXE‚H×>½\u000e\u000bÜ‹33º"}
+{"type": "printf", "data": "preadv 9 179 t¢ËÈ2w\u001aåƒ\u0015‹ª5p¹A€=\u0018\u0008Å‹Íî·{Ø\u0006ç·\\«m<)æÖ°ë8\u001a sÄeK¿£ƒ„‹z`ŸeÒö®¼„¤ÎaVh\u0012yš'{A0\u0019Ç~¶Ipš{ƒ’\u0004\u000c¯®2uõppD3ïn\u0010³4§”3ÖÌP¢4Ù\u001fİ²‚x\u000c›\u0007\u0012\u000fl¤D_ª€T:‹H÷Úİa<á±‘ëÊ}ìXĞìa&óáò\u0004ÉwˆRÏ$¡ÚyAr>^€›\t\\Â\u0006@ıà\u0016‚"}
+{"type": "printf", "data": "preadv 9 191 ¡‘CC7ÌpH¥ZÉ«Œâ\u0011ä˜)¶»T2Ü`\n¸9™\u0018Nå\u0003NŞ½ÍXpŞ×nêü¥Êê@æĞS\u0003—Q´emÉ\rh~(©m’Õ´?æ=QäQ^j\u0004|\u0007ÔÇª>Æ’Š{´Kbá:™5Íß¬}\u00122uo²\u0018\u0003‰«¥Ñä\\ÿU\u001dÌÉ\u001fc\u0014+,€€ª÷dˆø‰¤.×Tb8ı']ƒV­K¬oÃ÷+Œ5˜³™#)Î7\u000fWİì©à\u0010Ghısƒ\u0008ıĞŞŠ-õGjŒ\u0005¦î_Jİ‹F^ô]ØÉ"}
+{"type": "printf", "data": "preadv 9 152 [e \u000eª]ñŞ†\u0008_Å'\u00031aÔˆÛ+iü\u0016YC\u0007åÚæ\u000eX\u0013vÉ´-ÈAh\u001c\u0007\u001a}û‹áê´\u0007 æ‚Šv+\u001fõmnÓ<Çãû”•\u001e½\u001dS»\u000f¢ó\\Ï\u0010øZ‘¬v\u000b™\u001dõ¿ÚÇK9><¡È—™–\u0017îF}\u0014h\u000f\u0017Qá\u001f×\"\u0013.u&}/Ùm‹ó²"}
+{"type": "printf", "data": "preadv 9 162 kø­îÑF€(Ç\u001dyl/\u0012¢Ø¼#Ö\u0014¦XÉ–Ë±BA·’‹î\u000c\u0007›Û\u000bË¹°ç\nJí†4É\u0016\u0006Ø\u001dìAï˜ªÖ±f1€´‰N\"ß#—+W×¡hñÈûiî$3ƒ–ó3¶³ëAˆööe’N³¢°B’©ã”İÖp\"\nŒèƒŞtèe²o†Õ}ŞØC\t\u0018û°ãFüHÊ‰Æ\u0004X·!å.A”Y¥Â\u0011H•g\u0001§^L\u000flÅÚfa’"}
+{"type": "printf", "data": "preadv 9 46 \u0007±Öjb6W õï¨g\u0001\u0007¼×\u001d‚ ß†¨Q»\u0012ã?ÿ»…(¼\u0018Ä=ë¥\u000eÊí=\u0012,à"}
+{"type": "printf", "data": "preadv 9 125  PŞhû.]ÉA\u0011b‡H\u0015º}*ºH‘\u0016C\u0018ªÆgh&âYu$E¬¨\u001cöfÓ±\u0002X7\u001btæ²7¥iÀ\u000cç\u0002\u0011Õ’y›¦]ùJäz”’÷äø9\u0019\u0018\u001e\\2¼e½L>Et¤OPù\u0017C«\u001dx¤ü„\u0010E²ó&á\u001fA'”\u000fô=\u0008š\tDûˆ~\u001e1m¼Ø\"\u0011"}
+{"type": "printf", "data": "preadv 9 59 œ>\u001bî´åE\u00171Ü7\u0004_È\rº2\u0018IÅJEAï“P2ä=<í¹“%EÏYv\u0015\u0010ÚœG3İÛóÌ-•#i¹.bHå"}
+{"type": "printf", "data": "preadv 9 105 Î $i7©x¹·oŸ\u0007²­!åÑ˜ö<•»œ\u0012QŠÅõ@Æ0$Z{—0Ù«Àµå,\u0003.\u0012À¶Ü5İøÊwD'£\u001d\u0013hÒ©=•\nDm§SÛá'\u0011Şİéö˜œ=M²•\u001f?\u001aŠ\u0011¡\\Â2z­í\u0014›J\t6ò\u0013›n\u0012"}
+{"type": "printf", "data": "preadv 9 60 †ê¯«Stg²\u0018Ü»\u0005õˆ±Ç\u001eFaøÙå’ 5Éùù^0Úó¬”rÙo¬‡¸LM&oV/Â¸rŸÉş\u0008!\u000f¶Å‡"}
+{"type": "printf", "data": "preadv 9 119 tÆ&é\u001eÁü¿\ri\u0010\u0007JŠ:´è^\u0008Ú\u001d}\"áfÙ{Ûw¢€nsÕ×%•GsJôŒ:s?ÑšƒÖ<=~Á \u001b„\u0018}¶ÇÏ\u0008†51oP"}
+{"type": "printf", "data": "preadv 9 121 \u0014&f's—ÌjÎã«\u0002\t6g×î *R¬hp\u0015ûûš¢‹Å^|\u001aª\u001f·ŒdK\u0003Ğ1+uÖÇ³\u0012«j\u0005|\\ü­÷\u0014:öÌ@<ãòğé=ærßÃ/$\u0007Îhq\u0004¸ ¶÷\u001b\u000f½Şio\",ÁŸ\u000cpo•GÎ\u0018ı\u0011\u0008º¤‹DU66œ\u0004hq\u0011ü4½é~"}
+{"type": "printf", "data": "preadv 9 86 íYŒî¬‡ş^M\u001f{\u000b´\u0014Ÿkä‹käü£oÁıUL\u0005kv‰{ˆ}åXq1½¾&Ã’JnñG‰ƒº\u0007\u0004ŸŒç\u0001\u001eF"}
+{"type": "printf", "data": "preadv 9 161 Áü\\¶ Ç‰~G\\¾A x%\u0001·ÄÃÀ\u000ei•\u0018ûc;1KçÄß\u0014^ıyÇH;#Å6\\¾ü„[CÙ¤9e\u0010\u0004µçøöTcØ0Y“Ä‘øØ\u001b/[MÖ;ÛKm~\u0015/Œ'\u001dZ(\u000f'\u000e–\u0006½\u0019Ûş™xSª¿\u001eû’š|M¿c’\u0001UNŞ\u000eúÒ/¿M\u000cµ±3\u0002Q3\u0006ƒ¥\"TäQè{¶·YÆÑSÄR‘y`ßr{h Oî2\u0011õ"}
+{"type": "printf", "data": "preadv 9 53 \u000fætŒÔ|od\u0005p_¾¯å'ïW+jeŸ\u0016CÊ÷àf\u0014hVğ*ı²^»ªCqèò‚\u001a½Ó}…\u001f­ }‰"}
+{"type": "printf", "data": "preadv 9 31 ].z-Â\r»·]‚ş’İrÍ\u001aÓÌ\u0005Ì\u0011#ıïFß5;³T—"}
+{"type": "printf", "data": "preadv 9 115 °I¦ºd0\r5Ä\u0019Uq:ãF\u0002:Ôq\u0007ŞQ`'-“Û\u0011Ãºf¶7ÊË7\"\u000eN\u001fü}òı\u001c…íà–£ú\u000bMş\u001b××Èh\u0002€1Ïfİ¬ˆ,iw¯ˆR\u0011@ö\u0011wëø}ëêK ş—ˆ±ü‚Ş\u0007ZÓí–Z¦<È\u001bAãV\nI»Ä#Ù"}
+{"type": "printf", "data": "preadv 9 6 Ù"}
+{"type": "printf", "data": "preadv 9 66 ;bic\u001b{ÙZõ%\u001duÒ‹\u0015[hYvß…»ë•‹ô\u0001\\\u0004–\u0011ÍI\u001b0-Í!ûvÚ=¶\u00123æNÃêFÁ\nê\u0001ÍÂ:ò?EğÓs\u00062"}
+{"type": "printf", "data": "preadv 9 180 „"}
+{"type": "printf", "data": "preadv 9 113 Éö±\u0016´¥¹ÅZ·¶–\"°\"¢h‡#\rÇ\u0019'İ?¯Ø#\u0012V®fTi½ôS³\u0017€\u0019_ë¥u\u0017 R~\u0016ºæÀq£>:• —YÍŒ\u001d¦C\u0017Œßî¬1W½)&[5ê¹ZÚ¿œ4¸¨.Giç”¶Aê\" \"ÆC,“öHJt±Ók\u000fm"}
+{"type": "printf", "data": "preadv 9 128 :Vä"}
+{"type": "printf", "data": "preadv 9 116 €\u0018ø\u00011lø'oB§ŸûN\u0003\u0008ƒlD\u0003«ÒŠ+Û‹62´1ê’\u000f¤\u001b9È’.2îİ1@_¯Ç\u0013gü\u0003ÑÊ\u0006\u0005\\¿×½éÖÔìˆc‹.‡\u0017ê~lØ{•€(Ö„–Q¸k&\"yÛßÔÁ¦\tç”¼ƒhÓ ±}­Ëíº\u001aë"}
+{"type": "printf", "data": "preadv 9 30 œRİjú*\u0014\u001a\\t\u0006ØØL:™NŸVçh©\u0014\u000f\u000e§J†²ê’\u000f¤\u001b9È’.2îİ1@_¯Ç\u0013gü\u0003ÑÊ\u0006\u0005\\¿×½éÖÔìˆ"}
+{"type": "printf", "data": "preadv 9 0 œRİjú*\u0014\u001a\\t\u0006ØØL:™NŸVçh©\u0014\u000f\u000e§J†²ê’\u000f¤\u001b9È’.2îİ1@_¯Ç\u0013gü\u0003ÑÊ\u0006\u0005\\¿×½éÖÔìˆc‹.‡\u0017ê~l"}
 {"type": "printf", "data": "close 9 _ _"}
 {"type": "printf", "data": "close 8 _ _"}

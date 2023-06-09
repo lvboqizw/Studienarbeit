@@ -47,7 +47,7 @@ fn main() {
 }
 
 fn open_folder() {
-    let dir_org = "/data-original/test_files";
+    let dir_org = "/data/test_files";
     let entries = fs::read_dir(dir_org).unwrap();
     for entry in entries {
         if let Ok(entry) = entry {
