@@ -27,4 +27,4 @@ RUN cd /work \
     && cd /operation && ./fspf.sh \
     && scone cas attest $SCONE_CAS_ADDR --only_for_testing-trust-any --only_for_testing-debug  --only_for_testing-ignore-signer -C -G -S
 
- CMD ["sh", "/operation/threshold.sh"]
+ CMD ["sh", "/operation/run_program.sh"]
