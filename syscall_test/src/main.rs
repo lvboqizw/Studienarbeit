@@ -90,6 +90,7 @@ fn main()  {
     }
     if opt.test {
         println!("Analyse test");
+        monitor::analysis();
     } else if opt.threshold {
         println!("Analyse threshold");
         threshold::threshold_analysis();

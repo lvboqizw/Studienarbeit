@@ -1,7 +1,0 @@
-{"path":"outfiles/french","entropy":4.273082,"chi_square":129544.64,"mean":146.92307,"monte_carlo_pi":2.542199,"serial_correlation":0.498106}
-{"path":"outfiles/polish","entropy":4.312001,"chi_square":109557.875,"mean":148.94626,"monte_carlo_pi":2.325723,"serial_correlation":0.48989}
-{"path":"outfiles/turkish","entropy":4.30058,"chi_square":125881.15,"mean":146.34059,"monte_carlo_pi":2.473203,"serial_correlation":0.476961}
-{"path":"outfiles/english","entropy":4.313207,"chi_square":124211.33,"mean":149.48424,"monte_carlo_pi":2.427211,"serial_correlation":0.457873}
-{"path":"outfiles/spanish","entropy":4.303107,"chi_square":126156.234,"mean":148.58101,"monte_carlo_pi":2.177955,"serial_correlation":0.487106}
-{"path":"outfiles/portuguese","entropy":4.272331,"chi_square":53362.484,"mean":152.27959,"monte_carlo_pi":2.304636,"serial_correlation":0.453245}
-{"path":"outfiles/german","entropy":4.278045,"chi_square":48167.285,"mean":152.45737,"monte_carlo_pi":2.236559,"serial_correlation":0.46801}

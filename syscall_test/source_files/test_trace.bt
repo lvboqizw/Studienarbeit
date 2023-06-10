@@ -134,15 +134,15 @@ tracepoint:syscalls:sys_exit_pwritev2 /comm=="file_sys"/
 }
 
 //--------------open-----------
-tracepoint:syscalls:sys_enter_open /comm=="file_sys"/
-{
-    @open_path[tid] = args->filename;
-}
-tracepoint:syscalls:sys_exit_open /comm=="file_sys"/
-{
-    printf("open %d %d %s", @open_path[tid], args->ret, str(@open_path[tid]));
-    clear(@open_path);
-}
+//tracepoint:syscalls:sys_enter_open /comm=="file_sys"/
+//{
+//   @open_path[tid] = args->filename;
+//}
+//tracepoint:syscalls:sys_exit_open /comm=="file_sys"/
+//{
+//    printf("open %d %d %s", @open_path[tid], args->ret, str(@open_path[tid]));
+//    clear(@open_path);
+//}
 
 //-------------openat------------
 tracepoint:syscalls:sys_enter_openat /comm=="file_sys"/
@@ -153,6 +153,12 @@ tracepoint:syscalls:sys_exit_openat /comm=="file_sys"/
 {
     printf("open %d %d %s", @openat_path[tid], args->ret, str(@openat_path[tid]));
     clear(@openat_path);
+}
+
+//------------close--------------
+tracepoint:syscalls:sys_enter_close /comm=="file_sys"/
+{
+    printf("close %d _ _", args->fd);
 }
 
 
@@ -254,3 +260,5 @@ tracepoint:syscalls:sys_exit_sendmsg /comm=="server"/
     clear(@sendmsg_count);
     clear(@sendmsg_fd);
 }
+
+//------------connectect--------------------

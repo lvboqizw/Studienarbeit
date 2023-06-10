@@ -1,7 +1,0 @@
-{"path":"generator/data-original/test_files/french","entropy":4.613042,"chi_square":37496.51,"mean":97.51856,"monte_carlo_pi":3.981439,"serial_correlation":0.214252}
-{"path":"generator/data-original/test_files/polish","entropy":4.999202,"chi_square":25866.691,"mean":100.54458,"monte_carlo_pi":3.979899,"serial_correlation":0.298512}
-{"path":"generator/data-original/test_files/turkish","entropy":4.927516,"chi_square":27027.64,"mean":105.18495,"monte_carlo_pi":3.929293,"serial_correlation":0.363811}
-{"path":"generator/data-original/test_files/english","entropy":4.661063,"chi_square":35553.746,"mean":91.960915,"monte_carlo_pi":4.0,"serial_correlation":0.127357}
-{"path":"generator/data-original/test_files/spanish","entropy":4.608627,"chi_square":37190.75,"mean":93.62916,"monte_carlo_pi":4.0,"serial_correlation":0.235095}
-{"path":"generator/data-original/test_files/portuguese","entropy":4.696736,"chi_square":34863.59,"mean":94.87277,"monte_carlo_pi":4.0,"serial_correlation":0.303621}
-{"path":"generator/data-original/test_files/german","entropy":4.748941,"chi_square":34155.836,"mean":95.86262,"monte_carlo_pi":4.0,"serial_correlation":0.327818}

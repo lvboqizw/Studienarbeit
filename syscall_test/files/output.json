@@ -1,241 +1,606 @@
-{"type": "attached_probes", "data": {"probes": 31}}
-{"type": "printf", "data": "open _ 3 /operation/threshold"}
-{"type": "printf", "data": "close 3 _ _"}
-{"type": "printf", "data": "open _ 3 /etc/sgx-musl.conf"}
-{"type": "printf", "data": "read 3 112 Q 4\ne -1 0 0\ns -1 0 0\ns -1 0 0\ne -1 1 0\ns -1 1 0\ns -1 1 0\ne -1 2 0\ns -1 2 0\ns -1 2 0\ne -1 3 0\ns -1 3 0\ns -1 3 0\n"}
-{"type": "printf", "data": "read 3 0 Q 4\ne -1 0 0\ns -1 0 0\ns -1 0 0\ne -1 1 0\ns -1 1 0\ns -1 1 0\ne -1 2 0\ns -1 2 0\ns -1 2 0\ne -1 3 0\ns -1 3 0\ns -1 3 0\n"}
-{"type": "printf", "data": "close 3 _ _"}
-{"type": "printf", "data": "open _ 3 /etc/os-release"}
-{"type": "printf", "data": "read 3 382 NAME=\"Ubuntu\"\nVERSION=\"20.04.3 LTS (Focal Fossa)\"\nID=ubuntu\nID_LIKE=debian\nPRETTY_NAME=\"Ubuntu 20.04.3 LTS\"\nVERSION_ID=\"20.04\"\nHOME_URL=\"https://www.ubuntu.com/\"\nSUPPORT_URL=\"https://help.ubuntu.com/"}
-{"type": "printf", "data": "read 3 0 NAME=\"Ubuntu\"\nVERSION=\"20.04.3 LTS (Focal Fossa)\"\nID=ubuntu\nID_LIKE=debian\nPRETTY_NAME=\"Ubuntu 20.04.3 LTS\"\nVERSION_ID=\"20.04\"\nHOME_URL=\"https://www.ubuntu.com/\"\nSUPPORT_URL=\"https://help.ubuntu.com/"}
-{"type": "printf", "data": "close 3 _ _"}
-{"type": "printf", "data": "open _ 3 "}
-{"type": "printf", "data": "read 3 1024 overlay / overlay rw,relatime,lowerdir=/var/lib/docker/overlay2/l/D4GWF7LYBDK3AVXXYBOZBMSKDE:/var/lib/docker/overlay2/l/RNCRODARABUOIUQSM7IRM56J4F:/var/lib/docker/overlay2/l/ZMB5GPT62WMW2A5KVHJLSFQV4"}
-{"type": "printf", "data": "close 3 _ _"}
-{"type": "printf", "data": "open _ -2 /dev/sgx_enclave"}
-{"type": "printf", "data": "open _ -2 /dev/sgx/enclave"}
-{"type": "printf", "data": "open _ -2 /dev/sgx"}
-{"type": "printf", "data": "open _ 3 /dev/isgx"}
-{"type": "printf", "data": "close 3 _ _"}
-{"type": "printf", "data": "open _ 3 /dev/isgx"}
-{"type": "printf", "data": "open _ 4 /proc/sys/vm/mmap_min_addr"}
-{"type": "printf", "data": "read 4 6 65536\n"}
+{"type": "attached_probes", "data": {"probes": 29}}
+{"type": "printf", "data": "open 7347720 -2 /opt/scone/lib/sgx_white_list_cert.bin"}
+{"type": "printf", "data": "open 7337494 4 /dev/isgx"}
 {"type": "printf", "data": "close 4 _ _"}
-{"type": "printf", "data": "open _ -2 /opt/scone/lib/sgx_white_list_cert.bin"}
-{"type": "printf", "data": "open _ 4 /dev/isgx"}
-{"type": "printf", "data": "close 4 _ _"}
-{"type": "printf", "data": "open _ 4 /proc/7/mem"}
+{"type": "printf", "data": "open 359176528 4 /proc/7/mem"}
 {"type": "printf", "data": "write 4 1 \u0001"}
 {"type": "printf", "data": "close 4 _ _"}
-{"type": "printf", "data": "open _ 4 /proc/7/mem"}
+{"type": "printf", "data": "open 359176528 4 /proc/7/mem"}
 {"type": "printf", "data": "write 4 1 \u0001"}
 {"type": "printf", "data": "close 4 _ _"}
-{"type": "printf", "data": "open _ 4 /proc/7/mem"}
+{"type": "printf", "data": "open 359176528 4 /proc/7/mem"}
 {"type": "printf", "data": "write 4 1 \u0001"}
 {"type": "printf", "data": "close 4 _ _"}
-{"type": "printf", "data": "open _ 4 /proc/7/mem"}
+{"type": "printf", "data": "open 359176528 4 /proc/7/mem"}
 {"type": "printf", "data": "write 4 1 \u0001"}
 {"type": "printf", "data": "close 4 _ _"}
-{"type": "printf", "data": "open _ 4 /proc/7/mem"}
+{"type": "printf", "data": "open 359176528 4 /proc/7/mem"}
 {"type": "printf", "data": "write 4 1 \u0001"}
 {"type": "printf", "data": "close 4 _ _"}
-{"type": "printf", "data": "open _ 4 /proc/7/mem"}
+{"type": "printf", "data": "open 359176528 4 /proc/7/mem"}
 {"type": "printf", "data": "write 4 1 \u0001"}
 {"type": "printf", "data": "close 4 _ _"}
-{"type": "printf", "data": "open _ 4 /proc/7/mem"}
+{"type": "printf", "data": "open 359176528 4 /proc/7/mem"}
 {"type": "printf", "data": "write 4 1 \u0001"}
 {"type": "printf", "data": "close 4 _ _"}
-{"type": "printf", "data": "open _ 4 /proc/7/mem"}
+{"type": "printf", "data": "open 359176528 4 /proc/7/mem"}
 {"type": "printf", "data": "write 4 1 \u0001"}
 {"type": "printf", "data": "close 4 _ _"}
-{"type": "printf", "data": "open _ 4 /etc/sgx-musl.conf"}
+{"type": "printf", "data": "open 7328246 4 /etc/sgx-musl.conf"}
 {"type": "printf", "data": "read 4 112 Q 4\ne -1 0 0\ns -1 0 0\ns -1 0 0\ne -1 1 0\ns -1 1 0\ns -1 1 0\ne -1 2 0\ns -1 2 0\ns -1 2 0\ne -1 3 0\ns -1 3 0\ns -1 3 0\n"}
 {"type": "printf", "data": "read 4 0 Q 4\ne -1 0 0\ns -1 0 0\ns -1 0 0\ne -1 1 0\ns -1 1 0\ns -1 1 0\ne -1 2 0\ns -1 2 0\ns -1 2 0\ne -1 3 0\ns -1 3 0\ns -1 3 0\n"}
 {"type": "printf", "data": "close 4 _ _"}
-{"type": "printf", "data": "open _ 4 /etc/sgx-musl.conf"}
+{"type": "printf", "data": "open 7328246 4 /etc/sgx-musl.conf"}
 {"type": "printf", "data": "read 4 112 Q 4\ne -1 0 0\ns -1 0 0\ns -1 0 0\ne -1 1 0\ns -1 1 0\ns -1 1 0\ne -1 2 0\ns -1 2 0\ns -1 2 0\ne -1 3 0\ns -1 3 0\ns -1 3 0\n"}
 {"type": "printf", "data": "read 4 0 Q 4\ne -1 0 0\ns -1 0 0\ns -1 0 0\ne -1 1 0\ns -1 1 0\ns -1 1 0\ne -1 2 0\ns -1 2 0\ns -1 2 0\ne -1 3 0\ns -1 3 0\ns -1 3 0\n"}
 {"type": "printf", "data": "close 4 _ _"}
 {"type": "printf", "data": "writev 2 179 [SCONE|WARN] src/enclave/dispatch.c:197:print_version"}
 {"type": "printf", "data": "writev 2 0 "}
-{"type": "printf", "data": "open _ 4 /operation/threshold"}
 {"type": "printf", "data": "close 4 _ _"}
-{"type": "printf", "data": "open _ 4 /"}
-{"type": "printf", "data": "open _ 5 /"}
-{"type": "printf", "data": "open _ 6 /proc"}
-{"type": "printf", "data": "open _ 7 /dev"}
-{"type": "printf", "data": "open _ 8 data/test_files"}
-{"type": "printf", "data": "open _ 9 data/test_files/french"}
-{"type": "printf", "data": "preadv 9 30 \u0018\u001fX/âT\u0017\u0012ˆ}•\u0017\u000fëß\u000b.%)ƒ´\u0001‹\n…\n¥Ğ%"}
-{"type": "printf", "data": "preadv 9 130 ¦]\u0002\u0016ì 3\u0010tî\u0012q¼\u0017¹{ùM\tâÜÊÉ1T\u001a¼‡¼\u0012¿ój~ß˜ÜR!nÓ?Ô3c\u001bàK®\u001bÄúH 1§UÈš\u000cà‹l(Ø‰æüÈ¦S\u0012T\u0011\u001déÅze\u0005?L®§àA{úÆÂªåk\u001f^\u0005cF‰\u0019àk™xüU‹hÂÒŸ\u001cÀœl\u0001ê'ò7ùV\u0018—‚™S‰’"}
-{"type": "printf", "data": "preadv 9 67 ¾äbÊB¦±WìzKab\u001ea“\u001c\u0014¥âöû\u001f`™àË=W-Ã€Q{$q€ù•ß}Ç²ø\u001c_-!\u0002/\u0017«Ù\u001a¹tZ…å9lÁOËÎ"}
-{"type": "printf", "data": "preadv 9 10 şË\u0015N°œn/"}
-{"type": "printf", "data": "preadv 9 195 Ô®\u0004ÛštLv˜\u0006J\u000f"}
-{"type": "printf", "data": "preadv 9 95 ¯²n-i4\rg\u0017L|È\u0002gĞÀ;p\u0007IqKYİç)q\u0012ôå¦2ÿE¯ÔÄœºG¦¾›Xİ—~)<ã]4šñ)\u000b\u0015¤$vw‚[#³±\u0016÷¡†âUcÑ\u0004;Æ–k¾`İ¬\u000c›´dëÅ;Î\u001aé"}
-{"type": "printf", "data": "preadv 9 53 »g~Ëş\u0016eû\u0002+ÃÂ%o\u0016…WıílA1\u0019ñ¾tîº]+%&Ş1\u00134ü®Ö<\u0004”\u0003}g\u0006ô%ç1\u0006\u0013"}
-{"type": "printf", "data": "preadv 9 118 ˜#ĞmÆöeÂøÈ$0š_6¾„ÿ§>N\u0012ãL­\u0015¼(ÏòTDäE¼¨;¾×"}
-{"type": "printf", "data": "preadv 9 57 B\u0016ş²\u0016r¯`¨ö²l×~˜\u000bKCÂîj\"¡¼Í×Ù´ĞàBÀèÃkˆJüp­”–ts\u0001>Ëò<K¥‹\u0004)\\"}
-{"type": "printf", "data": "preadv 9 131 ‹ÄB>S†\u0016ét™×\u0011·'ƒ\u0016ğk¹û"}
-{"type": "printf", "data": "preadv 9 75 M\u0007\u000fD½ì¾@´\u001bØšm¨_Ä7`Ç\u0011\u000e\u001e+[\u0006òğhà\u000f¹‚¤ı»\u0018?ğ:Û©ÌÀ(\u0008\u00115N€ñ0Û‰ƒn!B¤×>gH¤û¼Ë\\\t»‘æ"}
-{"type": "printf", "data": "preadv 9 182 "}
-{"type": "printf", "data": "preadv 9 179 ÙÛË¤¼Ü°\u0012ÄF-\u0010©ãRú¦Ì"}
-{"type": "printf", "data": "preadv 9 145 \u0018”1QQØ:ÛR\n»¦İ\u0013\u001eŠ[øI\u000fvIn÷m\u0006ŒTH~F;ŒSÜõë2”:áiµ¹\u000céXxVx˜%Û\u0002ÇÉı”˜ïœ˜@ÄNù|(”æÀğ@®Õ\u0013Y|\u0002ğUÄÓî îº¥Oa=£âXÖ-&_Å–\u0013¢R/©\u0007¶¿¤ş,ê£,!ù îÇØŸ^EØÂô?¼Ú‚Ì¥7z‘­”…7\rf"}
-{"type": "printf", "data": "preadv 9 176 $)\u0006—\u0013g¯íˆƒ%eŸWÌïY\u0005šo\u0010W3ë·Ña¨ğVx¬ŠjÍ\u0007d,¼Ñ™ıÄ­BmL\u0003É)7˜ø`U·Ÿ[t\u001d§Îê³J©a­\u0006ÎÀĞØ« m\u0015Q\u001aš÷øDtUÜ\u0019ã\ré'<ıŸÜ*±”ã¢\u0004ı¢Ğ"}
-{"type": "printf", "data": "preadv 9 167 !ìk7‡OÉ ¢¥Ùo\u0017Må·ï,Yî†¼ã‚ŠbÄ¿{ä©±UeK´\u001bQ–§J<zY†NYñ{ã3>û¹X1"}
-{"type": "printf", "data": "preadv 9 190 ş»o9ôjª\nƒ1#ò¯BÍß\u000cu£D]\u0001c«¬0ÌåÙ\n¦UÓCá!ÙœØG\u0005\u0018q—›j¡\u0005ª¹\u0001X\u0006>cg%\u0001Úh\t­hò\u0011Ìx¶<[^³¥Y²e¦ùKì\u001cÜV;\u0017µ4ß\u0008^«a‚\u0002&±¿Ê:U\u0006¥µ¹»ÕA“\u001e\t\u0013 Š²>\u0010[õ\u001a\u0011† Ô\u001bKİÀGrÜM3*\u001dıÄÀÉ\u0008š\\}"}
-{"type": "printf", "data": "preadv 9 72 Å\u0015?Œ9–[ALµmtì€ÁxšD¬fÕÌ'Òê6\u001c¸\u0013'emá(Î\u0015q\u0018ùM“ãdj<J\u000f\u0011Š7“f5>r©OGìãÜ‹Á\u0006\u0010"}
-{"type": "printf", "data": "preadv 9 149 Å+Â»=u±4\"5\u000f\u0006©Î\u0011\u001bd|†°\u0003\u0007{ª\u000e\tñÏ°âÓ7G¿µòÈS…Ş\u001d6¼S\u000f\u0008e°¬ÛkÛæMóÈÿù€šÚg\rµÆ„Ëàg\u000b]‡Öy\u000b#NËP\u0005vgÛàõ)¹9¢ÿH·uI›9ñÿ±¬\u000fr\rCı}i›EVÓÛzU\u0002Âã\u0011‰cD\u0007“¨\u0003¢ëõX×kñ\u000c¼èG€\u001fWû:÷}F›á"}
-{"type": "printf", "data": "preadv 9 152 \u000e|“z@¼çqåbqÙ±¤r-SXÆÉÛ[8õÍÓ‘\u001fVğbOŠ/•ˆR-TX~\u0014”ß\u0016Új\u0008Ãrì\u0016¢\u001e¬‡\u0011\u0019ú\u0006\u0016íP¶/ÌZ‹ÅÜÒ=fÚKßûjÉkÑùí\"frš\u0013ØÒÉˆ6„ìDí¦\u001eT¯h\u0014“‘sófMGR\u0017hÉL‰»Î­kr¨j•ñÄ¾ö¤\u001aíÛÙ™£%é\u0002\u0003)*“=cRéö¥…*›"}
-{"type": "printf", "data": "preadv 9 189 Ø”Î'Òo1r!TÙ@cEã­ûf·\u0019e2öZx¿”¡õ\u0002q¨\u0015A¤”q÷¼\u0011Ô–’Â7\u0006\u0018xHÊ\u001e\u0011‘\u0013ÕD„†ªüš~~Ö¸N±\u0002!á¸4Šsi¶q\u000fÔŒ:®\\Ï°mlşıË;ùMàüÖlkÈÏê*g$2ú¦ÎèôÅaK*›’;\u001bÖCÖ´Şğ¬ò\u0017p\u0004Ñãu’» Ø¦º&\u001aEÌ%[VƒÍ…UC¦XÒîR¢\u001dbæÑRÔ~\u0008ª\u001a¤Ü«W\u001d¾fœ#\u0017ƒ:"}
-{"type": "printf", "data": "preadv 9 24 \u0019F\u0005ñ\u0018-Ÿ•Z\u001bA×syÆÜ‘©W\u0011\u0017®å7x¿”¡õ\u0002q¨\u0015A¤”q÷¼\u0011Ô–’Â7\u0006\u0018xHÊ\u001e\u0011‘\u0013ÕD„†ªüš~~Ö¸N±\u0002!á¸4Šsi¶q\u000fÔŒ:®\\Ï°mlşıË;ùMàüÖlkÈÏê*g$2ú¦ÎèôÅaK*›’;\u001bÖCÖ´Şğ¬ò\u0017p\u0004Ñãu’» Ø¦º&\u001aEÌ%[VƒÍ…UC¦XÒîR¢\u001dbæÑRÔ~\u0008ª\u001a¤Ü«W\u001d¾fœ"}
-{"type": "printf", "data": "preadv 9 0 \u0019F\u0005ñ\u0018-Ÿ•Z\u001bA×syÆÜ‘©W\u0011\u0017®å7x¿”¡õ\u0002q¨\u0015A¤”q÷¼\u0011Ô–’Â7\u0006\u0018xHÊ\u001e\u0011‘\u0013ÕD„†ªüš~~Ö¸N±\u0002!á¸4Šsi¶q\u000fÔŒ:®\\Ï°mlşıË;ùMàüÖlkÈÏê*g$2ú¦ÎèôÅaK*›’;"}
-{"type": "printf", "data": "close 9 _ _"}
-{"type": "printf", "data": "open _ 9 data/test_files/polish"}
-{"type": "printf", "data": "preadv 9 48 Bs\u0008\u0005ì°\u0001l\u000fUß$\u001eëÉ\u0004*#\\Ô>2u=x½\u0016øbÌM\u001aÊ¢=Õƒi¶Ó\u00153ÒH„1Óª"}
-{"type": "printf", "data": "preadv 9 50 ¨3²ò\u001aY\u0017öy\u0011x½KÛ§Hd\u000ezwÚWH1¯\u0014\u0008Z…„F/ı½ö­ó‰©¶i˜^PÕ‰ï"}
-{"type": "printf", "data": "preadv 9 148 †\u001bî÷³š¶Ë»0Æù¨±ö¼¡÷Ú\t\u001fPŠ”\"<_r‹fŸòY\u0008qç%‘IºÍÉnæÏŒÈ\u001b®ºµ\u0007óï7¦\\Ô1\u0013ÔëroùÃ\u001f¡l‡Şà˜\u001d“\r3ÿ?1ÊõÍ\u001bêÕô:sà\\êÎÅıf\u000c\u0017\u001e\u001dzvc\u0008*\u0019\u0008Â\u0014\u0006óOÀ}¸íD§ù¢Tk\u0015Ñ\r\r)øµ”hó×¹CøK…a‰•"}
-{"type": "printf", "data": "preadv 9 190 fÛÔ0ü&c\u0006@\r‚ä? ®U~?\u0019¢»½\u0011\u001cŸ]ìGŠRéYõä}ôC»\u0001Ì¥?EñH·\u00154æ²«·Ù„áíõ %BhQğõzĞu@¯#«\u0015c;\u0001I‰İæ6s$JyIç‰ËûœËwhi>5,w¤\u001d:Ît\u0011!|¯\u0002;³äÃûÜ\u0006§\u000e× éÑš\u0013ÒüLÎ¾½Ô$Ê\u001d!c\u0015Ïk¤r\u001d¶.s‚ °XG½a\u001e\t[à$×¦Oó•¼YŞ­#p\u0006*.“|\u0012ã¹Ù\u0006ÖÉ…K\u000b§Šu"}
-{"type": "printf", "data": "preadv 9 101 \u0012\u0014™m<\u0004‰fmş•j7–\"rŒuê]fJ\u0007Mò–C:\u0008Ò”\u0019ãªhòäIM±½[Ş£dåS\n7|Ğ­Z4Ò¬«U“µ\u0017šºĞ•ùŒÃ\u001bÄ‚&öXR¹”´~Ş¾(ìh?_µ…Ê\u000eKyXÑò˜véôÅ"}
-{"type": "printf", "data": "preadv 9 147 €u÷\u001cƒ¡1Tåb˜ö|Ò›ğæZ ?OÎo|Í?Õ²\rj"}
-{"type": "printf", "data": "preadv 9 128 –c\u000e[¢\"Õó}¯b±\n52—Çá„K\r\u001bFùÅ/õšlö\u001bJƒÈ~ân\u001b'k\\\t’&–”{Ôê„î Y†÷\u0012ù³Vm+%ˆûë¢Ù\u0003i.N=\u0006ĞÎ•á;Ræ“SêÃÊf\u000c+á!;­ã§\u0019ASÊ·‹Ô¨UÆú•ôªóÍMD¼µ¹U³sxÑÛ\u000eç¨õ"}
-{"type": "printf", "data": "preadv 9 156 f9\njÉê\u0013ş¬b\u000bŸ'\u0017\u0016»ß3 \"ş\u000bºÅM²\u001d\u0007rÛJTåZ4n=Ø…(…Şr|üÚÔÙì9ÃV2\u0018Æe8\u001eÒAñKV—\u0005éËcé\nî©Èš-F×ØÙ„ì7È…¡LÌ»C[ÎÊy•Oä…½Ê\rr¨}ÔøWêDX.Z¢{ÿBQPšËŸ\u000chwL«“íUcõ4B›\u001bö>,|Z“'<“m(Z\\¹jb^a"}
-{"type": "printf", "data": "preadv 9 43 âÑg\r¿Ç8pí\u0002·ëÀ1®3¥_m±)2ƒÔü{XQ¦óÙ„V\u001eÆø\u001eÃßÓMÙ"}
-{"type": "printf", "data": "preadv 9 36 rpQK\u001ene\u0012t¬\u0013®Pšu3÷iamµzAg€Ù2Pfø–Ğê%\u001d"}
-{"type": "printf", "data": "preadv 9 60 øVæú„ó\u0012•O#Å?s¡îŸŸ×^jq»ƒ5\u001aC. Hm„\u000e^ÄU«ã=ìBó³Y §³Ñ\"ê‚ØÛÆº\tôPKï"}
-{"type": "printf", "data": "preadv 9 199 Üùğ‚Qœx=Hjc÷4\u000b»‚Õ›Öš<Ö\u000eU\u001cõåÆıa°ázLn·Œ¯ì\u00046\u0012Ïb\u0003¢\u0005¶«¬ä\t\u0014ÍdZÕÈÃ OÚ\t/½bÒ=06\u0014±\"›Îìİß}\u0015iR<š…ü¾½–Ì\u001b„Œ'ï]â©á¤Ş\u0018QÍ£\u0007>”ŒÜşûë\u0004„eY\u00116"}
-{"type": "printf", "data": "preadv 9 102 —¡ı\u0005İ5b)±ú„\u001b ¨íºüT·¬¿—Ô+Rƒ˜y¯kUY\u001c\u000fT˜=\u0013ËÁú\u0010J¢›ÑqYâBĞÂP\u000c\u0010l;1ß½|I11cµ‘¡÷ª\u0008prxP¸û\u00183Œù×DâLÃ¡;sÚ-ıüRK]\u001c\u0004²"}
-{"type": "printf", "data": "preadv 9 134 \u0013W \u0010‡Ï,-Í\u0018$y\u001b\u000c€¾]ã„…]1TÊç»v^±Ü>\u001bU\u0003¨aqGˆ¢ı\u0012— \u0002ë:-ÌBf5¢m ï"}
-{"type": "printf", "data": "preadv 9 51 –cÎ4qísÖe\rşc\u001e$+\u0011¤fç…_6ÌŞùR\u0006Í¢\n¡û‹$Æ*Ò¦¦´wĞ<\u000eP‹qœ\t–\u0001"}
-{"type": "printf", "data": "preadv 9 124 ~^¹\u000cau\u0016­sG\u0004ÉÊèÍ!~\u001b\u0016_r`õ,AT\u0017\tlo,WÅ?\u0010e!\u0010ÌñÃ&báÙ?\u0019ÃÕ§HôÂ@AHzoTßí­\u000cFĞÅ;QNœ78}SAÖĞ³N\u0004ŠüRey\u0007’¿b]üú›¤è÷ \u0018k¹±ÀêïZz\u001d$f÷¦¿Ñm\u001aT˜¤|"}
-{"type": "printf", "data": "preadv 9 57 `'–ŒpSÓ<\u0018<3»¸Õ'3Õ3½\u0018\u0006~s<µ>F¤<Æ k÷¸\u0003ÆY¼¾dÙñ\u0014œ“°î:µC\u0016>\u000f~i\u0017"}
-{"type": "printf", "data": "preadv 9 90 …‡¶\u0011¡°Õ›Ìœ±±Ãİ\u0013\\Ùc$Pk:\u001büğª‚Î½µşd0îltc7ãé2“.ŞÊg+>ŒeTå\u001e™çúœš\u0015ãİ²>Cöç§u\u0002\u0016¶ùƒuÖõ\"M\u0015“rçQ!\u000ff=“—"}
-{"type": "printf", "data": "preadv 9 86 C.”¨¶2Í[¼ z\u001dJb»a\u001a\u0003\u0004·½ ĞM\u001b))‘3\u0014‡„ú®?¥–ÿ€üCÂkå\u0008#†t¥¨‡ä|„:v¹Ll0·Èâ/\u0014Ú„Â0›5\u000få-=¶.\u0010&Kô`ò8Õ"}
+{"type": "printf", "data": "open -359497728 4 /"}
+{"type": "printf", "data": "open -359497728 5 /"}
+{"type": "printf", "data": "open -359497728 6 /proc"}
+{"type": "printf", "data": "open -359497728 7 /dev"}
+{"type": "printf", "data": "open -359497728 8 data/test_files"}
+{"type": "printf", "data": "open -359497728 9 data/test_files/french"}
+{"type": "printf", "data": "open -359497728 10 data/write_file"}
+{"type": "printf", "data": "preadv 9 171 \u0018\u001fX/âT\u0017\u0012ˆ}•\u0017\u000fëß\u000b.%)ƒ´\u0001‹\n…\n¥Ğ%¦]\u0002\u0016ì 3\u0010tî\u0012q¼\u0017¹{ùM\tâÜÊÉ1T\u001a¼‡¼\u0012¿ój~ß˜ÜR!nÓ?Ô3c\u001bàK®\u001bÄúH 1§UÈš\u000cà‹l(Ø‰æüÈ¦S\u0012T\u0011\u001déÅze\u0005?L®§àA{úÆÂªåk\u001f^\u0005cF‰\u0019àk™xüU‹hÂÒŸ\u001cÀœl\u0001ê'ò7ùV\u0018—‚™S‰’¾äbÊB¦±Wìz"}
+{"type": "printf", "data": "pwritev 10 171 \u0018\u001fX/âT\u0017\u0012ˆ}•\u0017\u000fëß\u000b.%)ƒ´\u0001‹\n…\n¥Ğ%¦]\u0002\u0016ì 3\u0010tî\u0012q¼\u0017¹{ùM\tâÜÊÉ1T\u001a¼‡¼\u0012¿ój~ß˜ÜR!nÓ?Ô3c\u001bàK®\u001bÄúH 1§UÈš\u000cà‹l(Ø‰æüÈ¦S\u0012T\u0011\u001déÅze\u0005?L®§àA{úÆÂªåk\u001f^\u0005cF‰\u0019àk™xüU‹hÂÒŸ\u001cÀœl\u0001ê'ò7ùV\u0018—‚™S‰’¾äbÊB¦±Wìz"}
+{"type": "printf", "data": "preadv 9 63 Kab\u001ea“\u001c\u0014¥âöû\u001f`™àË=W-Ã€Q{$q€ù•ß}Ç²ø\u001c_-!\u0002/\u0017«Ù\u001a¹tZ…å9lÁOËÎşË\u0015N°"}
+{"type": "printf", "data": "pwritev 10 63 Kab\u001ea“\u001c\u0014¥âöû\u001f`™àË=W-Ã€Q{$q€ù•ß}Ç²ø\u001c_-!\u0002/\u0017«Ù\u001a¹tZ…å9lÁOËÎşË\u0015N°"}
+{"type": "printf", "data": "preadv 9 119 œn/Ô®\u0004ÛštLv˜\u0006J\u000f"}
+{"type": "printf", "data": "pwritev 10 119 œn/Ô®\u0004ÛštLv˜\u0006J\u000f"}
+{"type": "printf", "data": "preadv 9 61  …o:_úù3{\u0013\u000f\u000e\r„;@›ÿ\u0013áÚó[rµªtBr­Œïi4…D\u000b\u0005@…bŸ\u0005*¾VıÙ«M/õºÿŠ”Û\u0008\u000cèà"}
+{"type": "printf", "data": "pwritev 10 61  …o:_úù3{\u0013\u000f\u000e\r„;@›ÿ\u0013áÚó[rµªtBr­Œïi4…D\u000b\u0005@…bŸ\u0005*¾VıÙ«M/õºÿŠ”Û\u0008\u000cèà"}
+{"type": "printf", "data": "preadv 9 30 \u000c‡±\u0013 _¥îã”§Ú©š\nt¯²n-i4\rg\u0017L|È"}
+{"type": "printf", "data": "pwritev 10 30 \u000c‡±\u0013 _¥îã”§Ú©š\nt¯²n-i4\rg\u0017L|È"}
+{"type": "printf", "data": "preadv 9 121 \u0002gĞÀ;p\u0007IqKYİç)q\u0012ôå¦2ÿE¯ÔÄœºG¦¾›Xİ—~)<ã]4šñ)\u000b\u0015¤$vw‚[#³±\u0016÷¡†âUcÑ\u0004;Æ–k¾`İ¬\u000c›´dëÅ;Î\u001aé»g~Ëş\u0016eû\u0002+ÃÂ%o\u0016…WıílA1\u0019ñ¾tîº]+%&Ş1\u00134ü"}
+{"type": "printf", "data": "pwritev 10 121 \u0002gĞÀ;p\u0007IqKYİç)q\u0012ôå¦2ÿE¯ÔÄœºG¦¾›Xİ—~)<ã]4šñ)\u000b\u0015¤$vw‚[#³±\u0016÷¡†âUcÑ\u0004;Æ–k¾`İ¬\u000c›´dëÅ;Î\u001aé»g~Ëş\u0016eû\u0002+ÃÂ%o\u0016…WıílA1\u0019ñ¾tîº]+%&Ş1\u00134ü"}
+{"type": "printf", "data": "preadv 9 157 ®Ö<\u0004”\u0003}g\u0006ô%ç1\u0006\u0013˜#ĞmÆöeÂøÈ$0š_6¾„ÿ§>N\u0012ãL­\u0015¼(ÏòTDäE¼¨;¾×"}
+{"type": "printf", "data": "pwritev 10 157 ®Ö<\u0004”\u0003}g\u0006ô%ç1\u0006\u0013˜#ĞmÆöeÂøÈ$0š_6¾„ÿ§>N\u0012ãL­\u0015¼(ÏòTDäE¼¨;¾×"}
+{"type": "printf", "data": "preadv 9 38 ¡¼Í×Ù´ĞàBÀèÃkˆJüp­”–ts\u0001>Ëò<K¥‹\u0004)\\‹ÄB>"}
+{"type": "printf", "data": "pwritev 10 38 ¡¼Í×Ù´ĞàBÀèÃkˆJüp­”–ts\u0001>Ëò<K¥‹\u0004)\\‹ÄB>"}
+{"type": "printf", "data": "preadv 9 13 S†\u0016ét™×\u0011·'ƒ\u0016"}
+{"type": "printf", "data": "pwritev 10 13 S†\u0016ét™×\u0011·'ƒ\u0016"}
 {"type": "printf", "data": "preadv 9 0 "}
 {"type": "printf", "data": "close 9 _ _"}
-{"type": "printf", "data": "open _ 9 data/test_files/turkish"}
-{"type": "printf", "data": "preadv 9 99 Ìó©íM³¤\u0018qí>6¾\u0008pî\u001e¡\u0019\u0016º\u0015‡\u001e—°BõÙ\u0001ñ[v\u0018úÕ\u0016ëp}Ğ-~\u000bö\u001d1hWQ˜|™\u0001Ùj\u0018j¦U\u001b\u000cÂj¾Ø¤Š*«÷‰Ü\u001b\u0010Ä¤*v]íÙNq7¨ÏHÅé±\u0016Ç\u001fjF"}
-{"type": "printf", "data": "preadv 9 118 nøéÒª±²†4\n1fŒ"}
-{"type": "printf", "data": "preadv 9 65 Dx=5åy–]v–Ôí\u0007‡†ºtLf&×Nè\r§"}
-{"type": "printf", "data": "preadv 9 110 İƒx$\u001a\trå\\6“nµ78¥ºv\\y\"ÕbÚu ‹OúT3,åt’\u0003IF.Åí\u001fáÑğØ\"Æ\u0004&Ü \u001c¿ş<G\u0006¬0¼Z¡¸\u0005\u0010ı\u0018J8ş\u001f\u001bâ¶W'›7ş\u0003§&Xï\u001a\u0019=İ\u001ağÏÊ_3®š\u0018±\u001f¤Ğ`¾:"}
-{"type": "printf", "data": "preadv 9 87 ¬n[~\u0015±…\u000b•—š²68<æÙ›f‡ÊÿËA\u000bÖ¸Æ^z©A_\u001ftwºI$œ\u000bWğ*8T8V•T¢¼áúo€w 4\u000c]÷şÎnW)\u0003ÁPú’–\u0008i}óÈ¯ÓKy¸G¥øM"}
-{"type": "printf", "data": "preadv 9 143 \u001epo\u001elPş„(ò\nœ…±º™D@\r–şÏ\u001e0£mÛ1ï¡àd5®?rÖ\u0008²TÁ”Â\u0019Æ\u0002N¦7z#ü\u001bx\u001b>\u001a&6äit\u0015ø·ÈÎ¿óOH¥ğú*\"wíÕM[m¹›\u0018h±í;<¿Ìˆ\u0019Â‹¦ğ}†ÎÈ\rô9\u001c7ö\u0010P\u001cSq\u0013¨æ:CÁ\u0012˜“³š‚K‡É–xã¹o\u0003i"}
-{"type": "printf", "data": "preadv 9 24 ,\u000c‡9ÃwÑ›€Æ0ãôÉ{úw\u0014”Œ\u0014-n"}
-{"type": "printf", "data": "preadv 9 27 wõµ\u0014ÆÃğ>B\u0001\\ie!Á³;÷ÿ÷îY\u00023‰ö"}
-{"type": "printf", "data": "preadv 9 86 ²\nA?lhÿ¬1p}Åª,(>~Ã|k)äí÷wJ\nwÍn\u001f\u001d&•²Egó¨¼½°]¦½)"}
-{"type": "printf", "data": "preadv 9 62 ·Ú@İ3h#V\u0019S¸üÀk˜ÿ\u0010\u0006\u0015\u0010îÕÒgÊ<9\u0018AÎ–!§\u0006ƒ¢Z|TÏœ\u001cÌ%Ãe\u001f&Ì<dÄS\u000e¥¶7 ç+"}
-{"type": "printf", "data": "preadv 9 140 \rı\tˆÉ×›!RÃzï´\u000b.±\u0002Úçó÷$*\u0006Qæœõ\u001bÌÎ“cKŒï| kúĞ\u001fµÓ™Ò!§UV³–<»\u0004\u000fşÂ0²>‘\u000f´«p£ÿ˜0uıºşì\u0017<íÎ\u001dû ºâ´îÎ;›n2’€ûš˜M\"\u001dxryºõ‘ğ‰İ<\"í—mVˆŞgˆZÁ.’Nı/{ƒé{äp²¦\u001fš»‹·"}
-{"type": "printf", "data": "preadv 9 111 §Ü×“<ùŠ\u0018AR"}
-{"type": "printf", "data": "preadv 9 102 Tâ˜„Hİ’’ı­ğa;Xœ˜Ê]Õf„ŠD\u0019\u0002Ñ+O\u0016à>îº\u001eö'ÖüÊlmRjD"}
-{"type": "printf", "data": "preadv 9 25 áFQöK\n\\š\u000eñÚ3dçà.LÍçâ±\"\tÁ"}
-{"type": "printf", "data": "preadv 9 63 \u001có\u0007ã†‡±£˜¢ÑËºp®\u0004É !nw·&ÄÓ\u0015à;zJgÎİ#ú@µA\u0014ËTUr>ı“Zö\u0015°¼\u000bÊív6µXR"}
-{"type": "printf", "data": "preadv 9 72 Ñe×h‚xêv\r-S\u00040øèI\u0013óLàŞ ñ&\u0006\u001cP=šåï\nsceI>Ê\u000cÌ<½dw$×¸¬56ß[ÿjæEÊˆ;I³05\nöÁˆ"}
-{"type": "printf", "data": "preadv 9 127 Ğ×ÁX)_Ë\u001bv¸®7Â²‹£ô¥{¶ïÙ*\u000c\u000c?\u000c=\u001aÖ¶#@\u0012ÈÉ&E=ÈmF\u0002\u0014oÿÑôşÏX”{\u0018±”ÉP‡\u0008\u001el _¤*“v†\u0003Âë.=\u0017íéªTöærÏ\u000b\nâ\u000e\u001fBwî(êD¤“,Ÿ\u0001™mBñÈ²…\u0018\u000cãà,\u0018a\u0007³ÌĞ8T\u0015jü\u0004è]"}
-{"type": "printf", "data": "preadv 9 152 zõå’sô9‘P7\u0006…\u0008LvÄ%ŒI@«Ø#$@«£Bj#ªø„LJîVÓ*\u0011ç·ÏT¸R˜\u0014lĞò–\u001by$R\u0006Ã˜p¨\u001f.iêm\u0001;ÇÜ¸Ÿ‹•#Øğ³\u0017\u00088õ|áŸÜ\u001cvËÉä™×\u0003]é0çA\u001a*\u0011fû\u0005f@ÏjšO\u000fH_,€²Uï[ÿJn áà\"Ö¢g•e÷oÉ+k+NîìW¼wù]µC‚"}
-{"type": "printf", "data": "preadv 9 24 àbœL\u0015EaËXİgú~»|ª˜&Ê ıxCî"}
-{"type": "printf", "data": "preadv 9 35 \u0006!uŒ<LPv\u0005ã/\u00109õå\nJi¢Aóù\u000fs`Ÿ¯û2QÇ\u001dt"}
-{"type": "printf", "data": "preadv 9 50 [.\"Ğ­(ƒL{Ì$\u0013h\u0013\u001b”hõŠ\u0004ËU¢É3ÀÿN:v\u001eS \u001eÚ\u000c„ö“úÑº2Yš\u0013t°½Ğ"}
-{"type": "printf", "data": "preadv 9 64 HqÆ\n¢h01‡\u0012ô~–t=Š‰\u000f™w¦ÊÿË"}
-{"type": "printf", "data": "preadv 9 154 ñMø\u0003YS³vxz5†\u0001¶sû§\u0007ïœ\\c’1"}
-{"type": "printf", "data": "preadv 9 145 #ø¸ _\u0014×\u0007«°İ\u0016\u0007\u0011>èf\u0012ó0¸û‡¡é:s.Õº\u000fÒÀàRX¬Mˆ.(¨tg½LLN£yÆ{\u0019Qlh²ı\u0011€½¦·\u0018`5C\u001bØ¡HË\u001cÌj¢|G©K3\u0017¢c\u0015\u0002Ü}Œ\u000eæ\u000c¯R=ˆEÆä€(0%\u0015llóÜRò1‹‘Ì?\u0004ÀÊ·JPÜ|’b¾\u000e,şdŠ<`(\"u/Š!ßoş#'µ"}
-{"type": "printf", "data": "preadv 9 81 Lz\u0016Ä¢Œ9Ê-\u0016\u0008Ôä'ïàŞş›‘UÇ|+\"èŸÌ× …4m=2U*}g{\"ÜV\u0002Š\u0002š\u000c2û}óqAgq\u0004ãY(7Œ“-³¥pªúª¥Dá"}
-{"type": "printf", "data": "preadv 9 96 / Ç¦Ô±T›‰‚ŸT\u001b$¯Œ@|q{Z´2XQÍôÕ\u0007?±¨‘ìTŞ¹„:Å\"UŒ\u000c÷³@m™Ñ°x~ŒùÒ\u000c;r-Á{ÏG‚\u001f‚á21Ö\\áà±ò ÄÍ \u00088\u001b=\u001fO¿\u0018\u000eıøl"}
-{"type": "printf", "data": "preadv 9 117 ˜RÖ0^KñÏû¿<W+Û®×ôKãíA6\u00029\\\u0004êË-ªˆ¦,›\u0008Ù\u0003—e\u001by\u000b3¿\u001dñı\u0006:™B.È\u001cóÇ8ª-x¨Èß`½\u0003Ê_¬36À5ˆ–ş‚\u001f!F|LgUl“.h"}
-{"type": "printf", "data": "preadv 9 0 ˜RÖ0^KñÏû¿<W+Û®×ôKãíA6\u00029\\\u0004êË-ªˆ¦,›\u0008Ù\u0003—e\u001by\u000b3¿\u001dñı\u0006:™B.È\u001cóÇ8ª-x¨Èß`½\u0003Ê_¬36À5ˆ–ş‚\u001f!F|LgUl“.h"}
-{"type": "printf", "data": "close 9 _ _"}
-{"type": "printf", "data": "open _ 9 data/test_files/english"}
-{"type": "printf", "data": "preadv 9 185 \u001eWÍ\u0016DŞ òğŠk”¦dÍ¿Î"}
-{"type": "printf", "data": "preadv 9 93 ĞÆ\u000f­\u0007–H¿¤Ãj†.İéÚã{ZSgü\u001f¯ÛKÍÊKŠO-²ñš“\u00117h( ¸—›5'Ô’é£@$øz(jÉ«=Mw¼\u00080ÛænÓ-ğ¯\u001dÒ.}ö=VÖ-\u0001£\nA\u000b­¢\"?"}
-{"type": "printf", "data": "preadv 9 26 q,ó!úÙáÂˆ\u001cìFˆ1Ç[.“täŸÙdö×T"}
-{"type": "printf", "data": "preadv 9 20 >FËªúb\u0018“°Kª²›ÿ…k\u0006Ã*à"}
-{"type": "printf", "data": "preadv 9 9 L×ßëêfÙßW"}
-{"type": "printf", "data": "preadv 9 22 .G\u00061?†”ÿÃ0l<ş\u0013Ñ’œ\nø³÷]"}
-{"type": "printf", "data": "preadv 9 172 \u0013µ\u0007H†\u0001°»éˆ\u0017ˆ€ò\u001cO\tÕ0\\Ô.j·<ºs—‹\u0011\u001ek7ş‚k\u0007`|\u0015S\u0013†€;\u0017©ùH©ÏŞ`j±gş\u001b£&CG/¨l:s‘‡rD¤¯k×‘Eñ¾zvâ¨êä­ ÁÆ3Ô‚«ß¦\u0015\tâ•eÆ˜ß“\"$µr\u001fÚ%$IÁú-éø\r@g:T/¨õN†É”\r·eª_€æşø#ÇäJão¸üYÇ]±\u0006S¯*Yae\u000cäÉ3‚ÏÄ"}
-{"type": "printf", "data": "preadv 9 1 æ"}
-{"type": "printf", "data": "preadv 9 71 ;Ë¤±\u0007¥A\u000cŞtuÑiôg}bÊ\u0003\u001e©Ágjó“\u000e°NX\u0003p°²YƒVŞê.]ºf»‘ëk\n×`eî%•Qh¥\u0015ÍtšÙ&ªAÊ\u0007løw"}
-{"type": "printf", "data": "preadv 9 73 ‡{®E\r©¨\rJ3\u0018WØP‡“-7\u001eÜW\u0005R¾o>‹âW*È_ÇW&\u0002¢¬Ÿ[Š×\rˆ\u0005ùú(®\u001dÜfàÎ~ö‚-di€\u000b\u001cC@x\u0004¬gêY"}
-{"type": "printf", "data": "preadv 9 85 €s\nF,P)ã„S·|²vš\u0004K»×aBşgN/<¯`Mº\\Mu8qÚX\u001c8£ûß\u0006:ûj4Q\u001fş{ş¢³7åÉÊ¶ïÖ¼€Ì¨\u001a§z>I2\u001fİ¬T7\u0015)\u0016\u0006"}
-{"type": "printf", "data": "preadv 9 23 «L´²“R «Tà¾%óE°VŠ\u000c¶åÂÙ"}
-{"type": "printf", "data": "preadv 9 32  \u0001j\\²¾N°rI¿W\r\u001f‹*DR+áF‚VW=ÇÏ=\u000cØ"}
-{"type": "printf", "data": "preadv 9 47 Q|\u0015ã_P·W°¹ß˜™¨j\u0019$Q\u001eÍ¼b.DÂ‹çL;€¹KøÇ°|“cøm%û¤¬ó²}"}
-{"type": "printf", "data": "preadv 9 48 éëBÏth9ÏI´;\u0019\u001bN\u0011¹µ¥‰`\u001fY±>ƒÛõ\u001eÃœ¿/Ešö=0\r×œl{\u00189¯\u0010"}
-{"type": "printf", "data": "preadv 9 85 ºÑà'Z¶ìğôì”s½e\u001b+=kÇ’\t?Ø\u00126Z\u000bÅ\u0001ˆ©0Dğzp¯HÁ–Fm3\u0017™Ú|3]û\u000b\u001bëÅ6*ÑhMt]ktÁe\u001e\u0010%ŞK›j­vpÇS­?)\u0008Jj"}
-{"type": "printf", "data": "preadv 9 85 Éç\u0015|3ä\u0019Ú‚ñ^Ÿ°$s\u0005i’<°×\u0016¬t]³ Ní\u000eÕŒ\u001e"}
-{"type": "printf", "data": "preadv 9 60 \u0017ÄUWğò‡\u0003Š‚H®®\u001aRt<Ÿ8Ó$…WA\u00137ü†—Ù|ùº,K•İ\u001a7}wĞ·;©ÉÉœƒşS^Àéà\u001b\u0003"}
-{"type": "printf", "data": "preadv 9 91 8ª»>¿_Û\u001cxB¹´\n\u001a\u000bÁğ³ŠCéï\u000côÎ‹ÇÓ6Ã•eqs\u0002P\u001cØ\u001b%·V(@t+µù¡rº\u0018ÈG,vP/Ù¥ \rN\u0016¶.\u0013ğ\u001e‰û\u000c‚f¦@:İÖ¥f¾\u00182ÚÅu\u001a›&"}
-{"type": "printf", "data": "preadv 9 171 µÏ\u0014Ø„aŠ-åÛ¥ô¦\u0003¼&Ğ•Mç!¸Ê\u0006\u0011İ\u0017@Š·¥ s2\u0005‚fŸ—¬\\6Ÿì½Æ\u0016}9wÁ²q\u000f8¡“\u0002˜÷=.”-%»~\"Ú“ÑoäÒ\u000b2u\u000fê"}
-{"type": "printf", "data": "preadv 9 69 Ø\u0012Ô`\u0007•+|\u0007¤\u001fòAÛÚsÕ\u0005zû/õ0Æ0„ªñíg9w˜ÀIğA\u0018\u001bfÇú»¯W»±µ*zK÷©Nïr\u0017\\×Ë_yop»„ ƒ"}
-{"type": "printf", "data": "preadv 9 93 'Áe<À˜i‚3\u000e·\\Éé\u000e¡Ğ¥yãpƒ¬Á=wl¬M€Æ¹S+¡_GCO2Â"}
-{"type": "printf", "data": "preadv 9 12 (>ÜÁ8Ãû™<3œ("}
-{"type": "printf", "data": "preadv 9 55 –uù~e‰—CŞ.\u0007.ÀÙ€\u0018³hóØj¾ŸâW\n\u0017ÎœéN<\u0011½ò Ì<L›‡€›  y>¤“"}
-{"type": "printf", "data": "preadv 9 100 Æ\u0004KÙI‹Åéá¡‘~w\u001cíã!·yîCn,\n¨Z‰$KFº9ß"}
-{"type": "printf", "data": "preadv 9 148 À\u0015ÔcJô\u0016‚ìç•¶®\u000b\u001d\u0012\u0017ÚNn§FØÉù[7ĞÀ¾Èk£4«ñ¼´_Zow\u0005Eã\u000e4©o—ÖÆÉ(ÊC\u0007\u0004©äÈ£hWmÉÚ\né‰tœğÄB2Ñ\u0015Ï¨ü#\u0016SÖ=V”Å’‘V\u0007\u0005´¤‡rÔµÃ+?¯‹k·3‰ŞĞŒvbÑÖ¬YÔî2°\u0013„ê½ƒ\u001e"}
-{"type": "printf", "data": "preadv 9 154 Ô4@¸—ƒ1G¾İ‡\u001fõŞ\u0003ÊûKD'K%œğ©˜Ò1dyhd"}
-{"type": "printf", "data": "preadv 9 74 “æ ©éÓKCÌ²®\nîä·–\u0011}”\"È¬Ç®Y,]YVÏWë¤Eh\u000e±\råï¹éB‹4/›gW@:\u0011\"…¦Äò–+QgeÜU_öê\u0015½cÓC‚"}
-{"type": "printf", "data": "preadv 9 4 Ğ­S "}
-{"type": "printf", "data": "preadv 9 53 JOIR\u0012\u000bÔÌŞÒ»éş\u000fšx$\u0008¡,¡\u0007…\u0005Ô\u00182[ılÏÔ.”áåÁ”Ô]rU«˜åi†­\u000fÂåó"}
-{"type": "printf", "data": "preadv 9 14 \u000c\u000eÖÇ—©6kÍÿ\u000f\r|ê"}
-{"type": "printf", "data": "preadv 9 83 ¤\u0018ıù°\u0007½¨Ø·†5_¬ı8«¬G…q§º'\u0017ãâ¶\u001aUf3\u0015Ÿb¶\u0002}‚:öo›XA#‡¡:0(ÓKÆv3C;“ñ\u0003\u0002Ì\"rn¨7z\u000e%ØÍV¢‘\r\n•"}
-{"type": "printf", "data": "preadv 9 116 Cu= ˆAñ‘zMÔ5º˜lˆfgiCVï1òûÈÜ[”ĞÂe>ÎÈı\u0014\u000fñÌĞxø\u0008íİIÊSŞI¾Úhî°]\u0008î¹ZÚ º^™«\u0006\u001aB\u000c\u0002ˆ\nz·ÇI©à\u0018\u001fÖÕ+˜?°Z3-õ¦\u0006FĞ$:ÿ¦¶8i&!J\u0001+vİc«f"}
-{"type": "printf", "data": "preadv 9 74 \nˆT\u0010İŞÖibÅMÖ…Õè’·gJç\u0017ïõ\u0007˜pÿ½Ûæ"}
-{"type": "printf", "data": "preadv 9 8 ­l~RbûbÅMÖ…Õè’·gJç\u0017ïõ\u0007˜pÿ½Ûæ"}
-{"type": "printf", "data": "preadv 9 0 ­l~RbûbÅMÖ…Õè’·gJç\u0017ïõ\u0007˜pÿ½Ûæ"}
-{"type": "printf", "data": "close 9 _ _"}
-{"type": "printf", "data": "open _ 9 data/test_files/spanish"}
-{"type": "printf", "data": "preadv 9 139 \nxNX»ã,\u0018Iíu›ë*YE}66vè”ô.¼HĞlŞ†«ÍŠhêY$ÌĞ\u0004ÊxÊ‹Å—ùøL.–ªÛDM\u0015•Á,ÉYÀ\u0004À<<œğkƒÒèÃ5g=% àù…Å¢x†Ì,m\u001aÑÖ9\u0003“_˜4¢›™{§›«\u001di&]»`À\\|Ë_YX"}
-{"type": "printf", "data": "preadv 9 84 J•WQÀ/}óõàcûíP—\u0016~\u0005L~æ\u0008¡•3 8ŠüRˆÑ\u0005\u0006âo¡ZºÈğâdäSÎèQĞŒ“tøÜ‹‚[\u0016˜\u0012\u0012…Bæı{5>:İ°¦\\o¦°‹ÿ+#•\u0003!^"}
-{"type": "printf", "data": "preadv 9 119 \u0014 Äp¶Uç\nÌhk<Ÿ\\\u0014ê¥Õğ³çÆ)D5¢[©½\u0007ª²¹YûY³£÷Û§ƒyåo\u0003e¿óÉèÆ\u0013xÛÖQÓjNÍøË3rlŒ¤ÃÑ…Ijæğ§Ôõ¦®VÜòa[H\u001b\u0014¹?AíEL”*ÇÊTÅd¨\t\u0010\r7Úï59\u0017¯MˆÀ"}
-{"type": "printf", "data": "preadv 9 38 ¬/L¼Ö½UZYÛ]·Äòg°èÍ<’§\"MGjÀ«ÉY^J.‡yŸá"}
-{"type": "printf", "data": "preadv 9 8 ´±eî\u001dR\u0005"}
-{"type": "printf", "data": "preadv 9 163 #µ\u0002±5‚‘®¡"}
-{"type": "printf", "data": "preadv 9 106 à\\iâÜã[|ÔSÁ\u0016ê\u0002`\u0005\u001dül,v·l7\u0012ä|úø¾ÓqÊW7£ê\u00023g¹l\u0004\u0010\u0013PóM\u0006]ç_±jÒÎú\n‰\n©˜eU\u001cÛÄ@iÓâçÎI¸‘ç%Ó\u0002À¡,ÈÒ€a©\u001eÊK`j\u001dcC?\u0002şÉê\u0007J"}
-{"type": "printf", "data": "preadv 9 51 \u0004ÌPN§Hî\\…¸RØNVæ÷n aòFb[ ‰¿Êâj§¢µOØÚW,HnL\u001bR//yí]gõE"}
-{"type": "printf", "data": "preadv 9 172 È”!Ê.\u0016ô˜ßÇf"}
-{"type": "printf", "data": "preadv 9 128 3áşÑ˜\u001f/İ®1XÆŠ\u0010 =]s\u001dòı_\u0013C$Ü\u0001\u0010=°wõš&…Èóø?Ùk*A\u0004¢åƒ¸Œcå\u0005rlÔ¬ø\u000b-m•à\"ã¾1\u001bğ#á“öh\u0011\u000bámû\u001f\rÈåíÇö\u000c·ÜÄëïƒ‡\\\u0003¡Ìj€@:\u001aˆ\u000eS\\!±f@ãÃ\u0005\\OšGr¶‘\u0005<=U"}
-{"type": "printf", "data": "preadv 9 161 0ÿÖ“ñ\u0002İ¤øíK¡\u0002\u000e:—’ÊÔÔ‰ìŒ>-‚vã_ôÌnÛíÏ%8'Šv\u0011\u0007b¥êfc3\u0017uÜÀ´°&\n*ìOíC\n\u001a]¥"}
-{"type": "printf", "data": "preadv 9 104 :)Ÿ®°·é$±°í>™Âèvj\u0019\u0008‡Q+ëĞµ\u0006\u000e;ëRFY„‹’\tÁçæ•CÿW`z\\ÈŞï5ã½ŞaihŒ=)†”V\u0003Éû¢\tÅ\u001a-!qy¬ë#ÜšºÜ~ƒƒA‰\u0018¨s\ta¨^‰OLË–¶î"}
-{"type": "printf", "data": "preadv 9 172 lR(„‚»Û†.-á\u000b@YKP¼ÎGx¦H*\u0005%È.]È\u0007\u001aõˆz\u0017´ºÃ °é€ÒLR‰òÇ›µŞB7½ÅGä˜\u0014\u001ba\u001cª2 šl¨‚\u001c\"‹\u0004\u001a\nüSyÅxB¸„*_‚GHT¤—„¹>¨êoŸhì(Ì«f¨\u001c‘}\u000eJµ£\u0001Bz!\u001a\u0018~ „(ed\u0007^\u0001="}
-{"type": "printf", "data": "preadv 9 157 iDØäSó]Ö\u0008.ı‰”……®\nü\u0018ìI-Å°'s\u0018u¹Õ¼Çî%:~İbÉÃ7\\ğo·ÇRâ\u0006ñëz~¬'Ç‹\u000b{ÅËÏ¨^ê “ñİ\u0005;ø\u0019\u000cçcAs¡Yâ2QŸ¦‚î\u001bçì\u0005ò\u0014 ê\rZÏûÎ¤}VÕVöÂÁ1·_yOşöÒ_Úå\\’Œ¬ûÎ^’¶ÎÎ\u000c\u0004 Üåm%#˜déÂ…¶XuòŸnÁ%¦iŒ"}
-{"type": "printf", "data": "preadv 9 143 ¨Û[Nüq\tb‘ŒÊ©\u0010ÓÈJ.‚¢¬?\u0017RíİA\u0008™–ÃŞ<$a\u0019\u0018Æƒ‰Íf_åòS³Ÿ"}
-{"type": "printf", "data": "preadv 9 25 p\nQÆB©³I\u0015é“\u001aKMÏ}š½+ÎäÂÚ&"}
-{"type": "printf", "data": "preadv 9 12 RY‡‚ú¬Ym†DØ"}
-{"type": "printf", "data": "preadv 9 181 2%h`ÓŒ÷ÀZyêºn\u0019¼\u001e|Ä¦\u001fê€+ÔPãÉc¼Êeõ^o+\u0004»\u001b?ÑíXÃé°ç˜èHõ£?\u0002ıÏbØè"}
-{"type": "printf", "data": "preadv 9 62 Ê¯T\u000bØKª)¨\u00045›òO¬œà\u001fz\u0017ú\röS/u´âërä\u0005rLVP#ĞES´‚Ê…\u0007\u0007úSõîæä†Éî\u0017\u0006Ã3%M"}
-{"type": "printf", "data": "preadv 9 173 ÿãeÔ®m–QIØJgüŒàÎ¯«?ğR³ÿÁ^f43®d¬\u0012c\u0003¯~ÌT’o&¢ã$±Ë\t@îÿ]b zW{\u0008÷ß_\rY»»(öâÑ'K\u000c\u0008ZQ¡$¦\r'.:j ”ÌÄ´bî\u0004 eÉ•Ã"}
-{"type": "printf", "data": "preadv 9 51 \u0013B7µNßõ+ı\u0015eèõÉ©\u001dŞµÌ@LŸD7\u0010•í/\u001cšk\u001b(ÊeaÏ¬0Ê)\t\u0008E[k¾PO7ó"}
-{"type": "printf", "data": "preadv 9 147 ğ¹ïN”ãm¥òÎfˆëáˆÁ°^ø÷\u0017©r6\u0018áqÑl\u00147º\u001aL(êø©\u0001\u0018\"?\t\u00101a’kö\u0007\u000bÖ¶½sQ*î2óœDÄÑ\u001bQğ\u0018A$…€ä\t¥©Ém;†ımv=Ü¨LCûpGGÁCşÃn\u001eÓBÁPã\u0014Ù=Ä\u0013²(tãÄ›Mx\r°Zj[\u0015âÑ\u0016\u0011×\\q,İ±Ëh\rjı9\u000bË\u0017ã&"}
-{"type": "printf", "data": "preadv 9 32 «ºeÆªÕo\u0001¬\u0012w¬´;û[×\\LTÎÍ¿ï\u001eÅÿ/\u0014úZÓ"}
-{"type": "printf", "data": "preadv 9 7 ¡\u0003Ak4“q\u0001¬\u0012w¬´;û[×\\LTÎÍ¿ï\u001eÅÿ/\u0014úZÓ\u001aL(êø©\u0001\u0018\"?\t\u00101a’kö\u0007\u000bÖ¶½sQ*î2óœDÄÑ\u001bQğ\u0018A$…€ä\t¥©Ém;†ımv=Ü¨LCûpGGÁCşÃn\u001eÓBÁPã\u0014Ù=Ä\u0013²(tãÄ›Mx\r°Zj[\u0015âÑ\u0016\u0011×\\q,İ±Ëh\rjı9\u000bË\u0017ã&3‡;ûH\u000fĞÌ\u001e‹Ö¼lİKæò~HTú3ÀÜÛ\u0007r5H"}
-{"type": "printf", "data": "preadv 9 0 ¡\u0003Ak4“q\u0001¬\u0012w¬´;û[×\\LTÎÍ¿ï\u001eÅÿ/\u0014úZÓ\u001aL(êø©\u0001\u0018\"?\t\u00101a’kö\u0007\u000bÖ¶"}
-{"type": "printf", "data": "close 9 _ _"}
-{"type": "printf", "data": "open _ 9 data/test_files/portuguese"}
-{"type": "printf", "data": "preadv 9 143 7›—«Ş‘–\u0017U*[ sÕÑ’91ùd4H!\tîè';I\u0002@&A \rH7\u0017™{,L‘±6$hØ{³\u0008ÿ\n–txÒôıô‚´¶!H\u0008k\u0011c\rµT2¥â@‹ ĞkÌıÑQ—N´ø"}
-{"type": "printf", "data": "preadv 9 137 Z‹z…Ë.ö¤0qc#,ÉBäİWÜ;rÁÊšf¨¤ÍŸõñ|M\u0003^O§Ñ\u0013ŞFÌÃ"}
-{"type": "printf", "data": "preadv 9 58 ?fX\u0014\u0010¢ú\u0006·wÌ]æ+_¡\u0018Ròí«&—™+áı\u0001ä7Úi\"İè„àİ›—pòã\u0016Ëş\u0011VÄÆPhi—›µ»"}
-{"type": "printf", "data": "preadv 9 46 —f­¶q\u001do\u001b¸\u001cu!øÅšg†İ\u000c¹‡AÚûÂ>\u001dµØèl; ‘2ñº GK_r\nüİl"}
-{"type": "printf", "data": "preadv 9 48 Jn{œ\u001bP|Óì.j‡LC=;²ŸñĞ|‘/Lúiì œe\u0019ÈDŸ5ô÷]=6Iña®Ná æ"}
-{"type": "printf", "data": "preadv 9 137 ˆƒÛíòOøQ£DÎ\u0005o%Î!`>ab …ª†Y*zmmº§€¸\u0007sÕÈF¬\u0012iq!Iöı\u000c5D^–R›~‚ ÷ âYŞ.z\u0018\u0003áQ¶Öı|\u0002Ä)aï\u001fD\u000f¼ÕtÑ£Çf\u0015%¤\u0002àŠêçÉ\u001bılĞ]u¥\u000e¬4³k(8¨º¡Ô Ø\u000b¶Ş•\u0006ÇŒv[úü\u0018Ù.Ÿ "}
-{"type": "printf", "data": "preadv 9 5 (íÎ\n%"}
-{"type": "printf", "data": "preadv 9 99 İÆUšV´\u00033¶YOéÃH]!¶\u000eİgy\rj²—9Øµ½õ·¸£EØ\u000cŠ3v‹\u001fynF\u000c´ñ–Ô~u7û\u0017Yd_\u0012\u0001‹ãğnÑç6lÌú(¿9€ø/½¶\u0002êV/åşÆTƒ-Õ`œ°jLÕ"}
-{"type": "printf", "data": "preadv 9 162 [#¿.ühw Jà˜¿+Ewg˜¤a\u000fÃC\u0004Sçˆ¤m¦5z\u0013›\u000e"}
-{"type": "printf", "data": "preadv 9 7 qö\nîƒ$"}
-{"type": "printf", "data": "preadv 9 147 pÆ«+\u000e5\u0006Ï&\u001cx«8–\u0010Xàaåƒí™¼§®lJ{*\u0018¤‚ƒ¿¯¶Ça ]\u001eÉŠ\u0004™b×7lY\u0019Òë…Jöƒ˜T\u0013!\tã‹ÌŒ„*æÉd^ôˆ ¿‡Ó,œ*ãõ~’˜{¦ûç\u001ehkÆ\u0018«ûK™ù*­|l(ƒov\u001dÙ•ÚN-gIGé6lğÑ[îŸÈK¬¼,½\u000cZí;JñÅ)Vlx"}
-{"type": "printf", "data": "preadv 9 171 È\u001d£\u0005a+ÃµRâêk~µ\u001cİçó=\u0006eÖ™Ç,v“Œ}6ğcĞäÇm\"\u0014‘{‰®ÚË£¤\u0006\u0013T\u0019=—0˜æËT¹¡`\u0007¨ä#PÃ0ÏÉä>ƒ\u0001GÃ"}
+{"type": "printf", "data": "close 10 _ _"}
+{"type": "printf", "data": "open -359497728 9 data/test_files/polish"}
+{"type": "printf", "data": "open -359497728 10 data/write_file"}
+{"type": "printf", "data": "preadv 9 25 Bs\u0008\u0005ì°\u0001l\u000fUß$\u001eëÉ\u0004*#\\Ô>2u=x"}
+{"type": "printf", "data": "pwritev 10 25 Bs\u0008\u0005ì°\u0001l\u000fUß$\u001eëÉ\u0004*#\\Ô>2u=x"}
+{"type": "printf", "data": "preadv 9 31 ½\u0016øbÌM\u001aÊ¢=Õƒi¶Ó\u00153ÒH„1Óª¨3²ò\u001aY\u0017ö"}
+{"type": "printf", "data": "pwritev 10 31 ½\u0016øbÌM\u001aÊ¢=Õƒi¶Ó\u00153ÒH„1Óª¨3²ò\u001aY\u0017ö"}
+{"type": "printf", "data": "preadv 9 175 y\u0011x½KÛ§Hd\u000ezwÚWH1¯\u0014\u0008Z…„F/ı½ö­ó‰©¶i˜^PÕ‰ï†\u001bî÷³š¶Ë»0Æù¨±ö¼¡÷Ú\t\u001fPŠ”\"<_r‹fŸòY\u0008qç%‘IºÍÉnæÏŒÈ\u001b®ºµ\u0007óï7¦\\Ô1\u0013ÔëroùÃ\u001f¡l‡Şà˜\u001d“\r3ÿ?1ÊõÍ\u001bêÕô:sà\\êÎÅıf\u000c\u0017\u001e\u001dzvc\u0008*\u0019\u0008Â\u0014\u0006óOÀ}¸íD§ù¢Tk\u0015Ñ\r\r)"}
+{"type": "printf", "data": "pwritev 10 175 y\u0011x½KÛ§Hd\u000ezwÚWH1¯\u0014\u0008Z…„F/ı½ö­ó‰©¶i˜^PÕ‰ï†\u001bî÷³š¶Ë»0Æù¨±ö¼¡÷Ú\t\u001fPŠ”\"<_r‹fŸòY\u0008qç%‘IºÍÉnæÏŒÈ\u001b®ºµ\u0007óï7¦\\Ô1\u0013ÔëroùÃ\u001f¡l‡Şà˜\u001d“\r3ÿ?1ÊõÍ\u001bêÕô:sà\\êÎÅıf\u000c\u0017\u001e\u001dzvc\u0008*\u0019\u0008Â\u0014\u0006óOÀ}¸íD§ù¢Tk\u0015Ñ\r\r)"}
+{"type": "printf", "data": "preadv 9 163 øµ”hó×¹CøK…a‰•fÛÔ0ü&c\u0006@\r‚ä? ®U~?\u0019¢»½\u0011\u001cŸ]ìGŠRéYõä}ôC»\u0001Ì¥?EñH·\u00154æ²«·Ù„áíõ %BhQğõzĞu@¯#«\u0015c;\u0001I‰İæ6s$JyIç‰ËûœËwhi>5,w¤\u001d:Ît\u0011!|¯\u0002;³äÃûÜ\u0006§\u000e× éÑš\u0013ÒüLÎ¾½Ô$Ê\u001d!c\u0015Ïk¤r\u001d¶.s"}
+{"type": "printf", "data": "pwritev 10 163 øµ”hó×¹CøK…a‰•fÛÔ0ü&c\u0006@\r‚ä? ®U~?\u0019¢»½\u0011\u001cŸ]ìGŠRéYõä}ôC»\u0001Ì¥?EñH·\u00154æ²«·Ù„áíõ %BhQğõzĞu@¯#«\u0015c;\u0001I‰İæ6s$JyIç‰ËûœËwhi>5,w¤\u001d:Ît\u0011!|¯\u0002;³äÃûÜ\u0006§\u000e× éÑš\u0013ÒüLÎ¾½Ô$Ê\u001d!c\u0015Ïk¤r\u001d¶.s"}
+{"type": "printf", "data": "preadv 9 151 ‚ °XG½a\u001e\t[à$×¦Oó•¼YŞ­#p\u0006*.“|\u0012ã¹Ù\u0006ÖÉ…K\u000b§Šu\u0012\u0014™m<\u0004‰fmş•j7–\"rŒuê]fJ\u0007Mò–C:\u0008Ò”\u0019ãªhòäIM±½[Ş£dåS\n7|Ğ­Z4Ò¬«U“µ\u0017šºĞ•ùŒÃ\u001bÄ‚&öXR¹”´~Ş¾(ìh?_µ…Ê\u000eKyXÑò˜véôÅ€u÷\u001cƒ¡1T"}
+{"type": "printf", "data": "pwritev 10 151 ‚ °XG½a\u001e\t[à$×¦Oó•¼YŞ­#p\u0006*.“|\u0012ã¹Ù\u0006ÖÉ…K\u000b§Šu\u0012\u0014™m<\u0004‰fmş•j7–\"rŒuê]fJ\u0007Mò–C:\u0008Ò”\u0019ãªhòäIM±½[Ş£dåS\n7|Ğ­Z4Ò¬«U“µ\u0017šºĞ•ùŒÃ\u001bÄ‚&öXR¹”´~Ş¾(ìh?_µ…Ê\u000eKyXÑò˜véôÅ€u÷\u001cƒ¡1T"}
+{"type": "printf", "data": "preadv 9 81 åb˜ö|Ò›ğæZ ?OÎo|Í?Õ²\rj"}
+{"type": "printf", "data": "pwritev 10 81 åb˜ö|Ò›ğæZ ?OÎo|Í?Õ²\rj"}
+{"type": "printf", "data": "preadv 9 143 D6š\u00032ö»İ~M\u001a{?(Ã\u0003ıë\u0011-¼uÎü‹;>º#¹)¢†¦÷¤\u000e)%nMò\rH°?œ\\b\u0017\u0013¦9Àü+N–c\u000e[¢\"Õó}¯b±\n52—Çá„K\r\u001bFùÅ/õšlö\u001bJƒÈ~ân\u001b'k\\\t’&–”{Ôê„î Y†÷\u0012ù³Vm+%ˆûë¢Ù\u0003i.N=\u0006ĞÎ•á;Ræ“Sê"}
+{"type": "printf", "data": "pwritev 10 143 D6š\u00032ö»İ~M\u001a{?(Ã\u0003ıë\u0011-¼uÎü‹;>º#¹)¢†¦÷¤\u000e)%nMò\rH°?œ\\b\u0017\u0013¦9Àü+N–c\u000e[¢\"Õó}¯b±\n52—Çá„K\r\u001bFùÅ/õšlö\u001bJƒÈ~ân\u001b'k\\\t’&–”{Ôê„î Y†÷\u0012ù³Vm+%ˆûë¢Ù\u0003i.N=\u0006ĞÎ•á;Ræ“Sê"}
+{"type": "printf", "data": "preadv 9 189 ÃÊf\u000c+á!;­ã§\u0019ASÊ·‹Ô¨UÆú•ôªóÍMD¼µ¹U³sxÑÛ\u000eç¨õf9\njÉê\u0013ş¬b\u000bŸ'\u0017\u0016»ß3 \"ş\u000bºÅM²\u001d\u0007rÛJTåZ4n=Ø…(…Şr|üÚÔÙì9ÃV2\u0018Æe8\u001eÒAñKV—\u0005éËcé\nî©Èš-F×ØÙ„ì7È…¡LÌ»C[ÎÊy•Oä…½Ê\rr¨}ÔøWêDX.Z¢{ÿBQPšËŸ\u000chwL«“íUcõ4B›\u001bö>,|Z“'<"}
+{"type": "printf", "data": "pwritev 10 189 ÃÊf\u000c+á!;­ã§\u0019ASÊ·‹Ô¨UÆú•ôªóÍMD¼µ¹U³sxÑÛ\u000eç¨õf9\njÉê\u0013ş¬b\u000bŸ'\u0017\u0016»ß3 \"ş\u000bºÅM²\u001d\u0007rÛJTåZ4n=Ø…(…Şr|üÚÔÙì9ÃV2\u0018Æe8\u001eÒAñKV—\u0005éËcé\nî©Èš-F×ØÙ„ì7È…¡LÌ»C[ÎÊy•Oä…½Ê\rr¨}ÔøWêDX.Z¢{ÿBQPšËŸ\u000chwL«“íUcõ4B›\u001bö>,|Z“'<"}
+{"type": "printf", "data": "preadv 9 117 “m(Z\\¹jb^aâÑg\r¿Ç8pí\u0002·ëÀ1®3¥_m±)2ƒÔü{XQ¦óÙ„V\u001eÆø\u001eÃßÓMÙrpQK\u001ene\u0012t¬\u0013®Pšu3÷iamµzAg€Ù2Pfø–Ğê%\u001døVæú„ó\u0012•O#Å?s¡îŸŸ×^jq»ƒ5\u001aC."}
+{"type": "printf", "data": "pwritev 10 117 “m(Z\\¹jb^aâÑg\r¿Ç8pí\u0002·ëÀ1®3¥_m±)2ƒÔü{XQ¦óÙ„V\u001eÆø\u001eÃßÓMÙrpQK\u001ene\u0012t¬\u0013®Pšu3÷iamµzAg€Ù2Pfø–Ğê%\u001døVæú„ó\u0012•O#Å?s¡îŸŸ×^jq»ƒ5\u001aC."}
+{"type": "printf", "data": "preadv 9 182  Hm„\u000e^ÄU«ã=ìBó³Y §³Ñ\"ê‚ØÛÆº\tôPKïÜùğ‚Qœx=Hjc÷4\u000b»‚Õ›Öš<Ö\u000eU\u001cõåÆıa°ázLn·Œ¯ì\u00046\u0012Ïb\u0003¢\u0005¶«¬ä\t\u0014ÍdZÕÈÃ OÚ\t/½bÒ=06\u0014±\"›Îìİß}\u0015iR<š…ü¾½–Ì\u001b„Œ'ï]â©á¤Ş\u0018QÍ£\u0007>”ŒÜşûë\u0004„eY\u00116"}
+{"type": "printf", "data": "pwritev 10 182  Hm„\u000e^ÄU«ã=ìBó³Y §³Ñ\"ê‚ØÛÆº\tôPKïÜùğ‚Qœx=Hjc÷4\u000b»‚Õ›Öš<Ö\u000eU\u001cõåÆıa°ázLn·Œ¯ì\u00046\u0012Ïb\u0003¢\u0005¶«¬ä\t\u0014ÍdZÕÈÃ OÚ\t/½bÒ=06\u0014±\"›Îìİß}\u0015iR<š…ü¾½–Ì\u001b„Œ'ï]â©á¤Ş\u0018QÍ£\u0007>”ŒÜşûë\u0004„eY\u00116"}
+{"type": "printf", "data": "preadv 9 186 t\u001f­ Oê\u000fY1Te\u0008j©{ê{)öF‘ÃO®wÖÛ„—lçN\u0014ÇÃZÿã\u001f¬bl³+ªL¡—¡ı\u0005İ5b)±ú„\u001b ¨íºüT·¬¿—Ô+Rƒ˜y¯kUY\u001c\u000fT˜=\u0013ËÁú\u0010J¢›ÑqYâBĞÂP\u000c\u0010l;1ß½|I11cµ‘¡÷ª\u0008prxP¸û\u00183Œù×DâLÃ¡;sÚ-ıüRK]\u001c\u0004²\u0013W \u0010‡Ï,-Í\u0018$y\u001b\u000c€¾]ã„…]1TÊç»v^±Ü>\u001bU"}
+{"type": "printf", "data": "pwritev 10 186 t\u001f­ Oê\u000fY1Te\u0008j©{ê{)öF‘ÃO®wÖÛ„—lçN\u0014ÇÃZÿã\u001f¬bl³+ªL¡—¡ı\u0005İ5b)±ú„\u001b ¨íºüT·¬¿—Ô+Rƒ˜y¯kUY\u001c\u000fT˜=\u0013ËÁú\u0010J¢›ÑqYâBĞÂP\u000c\u0010l;1ß½|I11cµ‘¡÷ª\u0008prxP¸û\u00183Œù×DâLÃ¡;sÚ-ıüRK]\u001c\u0004²\u0013W \u0010‡Ï,-Í\u0018$y\u001b\u000c€¾]ã„…]1TÊç»v^±Ü>\u001bU"}
+{"type": "printf", "data": "preadv 9 69 \u0003¨aqGˆ¢ı\u0012— \u0002ë:-ÌBf5¢m ï"}
+{"type": "printf", "data": "pwritev 10 69 \u0003¨aqGˆ¢ı\u0012— \u0002ë:-ÌBf5¢m ï"}
+{"type": "printf", "data": "preadv 9 23 ¤\u000b+¶-ê\u0002çà\u0016Jc°#¨\u0008c\u0015\u0018½Â3k"}
+{"type": "printf", "data": "pwritev 10 23 ¤\u000b+¶-ê\u0002çà\u0016Jc°#¨\u0008c\u0015\u0018½Â3k"}
+{"type": "printf", "data": "preadv 9 49 xdÙÄq§˜–cÎ4qísÖe\rşc\u001e$+\u0011¤fç…_6ÌŞùR\u0006Í¢\n¡û‹$Æ*Ò¦¦´wĞ"}
+{"type": "printf", "data": "pwritev 10 49 xdÙÄq§˜–cÎ4qísÖe\rşc\u001e$+\u0011¤fç…_6ÌŞùR\u0006Í¢\n¡û‹$Æ*Ò¦¦´wĞ"}
+{"type": "printf", "data": "preadv 9 156 <\u000eP‹qœ\t–\u0001~^¹\u000cau\u0016­sG\u0004ÉÊèÍ!~\u001b\u0016_r`õ,AT\u0017\tlo,WÅ?\u0010e!\u0010ÌñÃ&báÙ?\u0019ÃÕ§HôÂ@AHzoTßí­\u000cFĞÅ;QNœ78}SAÖĞ³N\u0004ŠüRey\u0007’¿b]üú›¤è÷ \u0018k¹±ÀêïZz\u001d$f÷¦¿Ñm\u001aT˜¤|`'–ŒpSÓ<\u0018<3»¸Õ'3Õ3½\u0018\u0006~"}
+{"type": "printf", "data": "pwritev 10 156 <\u000eP‹qœ\t–\u0001~^¹\u000cau\u0016­sG\u0004ÉÊèÍ!~\u001b\u0016_r`õ,AT\u0017\tlo,WÅ?\u0010e!\u0010ÌñÃ&báÙ?\u0019ÃÕ§HôÂ@AHzoTßí­\u000cFĞÅ;QNœ78}SAÖĞ³N\u0004ŠüRey\u0007’¿b]üú›¤è÷ \u0018k¹±ÀêïZz\u001d$f÷¦¿Ñm\u001aT˜¤|`'–ŒpSÓ<\u0018<3»¸Õ'3Õ3½\u0018\u0006~"}
+{"type": "printf", "data": "preadv 9 130 s<µ>F¤<Æ k÷¸\u0003ÆY¼¾dÙñ\u0014œ“°î:µC\u0016>\u000f~i\u0017…‡¶\u0011¡°Õ›Ìœ±±Ãİ\u0013\\Ùc$Pk:\u001büğª‚Î½µşd0îltc7ãé2“.ŞÊg+>ŒeTå\u001e™çúœš\u0015ãİ²>Cöç§u\u0002\u0016¶ùƒuÖõ\"M\u0015“rçQ!\u000ff=“—C.”¨¶2"}
+{"type": "printf", "data": "pwritev 10 130 s<µ>F¤<Æ k÷¸\u0003ÆY¼¾dÙñ\u0014œ“°î:µC\u0016>\u000f~i\u0017…‡¶\u0011¡°Õ›Ìœ±±Ãİ\u0013\\Ùc$Pk:\u001büğª‚Î½µşd0îltc7ãé2“.ŞÊg+>ŒeTå\u001e™çúœš\u0015ãİ²>Cöç§u\u0002\u0016¶ùƒuÖõ\"M\u0015“rçQ!\u000ff=“—C.”¨¶2"}
+{"type": "printf", "data": "preadv 9 3 Í[¼"}
+{"type": "printf", "data": "pwritev 10 3 Í[¼"}
+{"type": "printf", "data": "preadv 9 143  z\u001dJb»a\u001a\u0003\u0004·½ ĞM\u001b))‘3\u0014‡„ú®?¥–ÿ€üCÂkå\u0008#†t¥¨‡ä|„:v¹Ll0·Èâ/\u0014Ú„Â0›5\u000få-=¶.\u0010&Kô`ò8Õi‹%ø•æ‡!­£ÿì8E\u0017÷ï*ÏGôœBqiÉV;ÅA\tb'tÉ0"}
+{"type": "printf", "data": "pwritev 10 143  z\u001dJb»a\u001a\u0003\u0004·½ ĞM\u001b))‘3\u0014‡„ú®?¥–ÿ€üCÂkå\u0008#†t¥¨‡ä|„:v¹Ll0·Èâ/\u0014Ú„Â0›5\u000få-=¶.\u0010&Kô`ò8Õi‹%ø•æ‡!­£ÿì8E\u0017÷ï*ÏGôœBqiÉV;ÅA\tb'tÉ0"}
+{"type": "printf", "data": "preadv 9 50 úªd‹¹ÁñØ²o¿´\t"}
+{"type": "printf", "data": "pwritev 10 50 úªd‹¹ÁñØ²o¿´\t"}
+{"type": "printf", "data": "preadv 9 188 wËÀâAk\u000fT-aÌ¶..¾­L0\u0011À\r|êX<V³08<ğ\u0006\u0003¸Ä0›p¥¾1ÿ È©ïK—€œ\u0003\u001bo¥¶RÀ¹U.ê!Ì‡‡~›ã‰\u000eƒõ¾¸x;ÚÜ\u001c\u0003Ğrdå\\\u0014hvñ\u001d¸\u0016Ñ3µrß\u0005v‡\u0019^ÁQûgö‹Ÿ\u0015~İáˆ‘×p)ı4'K3ˆèbAÓ3\u0015?fnı,\tÔ–"}
+{"type": "printf", "data": "pwritev 10 188 wËÀâAk\u000fT-aÌ¶..¾­L0\u0011À\r|êX<V³08<ğ\u0006\u0003¸Ä0›p¥¾1ÿ È©ïK—€œ\u0003\u001bo¥¶RÀ¹U.ê!Ì‡‡~›ã‰\u000eƒõ¾¸x;ÚÜ\u001c\u0003Ğrdå\\\u0014hvñ\u001d¸\u0016Ñ3µrß\u0005v‡\u0019^ÁQûgö‹Ÿ\u0015~İáˆ‘×p)ı4'K3ˆèbAÓ3\u0015?fnı,\tÔ–"}
+{"type": "printf", "data": "preadv 9 36 íƒËéIÂà«ÜĞV\rxs×\u0012˜ZÙÙã/ğoS:é6 w\u0005öl18"}
+{"type": "printf", "data": "pwritev 10 36 íƒËéIÂà«ÜĞV\rxs×\u0012˜ZÙÙã/ğoS:é6 w\u0005öl18"}
+{"type": "printf", "data": "preadv 9 99 "}
+{"type": "printf", "data": "pwritev 10 99 "}
 {"type": "printf", "data": "preadv 9 0 "}
 {"type": "printf", "data": "close 9 _ _"}
-{"type": "printf", "data": "open _ 9 data/test_files/german"}
-{"type": "printf", "data": "preadv 9 49 {À\u0006Ç\u0015]‘ø¢\u0006(,‹_0Ã\u0012\u000c•±\u0004«'e¹İmÕ\u0005^h"}
-{"type": "printf", "data": "preadv 9 105 ¶("}
-{"type": "printf", "data": "preadv 9 28 \n%Wyôˆ²3\u00130ü¨£Ğè\u0016).ÈIëƒâ¼³fi"}
-{"type": "printf", "data": "preadv 9 128 ©ZAğùÓBÃ\\fGÀOş|’\u0003}HÔ8¨÷Sƒ\u001cGÄúzdOÌî7tRÍpîRdÕ\n”æ©‘¶0ÍŞ\u000cÔ~ÛA\r‘\nRcC¥”Œ7æ‘zöúG«:Jw‘îÎ¸L§\u0013ÀîéØDNÂ°:®`Óaº<qYyÂZy3´÷¿\u0002q =€\u001e’ëL}b\u0012"}
-{"type": "printf", "data": "preadv 9 107 J^Î´€aû\u0002İ*1B‘Ï&7\u0014\"Ò \u0011b' èßr`ö„Iº$û\u0007OÌ|ka`C\u0006lÌf:ØÂ•\u0019A»ï|‘õú|ò°™ÕV;¡\n4È¥\u0003zøW­Ê;Vå\\ŞîßB*t\u0001ÆˆHúb´¡ÿ~Ë\u0008<0˜û¿¬\u001b"}
-{"type": "printf", "data": "preadv 9 8 ‰«®Âc\n¹­"}
-{"type": "printf", "data": "preadv 9 39 ¤Çj£ÓşÈÂ¤’ŠÑwâ˜í$ô`©ô‹¾ôñ™ô½\u0003çğã5¨$:Åİi"}
-{"type": "printf", "data": "preadv 9 6 Lò¹¼¹¼"}
-{"type": "printf", "data": "preadv 9 72 \u0016\u0019óê®¦ííÌ^Æ}×\u000b£òWAó\u001añŒá~¼ÆĞ\u0018á™k§Ñ¶È-¡x¼yˆ]\r÷Xğâœñd Ã"}
-{"type": "printf", "data": "preadv 9 91 ·BõŸiûA¸Ä¬ùŠl\u0018Ş¯êWÄ\u0019\u0013\u000c\u001be£Pşó°®iÓ\u0005®›®ƒĞ¬=¤"}
-{"type": "printf", "data": "preadv 9 84 Tâ¥jóTLl–\t’@&¡¿:x£QIkuËæ¿Æó·\u0012‡;móÖÈB ı> ¶1ÿ—4˜?\u0012]\np_@£á`[Œô[\u001c<oà\u001eıpŸ{Ø¸Ú¢Çµy§æ¾"}
-{"type": "printf", "data": "preadv 9 125 ?owÑ¨f$É\u001a_\u0007‡ó¾\u0005î¯\u0006ÑŠ­Ç\u001e„Ï¶§ ¤¹’£Oÿ9\u001d\\nNLY¢ «\u00027\u000e+upA|óG²ègÓNX\u001fµ®Ô·RÅ¤\u0015QGå6Š\u0004<d¬n\rü˜\u0004.Ô$^®y_´>KÀ·˜½e®^Èü‰]–H\u000cSvxòÀœ.a\u001brjBnu—"}
-{"type": "printf", "data": "preadv 9 89 ×(<6°•\u0008f™W\u000f\u001b)&?\u0001•¾~,ê\u0008\u0012kğ`‹ÿùœLŸÔ\u000ciø–U[\u001f\u0003ˆó\u000fjõ½Å÷J·I}ìdÈâr•[\u00146ï ²\\ú3¬|\u000b..Ö{p‚Á0\u0006ÏJ­ÏWÿ\u001b\u0007"}
-{"type": "printf", "data": "preadv 9 0 "}
+{"type": "printf", "data": "close 10 _ _"}
+{"type": "printf", "data": "open -359497728 9 data/test_files/turkish"}
+{"type": "printf", "data": "open -359497728 10 data/write_file"}
+{"type": "printf", "data": "preadv 9 31 Ìó©íM³¤\u0018qí>6¾\u0008pî\u001e¡\u0019\u0016º\u0015‡\u001e—°BõÙ\u0001ñ"}
+{"type": "printf", "data": "pwritev 10 31 Ìó©íM³¤\u0018qí>6¾\u0008pî\u001e¡\u0019\u0016º\u0015‡\u001e—°BõÙ\u0001ñ"}
+{"type": "printf", "data": "preadv 9 2 [v"}
+{"type": "printf", "data": "pwritev 10 2 [v"}
+{"type": "printf", "data": "preadv 9 125 \u0018úÕ\u0016ëp}Ğ-~\u000bö\u001d1hWQ˜|™\u0001Ùj\u0018j¦U\u001b\u000cÂj¾Ø¤Š*«÷‰Ü\u001b\u0010Ä¤*v]íÙNq7¨ÏHÅé±\u0016Ç\u001fjFnøéÒª±²†4\n1fŒ"}
+{"type": "printf", "data": "pwritev 10 125 \u0018úÕ\u0016ëp}Ğ-~\u000bö\u001d1hWQ˜|™\u0001Ùj\u0018j¦U\u001b\u000cÂj¾Ø¤Š*«÷‰Ü\u001b\u0010Ä¤*v]íÙNq7¨ÏHÅé±\u0016Ç\u001fjFnøéÒª±²†4\n1fŒ"}
+{"type": "printf", "data": "preadv 9 68 § \u00085EÚ¶$;†Oõh„A–ùŒ\núÚø²Ï?•\u0006úôçJÿ¤Á\u0006Î6¥Í¬L¬·\u0001­;ê;UN›„òO†\u0003ÃqDx=5åy–]v"}
+{"type": "printf", "data": "pwritev 10 68 § \u00085EÚ¶$;†Oõh„A–ùŒ\núÚø²Ï?•\u0006úôçJÿ¤Á\u0006Î6¥Í¬L¬·\u0001­;ê;UN›„òO†\u0003ÃqDx=5åy–]v"}
+{"type": "printf", "data": "preadv 9 119 –Ôí\u0007‡†ºtLf&×Nè\r§"}
+{"type": "printf", "data": "pwritev 10 119 –Ôí\u0007‡†ºtLf&×Nè\r§"}
+{"type": "printf", "data": "preadv 9 22 ¼Z¡¸\u0005\u0010ı\u0018J8ş\u001f\u001bâ¶W'›7ş\u0003"}
+{"type": "printf", "data": "pwritev 10 22 ¼Z¡¸\u0005\u0010ı\u0018J8ş\u001f\u001bâ¶W'›7ş\u0003"}
+{"type": "printf", "data": "preadv 9 105 §&Xï\u001a\u0019=İ\u001ağÏÊ_3®š\u0018±\u001f¤Ğ`¾:¬n[~\u0015±…\u000b•—š²68<æÙ›f‡ÊÿËA\u000bÖ¸Æ^z©A_\u001ftwºI$œ\u000bWğ*8T8V•T¢¼áúo€w 4\u000c]÷şÎnW)\u0003ÁPú’–\u0008i}óÈ¯Ó"}
+{"type": "printf", "data": "pwritev 10 105 §&Xï\u001a\u0019=İ\u001ağÏÊ_3®š\u0018±\u001f¤Ğ`¾:¬n[~\u0015±…\u000b•—š²68<æÙ›f‡ÊÿËA\u000bÖ¸Æ^z©A_\u001ftwºI$œ\u000bWğ*8T8V•T¢¼áúo€w 4\u000c]÷şÎnW)\u0003ÁPú’–\u0008i}óÈ¯Ó"}
+{"type": "printf", "data": "preadv 9 3 Ky¸"}
+{"type": "printf", "data": "pwritev 10 3 Ky¸"}
+{"type": "printf", "data": "preadv 9 113 G¥øM\u001epo\u001elPş„(ò\nœ…±º™D@\r–şÏ\u001e0£mÛ1ï¡àd5®?rÖ\u0008²TÁ”Â\u0019Æ\u0002N¦7z#ü\u001bx\u001b>\u001a&6äit\u0015ø·ÈÎ¿óOH¥ğú*\"wíÕM[m¹›\u0018h±í;<¿Ìˆ\u0019Â‹¦ğ}†ÎÈ"}
+{"type": "printf", "data": "pwritev 10 113 G¥øM\u001epo\u001elPş„(ò\nœ…±º™D@\r–şÏ\u001e0£mÛ1ï¡àd5®?rÖ\u0008²TÁ”Â\u0019Æ\u0002N¦7z#ü\u001bx\u001b>\u001a&6äit\u0015ø·ÈÎ¿óOH¥ğú*\"wíÕM[m¹›\u0018h±í;<¿Ìˆ\u0019Â‹¦ğ}†ÎÈ"}
+{"type": "printf", "data": "preadv 9 167 \rô9\u001c7ö\u0010P\u001cSq\u0013¨æ:CÁ\u0012˜“³š‚K‡É–xã¹o\u0003i,\u000c‡9ÃwÑ›€Æ0ãôÉ{úw\u0014”Œ\u0014-nwõµ\u0014ÆÃğ>B\u0001\\ie!Á³;÷ÿ÷îY\u00023‰ö²\nA?lhÿ¬1p}Åª,(>~Ã|k)äí÷wJ\nwÍn\u001f\u001d&•²Egó¨¼½°]¦½)"}
+{"type": "printf", "data": "pwritev 10 167 \rô9\u001c7ö\u0010P\u001cSq\u0013¨æ:CÁ\u0012˜“³š‚K‡É–xã¹o\u0003i,\u000c‡9ÃwÑ›€Æ0ãôÉ{úw\u0014”Œ\u0014-nwõµ\u0014ÆÃğ>B\u0001\\ie!Á³;÷ÿ÷îY\u00023‰ö²\nA?lhÿ¬1p}Åª,(>~Ã|k)äí÷wJ\nwÍn\u001f\u001d&•²Egó¨¼½°]¦½)"}
+{"type": "printf", "data": "preadv 9 150 F<±º·Ú@İ3h#V\u0019S¸üÀk˜ÿ\u0010\u0006\u0015\u0010îÕÒgÊ<9\u0018AÎ–!§\u0006ƒ¢Z|TÏœ\u001cÌ%Ãe\u001f&Ì<dÄS\u000e¥¶7 ç+\rı\tˆÉ×›!RÃzï´\u000b.±\u0002Úçó÷$*\u0006Qæœõ\u001bÌÎ“cKŒï| kúĞ\u001fµÓ™Ò!§UV³–<»\u0004\u000fşÂ0²>‘\u000f´«p£ÿ˜0uıºşì\u0017<íÎ\u001dû º"}
+{"type": "printf", "data": "pwritev 10 150 F<±º·Ú@İ3h#V\u0019S¸üÀk˜ÿ\u0010\u0006\u0015\u0010îÕÒgÊ<9\u0018AÎ–!§\u0006ƒ¢Z|TÏœ\u001cÌ%Ãe\u001f&Ì<dÄS\u000e¥¶7 ç+\rı\tˆÉ×›!RÃzï´\u000b.±\u0002Úçó÷$*\u0006Qæœõ\u001bÌÎ“cKŒï| kúĞ\u001fµÓ™Ò!§UV³–<»\u0004\u000fşÂ0²>‘\u000f´«p£ÿ˜0uıºşì\u0017<íÎ\u001dû º"}
+{"type": "printf", "data": "preadv 9 69 â´îÎ;›n2’€ûš˜M\"\u001dxryºõ‘ğ‰İ<\"í—mVˆŞgˆZÁ.’Nı/{ƒé{äp²¦\u001fš»‹·§Ü×“<ùŠ\u0018AR"}
+{"type": "printf", "data": "pwritev 10 69 â´îÎ;›n2’€ûš˜M\"\u001dxryºõ‘ğ‰İ<\"í—mVˆŞgˆZÁ.’Nı/{ƒé{äp²¦\u001fš»‹·§Ü×“<ùŠ\u0018AR"}
+{"type": "printf", "data": "preadv 9 186 ğ®)IvzÖ[ÔEmÜ\u0018»b§\u0003Ğ\u0008\u000b†Üõ\u001dÀ¶)¸Û3sŠÒ£‰Ğ¢\u0012Çõy\r¸æq?ÔA“‘N\u0019ß`¯j\u0002o]iµYwZVÇH½101\u001dp\u000c%c3è\u0015§­›Ñ‘<\u0015Œj\u000f³PïS4ûfTâ˜„Hİ’’ı­ğa;Xœ˜Ê]Õf„ŠD\u0019\u0002Ñ+O\u0016à>îº\u001eö'ÖüÊlmRjD"}
+{"type": "printf", "data": "pwritev 10 186 ğ®)IvzÖ[ÔEmÜ\u0018»b§\u0003Ğ\u0008\u000b†Üõ\u001dÀ¶)¸Û3sŠÒ£‰Ğ¢\u0012Çõy\r¸æq?ÔA“‘N\u0019ß`¯j\u0002o]iµYwZVÇH½101\u001dp\u000c%c3è\u0015§­›Ñ‘<\u0015Œj\u000f³PïS4ûfTâ˜„Hİ’’ı­ğa;Xœ˜Ê]Õf„ŠD\u0019\u0002Ñ+O\u0016à>îº\u001eö'ÖüÊlmRjD"}
+{"type": "printf", "data": "preadv 9 33 _áë\u0007rI#1õ\u0007ú\u0010OáFQöK\n\\š\u000eñÚ3dçà.LÍ"}
+{"type": "printf", "data": "pwritev 10 33 _áë\u0007rI#1õ\u0007ú\u0010OáFQöK\n\\š\u000eñÚ3dçà.LÍ"}
+{"type": "printf", "data": "preadv 9 2 çâ"}
+{"type": "printf", "data": "pwritev 10 2 çâ"}
+{"type": "printf", "data": "preadv 9 61 ±\"\tÁ\u001có\u0007ã†‡±£˜¢ÑËºp®\u0004É !nw·&ÄÓ\u0015à;zJgÎİ#ú@µA\u0014ËTUr>ı“Zö\u0015°¼\u000bÊív6µ"}
+{"type": "printf", "data": "pwritev 10 61 ±\"\tÁ\u001có\u0007ã†‡±£˜¢ÑËºp®\u0004É !nw·&ÄÓ\u0015à;zJgÎİ#ú@µA\u0014ËTUr>ı“Zö\u0015°¼\u000bÊív6µ"}
+{"type": "printf", "data": "preadv 9 32 XR"}
+{"type": "printf", "data": "pwritev 10 32 XR"}
+{"type": "printf", "data": "preadv 9 133 \u0006\u001cP=šåï\nsceI>Ê\u000cÌ<½dw$×¸¬56ß[ÿjæEÊˆ;I³05\nöÁˆĞ×ÁX)_Ë\u001bv¸®7Â²‹£ô¥{¶ïÙ*\u000c\u000c?\u000c=\u001aÖ¶#@\u0012ÈÉ&E=ÈmF\u0002\u0014oÿÑôşÏX”{\u0018±”ÉP‡\u0008\u001el _¤*“v†\u0003Âë.=\u0017íéªTöærÏ\u000b\nâ"}
+{"type": "printf", "data": "pwritev 10 133 \u0006\u001cP=šåï\nsceI>Ê\u000cÌ<½dw$×¸¬56ß[ÿjæEÊˆ;I³05\nöÁˆĞ×ÁX)_Ë\u001bv¸®7Â²‹£ô¥{¶ïÙ*\u000c\u000c?\u000c=\u001aÖ¶#@\u0012ÈÉ&E=ÈmF\u0002\u0014oÿÑôşÏX”{\u0018±”ÉP‡\u0008\u001el _¤*“v†\u0003Âë.=\u0017íéªTöærÏ\u000b\nâ"}
+{"type": "printf", "data": "preadv 9 122 \u000e\u001fBwî(êD¤“,Ÿ\u0001™mBñÈ²…\u0018\u000cãà,\u0018a\u0007³ÌĞ8T\u0015jü\u0004è]zõå’sô9‘P7\u0006…\u0008LvÄ%ŒI@«Ø#$@«£Bj#ªø„LJîVÓ*\u0011ç·ÏT¸R˜\u0014lĞò–\u001by$R\u0006Ã˜p¨\u001f.iêm\u0001;ÇÜ¸Ÿ‹•#Øğ³\u0017\u00088"}
+{"type": "printf", "data": "pwritev 10 122 \u000e\u001fBwî(êD¤“,Ÿ\u0001™mBñÈ²…\u0018\u000cãà,\u0018a\u0007³ÌĞ8T\u0015jü\u0004è]zõå’sô9‘P7\u0006…\u0008LvÄ%ŒI@«Ø#$@«£Bj#ªø„LJîVÓ*\u0011ç·ÏT¸R˜\u0014lĞò–\u001by$R\u0006Ã˜p¨\u001f.iêm\u0001;ÇÜ¸Ÿ‹•#Øğ³\u0017\u00088"}
+{"type": "printf", "data": "preadv 9 76 õ|áŸÜ\u001cvËÉä™×\u0003]é0çA\u001a*\u0011fû\u0005f@ÏjšO\u000fH_,€²Uï[ÿJn áà\"Ö¢g•e÷oÉ+k+NîìW¼wù]µC‚àbœL\u0015E"}
+{"type": "printf", "data": "pwritev 10 76 õ|áŸÜ\u001cvËÉä™×\u0003]é0çA\u001a*\u0011fû\u0005f@ÏjšO\u000fH_,€²Uï[ÿJn áà\"Ö¢g•e÷oÉ+k+NîìW¼wù]µC‚àbœL\u0015E"}
+{"type": "printf", "data": "preadv 9 128 aËXİgú~»|ª˜&Ê ıxCî\u0006!uŒ<LPv\u0005ã/\u00109õå\nJi¢Aóù\u000fs`Ÿ¯û2QÇ\u001dt[.\"Ğ­(ƒL{Ì$\u0013h\u0013\u001b”hõŠ\u0004ËU¢É3ÀÿN:v\u001eS \u001eÚ\u000c„ö“úÑº2Yš\u0013t°½ĞHqÆ\n¢h01‡\u0012ô~–t=Š‰\u000f™w¦ÊÿË"}
+{"type": "printf", "data": "pwritev 10 128 aËXİgú~»|ª˜&Ê ıxCî\u0006!uŒ<LPv\u0005ã/\u00109õå\nJi¢Aóù\u000fs`Ÿ¯û2QÇ\u001dt[.\"Ğ­(ƒL{Ì$\u0013h\u0013\u001b”hõŠ\u0004ËU¢É3ÀÿN:v\u001eS \u001eÚ\u000c„ö“úÑº2Yš\u0013t°½ĞHqÆ\n¢h01‡\u0012ô~–t=Š‰\u000f™w¦ÊÿË"}
+{"type": "printf", "data": "preadv 9 145 "}
+{"type": "printf", "data": "pwritev 10 145 "}
+{"type": "printf", "data": "preadv 9 65 –}ıá\u000cè‘\tÍ0w\u0007VPdq§Ó\u0016¬¦¥ëtQê\u0007‹:Õóù)k\u0002©ÆuwzâØ\rqÉ\u0019[\u000c#ø¸ _\u0014×\u0007«°İ\u0016\u0007\u0011>èf"}
+{"type": "printf", "data": "pwritev 10 65 –}ıá\u000cè‘\tÍ0w\u0007VPdq§Ó\u0016¬¦¥ëtQê\u0007‹:Õóù)k\u0002©ÆuwzâØ\rqÉ\u0019[\u000c#ø¸ _\u0014×\u0007«°İ\u0016\u0007\u0011>èf"}
+{"type": "printf", "data": "preadv 9 102 \u0012ó0¸û‡¡é:s.Õº\u000fÒÀàRX¬Mˆ.(¨tg½LLN£yÆ{\u0019Qlh²ı\u0011€½¦·\u0018`5C\u001bØ¡HË\u001cÌj¢|G©K3\u0017¢c\u0015\u0002Ü}Œ\u000eæ\u000c¯R=ˆEÆä€(0%\u0015llóÜRò1‹‘Ì?\u0004ÀÊ·"}
+{"type": "printf", "data": "pwritev 10 102 \u0012ó0¸û‡¡é:s.Õº\u000fÒÀàRX¬Mˆ.(¨tg½LLN£yÆ{\u0019Qlh²ı\u0011€½¦·\u0018`5C\u001bØ¡HË\u001cÌj¢|G©K3\u0017¢c\u0015\u0002Ü}Œ\u000eæ\u000c¯R=ˆEÆä€(0%\u0015llóÜRò1‹‘Ì?\u0004ÀÊ·"}
+{"type": "printf", "data": "preadv 9 10 JPÜ|’b¾\u000e,ş"}
+{"type": "printf", "data": "pwritev 10 10 JPÜ|’b¾\u000e,ş"}
+{"type": "printf", "data": "preadv 9 172 dŠ<`(\"u/Š!ßoş#'µLz\u0016Ä¢Œ9Ê-\u0016\u0008Ôä'ïàŞş›‘UÇ|+\"èŸÌ× …4m=2U*}g{\"ÜV\u0002Š\u0002š\u000c2û}óqAgq\u0004ãY(7Œ“-³¥pªúª¥Dá/ Ç¦Ô±T›‰‚ŸT\u001b$¯Œ@|q{Z´2XQÍôÕ\u0007?±¨‘ìTŞ¹„:Å\"UŒ\u000c÷³@m™Ñ°x~ŒùÒ\u000c;r-Á{ÏG‚\u001f‚á21Ö\\áà"}
+{"type": "printf", "data": "pwritev 10 172 dŠ<`(\"u/Š!ßoş#'µLz\u0016Ä¢Œ9Ê-\u0016\u0008Ôä'ïàŞş›‘UÇ|+\"èŸÌ× …4m=2U*}g{\"ÜV\u0002Š\u0002š\u000c2û}óqAgq\u0004ãY(7Œ“-³¥pªúª¥Dá/ Ç¦Ô±T›‰‚ŸT\u001b$¯Œ@|q{Z´2XQÍôÕ\u0007?±¨‘ìTŞ¹„:Å\"UŒ\u000c÷³@m™Ñ°x~ŒùÒ\u000c;r-Á{ÏG‚\u001f‚á21Ö\\áà"}
+{"type": "printf", "data": "preadv 9 7 ±ò ÄÍ"}
+{"type": "printf", "data": "pwritev 10 7 ±ò ÄÍ"}
+{"type": "printf", "data": "preadv 9 41  \u00088\u001b=\u001fO¿\u0018\u000eıøl˜RÖ0^KñÏû¿<W+Û®×ôKãíA6\u00029\\\u0004ê"}
+{"type": "printf", "data": "pwritev 10 41  \u00088\u001b=\u001fO¿\u0018\u000eıøl˜RÖ0^KñÏû¿<W+Û®×ôKãíA6\u00029\\\u0004ê"}
+{"type": "printf", "data": "preadv 9 90 Ë-ªˆ¦,›\u0008Ù\u0003—e\u001by\u000b3¿\u001dñı\u0006:™B.È\u001cóÇ8ª-x¨Èß`½\u0003Ê_¬36À5ˆ–ş‚\u001f!F|LgUl“.h"}
+{"type": "printf", "data": "pwritev 10 90 Ë-ªˆ¦,›\u0008Ù\u0003—e\u001by\u000b3¿\u001dñı\u0006:™B.È\u001cóÇ8ª-x¨Èß`½\u0003Ê_¬36À5ˆ–ş‚\u001f!F|LgUl“.h"}
+{"type": "printf", "data": "preadv 9 0 Ë-ªˆ¦,›\u0008Ù\u0003—e\u001by\u000b3¿\u001dñ"}
 {"type": "printf", "data": "close 9 _ _"}
+{"type": "printf", "data": "close 10 _ _"}
+{"type": "printf", "data": "open -359497728 9 data/test_files/english"}
+{"type": "printf", "data": "open -359497728 10 data/write_file"}
+{"type": "printf", "data": "preadv 9 173 \u001eWÍ\u0016DŞ òğŠk”¦dÍ¿Î"}
+{"type": "printf", "data": "pwritev 10 173 \u001eWÍ\u0016DŞ òğŠk”¦dÍ¿Î"}
+{"type": "printf", "data": "preadv 9 65 \u0004;\u001aø\u0011\u0012ÈàOvÏ¤ĞÆ\u000f­\u0007–H¿¤Ãj†.İéÚã{ZSgü\u001f¯ÛKÍÊKŠO-²ñš“\u00117h( ¸—›5'Ô’é£@"}
+{"type": "printf", "data": "pwritev 10 65 \u0004;\u001aø\u0011\u0012ÈàOvÏ¤ĞÆ\u000f­\u0007–H¿¤Ãj†.İéÚã{ZSgü\u001f¯ÛKÍÊKŠO-²ñš“\u00117h( ¸—›5'Ô’é£@"}
+{"type": "printf", "data": "preadv 9 129 $øz(jÉ«=Mw¼\u00080ÛænÓ-ğ¯\u001dÒ.}ö=VÖ-\u0001£\nA\u000b­¢\"?q,ó!úÙáÂˆ\u001cìFˆ1Ç[.“täŸÙdö×T>FËªúb\u0018“°Kª²›ÿ…k\u0006Ã*àL×ßëêfÙßW.G\u00061?†”ÿÃ0l<ş\u0013Ñ’œ\nø³÷]\u0013µ\u0007H†\u0001°»éˆ\u0017ˆ"}
+{"type": "printf", "data": "pwritev 10 129 $øz(jÉ«=Mw¼\u00080ÛænÓ-ğ¯\u001dÒ.}ö=VÖ-\u0001£\nA\u000b­¢\"?q,ó!úÙáÂˆ\u001cìFˆ1Ç[.“täŸÙdö×T>FËªúb\u0018“°Kª²›ÿ…k\u0006Ã*àL×ßëêfÙßW.G\u00061?†”ÿÃ0l<ş\u0013Ñ’œ\nø³÷]\u0013µ\u0007H†\u0001°»éˆ\u0017ˆ"}
+{"type": "printf", "data": "preadv 9 143 €ò\u001cO\tÕ0\\Ô.j·<ºs—‹\u0011\u001ek7ş‚k\u0007`|\u0015S\u0013†€;\u0017©ùH©ÏŞ`j±gş\u001b£&CG/¨l:s‘‡rD¤¯k×‘Eñ¾zvâ¨êä­ ÁÆ3Ô‚«ß¦\u0015\tâ•eÆ˜ß“\"$µr\u001fÚ%$IÁú-éø\r@g:T/¨õN†É”\r·eª_€æşø#ÇäJão¸üYÇ"}
+{"type": "printf", "data": "pwritev 10 143 €ò\u001cO\tÕ0\\Ô.j·<ºs—‹\u0011\u001ek7ş‚k\u0007`|\u0015S\u0013†€;\u0017©ùH©ÏŞ`j±gş\u001b£&CG/¨l:s‘‡rD¤¯k×‘Eñ¾zvâ¨êä­ ÁÆ3Ô‚«ß¦\u0015\tâ•eÆ˜ß“\"$µr\u001fÚ%$IÁú-éø\r@g:T/¨õN†É”\r·eª_€æşø#ÇäJão¸üYÇ"}
+{"type": "printf", "data": "preadv 9 163 ]±\u0006S¯*Yae\u000cäÉ3‚ÏÄæ;Ë¤±\u0007¥A\u000cŞtuÑiôg}bÊ\u0003\u001e©Ágjó“\u000e°NX\u0003p°²YƒVŞê.]ºf»‘ëk\n×`eî%•Qh¥\u0015ÍtšÙ&ªAÊ\u0007løw‡{®E\r©¨\rJ3\u0018WØP‡“-7\u001eÜW\u0005R¾o>‹âW*È_ÇW&\u0002¢¬Ÿ[Š×\rˆ\u0005ùú(®\u001dÜfàÎ~ö‚-di€\u000b\u001cC@x\u0004¬gêY€"}
+{"type": "printf", "data": "pwritev 10 163 ]±\u0006S¯*Yae\u000cäÉ3‚ÏÄæ;Ë¤±\u0007¥A\u000cŞtuÑiôg}bÊ\u0003\u001e©Ágjó“\u000e°NX\u0003p°²YƒVŞê.]ºf»‘ëk\n×`eî%•Qh¥\u0015ÍtšÙ&ªAÊ\u0007løw‡{®E\r©¨\rJ3\u0018WØP‡“-7\u001eÜW\u0005R¾o>‹âW*È_ÇW&\u0002¢¬Ÿ[Š×\rˆ\u0005ùú(®\u001dÜfàÎ~ö‚-di€\u000b\u001cC@x\u0004¬gêY€"}
+{"type": "printf", "data": "preadv 9 149 s\nF,P)ã„S·|²vš\u0004K»×aBşgN/<¯`Mº\\Mu8qÚX\u001c8£ûß\u0006:ûj4Q\u001fş{ş¢³7åÉÊ¶ïÖ¼€Ì¨\u001a§z>I2\u001fİ¬T7\u0015)\u0016\u0006«L´²“R «Tà¾%óE°VŠ\u000c¶åÂÙ \u0001j\\²¾N°rI¿W\r\u001f‹*DR+áF‚VW=ÇÏ=\u000cØQ|\u0015ã_P·W°¹"}
+{"type": "printf", "data": "pwritev 10 149 s\nF,P)ã„S·|²vš\u0004K»×aBşgN/<¯`Mº\\Mu8qÚX\u001c8£ûß\u0006:ûj4Q\u001fş{ş¢³7åÉÊ¶ïÖ¼€Ì¨\u001a§z>I2\u001fİ¬T7\u0015)\u0016\u0006«L´²“R «Tà¾%óE°VŠ\u000c¶åÂÙ \u0001j\\²¾N°rI¿W\r\u001f‹*DR+áF‚VW=ÇÏ=\u000cØQ|\u0015ã_P·W°¹"}
+{"type": "printf", "data": "preadv 9 87 ß˜™¨j\u0019$Q\u001eÍ¼b.DÂ‹çL;€¹KøÇ°|“cøm%û¤¬ó²}éëBÏth9ÏI´;\u0019\u001bN\u0011¹µ¥‰`\u001fY±>ƒÛõ\u001eÃœ¿/Ešö=0\r×œl{\u00189¯\u0010ºÑ"}
+{"type": "printf", "data": "pwritev 10 87 ß˜™¨j\u0019$Q\u001eÍ¼b.DÂ‹çL;€¹KøÇ°|“cøm%û¤¬ó²}éëBÏth9ÏI´;\u0019\u001bN\u0011¹µ¥‰`\u001fY±>ƒÛõ\u001eÃœ¿/Ešö=0\r×œl{\u00189¯\u0010ºÑ"}
+{"type": "printf", "data": "preadv 9 51 à'Z¶ìğôì”s½e\u001b+=kÇ’\t?Ø\u00126Z\u000bÅ\u0001ˆ©0Dğzp¯HÁ–Fm3\u0017™Ú|3]û\u000b"}
+{"type": "printf", "data": "pwritev 10 51 à'Z¶ìğôì”s½e\u001b+=kÇ’\t?Ø\u00126Z\u000bÅ\u0001ˆ©0Dğzp¯HÁ–Fm3\u0017™Ú|3]û\u000b"}
+{"type": "printf", "data": "preadv 9 31 \u001bëÅ6*ÑhMt]ktÁe\u001e\u0010%ŞK›j­vpÇS­?)\u0008J"}
+{"type": "printf", "data": "pwritev 10 31 \u001bëÅ6*ÑhMt]ktÁe\u001e\u0010%ŞK›j­vpÇS­?)\u0008J"}
+{"type": "printf", "data": "preadv 9 107 jÉç\u0015|3ä\u0019Ú‚ñ^Ÿ°$s\u0005i’<°×\u0016¬t]³ Ní\u000eÕŒ\u001e"}
+{"type": "printf", "data": "pwritev 10 107 jÉç\u0015|3ä\u0019Ú‚ñ^Ÿ°$s\u0005i’<°×\u0016¬t]³ Ní\u000eÕŒ\u001e"}
+{"type": "printf", "data": "preadv 9 107 $…WA\u00137ü†—Ù|ùº,K•İ\u001a7}wĞ·;©ÉÉœƒşS^Àéà\u001b\u00038ª»>¿_Û\u001cxB¹´\n\u001a\u000bÁğ³ŠCéï\u000côÎ‹ÇÓ6Ã•eqs\u0002P\u001cØ\u001b%·V(@t+µù¡rº\u0018ÈG,vP/Ù¥ \rN\u0016¶.\u0013"}
+{"type": "printf", "data": "pwritev 10 107 $…WA\u00137ü†—Ù|ùº,K•İ\u001a7}wĞ·;©ÉÉœƒşS^Àéà\u001b\u00038ª»>¿_Û\u001cxB¹´\n\u001a\u000bÁğ³ŠCéï\u000côÎ‹ÇÓ6Ã•eqs\u0002P\u001cØ\u001b%·V(@t+µù¡rº\u0018ÈG,vP/Ù¥ \rN\u0016¶.\u0013"}
+{"type": "printf", "data": "preadv 9 1 ğ"}
+{"type": "printf", "data": "pwritev 10 1 ğ"}
+{"type": "printf", "data": "preadv 9 127 \u001e‰û\u000c‚f¦@:İÖ¥f¾\u00182ÚÅu\u001a›&µÏ\u0014Ø„aŠ-åÛ¥ô¦\u0003¼&Ğ•Mç!¸Ê\u0006\u0011İ\u0017@Š·¥ s2\u0005‚fŸ—¬\\6Ÿì½Æ\u0016}9wÁ²q\u000f8¡“\u0002˜÷=.”-%»~\"Ú“ÑoäÒ\u000b2u\u000fê"}
+{"type": "printf", "data": "pwritev 10 127 \u001e‰û\u000c‚f¦@:İÖ¥f¾\u00182ÚÅu\u001a›&µÏ\u0014Ø„aŠ-åÛ¥ô¦\u0003¼&Ğ•Mç!¸Ê\u0006\u0011İ\u0017@Š·¥ s2\u0005‚fŸ—¬\\6Ÿì½Æ\u0016}9wÁ²q\u000f8¡“\u0002˜÷=.”-%»~\"Ú“ÑoäÒ\u000b2u\u000fê"}
+{"type": "printf", "data": "preadv 9 126 jÅLòÀ\u0010"}
+{"type": "printf", "data": "pwritev 10 126 jÅLòÀ\u0010"}
+{"type": "printf", "data": "preadv 9 175 _yop»„ ƒ'Áe<À˜i‚3\u000e·\\Éé\u000e¡Ğ¥yãpƒ¬Á=wl¬M€Æ¹S+¡_GCO2Â"}
+{"type": "printf", "data": "pwritev 10 175 _yop»„ ƒ'Áe<À˜i‚3\u000e·\\Éé\u000e¡Ğ¥yãpƒ¬Á=wl¬M€Æ¹S+¡_GCO2Â"}
+{"type": "printf", "data": "preadv 9 170 Åéá¡‘~w\u001cíã!·yîCn,\n¨Z‰$KFº9ß"}
+{"type": "printf", "data": "pwritev 10 170 Åéá¡‘~w\u001cíã!·yîCn,\n¨Z‰$KFº9ß"}
+{"type": "printf", "data": "preadv 9 197 B2Ñ\u0015Ï¨ü#\u0016SÖ=V”Å’‘V\u0007\u0005´¤‡rÔµÃ+?¯‹k·3‰ŞĞŒvbÑÖ¬YÔî2°\u0013„ê½ƒ\u001e"}
+{"type": "printf", "data": "pwritev 10 197 B2Ñ\u0015Ï¨ü#\u0016SÖ=V”Å’‘V\u0007\u0005´¤‡rÔµÃ+?¯‹k·3‰ŞĞŒvbÑÖ¬YÔî2°\u0013„ê½ƒ\u001e"}
+{"type": "printf", "data": "preadv 9 7 t%gƒÁöô"}
+{"type": "printf", "data": "pwritev 10 7 t%gƒÁöô"}
+{"type": "printf", "data": "preadv 9 122 ñf\u0013è\u001a\u001d\u0005b¤QŸº½,È9¨ÄïlËÖ“æ ©éÓKCÌ²®\nîä·–\u0011}”\"È¬Ç®Y,]YVÏWë¤Eh\u000e±\råï¹éB‹4/›gW@:\u0011\"…¦Äò–+QgeÜU_öê\u0015½cÓC‚Ğ­S JOIR\u0012\u000bÔÌŞÒ»éş\u000fšx$\u0008¡,¡"}
+{"type": "printf", "data": "pwritev 10 122 ñf\u0013è\u001a\u001d\u0005b¤QŸº½,È9¨ÄïlËÖ“æ ©éÓKCÌ²®\nîä·–\u0011}”\"È¬Ç®Y,]YVÏWë¤Eh\u000e±\råï¹éB‹4/›gW@:\u0011\"…¦Äò–+QgeÜU_öê\u0015½cÓC‚Ğ­S JOIR\u0012\u000bÔÌŞÒ»éş\u000fšx$\u0008¡,¡"}
+{"type": "printf", "data": "preadv 9 174 \u0007…\u0005Ô\u00182[ılÏÔ.”áåÁ”Ô]rU«˜åi†­\u000fÂåó\u000c\u000eÖÇ—©6kÍÿ\u000f\r|ê¤\u0018ıù°\u0007½¨Ø·†5_¬ı8«¬G…q§º'\u0017ãâ¶\u001aUf3\u0015Ÿb¶\u0002}‚:öo›XA#‡¡:0(ÓKÆv3C;“ñ\u0003\u0002Ì\"rn¨7z\u000e%ØÍV¢‘\r\n•Cu= ˆAñ‘zMÔ5º˜lˆfgiCVï1òûÈÜ[”ĞÂe>ÎÈı\u0014\u000fñÌĞxø\u0008í"}
+{"type": "printf", "data": "pwritev 10 174 \u0007…\u0005Ô\u00182[ılÏÔ.”áåÁ”Ô]rU«˜åi†­\u000fÂåó\u000c\u000eÖÇ—©6kÍÿ\u000f\r|ê¤\u0018ıù°\u0007½¨Ø·†5_¬ı8«¬G…q§º'\u0017ãâ¶\u001aUf3\u0015Ÿb¶\u0002}‚:öo›XA#‡¡:0(ÓKÆv3C;“ñ\u0003\u0002Ì\"rn¨7z\u000e%ØÍV¢‘\r\n•Cu= ˆAñ‘zMÔ5º˜lˆfgiCVï1òûÈÜ[”ĞÂe>ÎÈı\u0014\u000fñÌĞxø\u0008í"}
+{"type": "printf", "data": "preadv 9 123 İIÊSŞI¾Úhî°]\u0008î¹ZÚ º^™«\u0006\u001aB\u000c\u0002ˆ\nz·ÇI©à\u0018\u001fÖÕ+˜?°Z3-õ¦\u0006FĞ$:ÿ¦¶8i&!J\u0001+vİc«f\nˆT\u0010İŞÖibÅMÖ…Õè’·gJç\u0017ïõ\u0007˜pÿ½Ûæ"}
+{"type": "printf", "data": "pwritev 10 123 İIÊSŞI¾Úhî°]\u0008î¹ZÚ º^™«\u0006\u001aB\u000c\u0002ˆ\nz·ÇI©à\u0018\u001fÖÕ+˜?°Z3-õ¦\u0006FĞ$:ÿ¦¶8i&!J\u0001+vİc«f\nˆT\u0010İŞÖibÅMÖ…Õè’·gJç\u0017ïõ\u0007˜pÿ½Ûæ"}
+{"type": "printf", "data": "preadv 9 25 cT¥\u0006âàX…!¯ĞÖ\u0014^®Sùø¥Ü­l~R"}
+{"type": "printf", "data": "pwritev 10 25 cT¥\u0006âàX…!¯ĞÖ\u0014^®Sùø¥Ü­l~R"}
+{"type": "printf", "data": "preadv 9 4 bûâàX…!¯ĞÖ\u0014^®Sùø¥Ü­l~R\u000c\u0002ˆ\nz·ÇI©à\u0018\u001fÖÕ+˜?°Z3-õ¦\u0006FĞ$:ÿ¦¶8i&!J\u0001+vİc«f\nˆT\u0010İŞÖibÅMÖ…Õè’·gJç\u0017ïõ\u0007˜pÿ½Ûæ"}
+{"type": "printf", "data": "pwritev 10 4 bû"}
+{"type": "printf", "data": "preadv 9 0 bûâàX…!¯ĞÖ\u0014^®Sùø¥Ü­l~R\u000c\u0002ˆ\nz·ÇI©à\u0018\u001fÖÕ+˜?°Z3-õ¦\u0006FĞ$:ÿ¦¶8i&!J\u0001+vİc«f\nˆT\u0010İŞÖibÅMÖ…Õè’·gJç\u0017ïõ\u0007˜pÿ½Ûæ"}
+{"type": "printf", "data": "close 9 _ _"}
+{"type": "printf", "data": "close 10 _ _"}
+{"type": "printf", "data": "open -359497728 9 data/test_files/spanish"}
+{"type": "printf", "data": "open -359497728 10 data/write_file"}
+{"type": "printf", "data": "preadv 9 140 \nxNX»ã,\u0018Iíu›ë*YE}66vè”ô.¼HĞlŞ†«ÍŠhêY$ÌĞ\u0004ÊxÊ‹Å—ùøL.–ªÛDM\u0015•Á,ÉYÀ\u0004À<<œğkƒÒèÃ5g=% àù…Å¢x†Ì,m\u001aÑÖ9\u0003“_˜4¢›™{§›«\u001di&]»`À\\|Ë_YX"}
+{"type": "printf", "data": "pwritev 10 140 \nxNX»ã,\u0018Iíu›ë*YE}66vè”ô.¼HĞlŞ†«ÍŠhêY$ÌĞ\u0004ÊxÊ‹Å—ùøL.–ªÛDM\u0015•Á,ÉYÀ\u0004À<<œğkƒÒèÃ5g=% àù…Å¢x†Ì,m\u001aÑÖ9\u0003“_˜4¢›™{§›«\u001di&]»`À\\|Ë_YX"}
+{"type": "printf", "data": "preadv 9 178 •WQÀ/}óõàcûíP—\u0016~\u0005L~æ\u0008¡•3 8ŠüRˆÑ\u0005\u0006âo¡ZºÈğâdäSÎèQĞŒ“tøÜ‹‚[\u0016˜\u0012\u0012…Bæı{5>:İ°¦\\o¦°‹ÿ+#•\u0003!^\u0014 Äp¶Uç\nÌhk<Ÿ\\\u0014ê¥Õğ³çÆ)D5¢[©½\u0007ª²¹YûY³£÷Û§ƒyåo\u0003e¿óÉèÆ\u0013xÛÖQÓjNÍøË3rlŒ¤ÃÑ…Ijæğ§Ôõ¦®VÜòa[H\u001b\u0014¹?Aí"}
+{"type": "printf", "data": "pwritev 10 178 •WQÀ/}óõàcûíP—\u0016~\u0005L~æ\u0008¡•3 8ŠüRˆÑ\u0005\u0006âo¡ZºÈğâdäSÎèQĞŒ“tøÜ‹‚[\u0016˜\u0012\u0012…Bæı{5>:İ°¦\\o¦°‹ÿ+#•\u0003!^\u0014 Äp¶Uç\nÌhk<Ÿ\\\u0014ê¥Õğ³çÆ)D5¢[©½\u0007ª²¹YûY³£÷Û§ƒyåo\u0003e¿óÉèÆ\u0013xÛÖQÓjNÍøË3rlŒ¤ÃÑ…Ijæğ§Ôõ¦®VÜòa[H\u001b\u0014¹?Aí"}
+{"type": "printf", "data": "preadv 9 8 EL”*ÇÊTÅ"}
+{"type": "printf", "data": "pwritev 10 8 EL”*ÇÊTÅ"}
+{"type": "printf", "data": "preadv 9 130 d¨\t\u0010\r7Úï59\u0017¯MˆÀ¬/L¼Ö½UZYÛ]·Äòg°èÍ<’§\"MGjÀ«ÉY^J.‡yŸá´±eî\u001dR\u0005#µ\u0002±5‚‘®¡"}
+{"type": "printf", "data": "pwritev 10 130 d¨\t\u0010\r7Úï59\u0017¯MˆÀ¬/L¼Ö½UZYÛ]·Äòg°èÍ<’§\"MGjÀ«ÉY^J.‡yŸá´±eî\u001dR\u0005#µ\u0002±5‚‘®¡"}
+{"type": "printf", "data": "preadv 9 127 šÎ7ç\u0010zçµR>‘àİÚ6\u0004]ù{ûıùk\u001d\u0014ê¤†i—\u0006QJı\u0019š=È‹’‹ñ\u00128S\u0019—'s\u0006¨ğ[;}œ9v\u0018\rfwFã\u0015½´şÎ\u0004pğ .eûVe*Ñ\u0004˜Ñ9héº¸šã$½Îà\\iâÜã[|ÔSÁ\u0016ê\u0002`\u0005\u001dül,v·l7\u0012ä|úø¾Ó"}
+{"type": "printf", "data": "pwritev 10 127 šÎ7ç\u0010zçµR>‘àİÚ6\u0004]ù{ûıùk\u001d\u0014ê¤†i—\u0006QJı\u0019š=È‹’‹ñ\u00128S\u0019—'s\u0006¨ğ[;}œ9v\u0018\rfwFã\u0015½´şÎ\u0004pğ .eûVe*Ñ\u0004˜Ñ9héº¸šã$½Îà\\iâÜã[|ÔSÁ\u0016ê\u0002`\u0005\u001dül,v·l7\u0012ä|úø¾Ó"}
+{"type": "printf", "data": "preadv 9 11 qÊW7£ê\u00023g¹l"}
+{"type": "printf", "data": "pwritev 10 11 qÊW7£ê\u00023g¹l"}
+{"type": "printf", "data": "preadv 9 124 \u0004\u0010\u0013PóM\u0006]ç_±jÒÎú\n‰\n©˜eU\u001cÛÄ@iÓâçÎI¸‘ç%Ó\u0002À¡,ÈÒ€a©\u001eÊK`j\u001dcC?\u0002şÉê\u0007J\u0004ÌPN§Hî\\…¸RØNVæ÷n aòFb[ ‰¿Êâj§¢µOØÚW,HnL\u001bR//yí]gõEÈ”!Ê.\u0016ô˜ßÇ"}
+{"type": "printf", "data": "pwritev 10 124 \u0004\u0010\u0013PóM\u0006]ç_±jÒÎú\n‰\n©˜eU\u001cÛÄ@iÓâçÎI¸‘ç%Ó\u0002À¡,ÈÒ€a©\u001eÊK`j\u001dcC?\u0002şÉê\u0007J\u0004ÌPN§Hî\\…¸RØNVæ÷n aòFb[ ‰¿Êâj§¢µOØÚW,HnL\u001bR//yí]gõEÈ”!Ê.\u0016ô˜ßÇ"}
+{"type": "printf", "data": "preadv 9 78 f"}
+{"type": "printf", "data": "pwritev 10 78 f"}
+{"type": "printf", "data": "preadv 9 153 ¦ßÅ\u0012ßÈ`N¹\u000bt[É›Ï\u0008X½M·¥ì´ë\u0013øn¤\u001b‚äæÂ«ì‚G\\¿#Iø\nr*ÑöÔut×]}Z·‚\u0012€iÅ\u001a¨í\u000fÎ¶\u0007•ü§ÎQŞè]([H#FG3áşÑ˜\u001f/İ®1XÆŠ\u0010 =]s\u001dòı_\u0013C$Ü\u0001\u0010=°wõš&…Èóø?Ùk*A\u0004¢åƒ¸Œcå\u0005rlÔ¬ø\u000b-m•à\"ã¾"}
+{"type": "printf", "data": "pwritev 10 153 ¦ßÅ\u0012ßÈ`N¹\u000bt[É›Ï\u0008X½M·¥ì´ë\u0013øn¤\u001b‚äæÂ«ì‚G\\¿#Iø\nr*ÑöÔut×]}Z·‚\u0012€iÅ\u001a¨í\u000fÎ¶\u0007•ü§ÎQŞè]([H#FG3áşÑ˜\u001f/İ®1XÆŠ\u0010 =]s\u001dòı_\u0013C$Ü\u0001\u0010=°wõš&…Èóø?Ùk*A\u0004¢åƒ¸Œcå\u0005rlÔ¬ø\u000b-m•à\"ã¾"}
+{"type": "printf", "data": "preadv 9 60 1\u001bğ#á“öh\u0011\u000bámû\u001f\rÈåíÇö\u000c·ÜÄëïƒ‡\\\u0003¡Ìj€@:\u001aˆ\u000eS\\!±f@ãÃ\u0005\\OšGr¶‘\u0005<=U0"}
+{"type": "printf", "data": "pwritev 10 60 1\u001bğ#á“öh\u0011\u000bámû\u001f\rÈåíÇö\u000c·ÜÄëïƒ‡\\\u0003¡Ìj€@:\u001aˆ\u000eS\\!±f@ãÃ\u0005\\OšGr¶‘\u0005<=U0"}
+{"type": "printf", "data": "preadv 9 195 ÿÖ“ñ\u0002İ¤øíK¡\u0002\u000e:—’ÊÔÔ‰ìŒ>-‚vã_ôÌnÛíÏ%8'Šv\u0011\u0007b¥êfc3\u0017uÜÀ´°&\n*ìOíC\n\u001a]¥"}
+{"type": "printf", "data": "pwritev 10 195 ÿÖ“ñ\u0002İ¤øíK¡\u0002\u000e:—’ÊÔÔ‰ìŒ>-‚vã_ôÌnÛíÏ%8'Šv\u0011\u0007b¥êfc3\u0017uÜÀ´°&\n*ìOíC\n\u001a]¥"}
+{"type": "printf", "data": "preadv 9 25 ’\tÁçæ•CÿW`z\\ÈŞï5ã½ŞaihŒ=)"}
+{"type": "printf", "data": "pwritev 10 25 ’\tÁçæ•CÿW`z\\ÈŞï5ã½ŞaihŒ=)"}
+{"type": "printf", "data": "preadv 9 141 †”V\u0003Éû¢\tÅ\u001a-!qy¬ë#ÜšºÜ~ƒƒA‰\u0018¨s\ta¨^‰OLË–¶îlR(„‚»Û†.-á\u000b@YKP¼ÎGx¦H*\u0005%È.]È\u0007\u001aõˆz\u0017´ºÃ °é€ÒLR‰òÇ›µŞB7½ÅGä˜\u0014\u001ba\u001cª2 šl¨‚\u001c\"‹\u0004\u001a\nüSyÅxB¸„*_‚GHT¤—„¹"}
+{"type": "printf", "data": "pwritev 10 141 †”V\u0003Éû¢\tÅ\u001a-!qy¬ë#ÜšºÜ~ƒƒA‰\u0018¨s\ta¨^‰OLË–¶îlR(„‚»Û†.-á\u000b@YKP¼ÎGx¦H*\u0005%È.]È\u0007\u001aõˆz\u0017´ºÃ °é€ÒLR‰òÇ›µŞB7½ÅGä˜\u0014\u001ba\u001cª2 šl¨‚\u001c\"‹\u0004\u001a\nüSyÅxB¸„*_‚GHT¤—„¹"}
+{"type": "printf", "data": "preadv 9 50 >¨êoŸhì(Ì«f¨\u001c‘}\u000eJµ£\u0001Bz!\u001a\u0018~ „(ed\u0007^\u0001="}
+{"type": "printf", "data": "pwritev 10 50 >¨êoŸhì(Ì«f¨\u001c‘}\u000eJµ£\u0001Bz!\u001a\u0018~ „(ed\u0007^\u0001="}
+{"type": "printf", "data": "preadv 9 197 e\u0001ËØç\u0007\u000ekàÄ.Y“ïsä+…O'é½(\u0007iDØäSó]Ö\u0008.ı‰”……®\nü\u0018ìI-Å°'s\u0018u¹Õ¼Çî%:~İbÉÃ7\\ğo·ÇRâ\u0006ñëz~¬'Ç‹\u000b{ÅËÏ¨^ê “ñİ\u0005;ø\u0019\u000cçcAs¡Yâ2QŸ¦‚î\u001bçì\u0005ò\u0014 ê\rZÏûÎ¤}VÕVöÂÁ1·_yOşöÒ_Úå\\’Œ¬ûÎ^’¶ÎÎ\u000c\u0004 Üåm%#˜déÂ…¶XuòŸnÁ%¦iŒ¨Û[Nüq\tb‘ŒÊ©\u0010Ó"}
+{"type": "printf", "data": "pwritev 10 197 e\u0001ËØç\u0007\u000ekàÄ.Y“ïsä+…O'é½(\u0007iDØäSó]Ö\u0008.ı‰”……®\nü\u0018ìI-Å°'s\u0018u¹Õ¼Çî%:~İbÉÃ7\\ğo·ÇRâ\u0006ñëz~¬'Ç‹\u000b{ÅËÏ¨^ê “ñİ\u0005;ø\u0019\u000cçcAs¡Yâ2QŸ¦‚î\u001bçì\u0005ò\u0014 ê\rZÏûÎ¤}VÕVöÂÁ1·_yOşöÒ_Úå\\’Œ¬ûÎ^’¶ÎÎ\u000c\u0004 Üåm%#˜déÂ…¶XuòŸnÁ%¦iŒ¨Û[Nüq\tb‘ŒÊ©\u0010Ó"}
+{"type": "printf", "data": "preadv 9 39 ÈJ.‚¢¬?\u0017RíİA\u0008™–ÃŞ<$a\u0019\u0018Æƒ‰Íf_åòS³Ÿ"}
+{"type": "printf", "data": "pwritev 10 39 ÈJ.‚¢¬?\u0017RíİA\u0008™–ÃŞ<$a\u0019\u0018Æƒ‰Íf_åòS³Ÿ"}
+{"type": "printf", "data": "preadv 9 101 z´\n|»šVZ­¿m›\"Ñ\u0004ÙãG\u0015\u000e¡è0÷ÜJ’UóãÛh‘\u0014¥vŒ\u000bÀİ3¿¼\u0011˜¬ª;Z8ñ¶õ®k<\u001f4g±İ¨\u0014…ÁùB;÷;ŸÔ\u0007@\u0016­\u000b?e\u001d  â\u001a@ƒÀkp\nQÆB©³I\u0015é“"}
+{"type": "printf", "data": "pwritev 10 101 z´\n|»šVZ­¿m›\"Ñ\u0004ÙãG\u0015\u000e¡è0÷ÜJ’UóãÛh‘\u0014¥vŒ\u000bÀİ3¿¼\u0011˜¬ª;Z8ñ¶õ®k<\u001f4g±İ¨\u0014…ÁùB;÷;ŸÔ\u0007@\u0016­\u000b?e\u001d  â\u001a@ƒÀkp\nQÆB©³I\u0015é“"}
+{"type": "printf", "data": "preadv 9 5 \u001aKMÏ}"}
+{"type": "printf", "data": "pwritev 10 5 \u001aKMÏ}"}
+{"type": "printf", "data": "preadv 9 82 š½+ÎäÂÚ&RY‡‚ú¬Ym†DØ2%h`ÓŒ÷ÀZyêºn\u0019¼\u001e|Ä¦\u001fê€+ÔPãÉc¼Êeõ^o+\u0004»\u001b?ÑíXÃé°ç˜èHõ£?\u0002ıÏbØè"}
+{"type": "printf", "data": "pwritev 10 82 š½+ÎäÂÚ&RY‡‚ú¬Ym†DØ2%h`ÓŒ÷ÀZyêºn\u0019¼\u001e|Ä¦\u001fê€+ÔPãÉc¼Êeõ^o+\u0004»\u001b?ÑíXÃé°ç˜èHõ£?\u0002ıÏbØè"}
+{"type": "printf", "data": "preadv 9 178 h­µ%ğ²Ö9YÅ\u0016¥¶RïGZqNGe\u0007çã­„ùMWÃÖ\u0014‹O=æUi{P.²òX\u0002\u0014Z\u0013ÏaÀŠWëY¦Å7÷\u001dJ«s6Ú,eZWe®Ü%ñ\u0006÷İ?¨}'°\tğ\u0016ÿ/4XÉÎ€v]§Ò6%\u001a"}
+{"type": "printf", "data": "pwritev 10 178 h­µ%ğ²Ö9YÅ\u0016¥¶RïGZqNGe\u0007çã­„ùMWÃÖ\u0014‹O=æUi{P.²òX\u0002\u0014Z\u0013ÏaÀŠWëY¦Å7÷\u001dJ«s6Ú,eZWe®Ü%ñ\u0006÷İ?¨}'°\tğ\u0016ÿ/4XÉÎ€v]§Ò6%\u001a"}
+{"type": "printf", "data": "preadv 9 84 3%MÿãeÔ®m–QIØJgüŒàÎ¯«?ğR³ÿÁ^f43®d¬\u0012c\u0003¯~ÌT’o&¢ã$±Ë\t@îÿ]b zW{\u0008÷ß_\rY»»(öâÑ'K\u000c\u0008ZQ¡$¦\r"}
+{"type": "printf", "data": "pwritev 10 84 3%MÿãeÔ®m–QIØJgüŒàÎ¯«?ğR³ÿÁ^f43®d¬\u0012c\u0003¯~ÌT’o&¢ã$±Ë\t@îÿ]b zW{\u0008÷ß_\rY»»(öâÑ'K\u000c\u0008ZQ¡$¦\r"}
+{"type": "printf", "data": "preadv 9 52 '.:j ”ÌÄ´bî\u0004 eÉ•Ã"}
+{"type": "printf", "data": "pwritev 10 52 '.:j ”ÌÄ´bî\u0004 eÉ•Ã"}
+{"type": "printf", "data": "preadv 9 40 Yâa´\u0016Lß\u001c÷ò‘\u001d3‡;ûH\u000fĞÌ\u001e‹Ö¼lİKæò~HTú3ÀÜ"}
+{"type": "printf", "data": "pwritev 10 40 Yâa´\u0016Lß\u001c÷ò‘\u001d3‡;ûH\u000fĞÌ\u001e‹Ö¼lİKæò~HTú3ÀÜ"}
+{"type": "printf", "data": "preadv 9 197 \u0013B7µNßõ+ı\u0015eèõÉ©\u001dŞµÌ@LŸD7\u0010•í/\u001cšk\u001b(ÊeaÏ¬0Ê)\t\u0008E[k¾PO7óğ¹ïN”ãm¥òÎfˆëáˆÁ°^ø÷\u0017©r6\u0018áqÑl\u00147º\u001aL(êø©\u0001\u0018\"?\t\u00101a’kö\u0007\u000bÖ¶½sQ*î2óœDÄÑ\u001bQğ\u0018A$…€ä\t¥©Ém;†ımv=Ü¨LCûpGGÁCşÃn\u001eÓBÁPã\u0014Ù=Ä\u0013²(tãÄ›Mx\r°Zj[\u0015âÑ\u0016\u0011×\\q,İ±Ëh\rjı9\u000bË\u0017ã"}
+{"type": "printf", "data": "pwritev 10 197 \u0013B7µNßõ+ı\u0015eèõÉ©\u001dŞµÌ@LŸD7\u0010•í/\u001cšk\u001b(ÊeaÏ¬0Ê)\t\u0008E[k¾PO7óğ¹ïN”ãm¥òÎfˆëáˆÁ°^ø÷\u0017©r6\u0018áqÑl\u00147º\u001aL(êø©\u0001\u0018\"?\t\u00101a’kö\u0007\u000bÖ¶½sQ*î2óœDÄÑ\u001bQğ\u0018A$…€ä\t¥©Ém;†ımv=Ü¨LCûpGGÁCşÃn\u001eÓBÁPã\u0014Ù=Ä\u0013²(tãÄ›Mx\r°Zj[\u0015âÑ\u0016\u0011×\\q,İ±Ëh\rjı9\u000bË\u0017ã"}
+{"type": "printf", "data": "preadv 9 40 &«ºeÆªÕo\u0001¬\u0012w¬´;û[×\\LTÎÍ¿ï\u001eÅÿ/\u0014úZÓ¡\u0003Ak4“q)\t\u0008E[k¾PO7óğ¹ïN”ãm¥òÎfˆëáˆÁ°^ø÷\u0017©r6\u0018áqÑl\u00147º\u001aL(êø©\u0001\u0018\"?\t\u00101a’kö\u0007\u000bÖ¶½sQ*î2óœDÄÑ\u001bQğ\u0018A$…€ä\t¥©Ém;†ımv=Ü¨LCûpGGÁCşÃn\u001eÓBÁPã\u0014Ù=Ä\u0013²(tãÄ›Mx\r°Zj[\u0015âÑ\u0016\u0011×\\q,İ±Ë"}
+{"type": "printf", "data": "pwritev 10 40 &«ºeÆªÕo\u0001¬\u0012w¬´;û[×\\LTÎÍ¿ï\u001eÅÿ/\u0014úZÓ¡\u0003Ak4“q"}
+{"type": "printf", "data": "preadv 9 0 &«ºeÆªÕo"}
+{"type": "printf", "data": "close 9 _ _"}
+{"type": "printf", "data": "close 10 _ _"}
+{"type": "printf", "data": "open -359497728 9 data/test_files/portuguese"}
+{"type": "printf", "data": "open -359497728 10 data/write_file"}
+{"type": "printf", "data": "preadv 9 21 7›—«Ş‘–\u0017U*[ sÕÑ’91ùd4"}
+{"type": "printf", "data": "preadv 9 108 O§Ñ\u0013ŞFÌÃ"}
+{"type": "printf", "data": "pwritev 10 95  ‘2ñº GK_r\nüİlJn{œ\u001bP|Óì.j‡LC=;²ŸñĞ|‘/Lúiì œe\u0019ÈDŸ5ô÷]=6Iña®Ná æˆƒÛíòOøQ£DÎ\u0005o%Î!`>ab …ª†Y*zmmº"}
+{"type": "printf", "data": "close 10 _ _"}
+{"type": "printf", "data": "pwritev 10 21 7›—«Ş‘–\u0017U*[ sÕÑ’91ùd4"}
+{"type": "printf", "data": "pwritev 10 108 O§Ñ\u0013ŞFÌÃ"}
+{"type": "printf", "data": "preadv 9 95  ‘2ñº GK_r\nüİlJn{œ\u001bP|Óì.j‡LC=;²ŸñĞ|‘/Lúiì œe\u0019ÈDŸ5ô÷]=6Iña®Ná æˆƒÛíòOøQ£DÎ\u0005o%Î!`>ab …ª†Y*zmmº"}
+{"type": "printf", "data": "preadv 9 158 H!\tîè';I\u0002@&A \rH7\u0017™{,L‘±6$hØ{³\u0008ÿ\n–txÒôıô‚´¶!H\u0008k\u0011c\rµT2¥â@‹ ĞkÌıÑQ—N´ø"}
+{"type": "printf", "data": "pwritev 10 158 H!\tîè';I\u0002@&A \rH7\u0017™{,L‘±6$hØ{³\u0008ÿ\n–txÒôıô‚´¶!H\u0008k\u0011c\rµT2¥â@‹ ĞkÌıÑQ—N´ø"}
+{"type": "printf", "data": "preadv 9 83 \u0006·wÌ]æ+_¡\u0018Ròí«&—™+áı\u0001ä7Úi\"İè„àİ›—pòã\u0016Ëş\u0011VÄÆPhi—›µ»—f­¶q\u001do\u001b¸\u001cu!øÅšg†İ\u000c¹‡AÚûÂ>\u001dµØèl;"}
+{"type": "printf", "data": "preadv 9 0 "}
+{"type": "printf", "data": "pwritev 10 83 \u0006·wÌ]æ+_¡\u0018Ròí«&—™+áı\u0001ä7Úi\"İè„àİ›—pòã\u0016Ëş\u0011VÄÆPhi—›µ»—f­¶q\u001do\u001b¸\u001cu!øÅšg†İ\u000c¹‡AÚûÂ>\u001dµØèl;"}
+{"type": "printf", "data": "close 9 _ _"}
+{"type": "printf", "data": "open 0 9 "}
+{"type": "printf", "data": "open -359497728 10 data/write_file"}
+{"type": "printf", "data": "preadv 9 66 {À\u0006Ç\u0015]‘ø¢\u0006(,‹_0Ã\u0012\u000c•±\u0004«'e¹İmÕ\u0005^h"}
+{"type": "printf", "data": "pwritev 10 66 {À\u0006Ç\u0015]‘ø¢\u0006(,‹_0Ã\u0012\u000c•±\u0004«'e¹İmÕ\u0005^h"}
+{"type": "printf", "data": "preadv 9 89 T—\u0018z¾b™¹ôó/b¿É½Õ›šÇWÏ\rƒ\u0001»\u0007\u0001˜·¶Œş×;q™·¢@ûÁóesõ­T¼?V²\u0011¡F£4ÊÜe™ÒC\u0004ğïßú†Y¬(?E\u000e¶A”Dºd¾?s\u001d\u0018\n"}
+{"type": "printf", "data": "pwritev 10 89 T—\u0018z¾b™¹ôó/b¿É½Õ›šÇWÏ\rƒ\u0001»\u0007\u0001˜·¶Œş×;q™·¢@ûÁóesõ­T¼?V²\u0011¡F£4ÊÜe™ÒC\u0004ğïßú†Y¬(?E\u000e¶A”Dºd¾?s\u001d\u0018\n"}
+{"type": "printf", "data": "preadv 9 120 %Wyôˆ²3\u00130ü¨£Ğè\u0016).ÈIëƒâ¼³fi©ZAğùÓBÃ\\fGÀOş|’\u0003}HÔ8¨÷Sƒ\u001cGÄúzdOÌî7tRÍpîRdÕ\n”æ©‘¶0ÍŞ\u000cÔ~ÛA\r‘\nRcC¥”Œ7æ‘zöúG«:Jw‘îÎ¸L§\u0013ÀîéØDN"}
+{"type": "printf", "data": "pwritev 10 120 %Wyôˆ²3\u00130ü¨£Ğè\u0016).ÈIëƒâ¼³fi©ZAğùÓBÃ\\fGÀOş|’\u0003}HÔ8¨÷Sƒ\u001cGÄúzdOÌî7tRÍpîRdÕ\n”æ©‘¶0ÍŞ\u000cÔ~ÛA\r‘\nRcC¥”Œ7æ‘zöúG«:Jw‘îÎ¸L§\u0013ÀîéØDN"}
+{"type": "printf", "data": "preadv 9 178 Â°:®`Óaº<qYyÂZy3´÷¿\u0002q =€\u001e’ëL}b\u0012J^Î´€aû\u0002İ*1B‘Ï&7\u0014\"Ò \u0011b' èßr`ö„Iº$û\u0007OÌ|ka`C\u0006lÌf:ØÂ•\u0019A»ï|‘õú|ò°™ÕV;¡\n4È¥\u0003zøW­Ê;Vå\\ŞîßB*t\u0001ÆˆHúb´¡ÿ~Ë\u0008<0˜û¿¬\u001b‰«®Âc\n¹­¤Çj£ÓşÈÂ¤’ŠÑwâ˜í$ô`©ô‹¾ôñ™ô½"}
+{"type": "printf", "data": "pwritev 10 178 Â°:®`Óaº<qYyÂZy3´÷¿\u0002q =€\u001e’ëL}b\u0012J^Î´€aû\u0002İ*1B‘Ï&7\u0014\"Ò \u0011b' èßr`ö„Iº$û\u0007OÌ|ka`C\u0006lÌf:ØÂ•\u0019A»ï|‘õú|ò°™ÕV;¡\n4È¥\u0003zøW­Ê;Vå\\ŞîßB*t\u0001ÆˆHúb´¡ÿ~Ë\u0008<0˜û¿¬\u001b‰«®Âc\n¹­¤Çj£ÓşÈÂ¤’ŠÑwâ˜í$ô`©ô‹¾ôñ™ô½"}
+{"type": "printf", "data": "preadv 9 133 \u0003çğã5¨$:ÅİiLò¹¼¹¼\u0016\u0019óê®¦ííÌ^Æ}×\u000b£òWAó\u001añŒá~¼ÆĞ\u0018á™k§Ñ¶È-¡x¼yˆ]\r÷Xğâœñd Ã"}
+{"type": "printf", "data": "pwritev 10 133 \u0003çğã5¨$:ÅİiLò¹¼¹¼\u0016\u0019óê®¦ííÌ^Æ}×\u000b£òWAó\u001añŒá~¼ÆĞ\u0018á™k§Ñ¶È-¡x¼yˆ]\r÷Xğâœñd Ã"}
+{"type": "printf", "data": "preadv 9 14 ®†³ÿiß°Vƒ†¢RT\u001b"}
+{"type": "printf", "data": "pwritev 10 14 ®†³ÿiß°Vƒ†¢RT\u001b"}
+{"type": "printf", "data": "preadv 9 43 Á\u0011!1jBa.¨7Få„\u0019Ş±\u000eñ1\u0005-Qò\u001fiòPÏY˜ú\u0011\u0018Tâ¥jóTLl–\t"}
+{"type": "printf", "data": "pwritev 10 43 Á\u0011!1jBa.¨7Få„\u0019Ş±\u000eñ1\u0005-Qò\u001fiòPÏY˜ú\u0011\u0018Tâ¥jóTLl–\t"}
+{"type": "printf", "data": "preadv 9 180 ’@&¡¿:x£QIkuËæ¿Æó·\u0012‡;móÖÈB ı> ¶1ÿ—4˜?\u0012]\np_@£á`[Œô[\u001c<oà\u001eıpŸ{Ø¸Ú¢Çµy§æ¾?owÑ¨f$É\u001a_\u0007‡ó¾\u0005î¯\u0006ÑŠ­Ç\u001e„Ï¶§ ¤¹’£Oÿ9\u001d\\nNLY¢ «\u00027\u000e+upA|óG²ègÓNX\u001fµ®Ô·RÅ¤\u0015QGå6Š\u0004<d¬n\rü˜\u0004.Ô$^®y_´>KÀ·˜½e®^Èü‰"}
+{"type": "printf", "data": "pwritev 10 180 ’@&¡¿:x£QIkuËæ¿Æó·\u0012‡;móÖÈB ı> ¶1ÿ—4˜?\u0012]\np_@£á`[Œô[\u001c<oà\u001eıpŸ{Ø¸Ú¢Çµy§æ¾?owÑ¨f$É\u001a_\u0007‡ó¾\u0005î¯\u0006ÑŠ­Ç\u001e„Ï¶§ ¤¹’£Oÿ9\u001d\\nNLY¢ «\u00027\u000e+upA|óG²ègÓNX\u001fµ®Ô·RÅ¤\u0015QGå6Š\u0004<d¬n\rü˜\u0004.Ô$^®y_´>KÀ·˜½e®^Èü‰"}
+{"type": "printf", "data": "preadv 9 24 ]–H\u000cSvxòÀœ.a\u001brjBnu—×(<6"}
+{"type": "printf", "data": "pwritev 10 24 ]–H\u000cSvxòÀœ.a\u001brjBnu—×(<6"}
+{"type": "printf", "data": "preadv 9 3 °•\u0008"}
+{"type": "printf", "data": "pwritev 10 3 °•\u0008"}
+{"type": "printf", "data": "preadv 9 169 f™W\u000f\u001b)&?\u0001•¾~,ê\u0008\u0012kğ`‹ÿùœLŸÔ\u000ciø–U[\u001f\u0003ˆó\u000fjõ½Å÷J·I}ìdÈâr•[\u00146ï ²\\ú3¬|\u000b..Ö{p‚Á0\u0006ÏJ­ÏWÿ\u001b\u0007\u0013Ü³qıÏÛW1õHÄ\u000e.7\u000fEú½y\u0014…Šğ\u0011Şä€\u0002ª+×¤úúç\\d`EB”è\u00032­¿åwë6\u0012š"}
+{"type": "printf", "data": "pwritev 10 169 f™W\u000f\u001b)&?\u0001•¾~,ê\u0008\u0012kğ`‹ÿùœLŸÔ\u000ciø–U[\u001f\u0003ˆó\u000fjõ½Å÷J·I}ìdÈâr•[\u00146ï ²\\ú3¬|\u000b..Ö{p‚Á0\u0006ÏJ­ÏWÿ\u001b\u0007\u0013Ü³qıÏÛW1õHÄ\u000e.7\u000fEú½y\u0014…Šğ\u0011Şä€\u0002ª+×¤úúç\\d`EB”è\u00032­¿åwë6\u0012š"}
+{"type": "printf", "data": "preadv 9 43 \u0013ÿ`\nÅ\u0008s{âM—\u0010Je\u0013CD›=“¯6Û`EéÎf#¡J¡^èFQÆ¬ ×Äa–"}
+{"type": "printf", "data": "pwritev 10 43 \u0013ÿ`\nÅ\u0008s{âM—\u0010Je\u0013CD›=“¯6Û`EéÎf#¡J¡^èFQÆ¬ ×Äa–"}
+{"type": "printf", "data": "preadv 9 195 j×cü.ğxg†gd»P—×ù£7±âs[Q«M©³aÏ~¼¢s¸/\u0007\u000fÇ–¹DbvÈŠñ„2Ò}p;\u0012a®ë\u0003±¯$»¡aÏ\u0008Òcº%¹l?\tB<—\u0010\u0016®ß:š7»íÃvÃúëÙs(3çˆ0Ÿeï¸\u001e•b® iR¾Õ\u0008Ùè/÷"}
+{"type": "printf", "data": "pwritev 10 195 j×cü.ğxg†gd»P—×ù£7±âs[Q«M©³aÏ~¼¢s¸/\u0007\u000fÇ–¹DbvÈŠñ„2Ò}p;\u0012a®ë\u0003±¯$»¡aÏ\u0008Òcº%¹l?\tB<—\u0010\u0016®ß:š7»íÃvÃúëÙs(3çˆ0Ÿeï¸\u001e•b® iR¾Õ\u0008Ùè/÷"}
+{"type": "printf", "data": "preadv 9 27 JÒŞ&°\\âïÔ\u000cø!q·A'U\u000bÔ@“;Å•,'O"}
+{"type": "printf", "data": "pwritev 10 27 JÒŞ&°\\âïÔ\u000cø!q·A'U\u000bÔ@“;Å•,'O"}
+{"type": "printf", "data": "preadv 9 133 >%ÒÉÍ\u0012^9‡ó\u0006¼j\u001d™Éf¶‘R¡i\u0011°\\ÔÂ5MiÀ*®\u000cò\u001d¦¡uÓ/DËp²ø²4"}
+{"type": "printf", "data": "pwritev 10 133 >%ÒÉÍ\u0012^9‡ó\u0006¼j\u001d™Éf¶‘R¡i\u0011°\\ÔÂ5MiÀ*®\u000cò\u001d¦¡uÓ/DËp²ø²4"}
+{"type": "printf", "data": "preadv 9 194 Xñ—‰ÔVLc\u0016^i~İÊ\u0002ÖºÓ°éh>(*ö\u0015\"ÉSŸ\t¾Yi\u001fşÕ•ÆØ\u0002‘Pq¯{ëÉã,§z5%D&\u0018kjñõ`Ô¡Å@§;Ó¶écI¤)l±Ú¬Q’>\u0002,àÌV\u0006_:\u000bhXá-ğÂŞ\u001bÄK¬ÁÇ?d\u0002´'…"}
+{"type": "printf", "data": "pwritev 10 194 Xñ—‰ÔVLc\u0016^i~İÊ\u0002ÖºÓ°éh>(*ö\u0015\"ÉSŸ\t¾Yi\u001fşÕ•ÆØ\u0002‘Pq¯{ëÉã,§z5%D&\u0018kjñõ`Ô¡Å@§;Ó¶écI¤)l±Ú¬Q’>\u0002,àÌV\u0006_:\u000bhXá-ğÂŞ\u001bÄK¬ÁÇ?d\u0002´'…"}
+{"type": "printf", "data": "preadv 9 117 ç™î³c0˜^E«iÁÕä+µg¤tÛ\u001a14ìD¿M‹Ã²N\u0019n)ç¥/M0ßV+M\\\u0001²ºMÖî½I;lÅgs·ó‚G\"âuEøñ£-›J_\u0017ŒıµÄKo¾2\u0018Hc\u0018ì\u0008#7Ó\u0016|dº\u0015€ŞÊ—Ñ\u001aÓ(\u0006^ş.ß•ŞyœUØ"}
+{"type": "printf", "data": "pwritev 10 117 ç™î³c0˜^E«iÁÕä+µg¤tÛ\u001a14ìD¿M‹Ã²N\u0019n)ç¥/M0ßV+M\\\u0001²ºMÖî½I;lÅgs·ó‚G\"âuEøñ£-›J_\u0017ŒıµÄKo¾2\u0018Hc\u0018ì\u0008#7Ó\u0016|dº\u0015€ŞÊ—Ñ\u001aÓ(\u0006^ş.ß•ŞyœUØ"}
+{"type": "printf", "data": "preadv 9 169 ˆp1Êµ±Â­¥àuU˜¬:ïWyd$ë2Ä!#{ª#\"èt¸•hô)ÔW‚Ğ*§çËìábT’nÀ\u001aş·hùŸ{²\t8^ûƒ<:1$ß@¿s\"V<B‰qà¬¥Œ¯pa¯É‚Î¢TÂÑHr¾£nŞ!¿Ó\u0016’\u0003fMÜøÏö\u0010°\u0007<\"Y\u0011º\u0011-ö’<\u001eÔ´ÛI!£\nr†SRß*¸„ï•õ®zî¤êë\u001f§S\\(|+Å:X\u000fÓÂ¥ØÆ"}
+{"type": "printf", "data": "pwritev 10 169 ˆp1Êµ±Â­¥àuU˜¬:ïWyd$ë2Ä!#{ª#\"èt¸•hô)ÔW‚Ğ*§çËìábT’nÀ\u001aş·hùŸ{²\t8^ûƒ<:1$ß@¿s\"V<B‰qà¬¥Œ¯pa¯É‚Î¢TÂÑHr¾£nŞ!¿Ó\u0016’\u0003fMÜøÏö\u0010°\u0007<\"Y\u0011º\u0011-ö’<\u001eÔ´ÛI!£\nr†SRß*¸„ï•õ®zî¤êë\u001f§S\\(|+Å:X\u000fÓÂ¥ØÆ"}
+{"type": "printf", "data": "preadv 9 10 ÃŒ,ƒ-ª\u0017|\u0002L"}
+{"type": "printf", "data": "pwritev 10 10 ÃŒ,ƒ-ª\u0017|\u0002L"}
+{"type": "printf", "data": "preadv 9 132 \u001a\"ŒœµFÚÖ‹ß‹ç±P÷¸3.¸p›öoÁ*˜©\u000csÑ<Î\r3ÆªnûàhğAP§œú#=Lm[··ô5†;ô6Š$\u0005\u0006\u0004h¨A¦\u001cóŞ´TXA„\u0005+¾\u0014DÆêïãüH†\u0003Œ­lB[ş?ÖoÆÙU\u001dş$,pe«\\)•…Cr\u0007ol\tGş9=íº€,O®"}
+{"type": "printf", "data": "pwritev 10 132 \u001a\"ŒœµFÚÖ‹ß‹ç±P÷¸3.¸p›öoÁ*˜©\u000csÑ<Î\r3ÆªnûàhğAP§œú#=Lm[··ô5†;ô6Š$\u0005\u0006\u0004h¨A¦\u001cóŞ´TXA„\u0005+¾\u0014DÆêïãüH†\u0003Œ­lB[ş?ÖoÆÙU\u001dş$,pe«\\)•…Cr\u0007ol\tGş9=íº€,O®"}
+{"type": "printf", "data": "preadv 9 26 %\u000bd®CÅµ\tL\u001e„-´JF°\u0011ß-±´Ih"}
+{"type": "printf", "data": "pwritev 10 26 %\u000bd®CÅµ\tL\u001e„-´JF°\u0011ß-±´Ih"}
+{"type": "printf", "data": "preadv 9 193 Ş…\u0007b¹@às3¡(yRÿÇ–<¯Ær½¤?üš]ÚÜşû\u0015¦(fï\r:(s{¾\u0010›ëûƒzQş\u0002Î—s\u0018UòóW5~Åœ=3†ŠF\n(Zc\u001f¨±ÎG8%\tÉ#½F@‹\u0011uX\u000e°|Çù„ş\u00064>*Ç¥\"¡ÀĞ£ˆ¬Ü‚l$:³LœÉ\\¹’"}
+{"type": "printf", "data": "pwritev 10 193 Ş…\u0007b¹@às3¡(yRÿÇ–<¯Ær½¤?üš]ÚÜşû\u0015¦(fï\r:(s{¾\u0010›ëûƒzQş\u0002Î—s\u0018UòóW5~Åœ=3†ŠF\n(Zc\u001f¨±ÎG8%\tÉ#½F@‹\u0011uX\u000e°|Çù„ş\u00064>*Ç¥\"¡ÀĞ£ˆ¬Ü‚l$:³LœÉ\\¹’"}
+{"type": "printf", "data": "preadv 9 97 Rgí¥\u0015Ñ\u0015¾\u000b"}
+{"type": "printf", "data": "pwritev 10 97 Rgí¥\u0015Ñ\u0015¾\u000b"}
+{"type": "printf", "data": "preadv 9 82 ¬´\u0014ZÉ\u0002tA9_‡\u0002?şöÂÃ¿]\u0005¨×\\¡›ˆÓüÅÜ‡¯\u0013Şx˜Âü+K\u0017¬œ Â]”O]"}
+{"type": "printf", "data": "pwritev 10 82 ¬´\u0014ZÉ\u0002tA9_‡\u0002?şöÂÃ¿]\u0005¨×\\¡›ˆÓüÅÜ‡¯\u0013Şx˜Âü+K\u0017¬œ Â]”O]"}
+{"type": "printf", "data": "preadv 9 16 Ü™3ñ{[z\\µôœ‘oO*Ã¿]\u0005¨×\\¡›ˆÓüÅÜ‡¯\u0013Şx˜Âü+K\u0017¬œ Â]”O]"}
+{"type": "printf", "data": "pwritev 10 16 Ü™3ñ{[z\\µôœ‘oO*"}
+{"type": "printf", "data": "preadv 9 0 Ü™3ñ{[z\\µôœ‘oO*Ã¿]\u0005¨×\\¡›ˆÓüÅÜ‡¯\u0013Şx˜Âü+K\u0017¬œ Â]”O]"}
+{"type": "printf", "data": "close 9 _ _"}
+{"type": "printf", "data": "close 10 _ _"}
 {"type": "printf", "data": "close 8 _ _"}
+{"type": "printf", "data": "open -359497728 8 data/test_files"}
+{"type": "printf", "data": "open -359497728 9 data/test_files/french"}
+{"type": "printf", "data": "open -359497728 10 data/write_file"}
+{"type": "printf", "data": "preadv 9 200 \u0018\u001fX/âT\u0017\u0012ˆ}•\u0017\u000fëß\u000b.%)ƒ´\u0001‹\n…\n¥Ğ%¦]\u0002\u0016ì 3\u0010tî\u0012q¼\u0017¹{ùM\tâÜÊÉ1T\u001a¼‡¼\u0012¿ój~ß˜ÜR!nÓ?Ô3c\u001bàK®\u001bÄúH 1§UÈš\u000cà‹l(Ø‰æüÈ¦S\u0012T\u0011\u001déÅze\u0005?L®§àA{úÆÂªåk\u001f^\u0005cF‰\u0019àk™xüU‹hÂÒŸ\u001cÀœl\u0001ê'ò7ùV\u0018—‚™S‰’¾äbÊB¦±WìzKab\u001ea“\u001c\u0014¥âöû\u001f`™àË=W-Ã€Q{$q€"}
+{"type": "printf", "data": "pwritev 10 200 \u0018\u001fX/âT\u0017\u0012ˆ}•\u0017\u000fëß\u000b.%)ƒ´\u0001‹\n…\n¥Ğ%¦]\u0002\u0016ì 3\u0010tî\u0012q¼\u0017¹{ùM\tâÜÊÉ1T\u001a¼‡¼\u0012¿ój~ß˜ÜR!nÓ?Ô3c\u001bàK®\u001bÄúH 1§UÈš\u000cà‹l(Ø‰æüÈ¦S\u0012T\u0011\u001déÅze\u0005?L®§àA{úÆÂªåk\u001f^\u0005cF‰\u0019àk™xüU‹hÂÒŸ\u001cÀœl\u0001ê'ò7ùV\u0018—‚™S‰’¾äbÊB¦±WìzKab\u001ea“\u001c\u0014¥âöû\u001f`™àË=W-Ã€Q{$q€"}
+{"type": "printf", "data": "preadv 9 200 •ß}Ç²ø\u001c_-!\u0002/\u0017«Ù\u001a¹tZ…å9lÁOËÎşË\u0015N°œn/Ô®\u0004ÛštLv˜\u0006J\u000f"}
+{"type": "printf", "data": "pwritev 10 200 •ß}Ç²ø\u001c_-!\u0002/\u0017«Ù\u001a¹tZ…å9lÁOËÎşË\u0015N°œn/Ô®\u0004ÛštLv˜\u0006J\u000f"}
+{"type": "printf", "data": "preadv 9 200 Ù«M/õºÿŠ”Û\u0008\u000cèà\u000c‡±\u0013 _¥îã”§Ú©š\nt¯²n-i4\rg\u0017L|È\u0002gĞÀ;p\u0007IqKYİç)q\u0012ôå¦2ÿE¯ÔÄœºG¦¾›Xİ—~)<ã]4šñ)\u000b\u0015¤$vw‚[#³±\u0016÷¡†âUcÑ\u0004;Æ–k¾`İ¬\u000c›´dëÅ;Î\u001aé»g~Ëş\u0016eû\u0002+ÃÂ%o\u0016…WıílA1\u0019ñ¾tîº]+%&Ş1\u00134ü®Ö<\u0004”\u0003}g\u0006ô%ç1\u0006\u0013˜#ĞmÆöeÂøÈ$0š_6¾„ÿ§"}
+{"type": "printf", "data": "pwritev 10 200 Ù«M/õºÿŠ”Û\u0008\u000cèà\u000c‡±\u0013 _¥îã”§Ú©š\nt¯²n-i4\rg\u0017L|È\u0002gĞÀ;p\u0007IqKYİç)q\u0012ôå¦2ÿE¯ÔÄœºG¦¾›Xİ—~)<ã]4šñ)\u000b\u0015¤$vw‚[#³±\u0016÷¡†âUcÑ\u0004;Æ–k¾`İ¬\u000c›´dëÅ;Î\u001aé»g~Ëş\u0016eû\u0002+ÃÂ%o\u0016…WıílA1\u0019ñ¾tîº]+%&Ş1\u00134ü®Ö<\u0004”\u0003}g\u0006ô%ç1\u0006\u0013˜#ĞmÆöeÂøÈ$0š_6¾„ÿ§"}
+{"type": "printf", "data": "preadv 9 200 N\u0012ãL­\u0015¼(ÏòTDäE¼¨;¾×"}
+{"type": "printf", "data": "pwritev 10 200 N\u0012ãL­\u0015¼(ÏòTDäE¼¨;¾×"}
+{"type": "printf", "data": "preadv 9 200 Œ×ØN\u000b\u001ft”g/6ü«ä\u0003n¨Ë\u0014jİ•‹–\u0006CB•÷\u0002t6ğŠû+.S\u0017\u000cû L>¢i\u0007•^%\u0001vl,õ—U\u001c­>iû\u001fÓl3D¸V›C|}ÅŞ(Ö\u0012Äø\u000eM\u0007\u000fD½ì¾@´\u001bØšm¨_Ä7`Ç\u0011\u000e\u001e+[\u0006òğhà\u000f¹‚¤ı»\u0018?ğ:Û©ÌÀ(\u0008\u00115N€ñ0Û‰ƒn!B¤×>gH¤û¼Ë\\\t»‘æ"}
+{"type": "printf", "data": "pwritev 10 200 Œ×ØN\u000b\u001ft”g/6ü«ä\u0003n¨Ë\u0014jİ•‹–\u0006CB•÷\u0002t6ğŠû+.S\u0017\u000cû L>¢i\u0007•^%\u0001vl,õ—U\u001c­>iû\u001fÓl3D¸V›C|}ÅŞ(Ö\u0012Äø\u000eM\u0007\u000fD½ì¾@´\u001bØšm¨_Ä7`Ç\u0011\u000e\u001e+[\u0006òğhà\u000f¹‚¤ı»\u0018?ğ:Û©ÌÀ(\u0008\u00115N€ñ0Û‰ƒn!B¤×>gH¤û¼Ë\\\t»‘æ"}
+{"type": "printf", "data": "preadv 9 200 MÜNLÄ8}¬V“=Uí°=Bójsìş4Ã‹Õ¾ïÆ`ƒ\u0005(³j­œE>\u0015Ok’.‰_xÌõŸÅ…n©+Ë\u00111ª\u001cV\\¸›¨³îUeÓ\tÀKÎ÷ÎÜb^\u000c¨jƒÙ\u0006"}
+{"type": "printf", "data": "pwritev 10 200 MÜNLÄ8}¬V“=Uí°=Bójsìş4Ã‹Õ¾ïÆ`ƒ\u0005(³j­œE>\u0015Ok’.‰_xÌõŸÅ…n©+Ë\u00111ª\u001cV\\¸›¨³îUeÓ\tÀKÎ÷ÎÜb^\u000c¨jƒÙ\u0006"}
+{"type": "printf", "data": "preadv 9 200 ºÌ=UÒÇE\rÈ·1\u0019]Ê¤îF‡rFâ¼ì\u0017õ›aßì±íºÖ>Ñ]á’\u000b\u0007éZñUm4$2\u0006ñY\u000faj7úîNş»ıŸ`£\u0019£\u000b\u0015w"}
+{"type": "printf", "data": "pwritev 10 200 ºÌ=UÒÇE\rÈ·1\u0019]Ê¤îF‡rFâ¼ì\u0017õ›aßì±íºÖ>Ñ]á’\u000b\u0007éZñUm4$2\u0006ñY\u000faj7úîNş»ıŸ`£\u0019£\u000b\u0015w"}
+{"type": "printf", "data": "preadv 9 200 Y|\u0002ğUÄÓî îº¥Oa=£âXÖ-&_Å–\u0013¢R/©\u0007¶¿¤ş,ê£,!ù îÇØŸ^EØÂô?¼Ú‚Ì¥7z‘­”…7\rf$)\u0006—\u0013g¯íˆƒ%eŸWÌïY\u0005šo\u0010W3ë·Ña¨ğVx¬ŠjÍ\u0007d,¼Ñ™ıÄ­BmL\u0003É)7˜ø`U·Ÿ[t\u001d§Îê³J©a­\u0006ÎÀĞØ« m\u0015Q\u001aš÷øDtUÜ\u0019ã\ré'<ıŸÜ*±”ã¢\u0004ı¢Ğ"}
+{"type": "printf", "data": "pwritev 10 200 Y|\u0002ğUÄÓî îº¥Oa=£âXÖ-&_Å–\u0013¢R/©\u0007¶¿¤ş,ê£,!ù îÇØŸ^EØÂô?¼Ú‚Ì¥7z‘­”…7\rf$)\u0006—\u0013g¯íˆƒ%eŸWÌïY\u0005šo\u0010W3ë·Ña¨ğVx¬ŠjÍ\u0007d,¼Ñ™ıÄ­BmL\u0003É)7˜ø`U·Ÿ[t\u001d§Îê³J©a­\u0006ÎÀĞØ« m\u0015Q\u001aš÷øDtUÜ\u0019ã\ré'<ıŸÜ*±”ã¢\u0004ı¢Ğ"}
+{"type": "printf", "data": "preadv 9 200 û0Q­Stˆ¥'®è†ZŒÌO$\nPà¥.¤J\u00057ÉRÙ»øtü—w© \u0010Ç!ìk7‡OÉ ¢¥Ùo\u0017Må·ï,Yî†¼ã‚ŠbÄ¿{ä©±UeK´\u001bQ–§J<zY†NYñ{ã3>û¹X1"}
+{"type": "printf", "data": "pwritev 10 200 û0Q­Stˆ¥'®è†ZŒÌO$\nPà¥.¤J\u00057ÉRÙ»øtü—w© \u0010Ç!ìk7‡OÉ ¢¥Ùo\u0017Må·ï,Yî†¼ã‚ŠbÄ¿{ä©±UeK´\u001bQ–§J<zY†NYñ{ã3>û¹X1"}
+{"type": "printf", "data": "preadv 9 200 \néoÃXÂÒ\u001fş»o9ôjª\nƒ1#ò¯BÍß\u000cu£D]\u0001c«¬0ÌåÙ\n¦UÓCá!ÙœØG\u0005\u0018q—›j¡\u0005ª¹\u0001X\u0006>cg%\u0001Úh\t­hò\u0011Ìx¶<[^³¥Y²e¦ùKì\u001cÜV;\u0017µ4ß\u0008^«a‚\u0002&±¿Ê:U\u0006¥µ¹»ÕA“\u001e\t\u0013 Š²>\u0010[õ\u001a\u0011† Ô\u001bKİÀGrÜM3*\u001dıÄÀÉ\u0008š\\}"}
+{"type": "printf", "data": "pwritev 10 200 \néoÃXÂÒ\u001fş»o9ôjª\nƒ1#ò¯BÍß\u000cu£D]\u0001c«¬0ÌåÙ\n¦UÓCá!ÙœØG\u0005\u0018q—›j¡\u0005ª¹\u0001X\u0006>cg%\u0001Úh\t­hò\u0011Ìx¶<[^³¥Y²e¦ùKì\u001cÜV;\u0017µ4ß\u0008^«a‚\u0002&±¿Ê:U\u0006¥µ¹»ÕA“\u001e\t\u0013 Š²>\u0010[õ\u001a\u0011† Ô\u001bKİÀGrÜM3*\u001dıÄÀÉ\u0008š\\}"}
+{"type": "printf", "data": "preadv 9 200 Å\u0015?Œ9–[ALµmtì€ÁxšD¬fÕÌ'Òê6\u001c¸\u0013'emá(Î\u0015q\u0018ùM“ãdj<J\u000f\u0011Š7“f5>r©OGìãÜ‹Á\u0006\u0010Å+Â»=u±4\"5\u000f\u0006©Î\u0011\u001bd|†°\u0003\u0007{ª\u000e\tñÏ°âÓ7G¿µòÈS…Ş\u001d6¼S\u000f\u0008e°¬ÛkÛæMóÈÿù€šÚg\rµÆ„Ëàg\u000b]‡Öy\u000b#NËP\u0005vgÛàõ)¹9¢ÿH·uI›9ñÿ±¬\u000fr\rCı}i›EVÓÛzU\u0002Âã\u0011‰cD\u0007“¨"}
+{"type": "printf", "data": "pwritev 10 200 Å\u0015?Œ9–[ALµmtì€ÁxšD¬fÕÌ'Òê6\u001c¸\u0013'emá(Î\u0015q\u0018ùM“ãdj<J\u000f\u0011Š7“f5>r©OGìãÜ‹Á\u0006\u0010Å+Â»=u±4\"5\u000f\u0006©Î\u0011\u001bd|†°\u0003\u0007{ª\u000e\tñÏ°âÓ7G¿µòÈS…Ş\u001d6¼S\u000f\u0008e°¬ÛkÛæMóÈÿù€šÚg\rµÆ„Ëàg\u000b]‡Öy\u000b#NËP\u0005vgÛàõ)¹9¢ÿH·uI›9ñÿ±¬\u000fr\rCı}i›EVÓÛzU\u0002Âã\u0011‰cD\u0007“¨"}
+{"type": "printf", "data": "preadv 9 200 ¢ëõX×kñ\u000c¼èG€\u001fWû:÷}F›á\u000e|“z@¼çqåbqÙ±¤r-SXÆÉÛ[8õÍÓ‘\u001fVğbOŠ/•ˆR-TX~\u0014”ß\u0016Új\u0008Ãrì\u0016¢\u001e¬‡\u0011\u0019ú\u0006\u0016íP¶/ÌZ‹ÅÜÒ=fÚKßûjÉkÑùí\"frš\u0013ØÒÉˆ6„ìDí¦\u001eT¯h\u0014“‘sófMGR\u0017hÉL‰»Î­kr¨j•ñÄ¾ö¤\u001aíÛÙ™£%é\u0002\u0003)*“=cRéö¥…*›Ø”Î'Òo1r!TÙ@cEã­ûf·\u0019e2öZx¿"}
+{"type": "printf", "data": "pwritev 10 200 ¢ëõX×kñ\u000c¼èG€\u001fWû:÷}F›á\u000e|“z@¼çqåbqÙ±¤r-SXÆÉÛ[8õÍÓ‘\u001fVğbOŠ/•ˆR-TX~\u0014”ß\u0016Új\u0008Ãrì\u0016¢\u001e¬‡\u0011\u0019ú\u0006\u0016íP¶/ÌZ‹ÅÜÒ=fÚKßûjÉkÑùí\"frš\u0013ØÒÉˆ6„ìDí¦\u001eT¯h\u0014“‘sófMGR\u0017hÉL‰»Î­kr¨j•ñÄ¾ö¤\u001aíÛÙ™£%é\u0002\u0003)*“=cRéö¥…*›Ø”Î'Òo1r!TÙ@cEã­ûf·\u0019e2öZx¿"}
+{"type": "printf", "data": "preadv 9 186 ¡õ\u0002q¨\u0015A¤”q÷¼\u0011Ô–’Â7\u0006\u0018xHÊ\u001e\u0011‘\u0013ÕD„†ªüš~~Ö¸N±\u0002!á¸4Šsi¶q\u000fÔŒ:®\\Ï°mlşıË;ùMàüÖlkÈÏê*g$2ú¦ÎèôÅaK*›’;\u001bÖCÖ´Şğ¬ò\u0017p\u0004Ñãu’» Ø¦º&\u001aEÌ%[VƒÍ…UC¦XÒîR¢\u001dbæÑRÔ~\u0008ª\u001a¤Ü«W\u001d¾fœ#\u0017ƒ:"}
+{"type": "printf", "data": "pwritev 10 200 ¡õ\u0002q¨\u0015A¤”q÷¼\u0011Ô–’Â7\u0006\u0018xHÊ\u001e\u0011‘\u0013ÕD„†ªüš~~Ö¸N±\u0002!á¸4Šsi¶q\u000fÔŒ:®\\Ï°mlşıË;ùMàüÖlkÈÏê*g$2ú¦ÎèôÅaK*›’;\u001bÖCÖ´Şğ¬ò\u0017p\u0004Ñãu’» Ø¦º&\u001aEÌ%[VƒÍ…UC¦XÒîR¢\u001dbæÑRÔ~\u0008ª\u001a¤Ü«W\u001d¾fœ#\u0017ƒ:"}
+{"type": "printf", "data": "preadv 9 0 ¡õ\u0002q¨\u0015A¤”q÷¼\u0011Ô–’Â7\u0006\u0018xHÊ\u001e\u0011‘\u0013ÕD„†ªüš~~Ö¸N±\u0002!á¸4Šsi¶q\u000fÔŒ:®\\Ï°mlşıË;ùMàüÖlkÈÏê*g$2ú¦ÎèôÅaK*›’;\u001bÖCÖ´Şğ¬ò\u0017p\u0004Ñãu’» Ø¦º&\u001aEÌ%[VƒÍ…UC¦XÒîR¢\u001dbæÑRÔ~\u0008ª\u001a¤Ü«W\u001d¾fœ#\u0017ƒ:"}
+{"type": "printf", "data": "close 9 _ _"}
+{"type": "printf", "data": "close 10 _ _"}
+{"type": "printf", "data": "open -359497728 9 data/test_files/polish"}
+{"type": "printf", "data": "open -359497728 10 data/write_file"}
+{"type": "printf", "data": "preadv 9 200 Bs\u0008\u0005ì°\u0001l\u000fUß$\u001eëÉ\u0004*#\\Ô>2u=x½\u0016øbÌM\u001aÊ¢=Õƒi¶Ó\u00153ÒH„1Óª¨3²ò\u001aY\u0017öy\u0011x½KÛ§Hd\u000ezwÚWH1¯\u0014\u0008Z…„F/ı½ö­ó‰©¶i˜^PÕ‰ï†\u001bî÷³š¶Ë»0Æù¨±ö¼¡÷Ú\t\u001fPŠ”\"<_r‹fŸòY\u0008qç%‘IºÍÉnæÏŒÈ\u001b®ºµ\u0007óï7¦\\Ô1\u0013ÔëroùÃ\u001f¡l‡Şà˜\u001d“\r3ÿ?1ÊõÍ\u001bêÕô:sà\\êÎÅıf"}
+{"type": "printf", "data": "pwritev 10 200 Bs\u0008\u0005ì°\u0001l\u000fUß$\u001eëÉ\u0004*#\\Ô>2u=x½\u0016øbÌM\u001aÊ¢=Õƒi¶Ó\u00153ÒH„1Óª¨3²ò\u001aY\u0017öy\u0011x½KÛ§Hd\u000ezwÚWH1¯\u0014\u0008Z…„F/ı½ö­ó‰©¶i˜^PÕ‰ï†\u001bî÷³š¶Ë»0Æù¨±ö¼¡÷Ú\t\u001fPŠ”\"<_r‹fŸòY\u0008qç%‘IºÍÉnæÏŒÈ\u001b®ºµ\u0007óï7¦\\Ô1\u0013ÔëroùÃ\u001f¡l‡Şà˜\u001d“\r3ÿ?1ÊõÍ\u001bêÕô:sà\\êÎÅıf"}
+{"type": "printf", "data": "preadv 9 200 \u0017\u001e\u001dzvc\u0008*\u0019\u0008Â\u0014\u0006óOÀ}¸íD§ù¢Tk\u0015Ñ\r\r)øµ”hó×¹CøK…a‰•fÛÔ0ü&c\u0006@\r‚ä? ®U~?\u0019¢»½\u0011\u001cŸ]ìGŠRéYõä}ôC»\u0001Ì¥?EñH·\u00154æ²«·Ù„áíõ %BhQğõzĞu@¯#«\u0015c;\u0001I‰İæ6s$JyIç‰ËûœËwhi>5,w¤\u001d:Ît\u0011!|¯\u0002;³äÃûÜ\u0006§\u000e× éÑš\u0013ÒüLÎ¾½Ô$Ê\u001d!c\u0015Ïk¤r\u001d¶.s‚ °XG"}
+{"type": "printf", "data": "pwritev 10 200 \u0017\u001e\u001dzvc\u0008*\u0019\u0008Â\u0014\u0006óOÀ}¸íD§ù¢Tk\u0015Ñ\r\r)øµ”hó×¹CøK…a‰•fÛÔ0ü&c\u0006@\r‚ä? ®U~?\u0019¢»½\u0011\u001cŸ]ìGŠRéYõä}ôC»\u0001Ì¥?EñH·\u00154æ²«·Ù„áíõ %BhQğõzĞu@¯#«\u0015c;\u0001I‰İæ6s$JyIç‰ËûœËwhi>5,w¤\u001d:Ît\u0011!|¯\u0002;³äÃûÜ\u0006§\u000e× éÑš\u0013ÒüLÎ¾½Ô$Ê\u001d!c\u0015Ïk¤r\u001d¶.s‚ °XG"}
+{"type": "printf", "data": "preadv 9 200 a\u001e\t[à$×¦Oó•¼YŞ­#p\u0006*.“|\u0012ã¹Ù\u0006ÖÉ…K\u000b§Šu\u0012\u0014™m<\u0004‰fmş•j7–\"rŒuê]fJ\u0007Mò–C:\u0008Ò”\u0019ãªhòäIM±½[Ş£dåS\n7|Ğ­Z4Ò¬«U“µ\u0017šºĞ•ùŒÃ\u001bÄ‚&öXR¹”´~Ş¾(ìh?_µ…Ê\u000eKyXÑò˜véôÅ€u÷\u001cƒ¡1Tåb˜ö|Ò›ğæZ ?OÎo|Í?Õ²\rj"}
+{"type": "printf", "data": "pwritev 10 200 a\u001e\t[à$×¦Oó•¼YŞ­#p\u0006*.“|\u0012ã¹Ù\u0006ÖÉ…K\u000b§Šu\u0012\u0014™m<\u0004‰fmş•j7–\"rŒuê]fJ\u0007Mò–C:\u0008Ò”\u0019ãªhòäIM±½[Ş£dåS\n7|Ğ­Z4Ò¬«U“µ\u0017šºĞ•ùŒÃ\u001bÄ‚&öXR¹”´~Ş¾(ìh?_µ…Ê\u000eKyXÑò˜véôÅ€u÷\u001cƒ¡1Tåb˜ö|Ò›ğæZ ?OÎo|Í?Õ²\rj"}
+{"type": "printf", "data": "preadv 9 200 Ş\u001eÆ“•Ú´2h–Yp\u0001¶Ü\u001b½;\u000c*âÂ¹J«ÈD6š\u00032ö»İ~M\u001a{?(Ã\u0003ıë\u0011-¼uÎü‹;>º#¹)¢†¦÷¤\u000e)%nMò\rH°?œ\\b\u0017\u0013¦9Àü+N–c\u000e[¢\"Õó}¯b±\n52—Çá„K\r\u001bFùÅ/õšlö\u001bJƒÈ~ân\u001b'k\\\t’&–”{Ôê„î Y†÷\u0012ù³Vm+%ˆûë¢Ù\u0003i.N=\u0006ĞÎ•á;Ræ“SêÃÊf\u000c+á!;­ã§\u0019ASÊ·‹Ô¨UÆú•ôªóÍMD"}
+{"type": "printf", "data": "pwritev 10 200 Ş\u001eÆ“•Ú´2h–Yp\u0001¶Ü\u001b½;\u000c*âÂ¹J«ÈD6š\u00032ö»İ~M\u001a{?(Ã\u0003ıë\u0011-¼uÎü‹;>º#¹)¢†¦÷¤\u000e)%nMò\rH°?œ\\b\u0017\u0013¦9Àü+N–c\u000e[¢\"Õó}¯b±\n52—Çá„K\r\u001bFùÅ/õšlö\u001bJƒÈ~ân\u001b'k\\\t’&–”{Ôê„î Y†÷\u0012ù³Vm+%ˆûë¢Ù\u0003i.N=\u0006ĞÎ•á;Ræ“SêÃÊf\u000c+á!;­ã§\u0019ASÊ·‹Ô¨UÆú•ôªóÍMD"}
+{"type": "printf", "data": "preadv 9 200 µ¹U³sxÑÛ\u000eç¨õf9\njÉê\u0013ş¬b\u000bŸ'\u0017\u0016»ß3 \"ş\u000bºÅM²\u001d\u0007rÛJTåZ4n=Ø…(…Şr|üÚÔÙì9ÃV2\u0018Æe8\u001eÒAñKV—\u0005éËcé\nî©Èš-F×ØÙ„ì7È…¡LÌ»C[ÎÊy•Oä…½Ê\rr¨}ÔøWêDX.Z¢{ÿBQPšËŸ\u000chwL«“íUcõ4B›\u001bö>,|Z“'<“m(Z\\¹jb^aâÑg\r¿Ç8pí\u0002·ëÀ1®3¥_m±)2ƒÔü{XQ¦ó"}
+{"type": "printf", "data": "pwritev 10 200 µ¹U³sxÑÛ\u000eç¨õf9\njÉê\u0013ş¬b\u000bŸ'\u0017\u0016»ß3 \"ş\u000bºÅM²\u001d\u0007rÛJTåZ4n=Ø…(…Şr|üÚÔÙì9ÃV2\u0018Æe8\u001eÒAñKV—\u0005éËcé\nî©Èš-F×ØÙ„ì7È…¡LÌ»C[ÎÊy•Oä…½Ê\rr¨}ÔøWêDX.Z¢{ÿBQPšËŸ\u000chwL«“íUcõ4B›\u001bö>,|Z“'<“m(Z\\¹jb^aâÑg\r¿Ç8pí\u0002·ëÀ1®3¥_m±)2ƒÔü{XQ¦ó"}
+{"type": "printf", "data": "preadv 9 200 „V\u001eÆø\u001eÃßÓMÙrpQK\u001ene\u0012t¬\u0013®Pšu3÷iamµzAg€Ù2Pfø–Ğê%\u001døVæú„ó\u0012•O#Å?s¡îŸŸ×^jq»ƒ5\u001aC. Hm„\u000e^ÄU«ã=ìBó³Y §³Ñ\"ê‚ØÛÆº\tôPKïÜùğ‚Qœx=Hjc÷4\u000b»‚Õ›Öš<Ö\u000eU\u001cõåÆıa°ázLn·Œ¯ì\u00046\u0012Ïb\u0003¢\u0005¶«¬ä\t\u0014ÍdZÕÈÃ OÚ\t/½bÒ=06\u0014±\"›Îìİß}\u0015iR<š…ü¾"}
+{"type": "printf", "data": "pwritev 10 200 „V\u001eÆø\u001eÃßÓMÙrpQK\u001ene\u0012t¬\u0013®Pšu3÷iamµzAg€Ù2Pfø–Ğê%\u001døVæú„ó\u0012•O#Å?s¡îŸŸ×^jq»ƒ5\u001aC. Hm„\u000e^ÄU«ã=ìBó³Y §³Ñ\"ê‚ØÛÆº\tôPKïÜùğ‚Qœx=Hjc÷4\u000b»‚Õ›Öš<Ö\u000eU\u001cõåÆıa°ázLn·Œ¯ì\u00046\u0012Ïb\u0003¢\u0005¶«¬ä\t\u0014ÍdZÕÈÃ OÚ\t/½bÒ=06\u0014±\"›Îìİß}\u0015iR<š…ü¾"}
+{"type": "printf", "data": "preadv 9 200 –Ì\u001b„Œ'ï]â©á¤Ş\u0018QÍ£\u0007>”ŒÜşûë\u0004„eY\u00116"}
+{"type": "printf", "data": "pwritev 10 200 –Ì\u001b„Œ'ï]â©á¤Ş\u0018QÍ£\u0007>”ŒÜşûë\u0004„eY\u00116"}
+{"type": "printf", "data": "preadv 9 200 ıüRK]\u001c\u0004²\u0013W \u0010‡Ï,-Í\u0018$y\u001b\u000c€¾]ã„…]1TÊç»v^±Ü>\u001bU\u0003¨aqGˆ¢ı\u0012— \u0002ë:-ÌBf5¢m ï"}
+{"type": "printf", "data": "pwritev 10 200 ıüRK]\u001c\u0004²\u0013W \u0010‡Ï,-Í\u0018$y\u001b\u000c€¾]ã„…]1TÊç»v^±Ü>\u001bU\u0003¨aqGˆ¢ı\u0012— \u0002ë:-ÌBf5¢m ï"}
+{"type": "printf", "data": "preadv 9 200 ­sG\u0004ÉÊèÍ!~\u001b\u0016_r`õ,AT\u0017\tlo,WÅ?\u0010e!\u0010ÌñÃ&báÙ?\u0019ÃÕ§HôÂ@AHzoTßí­\u000cFĞÅ;QNœ78}SAÖĞ³N\u0004ŠüRey\u0007’¿b]üú›¤è÷ \u0018k¹±ÀêïZz\u001d$f÷¦¿Ñm\u001aT˜¤|`'–ŒpSÓ<\u0018<3»¸Õ'3Õ3½\u0018\u0006~s<µ>F¤<Æ k÷¸\u0003ÆY¼¾dÙñ\u0014œ“°î:µC\u0016>\u000f~i\u0017…‡¶\u0011¡°Õ›Ìœ±±Ãİ\u0013\\Ùc$Pk:\u001büğ"}
+{"type": "printf", "data": "pwritev 10 200 ­sG\u0004ÉÊèÍ!~\u001b\u0016_r`õ,AT\u0017\tlo,WÅ?\u0010e!\u0010ÌñÃ&báÙ?\u0019ÃÕ§HôÂ@AHzoTßí­\u000cFĞÅ;QNœ78}SAÖĞ³N\u0004ŠüRey\u0007’¿b]üú›¤è÷ \u0018k¹±ÀêïZz\u001d$f÷¦¿Ñm\u001aT˜¤|`'–ŒpSÓ<\u0018<3»¸Õ'3Õ3½\u0018\u0006~s<µ>F¤<Æ k÷¸\u0003ÆY¼¾dÙñ\u0014œ“°î:µC\u0016>\u000f~i\u0017…‡¶\u0011¡°Õ›Ìœ±±Ãİ\u0013\\Ùc$Pk:\u001büğ"}
+{"type": "printf", "data": "preadv 9 200 ‚Î½µşd0îltc7ãé2“.ŞÊg+>ŒeTå\u001e™çúœš\u0015ãİ²>Cöç§u\u0002\u0016¶ùƒuÖõ\"M\u0015“rçQ!\u000ff=“—C.”¨¶2Í[¼ z\u001dJb»a\u001a\u0003\u0004·½ ĞM\u001b))‘3\u0014‡„ú®?¥–ÿ€üCÂkå\u0008#†t¥¨‡ä|„:v¹Ll0·Èâ/\u0014Ú„Â0›5\u000få-=¶.\u0010&Kô`ò8Õi‹%ø•æ‡!­£ÿì8E\u0017÷ï*ÏGôœBqiÉV;ÅA\tb'tÉ0"}
+{"type": "printf", "data": "pwritev 10 200 ‚Î½µşd0îltc7ãé2“.ŞÊg+>ŒeTå\u001e™çúœš\u0015ãİ²>Cöç§u\u0002\u0016¶ùƒuÖõ\"M\u0015“rçQ!\u000ff=“—C.”¨¶2Í[¼ z\u001dJb»a\u001a\u0003\u0004·½ ĞM\u001b))‘3\u0014‡„ú®?¥–ÿ€üCÂkå\u0008#†t¥¨‡ä|„:v¹Ll0·Èâ/\u0014Ú„Â0›5\u000få-=¶.\u0010&Kô`ò8Õi‹%ø•æ‡!­£ÿì8E\u0017÷ï*ÏGôœBqiÉV;ÅA\tb'tÉ0"}
+{"type": "printf", "data": "preadv 9 200 ÑÉ.A€\u001eR\u00132Ó\u0012²¹¯3ûúªd‹¹ÁñØ²o¿´\t"}
+{"type": "printf", "data": "pwritev 10 200 ÑÉ.A€\u001eR\u00132Ó\u0012²¹¯3ûúªd‹¹ÁñØ²o¿´\t"}
+{"type": "printf", "data": "preadv 9 189 fnı,\tÔ–"}
+{"type": "printf", "data": "pwritev 10 200 fnı,\tÔ–"}
+{"type": "printf", "data": "preadv 9 0 fnı,\tÔ–"}
+{"type": "printf", "data": "close 9 _ _"}
+{"type": "printf", "data": "close 10 _ _"}
+{"type": "printf", "data": "open -359497728 9 data/test_files/turkish"}
+{"type": "printf", "data": "open -359497728 10 data/write_file"}
+{"type": "printf", "data": "preadv 9 200 Ìó©íM³¤\u0018qí>6¾\u0008pî\u001e¡\u0019\u0016º\u0015‡\u001e—°BõÙ\u0001ñ[v\u0018úÕ\u0016ëp}Ğ-~\u000bö\u001d1hWQ˜|™\u0001Ùj\u0018j¦U\u001b\u000cÂj¾Ø¤Š*«÷‰Ü\u001b\u0010Ä¤*v]íÙNq7¨ÏHÅé±\u0016Ç\u001fjFnøéÒª±²†4\n1fŒ"}
+{"type": "printf", "data": "pwritev 10 200 Ìó©íM³¤\u0018qí>6¾\u0008pî\u001e¡\u0019\u0016º\u0015‡\u001e—°BõÙ\u0001ñ[v\u0018úÕ\u0016ëp}Ğ-~\u000bö\u001d1hWQ˜|™\u0001Ùj\u0018j¦U\u001b\u000cÂj¾Ø¤Š*«÷‰Ü\u001b\u0010Ä¤*v]íÙNq7¨ÏHÅé±\u0016Ç\u001fjFnøéÒª±²†4\n1fŒ"}
+{"type": "printf", "data": "preadv 9 200 ¬·\u0001­;ê;UN›„òO†\u0003ÃqDx=5åy–]v–Ôí\u0007‡†ºtLf&×Nè\r§"}
+{"type": "printf", "data": "pwritev 10 200 ¬·\u0001­;ê;UN›„òO†\u0003ÃqDx=5åy–]v–Ôí\u0007‡†ºtLf&×Nè\r§"}
+{"type": "printf", "data": "preadv 9 200 •—š²68<æÙ›f‡ÊÿËA\u000bÖ¸Æ^z©A_\u001ftwºI$œ\u000bWğ*8T8V•T¢¼áúo€w 4\u000c]÷şÎnW)\u0003ÁPú’–\u0008i}óÈ¯ÓKy¸G¥øM\u001epo\u001elPş„(ò\nœ…±º™D@\r–şÏ\u001e0£mÛ1ï¡àd5®?rÖ\u0008²TÁ”Â\u0019Æ\u0002N¦7z#ü\u001bx\u001b>\u001a&6äit\u0015ø·ÈÎ¿óOH¥ğú*\"wíÕM[m¹›\u0018h±í;<¿Ìˆ\u0019Â‹¦ğ}†ÎÈ\rô9\u001c7ö\u0010P\u001cS"}
+{"type": "printf", "data": "pwritev 10 200 •—š²68<æÙ›f‡ÊÿËA\u000bÖ¸Æ^z©A_\u001ftwºI$œ\u000bWğ*8T8V•T¢¼áúo€w 4\u000c]÷şÎnW)\u0003ÁPú’–\u0008i}óÈ¯ÓKy¸G¥øM\u001epo\u001elPş„(ò\nœ…±º™D@\r–şÏ\u001e0£mÛ1ï¡àd5®?rÖ\u0008²TÁ”Â\u0019Æ\u0002N¦7z#ü\u001bx\u001b>\u001a&6äit\u0015ø·ÈÎ¿óOH¥ğú*\"wíÕM[m¹›\u0018h±í;<¿Ìˆ\u0019Â‹¦ğ}†ÎÈ\rô9\u001c7ö\u0010P\u001cS"}
+{"type": "printf", "data": "preadv 9 200 \u0013¨æ:CÁ\u0012˜“³š‚K‡É–xã¹o\u0003i,\u000c‡9ÃwÑ›€Æ0ãôÉ{úw\u0014”Œ\u0014-nwõµ\u0014ÆÃğ>B\u0001\\ie!Á³;÷ÿ÷îY\u00023‰ö²\nA?lhÿ¬1p}Åª,(>~Ã|k)äí÷wJ\nwÍn\u001f\u001d&•²Egó¨¼½°]¦½)"}
+{"type": "printf", "data": "pwritev 10 200 \u0013¨æ:CÁ\u0012˜“³š‚K‡É–xã¹o\u0003i,\u000c‡9ÃwÑ›€Æ0ãôÉ{úw\u0014”Œ\u0014-nwõµ\u0014ÆÃğ>B\u0001\\ie!Á³;÷ÿ÷îY\u00023‰ö²\nA?lhÿ¬1p}Åª,(>~Ã|k)äí÷wJ\nwÍn\u001f\u001d&•²Egó¨¼½°]¦½)"}
+{"type": "printf", "data": "preadv 9 200 Ïœ\u001cÌ%Ãe\u001f&Ì<dÄS\u000e¥¶7 ç+\rı\tˆÉ×›!RÃzï´\u000b.±\u0002Úçó÷$*\u0006Qæœõ\u001bÌÎ“cKŒï| kúĞ\u001fµÓ™Ò!§UV³–<»\u0004\u000fşÂ0²>‘\u000f´«p£ÿ˜0uıºşì\u0017<íÎ\u001dû ºâ´îÎ;›n2’€ûš˜M\"\u001dxryºõ‘ğ‰İ<\"í—mVˆŞgˆZÁ.’Nı/{ƒé{äp²¦\u001fš»‹·§Ü×“<ùŠ\u0018AR"}
+{"type": "printf", "data": "pwritev 10 200 Ïœ\u001cÌ%Ãe\u001f&Ì<dÄS\u000e¥¶7 ç+\rı\tˆÉ×›!RÃzï´\u000b.±\u0002Úçó÷$*\u0006Qæœõ\u001bÌÎ“cKŒï| kúĞ\u001fµÓ™Ò!§UV³–<»\u0004\u000fşÂ0²>‘\u000f´«p£ÿ˜0uıºşì\u0017<íÎ\u001dû ºâ´îÎ;›n2’€ûš˜M\"\u001dxryºõ‘ğ‰İ<\"í—mVˆŞgˆZÁ.’Nı/{ƒé{äp²¦\u001fš»‹·§Ü×“<ùŠ\u0018AR"}
+{"type": "printf", "data": "preadv 9 200 ¶)¸Û3sŠÒ£‰Ğ¢\u0012Çõy\r¸æq?ÔA“‘N\u0019ß`¯j\u0002o]iµYwZVÇH½101\u001dp\u000c%c3è\u0015§­›Ñ‘<\u0015Œj\u000f³PïS4ûfTâ˜„Hİ’’ı­ğa;Xœ˜Ê]Õf„ŠD\u0019\u0002Ñ+O\u0016à>îº\u001eö'ÖüÊlmRjD"}
+{"type": "printf", "data": "pwritev 10 200 ¶)¸Û3sŠÒ£‰Ğ¢\u0012Çõy\r¸æq?ÔA“‘N\u0019ß`¯j\u0002o]iµYwZVÇH½101\u001dp\u000c%c3è\u0015§­›Ñ‘<\u0015Œj\u000f³PïS4ûfTâ˜„Hİ’’ı­ğa;Xœ˜Ê]Õf„ŠD\u0019\u0002Ñ+O\u0016à>îº\u001eö'ÖüÊlmRjD"}
+{"type": "printf", "data": "preadv 9 200 ó\u0007ã†‡±£˜¢ÑËºp®\u0004É !nw·&ÄÓ\u0015à;zJgÎİ#ú@µA\u0014ËTUr>ı“Zö\u0015°¼\u000bÊív6µXR"}
+{"type": "printf", "data": "pwritev 10 200 ó\u0007ã†‡±£˜¢ÑËºp®\u0004É !nw·&ÄÓ\u0015à;zJgÎİ#ú@µA\u0014ËTUr>ı“Zö\u0015°¼\u000bÊív6µXR"}
+{"type": "printf", "data": "preadv 9 200 “v†\u0003Âë.=\u0017íéªTöærÏ\u000b\nâ\u000e\u001fBwî(êD¤“,Ÿ\u0001™mBñÈ²…\u0018\u000cãà,\u0018a\u0007³ÌĞ8T\u0015jü\u0004è]zõå’sô9‘P7\u0006…\u0008LvÄ%ŒI@«Ø#$@«£Bj#ªø„LJîVÓ*\u0011ç·ÏT¸R˜\u0014lĞò–\u001by$R\u0006Ã˜p¨\u001f.iêm\u0001;ÇÜ¸Ÿ‹•#Øğ³\u0017\u00088õ|áŸÜ\u001cvËÉä™×\u0003]é0çA\u001a*\u0011fû\u0005f@ÏjšO\u000fH_,€²Uï[ÿJn áà\"Ö¢g•e÷oÉ+"}
+{"type": "printf", "data": "pwritev 10 200 “v†\u0003Âë.=\u0017íéªTöærÏ\u000b\nâ\u000e\u001fBwî(êD¤“,Ÿ\u0001™mBñÈ²…\u0018\u000cãà,\u0018a\u0007³ÌĞ8T\u0015jü\u0004è]zõå’sô9‘P7\u0006…\u0008LvÄ%ŒI@«Ø#$@«£Bj#ªø„LJîVÓ*\u0011ç·ÏT¸R˜\u0014lĞò–\u001by$R\u0006Ã˜p¨\u001f.iêm\u0001;ÇÜ¸Ÿ‹•#Øğ³\u0017\u00088õ|áŸÜ\u001cvËÉä™×\u0003]é0çA\u001a*\u0011fû\u0005f@ÏjšO\u000fH_,€²Uï[ÿJn áà\"Ö¢g•e÷oÉ+"}
+{"type": "printf", "data": "preadv 9 200 +NîìW¼wù]µC‚àbœL\u0015EaËXİgú~»|ª˜&Ê ıxCî\u0006!uŒ<LPv\u0005ã/\u00109õå\nJi¢Aóù\u000fs`Ÿ¯û2QÇ\u001dt[.\"Ğ­(ƒL{Ì$\u0013h\u0013\u001b”hõŠ\u0004ËU¢É3ÀÿN:v\u001eS \u001eÚ\u000c„ö“úÑº2Yš\u0013t°½ĞHqÆ\n¢h01‡\u0012ô~–t=Š‰\u000f™w¦ÊÿË"}
+{"type": "printf", "data": "pwritev 10 200 +NîìW¼wù]µC‚àbœL\u0015EaËXİgú~»|ª˜&Ê ıxCî\u0006!uŒ<LPv\u0005ã/\u00109õå\nJi¢Aóù\u000fs`Ÿ¯û2QÇ\u001dt[.\"Ğ­(ƒL{Ì$\u0013h\u0013\u001b”hõŠ\u0004ËU¢É3ÀÿN:v\u001eS \u001eÚ\u000c„ö“úÑº2Yš\u0013t°½ĞHqÆ\n¢h01‡\u0012ô~–t=Š‰\u000f™w¦ÊÿË"}
+{"type": "printf", "data": "preadv 9 200 sû§\u0007ïœ\\c’1"}
+{"type": "printf", "data": "pwritev 10 200 sû§\u0007ïœ\\c’1"}
+{"type": "printf", "data": "preadv 9 200 ½¦·\u0018`5C\u001bØ¡HË\u001cÌj¢|G©K3\u0017¢c\u0015\u0002Ü}Œ\u000eæ\u000c¯R=ˆEÆä€(0%\u0015llóÜRò1‹‘Ì?\u0004ÀÊ·JPÜ|’b¾\u000e,şdŠ<`(\"u/Š!ßoş#'µLz\u0016Ä¢Œ9Ê-\u0016\u0008Ôä'ïàŞş›‘UÇ|+\"èŸÌ× …4m=2U*}g{\"ÜV\u0002Š\u0002š\u000c2û}óqAgq\u0004ãY(7Œ“-³¥pªúª¥Dá/ Ç¦Ô±T›‰‚ŸT\u001b$¯Œ@|q{Z´2XQÍôÕ\u0007?±¨‘"}
+{"type": "printf", "data": "pwritev 10 200 ½¦·\u0018`5C\u001bØ¡HË\u001cÌj¢|G©K3\u0017¢c\u0015\u0002Ü}Œ\u000eæ\u000c¯R=ˆEÆä€(0%\u0015llóÜRò1‹‘Ì?\u0004ÀÊ·JPÜ|’b¾\u000e,şdŠ<`(\"u/Š!ßoş#'µLz\u0016Ä¢Œ9Ê-\u0016\u0008Ôä'ïàŞş›‘UÇ|+\"èŸÌ× …4m=2U*}g{\"ÜV\u0002Š\u0002š\u000c2û}óqAgq\u0004ãY(7Œ“-³¥pªúª¥Dá/ Ç¦Ô±T›‰‚ŸT\u001b$¯Œ@|q{Z´2XQÍôÕ\u0007?±¨‘"}
+{"type": "printf", "data": "preadv 9 179 TŞ¹„:Å\"UŒ\u000c÷³@m™Ñ°x~ŒùÒ\u000c;r-Á{ÏG‚\u001f‚á21Ö\\áà±ò ÄÍ \u00088\u001b=\u001fO¿\u0018\u000eıøl˜RÖ0^KñÏû¿<W+Û®×ôKãíA6\u00029\\\u0004êË-ªˆ¦,›\u0008Ù\u0003—e\u001by\u000b3¿\u001dñı\u0006:™B.È\u001cóÇ8ª-x¨Èß`½\u0003Ê_¬36À5ˆ–ş‚\u001f!F|LgUl“.h"}
+{"type": "printf", "data": "pwritev 10 200 TŞ¹„:Å\"UŒ\u000c÷³@m™Ñ°x~ŒùÒ\u000c;r-Á{ÏG‚\u001f‚á21Ö\\áà±ò ÄÍ \u00088\u001b=\u001fO¿\u0018\u000eıøl˜RÖ0^KñÏû¿<W+Û®×ôKãíA6\u00029\\\u0004êË-ªˆ¦,›\u0008Ù\u0003—e\u001by\u000b3¿\u001dñı\u0006:™B.È\u001cóÇ8ª-x¨Èß`½\u0003Ê_¬36À5ˆ–ş‚\u001f!F|LgUl“.h"}
+{"type": "printf", "data": "preadv 9 0 TŞ¹„:Å\"UŒ\u000c÷³@m™Ñ°x~ŒùÒ\u000c;r-Á{ÏG‚\u001f‚á21Ö\\áà±ò ÄÍ \u00088\u001b=\u001fO¿\u0018\u000eıøl˜RÖ0^KñÏû¿<W+Û®×ôKãíA6\u00029\\\u0004êË-ªˆ¦,›\u0008Ù\u0003—e\u001by\u000b3¿\u001dñı\u0006:™B.È\u001cóÇ8ª-x¨Èß`½\u0003Ê_¬36À5ˆ–ş‚\u001f!F|LgUl“.h"}
+{"type": "printf", "data": "close 9 _ _"}
+{"type": "printf", "data": "close 10 _ _"}
+{"type": "printf", "data": "open -359497728 9 data/test_files/english"}
+{"type": "printf", "data": "open -359497728 10 data/write_file"}
+{"type": "printf", "data": "preadv 9 200 \u001eWÍ\u0016DŞ òğŠk”¦dÍ¿Î"}
+{"type": "printf", "data": "pwritev 10 200 \u001eWÍ\u0016DŞ òğŠk”¦dÍ¿Î"}
+{"type": "printf", "data": "preadv 9 200 éÚã{ZSgü\u001f¯ÛKÍÊKŠO-²ñš“\u00117h( ¸—›5'Ô’é£@$øz(jÉ«=Mw¼\u00080ÛænÓ-ğ¯\u001dÒ.}ö=VÖ-\u0001£\nA\u000b­¢\"?q,ó!úÙáÂˆ\u001cìFˆ1Ç[.“täŸÙdö×T>FËªúb\u0018“°Kª²›ÿ…k\u0006Ã*àL×ßëêfÙßW.G\u00061?†”ÿÃ0l<ş\u0013Ñ’œ\nø³÷]\u0013µ\u0007H†\u0001°»éˆ\u0017ˆ€ò\u001cO\tÕ0\\Ô.j·<ºs—‹\u0011\u001ek7ş‚k\u0007`|\u0015S\u0013†"}
+{"type": "printf", "data": "pwritev 10 200 éÚã{ZSgü\u001f¯ÛKÍÊKŠO-²ñš“\u00117h( ¸—›5'Ô’é£@$øz(jÉ«=Mw¼\u00080ÛænÓ-ğ¯\u001dÒ.}ö=VÖ-\u0001£\nA\u000b­¢\"?q,ó!úÙáÂˆ\u001cìFˆ1Ç[.“täŸÙdö×T>FËªúb\u0018“°Kª²›ÿ…k\u0006Ã*àL×ßëêfÙßW.G\u00061?†”ÿÃ0l<ş\u0013Ñ’œ\nø³÷]\u0013µ\u0007H†\u0001°»éˆ\u0017ˆ€ò\u001cO\tÕ0\\Ô.j·<ºs—‹\u0011\u001ek7ş‚k\u0007`|\u0015S\u0013†"}
+{"type": "printf", "data": "preadv 9 200 ;\u0017©ùH©ÏŞ`j±gş\u001b£&CG/¨l:s‘‡rD¤¯k×‘Eñ¾zvâ¨êä­ ÁÆ3Ô‚«ß¦\u0015\tâ•eÆ˜ß“\"$µr\u001fÚ%$IÁú-éø\r@g:T/¨õN†É”\r·eª_€æşø#ÇäJão¸üYÇ]±\u0006S¯*Yae\u000cäÉ3‚ÏÄæ;Ë¤±\u0007¥A\u000cŞtuÑiôg}bÊ\u0003\u001e©Ágjó“\u000e°NX\u0003p°²YƒVŞê.]ºf»‘ëk\n×`eî%•Qh¥\u0015ÍtšÙ&ªAÊ\u0007løw"}
+{"type": "printf", "data": "pwritev 10 200 ;\u0017©ùH©ÏŞ`j±gş\u001b£&CG/¨l:s‘‡rD¤¯k×‘Eñ¾zvâ¨êä­ ÁÆ3Ô‚«ß¦\u0015\tâ•eÆ˜ß“\"$µr\u001fÚ%$IÁú-éø\r@g:T/¨õN†É”\r·eª_€æşø#ÇäJão¸üYÇ]±\u0006S¯*Yae\u000cäÉ3‚ÏÄæ;Ë¤±\u0007¥A\u000cŞtuÑiôg}bÊ\u0003\u001e©Ágjó“\u000e°NX\u0003p°²YƒVŞê.]ºf»‘ëk\n×`eî%•Qh¥\u0015ÍtšÙ&ªAÊ\u0007løw"}
+{"type": "printf", "data": "preadv 9 200 {®E\r©¨\rJ3\u0018WØP‡“-7\u001eÜW\u0005R¾o>‹âW*È_ÇW&\u0002¢¬Ÿ[Š×\rˆ\u0005ùú(®\u001dÜfàÎ~ö‚-di€\u000b\u001cC@x\u0004¬gêY€s\nF,P)ã„S·|²vš\u0004K»×aBşgN/<¯`Mº\\Mu8qÚX\u001c8£ûß\u0006:ûj4Q\u001fş{ş¢³7åÉÊ¶ïÖ¼€Ì¨\u001a§z>I2\u001fİ¬T7\u0015)\u0016\u0006«L´²“R «Tà¾%óE°VŠ\u000c¶åÂÙ \u0001j\\²¾N°rI¿W\r\u001f‹*DR"}
+{"type": "printf", "data": "pwritev 10 200 {®E\r©¨\rJ3\u0018WØP‡“-7\u001eÜW\u0005R¾o>‹âW*È_ÇW&\u0002¢¬Ÿ[Š×\rˆ\u0005ùú(®\u001dÜfàÎ~ö‚-di€\u000b\u001cC@x\u0004¬gêY€s\nF,P)ã„S·|²vš\u0004K»×aBşgN/<¯`Mº\\Mu8qÚX\u001c8£ûß\u0006:ûj4Q\u001fş{ş¢³7åÉÊ¶ïÖ¼€Ì¨\u001a§z>I2\u001fİ¬T7\u0015)\u0016\u0006«L´²“R «Tà¾%óE°VŠ\u000c¶åÂÙ \u0001j\\²¾N°rI¿W\r\u001f‹*DR"}
+{"type": "printf", "data": "preadv 9 200 áF‚VW=ÇÏ=\u000cØQ|\u0015ã_P·W°¹ß˜™¨j\u0019$Q\u001eÍ¼b.DÂ‹çL;€¹KøÇ°|“cøm%û¤¬ó²}éëBÏth9ÏI´;\u0019\u001bN\u0011¹µ¥‰`\u001fY±>ƒÛõ\u001eÃœ¿/Ešö=0\r×œl{\u00189¯\u0010ºÑà'Z¶ìğôì”s½e\u001b+=kÇ’\t?Ø\u00126Z\u000bÅ\u0001ˆ©0Dğzp¯HÁ–Fm3\u0017™Ú|3]û\u000b\u001bëÅ6*ÑhMt]ktÁe\u001e\u0010%ŞK›j­vpÇS­?)\u0008JjÉç\u0015|3ä\u0019"}
+{"type": "printf", "data": "pwritev 10 200 áF‚VW=ÇÏ=\u000cØQ|\u0015ã_P·W°¹ß˜™¨j\u0019$Q\u001eÍ¼b.DÂ‹çL;€¹KøÇ°|“cøm%û¤¬ó²}éëBÏth9ÏI´;\u0019\u001bN\u0011¹µ¥‰`\u001fY±>ƒÛõ\u001eÃœ¿/Ešö=0\r×œl{\u00189¯\u0010ºÑà'Z¶ìğôì”s½e\u001b+=kÇ’\t?Ø\u00126Z\u000bÅ\u0001ˆ©0Dğzp¯HÁ–Fm3\u0017™Ú|3]û\u000b\u001bëÅ6*ÑhMt]ktÁe\u001e\u0010%ŞK›j­vpÇS­?)\u0008JjÉç\u0015|3ä\u0019"}
+{"type": "printf", "data": "preadv 9 200 ‚ñ^Ÿ°$s\u0005i’<°×\u0016¬t]³ Ní\u000eÕŒ\u001e"}
+{"type": "printf", "data": "pwritev 10 200 ‚ñ^Ÿ°$s\u0005i’<°×\u0016¬t]³ Ní\u000eÕŒ\u001e"}
+{"type": "printf", "data": "preadv 9 200 N\u0016¶.\u0013ğ\u001e‰û\u000c‚f¦@:İÖ¥f¾\u00182ÚÅu\u001a›&µÏ\u0014Ø„aŠ-åÛ¥ô¦\u0003¼&Ğ•Mç!¸Ê\u0006\u0011İ\u0017@Š·¥ s2\u0005‚fŸ—¬\\6Ÿì½Æ\u0016}9wÁ²q\u000f8¡“\u0002˜÷=.”-%»~\"Ú“ÑoäÒ\u000b2u\u000fê"}
+{"type": "printf", "data": "pwritev 10 200 N\u0016¶.\u0013ğ\u001e‰û\u000c‚f¦@:İÖ¥f¾\u00182ÚÅu\u001a›&µÏ\u0014Ø„aŠ-åÛ¥ô¦\u0003¼&Ğ•Mç!¸Ê\u0006\u0011İ\u0017@Š·¥ s2\u0005‚fŸ—¬\\6Ÿì½Æ\u0016}9wÁ²q\u000f8¡“\u0002˜÷=.”-%»~\"Ú“ÑoäÒ\u000b2u\u000fê"}
+{"type": "printf", "data": "preadv 9 200 \u0012Ô`\u0007•+|\u0007¤\u001fòAÛÚsÕ\u0005zû/õ0Æ0„ªñíg9w˜ÀIğA\u0018\u001bfÇú»¯W»±µ*zK÷©Nïr\u0017\\×Ë_yop»„ ƒ'Áe<À˜i‚3\u000e·\\Éé\u000e¡Ğ¥yãpƒ¬Á=wl¬M€Æ¹S+¡_GCO2Â"}
+{"type": "printf", "data": "pwritev 10 200 \u0012Ô`\u0007•+|\u0007¤\u001fòAÛÚsÕ\u0005zû/õ0Æ0„ªñíg9w˜ÀIğA\u0018\u001bfÇú»¯W»±µ*zK÷©Nïr\u0017\\×Ë_yop»„ ƒ'Áe<À˜i‚3\u000e·\\Éé\u000e¡Ğ¥yãpƒ¬Á=wl¬M€Æ¹S+¡_GCO2Â"}
+{"type": "printf", "data": "preadv 9 200 \u0017ÎœéN<\u0011½ò Ì<L›‡€›  y>¤“"}
+{"type": "printf", "data": "pwritev 10 200 \u0017ÎœéN<\u0011½ò Ì<L›‡€›  y>¤“"}
+{"type": "printf", "data": "preadv 9 200 œğÄB2Ñ\u0015Ï¨ü#\u0016SÖ=V”Å’‘V\u0007\u0005´¤‡rÔµÃ+?¯‹k·3‰ŞĞŒvbÑÖ¬YÔî2°\u0013„ê½ƒ\u001e"}
+{"type": "printf", "data": "pwritev 10 200 œğÄB2Ñ\u0015Ï¨ü#\u0016SÖ=V”Å’‘V\u0007\u0005´¤‡rÔµÃ+?¯‹k·3‰ŞĞŒvbÑÖ¬YÔî2°\u0013„ê½ƒ\u001e"}
+{"type": "printf", "data": "preadv 9 200 &t%gƒÁöôñf\u0013è\u001a\u001d\u0005b¤QŸº½,È9¨ÄïlËÖ“æ ©éÓKCÌ²®\nîä·–\u0011}”\"È¬Ç®Y,]YVÏWë¤Eh\u000e±\råï¹éB‹4/›gW@:\u0011\"…¦Äò–+QgeÜU_öê\u0015½cÓC‚Ğ­S JOIR\u0012\u000bÔÌŞÒ»éş\u000fšx$\u0008¡,¡\u0007…\u0005Ô\u00182[ılÏÔ.”áåÁ”Ô]rU«˜åi†­\u000fÂåó\u000c\u000eÖÇ—©6kÍÿ\u000f\r|ê¤\u0018ıù°\u0007½¨Ø·†5_¬ı8«¬G…q§º"}
+{"type": "printf", "data": "pwritev 10 200 &t%gƒÁöôñf\u0013è\u001a\u001d\u0005b¤QŸº½,È9¨ÄïlËÖ“æ ©éÓKCÌ²®\nîä·–\u0011}”\"È¬Ç®Y,]YVÏWë¤Eh\u000e±\råï¹éB‹4/›gW@:\u0011\"…¦Äò–+QgeÜU_öê\u0015½cÓC‚Ğ­S JOIR\u0012\u000bÔÌŞÒ»éş\u000fšx$\u0008¡,¡\u0007…\u0005Ô\u00182[ılÏÔ.”áåÁ”Ô]rU«˜åi†­\u000fÂåó\u000c\u000eÖÇ—©6kÍÿ\u000f\r|ê¤\u0018ıù°\u0007½¨Ø·†5_¬ı8«¬G…q§º"}
+{"type": "printf", "data": "preadv 9 200 '\u0017ãâ¶\u001aUf3\u0015Ÿb¶\u0002}‚:öo›XA#‡¡:0(ÓKÆv3C;“ñ\u0003\u0002Ì\"rn¨7z\u000e%ØÍV¢‘\r\n•Cu= ˆAñ‘zMÔ5º˜lˆfgiCVï1òûÈÜ[”ĞÂe>ÎÈı\u0014\u000fñÌĞxø\u0008íİIÊSŞI¾Úhî°]\u0008î¹ZÚ º^™«\u0006\u001aB\u000c\u0002ˆ\nz·ÇI©à\u0018\u001fÖÕ+˜?°Z3-õ¦\u0006FĞ$:ÿ¦¶8i&!J\u0001+vİc«f\nˆT\u0010İŞÖibÅMÖ…Õè’·gJç\u0017ïõ\u0007˜"}
+{"type": "printf", "data": "pwritev 10 200 '\u0017ãâ¶\u001aUf3\u0015Ÿb¶\u0002}‚:öo›XA#‡¡:0(ÓKÆv3C;“ñ\u0003\u0002Ì\"rn¨7z\u000e%ØÍV¢‘\r\n•Cu= ˆAñ‘zMÔ5º˜lˆfgiCVï1òûÈÜ[”ĞÂe>ÎÈı\u0014\u000fñÌĞxø\u0008íİIÊSŞI¾Úhî°]\u0008î¹ZÚ º^™«\u0006\u001aB\u000c\u0002ˆ\nz·ÇI©à\u0018\u001fÖÕ+˜?°Z3-õ¦\u0006FĞ$:ÿ¦¶8i&!J\u0001+vİc«f\nˆT\u0010İŞÖibÅMÖ…Õè’·gJç\u0017ïõ\u0007˜"}
+{"type": "printf", "data": "preadv 9 56 ÿ½Ûæ"}
+{"type": "printf", "data": "pwritev 10 200 ÿ½Ûæ"}
+{"type": "printf", "data": "preadv 9 0 ÿ½Ûæ"}
+{"type": "printf", "data": "close 9 _ _"}
+{"type": "printf", "data": "close 10 _ _"}
+{"type": "printf", "data": "open -359497728 9 data/test_files/spanish"}
+{"type": "printf", "data": "open -359497728 10 data/write_file"}
+{"type": "printf", "data": "preadv 9 200 \nxNX»ã,\u0018Iíu›ë*YE}66vè”ô.¼HĞlŞ†«ÍŠhêY$ÌĞ\u0004ÊxÊ‹Å—ùøL.–ªÛDM\u0015•Á,ÉYÀ\u0004À<<œğkƒÒèÃ5g=% àù…Å¢x†Ì,m\u001aÑÖ9\u0003“_˜4¢›™{§›«\u001di&]»`À\\|Ë_YX"}
+{"type": "printf", "data": "pwritev 10 200 \nxNX»ã,\u0018Iíu›ë*YE}66vè”ô.¼HĞlŞ†«ÍŠhêY$ÌĞ\u0004ÊxÊ‹Å—ùøL.–ªÛDM\u0015•Á,ÉYÀ\u0004À<<œğkƒÒèÃ5g=% àù…Å¢x†Ì,m\u001aÑÖ9\u0003“_˜4¢›™{§›«\u001di&]»`À\\|Ë_YX"}
+{"type": "printf", "data": "preadv 9 200 …Bæı{5>:İ°¦\\o¦°‹ÿ+#•\u0003!^\u0014 Äp¶Uç\nÌhk<Ÿ\\\u0014ê¥Õğ³çÆ)D5¢[©½\u0007ª²¹YûY³£÷Û§ƒyåo\u0003e¿óÉèÆ\u0013xÛÖQÓjNÍøË3rlŒ¤ÃÑ…Ijæğ§Ôõ¦®VÜòa[H\u001b\u0014¹?AíEL”*ÇÊTÅd¨\t\u0010\r7Úï59\u0017¯MˆÀ¬/L¼Ö½UZYÛ]·Äòg°èÍ<’§\"MGjÀ«ÉY^J.‡yŸá´±eî\u001dR\u0005#µ\u0002±5‚‘®¡"}
+{"type": "printf", "data": "pwritev 10 200 …Bæı{5>:İ°¦\\o¦°‹ÿ+#•\u0003!^\u0014 Äp¶Uç\nÌhk<Ÿ\\\u0014ê¥Õğ³çÆ)D5¢[©½\u0007ª²¹YûY³£÷Û§ƒyåo\u0003e¿óÉèÆ\u0013xÛÖQÓjNÍøË3rlŒ¤ÃÑ…Ijæğ§Ôõ¦®VÜòa[H\u001b\u0014¹?AíEL”*ÇÊTÅd¨\t\u0010\r7Úï59\u0017¯MˆÀ¬/L¼Ö½UZYÛ]·Äòg°èÍ<’§\"MGjÀ«ÉY^J.‡yŸá´±eî\u001dR\u0005#µ\u0002±5‚‘®¡"}
+{"type": "printf", "data": "preadv 9 200 w¾\u001aF\nâ\u000c`aÔıw\u0006x,À$ ¤MhT\u0015F|{<ÇÖ^\u0005¬\u001c«æBµ¯C\u0015.±\u000e\u0008Ú.‰şWZlk…Ã@šÎ7ç\u0010zçµR>‘àİÚ6\u0004]ù{ûıùk\u001d\u0014ê¤†i—\u0006QJı\u0019š=È‹’‹ñ\u00128S\u0019—'s\u0006¨ğ[;}œ9v\u0018\rfwFã\u0015½´şÎ\u0004pğ .eûVe*Ñ\u0004˜Ñ9héº¸šã$½Îà\\iâÜã[|ÔSÁ\u0016ê\u0002`\u0005\u001dül,v·l7\u0012ä|úø¾ÓqÊW7£ê\u00023g¹l\u0004\u0010\u0013P"}
+{"type": "printf", "data": "pwritev 10 200 w¾\u001aF\nâ\u000c`aÔıw\u0006x,À$ ¤MhT\u0015F|{<ÇÖ^\u0005¬\u001c«æBµ¯C\u0015.±\u000e\u0008Ú.‰şWZlk…Ã@šÎ7ç\u0010zçµR>‘àİÚ6\u0004]ù{ûıùk\u001d\u0014ê¤†i—\u0006QJı\u0019š=È‹’‹ñ\u00128S\u0019—'s\u0006¨ğ[;}œ9v\u0018\rfwFã\u0015½´şÎ\u0004pğ .eûVe*Ñ\u0004˜Ñ9héº¸šã$½Îà\\iâÜã[|ÔSÁ\u0016ê\u0002`\u0005\u001dül,v·l7\u0012ä|úø¾ÓqÊW7£ê\u00023g¹l\u0004\u0010\u0013P"}
+{"type": "printf", "data": "preadv 9 200 M\u0006]ç_±jÒÎú\n‰\n©˜eU\u001cÛÄ@iÓâçÎI¸‘ç%Ó\u0002À¡,ÈÒ€a©\u001eÊK`j\u001dcC?\u0002şÉê\u0007J\u0004ÌPN§Hî\\…¸RØNVæ÷n aòFb[ ‰¿Êâj§¢µOØÚW,HnL\u001bR//yí]gõEÈ”!Ê.\u0016ô˜ßÇf"}
+{"type": "printf", "data": "pwritev 10 200 M\u0006]ç_±jÒÎú\n‰\n©˜eU\u001cÛÄ@iÓâçÎI¸‘ç%Ó\u0002À¡,ÈÒ€a©\u001eÊK`j\u001dcC?\u0002şÉê\u0007J\u0004ÌPN§Hî\\…¸RØNVæ÷n aòFb[ ‰¿Êâj§¢µOØÚW,HnL\u001bR//yí]gõEÈ”!Ê.\u0016ô˜ßÇf"}
+{"type": "printf", "data": "preadv 9 200 ßÈ`N¹\u000bt[É›Ï\u0008X½M·¥ì´ë\u0013øn¤\u001b‚äæÂ«ì‚G\\¿#Iø\nr*ÑöÔut×]}Z·‚\u0012€iÅ\u001a¨í\u000fÎ¶\u0007•ü§ÎQŞè]([H#FG3áşÑ˜\u001f/İ®1XÆŠ\u0010 =]s\u001dòı_\u0013C$Ü\u0001\u0010=°wõš&…Èóø?Ùk*A\u0004¢åƒ¸Œcå\u0005rlÔ¬ø\u000b-m•à\"ã¾1\u001bğ#á“öh\u0011\u000bámû\u001f\rÈåíÇö\u000c·ÜÄëïƒ‡\\\u0003¡Ìj€@:\u001aˆ\u000eS\\!±f@ãÃ\u0005\\O"}
+{"type": "printf", "data": "pwritev 10 200 ßÈ`N¹\u000bt[É›Ï\u0008X½M·¥ì´ë\u0013øn¤\u001b‚äæÂ«ì‚G\\¿#Iø\nr*ÑöÔut×]}Z·‚\u0012€iÅ\u001a¨í\u000fÎ¶\u0007•ü§ÎQŞè]([H#FG3áşÑ˜\u001f/İ®1XÆŠ\u0010 =]s\u001dòı_\u0013C$Ü\u0001\u0010=°wõš&…Èóø?Ùk*A\u0004¢åƒ¸Œcå\u0005rlÔ¬ø\u000b-m•à\"ã¾1\u001bğ#á“öh\u0011\u000bámû\u001f\rÈåíÇö\u000c·ÜÄëïƒ‡\\\u0003¡Ìj€@:\u001aˆ\u000eS\\!±f@ãÃ\u0005\\O"}
+{"type": "printf", "data": "preadv 9 200 Gr¶‘\u0005<=U0ÿÖ“ñ\u0002İ¤øíK¡\u0002\u000e:—’ÊÔÔ‰ìŒ>-‚vã_ôÌnÛíÏ%8'Šv\u0011\u0007b¥êfc3\u0017uÜÀ´°&\n*ìOíC\n\u001a]¥"}
+{"type": "printf", "data": "pwritev 10 200 Gr¶‘\u0005<=U0ÿÖ“ñ\u0002İ¤øíK¡\u0002\u000e:—’ÊÔÔ‰ìŒ>-‚vã_ôÌnÛíÏ%8'Šv\u0011\u0007b¥êfc3\u0017uÜÀ´°&\n*ìOíC\n\u001a]¥"}
+{"type": "printf", "data": "preadv 9 200 FY„‹’\tÁçæ•CÿW`z\\ÈŞï5ã½ŞaihŒ=)†”V\u0003Éû¢\tÅ\u001a-!qy¬ë#ÜšºÜ~ƒƒA‰\u0018¨s\ta¨^‰OLË–¶îlR(„‚»Û†.-á\u000b@YKP¼ÎGx¦H*\u0005%È.]È\u0007\u001aõˆz\u0017´ºÃ °é€ÒLR‰òÇ›µŞB7½ÅGä˜\u0014\u001ba\u001cª2 šl¨‚\u001c\"‹\u0004\u001a\nüSyÅxB¸„*_‚GHT¤—„¹>¨êoŸhì(Ì«f¨\u001c‘}\u000eJµ£\u0001Bz!\u001a\u0018~ "}
+{"type": "printf", "data": "pwritev 10 200 FY„‹’\tÁçæ•CÿW`z\\ÈŞï5ã½ŞaihŒ=)†”V\u0003Éû¢\tÅ\u001a-!qy¬ë#ÜšºÜ~ƒƒA‰\u0018¨s\ta¨^‰OLË–¶îlR(„‚»Û†.-á\u000b@YKP¼ÎGx¦H*\u0005%È.]È\u0007\u001aõˆz\u0017´ºÃ °é€ÒLR‰òÇ›µŞB7½ÅGä˜\u0014\u001ba\u001cª2 šl¨‚\u001c\"‹\u0004\u001a\nüSyÅxB¸„*_‚GHT¤—„¹>¨êoŸhì(Ì«f¨\u001c‘}\u000eJµ£\u0001Bz!\u001a\u0018~ "}
+{"type": "printf", "data": "preadv 9 200 (ed\u0007^\u0001="}
+{"type": "printf", "data": "pwritev 10 200 (ed\u0007^\u0001="}
+{"type": "printf", "data": "preadv 9 200 iŒ¨Û[Nüq\tb‘ŒÊ©\u0010ÓÈJ.‚¢¬?\u0017RíİA\u0008™–ÃŞ<$a\u0019\u0018Æƒ‰Íf_åòS³Ÿ"}
+{"type": "printf", "data": "pwritev 10 200 iŒ¨Û[Nüq\tb‘ŒÊ©\u0010ÓÈJ.‚¢¬?\u0017RíİA\u0008™–ÃŞ<$a\u0019\u0018Æƒ‰Íf_åòS³Ÿ"}
+{"type": "printf", "data": "preadv 9 200 Ä¦\u001fê€+ÔPãÉc¼Êeõ^o+\u0004»\u001b?ÑíXÃé°ç˜èHõ£?\u0002ıÏbØè"}
+{"type": "printf", "data": "pwritev 10 200 Ä¦\u001fê€+ÔPãÉc¼Êeõ^o+\u0004»\u001b?ÑíXÃé°ç˜èHõ£?\u0002ıÏbØè"}
+{"type": "printf", "data": "preadv 9 200 #ĞES´‚Ê…\u0007\u0007úSõîæä†Éî\u0017\u0006Ã3%MÿãeÔ®m–QIØJgüŒàÎ¯«?ğR³ÿÁ^f43®d¬\u0012c\u0003¯~ÌT’o&¢ã$±Ë\t@îÿ]b zW{\u0008÷ß_\rY»»(öâÑ'K\u000c\u0008ZQ¡$¦\r'.:j ”ÌÄ´bî\u0004 eÉ•Ã"}
+{"type": "printf", "data": "pwritev 10 200 #ĞES´‚Ê…\u0007\u0007úSõîæä†Éî\u0017\u0006Ã3%MÿãeÔ®m–QIØJgüŒàÎ¯«?ğR³ÿÁ^f43®d¬\u0012c\u0003¯~ÌT’o&¢ã$±Ë\t@îÿ]b zW{\u0008÷ß_\rY»»(öâÑ'K\u000c\u0008ZQ¡$¦\r'.:j ”ÌÄ´bî\u0004 eÉ•Ã"}
+{"type": "printf", "data": "preadv 9 200 7µNßõ+ı\u0015eèõÉ©\u001dŞµÌ@LŸD7\u0010•í/\u001cšk\u001b(ÊeaÏ¬0Ê)\t\u0008E[k¾PO7óğ¹ïN”ãm¥òÎfˆëáˆÁ°^ø÷\u0017©r6\u0018áqÑl\u00147º\u001aL(êø©\u0001\u0018\"?\t\u00101a’kö\u0007\u000bÖ¶½sQ*î2óœDÄÑ\u001bQğ\u0018A$…€ä\t¥©Ém;†ımv=Ü¨LCûpGGÁCşÃn\u001eÓBÁPã\u0014Ù=Ä\u0013²(tãÄ›Mx\r°Zj[\u0015âÑ\u0016\u0011×\\q,İ±Ëh\rjı9\u000bË\u0017ã&«ºe"}
+{"type": "printf", "data": "pwritev 10 200 7µNßõ+ı\u0015eèõÉ©\u001dŞµÌ@LŸD7\u0010•í/\u001cšk\u001b(ÊeaÏ¬0Ê)\t\u0008E[k¾PO7óğ¹ïN”ãm¥òÎfˆëáˆÁ°^ø÷\u0017©r6\u0018áqÑl\u00147º\u001aL(êø©\u0001\u0018\"?\t\u00101a’kö\u0007\u000bÖ¶½sQ*î2óœDÄÑ\u001bQğ\u0018A$…€ä\t¥©Ém;†ımv=Ü¨LCûpGGÁCşÃn\u001eÓBÁPã\u0014Ù=Ä\u0013²(tãÄ›Mx\r°Zj[\u0015âÑ\u0016\u0011×\\q,İ±Ëh\rjı9\u000bË\u0017ã&«ºe"}
+{"type": "printf", "data": "preadv 9 35 ªÕo\u0001¬\u0012w¬´;û[×\\LTÎÍ¿ï\u001eÅÿ/\u0014úZÓ¡\u0003Ak4“q¬0Ê)\t\u0008E[k¾PO7óğ¹ïN”ãm¥òÎfˆëáˆÁ°^ø÷\u0017©r6\u0018áqÑl\u00147º\u001aL(êø©\u0001\u0018\"?\t\u00101a’kö\u0007\u000bÖ¶½sQ*î2óœDÄÑ\u001bQğ\u0018A$…€ä\t¥©Ém;†ımv=Ü¨LCûpGGÁCşÃn\u001eÓBÁPã\u0014Ù=Ä\u0013²(tãÄ›Mx\r°Zj[\u0015âÑ\u0016\u0011×\\q,İ±Ëh\rjı9\u000bË\u0017ã&«ºe"}
+{"type": "printf", "data": "pwritev 10 200 ªÕo\u0001¬\u0012w¬´;û[×\\LTÎÍ¿ï\u001eÅÿ/\u0014úZÓ¡\u0003Ak4“q"}
+{"type": "printf", "data": "preadv 9 0 ªÕo\u0001¬\u0012w¬´;û[×\\LTÎÍ¿ï\u001eÅÿ/\u0014úZÓ¡\u0003Ak4“q"}
+{"type": "printf", "data": "close 9 _ _"}
+{"type": "printf", "data": "close 10 _ _"}
+{"type": "printf", "data": "open -359497728 9 data/test_files/portuguese"}
+{"type": "printf", "data": "open -359497728 10 data/write_file"}
+{"type": "printf", "data": "preadv 9 200 7›—«Ş‘–\u0017U*[ sÕÑ’91ùd4H!\tîè';I\u0002@&A \rH7\u0017™{,L‘±6$hØ{³\u0008ÿ\n–txÒôıô‚´¶!H\u0008k\u0011c\rµT2¥â@‹ ĞkÌıÑQ—N´ø"}
+{"type": "printf", "data": "pwritev 10 200 7›—«Ş‘–\u0017U*[ sÕÑ’91ùd4H!\tîè';I\u0002@&A \rH7\u0017™{,L‘±6$hØ{³\u0008ÿ\n–txÒôıô‚´¶!H\u0008k\u0011c\rµT2¥â@‹ ĞkÌıÑQ—N´ø"}
+{"type": "printf", "data": "preadv 9 200 ~2Ñƒœuü‹‚—\\qL\u0016v]Õ1ş©z"}
+{"type": "printf", "data": "pwritev 10 200 ~2Ñƒœuü‹‚—\\qL\u0016v]Õ1ş©z"}
+{"type": "printf", "data": "preadv 9 200 ²ŸñĞ|‘/Lúiì œe\u0019ÈDŸ5ô÷]=6Iña®Ná æˆƒÛíòOøQ£DÎ\u0005o%Î!`>ab …ª†Y*zmmº§€¸\u0007sÕÈF¬\u0012iq!Iöı\u000c5D^–R›~‚ ÷ âYŞ.z\u0018\u0003áQ¶Öı|\u0002Ä)aï\u001fD\u000f¼ÕtÑ£Çf\u0015%¤\u0002àŠêçÉ\u001bılĞ]u¥\u000e¬4³k(8¨º¡Ô Ø\u000b¶Ş•\u0006ÇŒv[úü\u0018Ù.Ÿ (íÎ\n%İÆUšV´\u00033¶YOéÃH]!¶\u000eİgy\rj²—"}
+{"type": "printf", "data": "pwritev 10 200 ²ŸñĞ|‘/Lúiì œe\u0019ÈDŸ5ô÷]=6Iña®Ná æˆƒÛíòOøQ£DÎ\u0005o%Î!`>ab …ª†Y*zmmº§€¸\u0007sÕÈF¬\u0012iq!Iöı\u000c5D^–R›~‚ ÷ âYŞ.z\u0018\u0003áQ¶Öı|\u0002Ä)aï\u001fD\u000f¼ÕtÑ£Çf\u0015%¤\u0002àŠêçÉ\u001bılĞ]u¥\u000e¬4³k(8¨º¡Ô Ø\u000b¶Ş•\u0006ÇŒv[úü\u0018Ù.Ÿ (íÎ\n%İÆUšV´\u00033¶YOéÃH]!¶\u000eİgy\rj²—"}
+{"type": "printf", "data": "preadv 9 200 Øµ½õ·¸£EØ\u000cŠ3v‹\u001fynF\u000c´ñ–Ô~u7û\u0017Yd_\u0012\u0001‹ãğnÑç6lÌú(¿9€ø/½¶\u0002êV/åşÆTƒ-Õ`œ°jLÕ[#¿.ühw Jà˜¿+Ewg˜¤a\u000fÃC\u0004Sçˆ¤m¦5z\u0013›\u000e"}
+{"type": "printf", "data": "pwritev 10 200 Øµ½õ·¸£EØ\u000cŠ3v‹\u001fynF\u000c´ñ–Ô~u7û\u0017Yd_\u0012\u0001‹ãğnÑç6lÌú(¿9€ø/½¶\u0002êV/åşÆTƒ-Õ`œ°jLÕ[#¿.ühw Jà˜¿+Ewg˜¤a\u000fÃC\u0004Sçˆ¤m¦5z\u0013›\u000e"}
+{"type": "printf", "data": "preadv 9 200 şİï\u0013ö\\©¼\u0018i\u00178!¿µ+«°Dÿ\u001c\u000bÜá4\u0012ÚÚÎLµ4¥Ö[qö\nîƒ$pÆ«+\u000e5\u0006Ï&\u001cx«8–\u0010Xàaåƒí™¼§®lJ{*\u0018¤‚ƒ¿¯¶Ça ]\u001eÉŠ\u0004™b×7lY\u0019Òë…Jöƒ˜T\u0013!\tã‹ÌŒ„*æÉd^ôˆ ¿‡Ó,œ*ãõ~’˜{¦ûç\u001ehkÆ\u0018«ûK™ù*­|l(ƒov\u001dÙ•ÚN-gIGé6lğÑ[îŸÈK¬¼,½\u000cZí;JñÅ)VlxÈ\u001d£\u0005a+ÃµRâ"}
+{"type": "printf", "data": "pwritev 10 200 şİï\u0013ö\\©¼\u0018i\u00178!¿µ+«°Dÿ\u001c\u000bÜá4\u0012ÚÚÎLµ4¥Ö[qö\nîƒ$pÆ«+\u000e5\u0006Ï&\u001cx«8–\u0010Xàaåƒí™¼§®lJ{*\u0018¤‚ƒ¿¯¶Ça ]\u001eÉŠ\u0004™b×7lY\u0019Òë…Jöƒ˜T\u0013!\tã‹ÌŒ„*æÉd^ôˆ ¿‡Ó,œ*ãõ~’˜{¦ûç\u001ehkÆ\u0018«ûK™ù*­|l(ƒov\u001dÙ•ÚN-gIGé6lğÑ[îŸÈK¬¼,½\u000cZí;JñÅ)VlxÈ\u001d£\u0005a+ÃµRâ"}
+{"type": "printf", "data": "preadv 9 200 k~µ\u001cİçó=\u0006eÖ™Ç,v“Œ}6ğcĞäÇm\"\u0014‘{‰®ÚË£¤\u0006\u0013T\u0019=—0˜æËT¹¡`\u0007¨ä#PÃ0ÏÉä>ƒ\u0001GÃ"}
+{"type": "printf", "data": "pwritev 10 200 k~µ\u001cİçó=\u0006eÖ™Ç,v“Œ}6ğcĞäÇm\"\u0014‘{‰®ÚË£¤\u0006\u0013T\u0019=—0˜æËT¹¡`\u0007¨ä#PÃ0ÏÉä>ƒ\u0001GÃ"}
+{"type": "printf", "data": "preadv 9 200 5NOiKlsŞÂw|Œ“\u0010Ã$÷Ã%ÃÄƒÉíÄÃ¦—DïØŸ\u000bómÄ¤r\"&—-O\rÛ~Q+\u000cduDçİîxÃ>ëçÁWí/B¸—¥ù¾ŞA&L$\\Œñ1â§£Ueùƒ"}
+{"type": "printf", "data": "pwritev 10 200 5NOiKlsŞÂw|Œ“\u0010Ã$÷Ã%ÃÄƒÉíÄÃ¦—DïØŸ\u000bómÄ¤r\"&—-O\rÛ~Q+\u000cduDçİîxÃ>ëçÁWí/B¸—¥ù¾ŞA&L$\\Œñ1â§£Ueùƒ"}
+{"type": "printf", "data": "preadv 9 200 ß{Ã\u0014¹\u001fSæ€\u000cÌû\t\"c38\u001fc'y¾\u0002‹ºíô~.·ÌB¤SõÃhâ-Ô\u0013}f\u0012ŠĞó01ZÌYõ¾ÿJ\u0001jc5¾Œ\u001cgD…i‘;E¥°Ø¾¨\u0011¾°Lıxê—n\u0008Öy­{Ö£Æ§Óâ~³Gçû2oä–¬É¿ˆ/  \u0008ÓĞ‹¶\u000egõ¼]G[•ğ•ığ~\u001fk8½(g¦÷±pOW\u0008¢‰¿2ŒvZÙŞç^l-\u0014Ç‹\u001f¢Š½Âÿ~\rP-~S•ˆ7Ë‡I7sÃ»3Oôß7x7ŸrA\u0013o«¯"}
+{"type": "printf", "data": "pwritev 10 200 ß{Ã\u0014¹\u001fSæ€\u000cÌû\t\"c38\u001fc'y¾\u0002‹ºíô~.·ÌB¤SõÃhâ-Ô\u0013}f\u0012ŠĞó01ZÌYõ¾ÿJ\u0001jc5¾Œ\u001cgD…i‘;E¥°Ø¾¨\u0011¾°Lıxê—n\u0008Öy­{Ö£Æ§Óâ~³Gçû2oä–¬É¿ˆ/  \u0008ÓĞ‹¶\u000egõ¼]G[•ğ•ığ~\u001fk8½(g¦÷±pOW\u0008¢‰¿2ŒvZÙŞç^l-\u0014Ç‹\u001f¢Š½Âÿ~\rP-~S•ˆ7Ë‡I7sÃ»3Oôß7x7ŸrA\u0013o«¯"}
+{"type": "printf", "data": "preadv 9 200 û\\VÜ\u000fñn†\u0018ŠÄKDFo9ëÏ[íˆ6âß\u001dĞìqzÙ•Ÿçµñ2w6”ÄU~\u001bh©\t.)·%‘©Ïöù‹\u001dTcĞ:\u000fÍò`eğ\nĞ\u0018ÔTÅ\t’®äC(/Nù\u000cº©\u0011€Àù†ŒÉëñ\u0003åğU§“h9\rè\u0019\u001eè$Ê\u0011î'åJóxÍïfMjİ™j ¦\u001b§É×²d\u000b#ŒÛRû>v\u001bá-c²#ö”ì\u000fí™F¤ÊLz>‚Õ}\u0012dâxlv \rsˆ:‹˜äŞçÁ»}z\u001cº2m0xÛƒ|ƒ3‹š"}
+{"type": "printf", "data": "pwritev 10 200 û\\VÜ\u000fñn†\u0018ŠÄKDFo9ëÏ[íˆ6âß\u001dĞìqzÙ•Ÿçµñ2w6”ÄU~\u001bh©\t.)·%‘©Ïöù‹\u001dTcĞ:\u000fÍò`eğ\nĞ\u0018ÔTÅ\t’®äC(/Nù\u000cº©\u0011€Àù†ŒÉëñ\u0003åğU§“h9\rè\u0019\u001eè$Ê\u0011î'åJóxÍïfMjİ™j ¦\u001b§É×²d\u000b#ŒÛRû>v\u001bá-c²#ö”ì\u000fí™F¤ÊLz>‚Õ}\u0012dâxlv \rsˆ:‹˜äŞçÁ»}z\u001cº2m0xÛƒ|ƒ3‹š"}
+{"type": "printf", "data": "preadv 9 200 ±,\u001aÈô’÷u‹×EIüÔ NB\u0017öâ9«Ô\u0003ø0”/&òBx\u00045 qo<¼Öp]ŠA2A·@\"œB …çÂšÛ\u0004%\u000f%É¾‘U6=ï¹“¸\u0001$7€q\u0001TÎÃ\u0019•\u001f=ü˜cÙ\u0007O4«Çm5Ğ\u0005ìGÛæ\u0005²Ô§Z`ø±Õˆz²ø\u0017Ä^Ù6Æ³ÿ”\u001f/njRşÖWÑ†¹\u001a\u0017©¥\u0010{Û\u001e”’\u0010\t\u0004½Íõà>Èéï­ó\u0017Wÿ\u0001¸P±®Şiíéï\"O,V`dåwÁ½«î3{ñ4Q\u000eƒ½Kf•h²5"}
+{"type": "printf", "data": "pwritev 10 200 ±,\u001aÈô’÷u‹×EIüÔ NB\u0017öâ9«Ô\u0003ø0”/&òBx\u00045 qo<¼Öp]ŠA2A·@\"œB …çÂšÛ\u0004%\u000f%É¾‘U6=ï¹“¸\u0001$7€q\u0001TÎÃ\u0019•\u001f=ü˜cÙ\u0007O4«Çm5Ğ\u0005ìGÛæ\u0005²Ô§Z`ø±Õˆz²ø\u0017Ä^Ù6Æ³ÿ”\u001f/njRşÖWÑ†¹\u001a\u0017©¥\u0010{Û\u001e”’\u0010\t\u0004½Íõà>Èéï­ó\u0017Wÿ\u0001¸P±®Şiíéï\"O,V`dåwÁ½«î3{ñ4Q\u000eƒ½Kf•h²5"}
+{"type": "printf", "data": "preadv 9 200 \n¸Òïœ½\u0008Yù˜Í\u0014ßğÈ\r†!¡PØ¥ÆßŒâ’4\u000bâœC¥¸=gš\u0015ô·È ğB©\u00027ïs\u0015‘â8S8û<¬©\u0016ò¹úŸ×8!^\u0007é–J\u0001]‰’°Û\u001bí\"KIÈ^ÜŞíº\u0005»Í¿˜\u0011×Ü™f\u0001\u0005J\u0015\u001cnÏ[+ƒ\u000eæ,©vŠãvÊ}9²z¥Õİ6R0e\u000f–jBz\u0002>\u0003X‚?üoöş\u0008¥æC9Z§\u001e”.0õ ;&À«\u001eLbòÌ5õc\nˆD³P\u000c3ŸúM÷t\";v×Pˆ´sá%\u0006áú"}
+{"type": "printf", "data": "pwritev 10 200 \n¸Òïœ½\u0008Yù˜Í\u0014ßğÈ\r†!¡PØ¥ÆßŒâ’4\u000bâœC¥¸=gš\u0015ô·È ğB©\u00027ïs\u0015‘â8S8û<¬©\u0016ò¹úŸ×8!^\u0007é–J\u0001]‰’°Û\u001bí\"KIÈ^ÜŞíº\u0005»Í¿˜\u0011×Ü™f\u0001\u0005J\u0015\u001cnÏ[+ƒ\u000eæ,©vŠãvÊ}9²z¥Õİ6R0e\u000f–jBz\u0002>\u0003X‚?üoöş\u0008¥æC9Z§\u001e”.0õ ;&À«\u001eLbòÌ5õc\nˆD³P\u000c3ŸúM÷t\";v×Pˆ´sá%\u0006áú"}
+{"type": "printf", "data": "preadv 9 200 ºK¹\u001bÈıå,5d+e\r|o¨…\u001a‚!XHğ%d\"9T:[Ì`d\u000c.îİGZŞÃ\u0003š¶kï\u0001»\u001e¶º‚\t…{ ¾>ãcğZõ\u0008osÈY\u001bñ5Æ\u0010½ò¶¨rŸ»\r\u0008÷±†“¨Î¯^G+H/Óõ\u000bÏ\"¸?Ù’\u0004­Q~tö‰?`ò”¹ê•p‘ÊÑ\u0019µ`©‹úªÙã}‚ÎËºÑ\r†\u000eF\u0001\u001eÑ5\u0012´ù^¶ÒëÛ°b£€•e¥¾n°dyì\u0006´02ıú\u0006\u0010\" »ùÏy\ncnÎÃ\u0008 P/pU<H="}
+{"type": "printf", "data": "pwritev 10 200 ºK¹\u001bÈıå,5d+e\r|o¨…\u001a‚!XHğ%d\"9T:[Ì`d\u000c.îİGZŞÃ\u0003š¶kï\u0001»\u001e¶º‚\t…{ ¾>ãcğZõ\u0008osÈY\u001bñ5Æ\u0010½ò¶¨rŸ»\r\u0008÷±†“¨Î¯^G+H/Óõ\u000bÏ\"¸?Ù’\u0004­Q~tö‰?`ò”¹ê•p‘ÊÑ\u0019µ`©‹úªÙã}‚ÎËºÑ\r†\u000eF\u0001\u001eÑ5\u0012´ù^¶ÒëÛ°b£€•e¥¾n°dyì\u0006´02ıú\u0006\u0010\" »ùÏy\ncnÎÃ\u0008 P/pU<H="}
+{"type": "printf", "data": "preadv 9 13 éhÎ‘wÉ\u001c~{(:\r|o¨…\u001a‚!XHğ%d\"9T:[Ì`d\u000c.îİGZŞÃ\u0003š¶kï\u0001»\u001e¶º‚\t…{ ¾>ãcğZõ\u0008osÈY\u001bñ5Æ\u0010½ò¶¨rŸ»\r\u0008÷±†“¨Î¯^G+H/Óõ\u000bÏ\"¸?Ù’\u0004­Q~tö‰?`ò”¹ê•p‘ÊÑ\u0019µ`©‹úªÙã}‚ÎËºÑ\r†\u000eF\u0001\u001eÑ5\u0012´ù^¶ÒëÛ°b£€•e¥¾n°dyì\u0006´02ıú\u0006\u0010\" »ùÏy\ncnÎÃ\u0008 P/pU<H="}
+{"type": "printf", "data": "pwritev 10 200 éhÎ‘wÉ\u001c~{(:"}
+{"type": "printf", "data": "preadv 9 0 éhÎ‘wÉ\u001c~{(:"}
+{"type": "printf", "data": "close 9 _ _"}
+{"type": "printf", "data": "close 10 _ _"}
+{"type": "printf", "data": "open -359497728 9 data/test_files/german"}
+{"type": "printf", "data": "open -359497728 10 data/write_file"}
+{"type": "printf", "data": "preadv 9 200 {À\u0006Ç\u0015]‘ø¢\u0006(,‹_0Ã\u0012\u000c•±\u0004«'e¹İmÕ\u0005^h"}
+{"type": "printf", "data": "pwritev 10 200 {À\u0006Ç\u0015]‘ø¢\u0006(,‹_0Ã\u0012\u000c•±\u0004«'e¹İmÕ\u0005^h"}
+{"type": "printf", "data": "preadv 9 200 HÔ8¨÷Sƒ\u001cGÄúzdOÌî7tRÍpîRdÕ\n”æ©‘¶0ÍŞ\u000cÔ~ÛA\r‘\nRcC¥”Œ7æ‘zöúG«:Jw‘îÎ¸L§\u0013ÀîéØDNÂ°:®`Óaº<qYyÂZy3´÷¿\u0002q =€\u001e’ëL}b\u0012J^Î´€aû\u0002İ*1B‘Ï&7\u0014\"Ò \u0011b' èßr`ö„Iº$û\u0007OÌ|ka`C\u0006lÌf:ØÂ•\u0019A»ï|‘õú|ò°™ÕV;¡\n4È¥\u0003zøW­Ê;Vå\\ŞîßB*t\u0001"}
+{"type": "printf", "data": "pwritev 10 200 HÔ8¨÷Sƒ\u001cGÄúzdOÌî7tRÍpîRdÕ\n”æ©‘¶0ÍŞ\u000cÔ~ÛA\r‘\nRcC¥”Œ7æ‘zöúG«:Jw‘îÎ¸L§\u0013ÀîéØDNÂ°:®`Óaº<qYyÂZy3´÷¿\u0002q =€\u001e’ëL}b\u0012J^Î´€aû\u0002İ*1B‘Ï&7\u0014\"Ò \u0011b' èßr`ö„Iº$û\u0007OÌ|ka`C\u0006lÌf:ØÂ•\u0019A»ï|‘õú|ò°™ÕV;¡\n4È¥\u0003zøW­Ê;Vå\\ŞîßB*t\u0001"}
+{"type": "printf", "data": "preadv 9 200 ˆHúb´¡ÿ~Ë\u0008<0˜û¿¬\u001b‰«®Âc\n¹­¤Çj£ÓşÈÂ¤’ŠÑwâ˜í$ô`©ô‹¾ôñ™ô½\u0003çğã5¨$:ÅİiLò¹¼¹¼\u0016\u0019óê®¦ííÌ^Æ}×\u000b£òWAó\u001añŒá~¼ÆĞ\u0018á™k§Ñ¶È-¡x¼yˆ]\r÷Xğâœñd Ã"}
+{"type": "printf", "data": "pwritev 10 200 ˆHúb´¡ÿ~Ë\u0008<0˜û¿¬\u001b‰«®Âc\n¹­¤Çj£ÓşÈÂ¤’ŠÑwâ˜í$ô`©ô‹¾ôñ™ô½\u0003çğã5¨$:ÅİiLò¹¼¹¼\u0016\u0019óê®¦ííÌ^Æ}×\u000b£òWAó\u001añŒá~¼ÆĞ\u0018á™k§Ñ¶È-¡x¼yˆ]\r÷Xğâœñd Ã"}
+{"type": "printf", "data": "preadv 9 200 Á\u0011!1jBa.¨7Få„\u0019Ş±\u000eñ1\u0005-Qò\u001fiòPÏY˜ú\u0011\u0018Tâ¥jóTLl–\t’@&¡¿:x£QIkuËæ¿Æó·\u0012‡;móÖÈB ı> ¶1ÿ—4˜?\u0012]\np_@£á`[Œô[\u001c<oà\u001eıpŸ{Ø¸Ú¢Çµy§æ¾?owÑ¨f$É\u001a_\u0007‡ó¾\u0005î¯\u0006ÑŠ­Ç\u001e„Ï¶§ ¤¹’£Oÿ9\u001d\\nNLY¢ «\u00027\u000e+upA|óG²ègÓNX\u001fµ®Ô·RÅ¤\u0015QGå6Š\u0004<d¬n"}
+{"type": "printf", "data": "pwritev 10 200 Á\u0011!1jBa.¨7Få„\u0019Ş±\u000eñ1\u0005-Qò\u001fiòPÏY˜ú\u0011\u0018Tâ¥jóTLl–\t’@&¡¿:x£QIkuËæ¿Æó·\u0012‡;móÖÈB ı> ¶1ÿ—4˜?\u0012]\np_@£á`[Œô[\u001c<oà\u001eıpŸ{Ø¸Ú¢Çµy§æ¾?owÑ¨f$É\u001a_\u0007‡ó¾\u0005î¯\u0006ÑŠ­Ç\u001e„Ï¶§ ¤¹’£Oÿ9\u001d\\nNLY¢ «\u00027\u000e+upA|óG²ègÓNX\u001fµ®Ô·RÅ¤\u0015QGå6Š\u0004<d¬n"}
+{"type": "printf", "data": "preadv 9 200 ü˜\u0004.Ô$^®y_´>KÀ·˜½e®^Èü‰]–H\u000cSvxòÀœ.a\u001brjBnu—×(<6°•\u0008f™W\u000f\u001b)&?\u0001•¾~,ê\u0008\u0012kğ`‹ÿùœLŸÔ\u000ciø–U[\u001f\u0003ˆó\u000fjõ½Å÷J·I}ìdÈâr•[\u00146ï ²\\ú3¬|\u000b..Ö{p‚Á0\u0006ÏJ­ÏWÿ\u001b\u0007\u0013Ü³qıÏÛW1õHÄ\u000e.7\u000fEú½y\u0014…Šğ\u0011Şä€\u0002ª+×¤úúç\\d`EB”è\u00032­¿åwë6\u0012š"}
+{"type": "printf", "data": "pwritev 10 200 ü˜\u0004.Ô$^®y_´>KÀ·˜½e®^Èü‰]–H\u000cSvxòÀœ.a\u001brjBnu—×(<6°•\u0008f™W\u000f\u001b)&?\u0001•¾~,ê\u0008\u0012kğ`‹ÿùœLŸÔ\u000ciø–U[\u001f\u0003ˆó\u000fjõ½Å÷J·I}ìdÈâr•[\u00146ï ²\\ú3¬|\u000b..Ö{p‚Á0\u0006ÏJ­ÏWÿ\u001b\u0007\u0013Ü³qıÏÛW1õHÄ\u000e.7\u000fEú½y\u0014…Šğ\u0011Şä€\u0002ª+×¤úúç\\d`EB”è\u00032­¿åwë6\u0012š"}
+{"type": "printf", "data": "preadv 9 200 9Ö…şë¤Ş\u0019ˆ¥ß\u0013ÙØ%ô¼!€\u0013ÿ`\nÅ\u0008s{âM—\u0010Je\u0013CD›=“¯6Û`EéÎf#¡J¡^èFQÆ¬ ×Äa–j×cü.ğxg†gd»P—×ù£7±âs[Q«M©³aÏ~¼¢s¸/\u0007\u000fÇ–¹DbvÈŠñ„2Ò}p;\u0012a®ë\u0003±¯$»¡aÏ\u0008Òcº%¹l?\tB<—\u0010\u0016®ß:š7»íÃvÃúëÙs(3çˆ0Ÿeï¸\u001e•b® iR¾Õ\u0008Ùè/÷"}
+{"type": "printf", "data": "pwritev 10 200 9Ö…şë¤Ş\u0019ˆ¥ß\u0013ÙØ%ô¼!€\u0013ÿ`\nÅ\u0008s{âM—\u0010Je\u0013CD›=“¯6Û`EéÎf#¡J¡^èFQÆ¬ ×Äa–j×cü.ğxg†gd»P—×ù£7±âs[Q«M©³aÏ~¼¢s¸/\u0007\u000fÇ–¹DbvÈŠñ„2Ò}p;\u0012a®ë\u0003±¯$»¡aÏ\u0008Òcº%¹l?\tB<—\u0010\u0016®ß:š7»íÃvÃúëÙs(3çˆ0Ÿeï¸\u001e•b® iR¾Õ\u0008Ùè/÷"}
+{"type": "printf", "data": "preadv 9 200 p<Ğ¡wz\u0001.ƒ&Hª!hğ*%®ı³RDá's‰6.ôæÒa5Šb›0áKë«œ¡hÌ\u0010™ílÓsZ\u0017\u000b\t½çJÒŞ&°\\âïÔ\u000cø!q·A'U\u000bÔ@“;Å•,'O>%ÒÉÍ\u0012^9‡ó\u0006¼j\u001d™Éf¶‘R¡i\u0011°\\ÔÂ5MiÀ*®\u000cò\u001d¦¡uÓ/DËp²ø²4"}
+{"type": "printf", "data": "pwritev 10 200 p<Ğ¡wz\u0001.ƒ&Hª!hğ*%®ı³RDá's‰6.ôæÒa5Šb›0áKë«œ¡hÌ\u0010™ílÓsZ\u0017\u000b\t½çJÒŞ&°\\âïÔ\u000cø!q·A'U\u000bÔ@“;Å•,'O>%ÒÉÍ\u0012^9‡ó\u0006¼j\u001d™Éf¶‘R¡i\u0011°\\ÔÂ5MiÀ*®\u000cò\u001d¦¡uÓ/DËp²ø²4"}
+{"type": "printf", "data": "preadv 9 200 ˜ù\u0006Í#KH£\u0012Ü¢[Ì‘ÕÛªXñ—‰ÔVLc\u0016^i~İÊ\u0002ÖºÓ°éh>(*ö\u0015\"ÉSŸ\t¾Yi\u001fşÕ•ÆØ\u0002‘Pq¯{ëÉã,§z5%D&\u0018kjñõ`Ô¡Å@§;Ó¶écI¤)l±Ú¬Q’>\u0002,àÌV\u0006_:\u000bhXá-ğÂŞ\u001bÄK¬ÁÇ?d\u0002´'…"}
+{"type": "printf", "data": "pwritev 10 200 ˜ù\u0006Í#KH£\u0012Ü¢[Ì‘ÕÛªXñ—‰ÔVLc\u0016^i~İÊ\u0002ÖºÓ°éh>(*ö\u0015\"ÉSŸ\t¾Yi\u001fşÕ•ÆØ\u0002‘Pq¯{ëÉã,§z5%D&\u0018kjñõ`Ô¡Å@§;Ó¶écI¤)l±Ú¬Q’>\u0002,àÌV\u0006_:\u000bhXá-ğÂŞ\u001bÄK¬ÁÇ?d\u0002´'…"}
+{"type": "printf", "data": "preadv 9 200 ¯D–›?>–L\\:ç™î³c0˜^E«iÁÕä+µg¤tÛ\u001a14ìD¿M‹Ã²N\u0019n)ç¥/M0ßV+M\\\u0001²ºMÖî½I;lÅgs·ó‚G\"âuEøñ£-›J_\u0017ŒıµÄKo¾2\u0018Hc\u0018ì\u0008#7Ó\u0016|dº\u0015€ŞÊ—Ñ\u001aÓ(\u0006^ş.ß•ŞyœUØˆp1Êµ±Â­¥àuU˜¬:ïWyd$ë2Ä!#{ª#\"èt¸•hô)ÔW‚Ğ*§çËìábT’nÀ\u001aş·hùŸ{²\t8^ûƒ<:1$ß@"}
+{"type": "printf", "data": "pwritev 10 200 ¯D–›?>–L\\:ç™î³c0˜^E«iÁÕä+µg¤tÛ\u001a14ìD¿M‹Ã²N\u0019n)ç¥/M0ßV+M\\\u0001²ºMÖî½I;lÅgs·ó‚G\"âuEøñ£-›J_\u0017ŒıµÄKo¾2\u0018Hc\u0018ì\u0008#7Ó\u0016|dº\u0015€ŞÊ—Ñ\u001aÓ(\u0006^ş.ß•ŞyœUØˆp1Êµ±Â­¥àuU˜¬:ïWyd$ë2Ä!#{ª#\"èt¸•hô)ÔW‚Ğ*§çËìábT’nÀ\u001aş·hùŸ{²\t8^ûƒ<:1$ß@"}
+{"type": "printf", "data": "preadv 9 200 s\"V<B‰qà¬¥Œ¯pa¯É‚Î¢TÂÑHr¾£nŞ!¿Ó\u0016’\u0003fMÜøÏö\u0010°\u0007<\"Y\u0011º\u0011-ö’<\u001eÔ´ÛI!£\nr†SRß*¸„ï•õ®zî¤êë\u001f§S\\(|+Å:X\u000fÓÂ¥ØÆÃŒ,ƒ-ª\u0017|\u0002L\u001a\"ŒœµFÚÖ‹ß‹ç±P÷¸3.¸p›öoÁ*˜©\u000csÑ<Î\r3ÆªnûàhğAP§œú#=Lm[··ô5†;ô6Š$\u0005\u0006\u0004h¨A¦\u001cóŞ´TXA„\u0005+¾\u0014DÆêïãüH†"}
+{"type": "printf", "data": "pwritev 10 200 s\"V<B‰qà¬¥Œ¯pa¯É‚Î¢TÂÑHr¾£nŞ!¿Ó\u0016’\u0003fMÜøÏö\u0010°\u0007<\"Y\u0011º\u0011-ö’<\u001eÔ´ÛI!£\nr†SRß*¸„ï•õ®zî¤êë\u001f§S\\(|+Å:X\u000fÓÂ¥ØÆÃŒ,ƒ-ª\u0017|\u0002L\u001a\"ŒœµFÚÖ‹ß‹ç±P÷¸3.¸p›öoÁ*˜©\u000csÑ<Î\r3ÆªnûàhğAP§œú#=Lm[··ô5†;ô6Š$\u0005\u0006\u0004h¨A¦\u001cóŞ´TXA„\u0005+¾\u0014DÆêïãüH†"}
+{"type": "printf", "data": "preadv 9 200 Œ­lB[ş?ÖoÆÙU\u001dş$,pe«\\)•…Cr\u0007ol\tGş9=íº€,O®%\u000bd®CÅµ\tL\u001e„-´JF°\u0011ß-±´IhŞ…\u0007b¹@às3¡(yRÿÇ–<¯Ær½¤?üš]ÚÜşû\u0015¦(fï\r:(s{¾\u0010›ëûƒzQş\u0002Î—s\u0018UòóW5~Åœ=3†ŠF\n(Zc\u001f¨±ÎG8%\tÉ#½F@‹\u0011uX\u000e°|Çù„ş\u00064>*Ç¥\"¡ÀĞ£ˆ¬Ü‚l$:³LœÉ\\¹’"}
+{"type": "printf", "data": "pwritev 10 200 Œ­lB[ş?ÖoÆÙU\u001dş$,pe«\\)•…Cr\u0007ol\tGş9=íº€,O®%\u000bd®CÅµ\tL\u001e„-´JF°\u0011ß-±´IhŞ…\u0007b¹@às3¡(yRÿÇ–<¯Ær½¤?üš]ÚÜşû\u0015¦(fï\r:(s{¾\u0010›ëûƒzQş\u0002Î—s\u0018UòóW5~Åœ=3†ŠF\n(Zc\u001f¨±ÎG8%\tÉ#½F@‹\u0011uX\u000e°|Çù„ş\u00064>*Ç¥\"¡ÀĞ£ˆ¬Ü‚l$:³LœÉ\\¹’"}
+{"type": "printf", "data": "preadv 9 200 Îp¡$¦vP?†Ÿ©\\‡˜?\u000bÅu¡Ù9\u000eiˆYEkJø‡Sè°ô§ÁMX\tOÖ»å-‡+÷f”ÅĞ\u0018"}
+{"type": "printf", "data": "pwritev 10 200 Îp¡$¦vP?†Ÿ©\\‡˜?\u000bÅu¡Ù9\u000eiˆYEkJø‡Sè°ô§ÁMX\tOÖ»å-‡+÷f”ÅĞ\u0018"}
+{"type": "printf", "data": "preadv 9 53  Â]”O]"}
+{"type": "printf", "data": "pwritev 10 200  Â]”O]"}
+{"type": "printf", "data": "preadv 9 0  Â]”O]"}
+{"type": "printf", "data": "close 9 _ _"}
+{"type": "printf", "data": "close 10 _ _"}
+{"type": "printf", "data": "close 8 _ _"}
+{"type": "printf", "data": "sendto 7 30 \u0002½\u0001"}
+{"type": "printf", "data": "recvfrom 7 46 \u0002½€"}
+{"type": "printf", "data": "recvfrom 4 1594 \u0016\u0003\u0003"}
+{"type": "printf", "data": "recvfrom 4 103 \u0017\u0003\u0003"}
+{"type": "printf", "data": "recvfrom 0 25 "}
+{"type": "printf", "data": "recvfrom 4 2104 ¶\u0010\n³\u0010\rn\r"}
+{"type": "printf", "data": "sendto 5 30 öv\u0001"}
+{"type": "printf", "data": "sendto 0 30 öÚ\u0001"}
+{"type": "printf", "data": "recvfrom 5 46 öv€"}
+{"type": "printf", "data": "recvfrom 5 -11 öv€"}
+{"type": "printf", "data": "recvfrom 5 30 öÚ€"}
+{"type": "printf", "data": "recvfrom 5 1594 \u0016\u0003\u0003"}
+{"type": "printf", "data": "sendto 4 442 ¸\u0003\u0012µ\u0003\n°\u0003\u0004\u0004ÿÿÿ\u0001"}
+{"type": "printf", "data": "recvfrom 4 490 è\u0003\u001aå\u0003\u0008\u0001\u0012à\u0003\u0004\u0004ÿÿÿ\u0001"}
+{"type": "printf", "data": "recvfrom 5 103 \u0017\u0003\u0003"}
+{"type": "printf", "data": "recvfrom 5 60 \u0017\u0003\u0003"}
+{"type": "printf", "data": "sendto 4 34 !\"\u001f\n\u001d\n\u00102ÂÓ,ÔñÈsb[¾eÙs§\u0002\u0010\u0001\u0019ş½æ\u0008ÌÑ\u0013\u0008"}
+{"type": "printf", "data": "recvfrom 4 1127 å\u0008*â\u0008\nß\u0008\nÜ\u0008\u0002"}
+{"type": "printf", "data": "recvfrom 5 51 \u0017\u0003\u0003"}
+{"type": "printf", "data": "sendto 4 462 Ì\u0003\u0012É\u0003\n°\u0003\u0004\u0004ÿÿÿ\u0001"}
+{"type": "printf", "data": "recvfrom 4 1126 ä\u0008\u001aá\u0008\u0008\u0002\u0012Ü\u0008\u0002"}
+{"type": "printf", "data": "recvfrom 5 1576 \u0017\u0003\u0003\u0006#}xZ\u0012xÈ?Ï¬>Ô$L\u001cTë)å¥w,^¸¥˜¢z¡\u0005\u000b~Êé³3.Hèò‹Âá\u000beë\u0003eá\"¯sÄn\"´»„ı\u000e†â÷¬e\tû"}
+{"type": "printf", "data": "sendto 4 3 \u0002\u001a"}
+{"type": "printf", "data": "recvfrom 10 -11 \u0002"}
+{"type": "printf", "data": "sendto 10 127 \u0016\u0003\u0003"}
+{"type": "printf", "data": "sendto 10 6 "}
+{"type": "printf", "data": "sendto 10 83 \u0017\u0003\u0003"}
+{"type": "printf", "data": "sendto 10 372 \u0017\u0003\u0003\u0001ons\u0002\u0015±Õ\u0010Eazg¼PR•ÆıÂÆ\u001c\u0001 r•\nª\u0014\u000e¾0Nêf\u0010\u00076Š<nGª·kš*ú\u0010ıïf/6\"ht?ºgq²ğn¬\u0012\u000b\u0013Ä\u0017š\u0005Ã8[’koÂ\u0007\u0003F»xù<XÀÄ¢ƒ\u0011Ük\u001f\u0012rœ#z¦ù&ûnæ†GößA-£#"}
+{"type": "printf", "data": "sendto 10 58 \u0017\u0003\u0003"}
+{"type": "printf", "data": "recvfrom 10 -11 \u0017\u0003\u0003"}
+{"type": "printf", "data": "recvfrom 10 512 \u0014\u0003\u0003"}
+{"type": "printf", "data": "recvfrom 10 1127 \u0017\u0003\u0003\u0001.!B\u0001«;?_é°´[¬\u0014%ïªF‰ô0˜Î‰\\KÈ5b\rA+\u0017ØÖ³\u0006««mÀ7ºïÏ¦½PqİÍdÄ79™W4l\\.ÙÙD(\u0018ÊCf)I«„P·³=T’Ÿë!^\u000f`¤\u0006éŒtzb$‘d«amö`_óµÿ‚å[sñ‚–<”7i™•÷ĞŠ3 ¤•+s\u0013|`)\u0003W’s‰R”\u001dğ2Ï·ê…ê_¡XAVšòµ?,æŸ<ÙE\u0008\u001e*ïß5Ü—‘¤øOOôÆ\\¡C\"\u0011Š\nŠs8Bß\tÈ"}
+{"type": "printf", "data": "recvfrom 10 24 \u0017\u0003\u0003"}
+{"type": "printf", "data": "recvfrom 10 0 \u0017\u0003\u0003"}
+{"type": "printf", "data": "sendto 10 435 \u0017\u0003\u0003\u0001®ëÔwzœÆaóI0a‡lú\u000e”\u001b!éÃ‹ÉÜÄ™mÖ5îVŞ·¬c\u000f\u0004ı\u000c;]\u0018VIˆ/\u0013_Öİ\u0017œËw\ngÑ¨–óRÂ‚ËÜ3òü@ŠàõÃwyÑ\u0004ˆh\u0013•Í‚ŠÌMßç¥³H™õ.?ã¾oñ«qBÒ\t4]`:Œ©\u0008Cÿ`\u0004Í¿dRÚ˜óÚV"}
