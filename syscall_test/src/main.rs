@@ -1,10 +1,11 @@
-use std::{fs::OpenOptions, io::Write};
+use std::{fs::OpenOptions, io::Write, path::Path};
 use std::process::Command;
 use structopt::StructOpt;
 
 mod executor;
 mod monitor;
 mod tracer;
+mod threshold;
 
 
 #[derive(StructOpt, Debug)]
@@ -29,7 +30,7 @@ struct Opt {
 fn main()  {
     // bpftrace need to run with root permission
     sudo::escalate_if_needed().expect("Failed to sudo");
-    monitor::install_ent(); 
+    install_ent(); 
     
     let app_name: String;
     let opt = Opt::from_args();
@@ -49,7 +50,6 @@ fn main()  {
         let execution = "\n CMD [\"sh\", \"/operation/run_program.sh\"]";
         fs.write_all(execution.as_bytes()).unwrap();
         tracer::test_trace();
-        return;
     } else if opt.threshold {                                       // threshold
         println!("Run test to find a fit threshold");
         let source_path = "source_files/Dockerfile";
@@ -92,10 +92,21 @@ fn main()  {
         println!("Analyse test");
     } else if opt.threshold {
         println!("Analyse threshold");
-        monitor::threshold_analysis();
+        threshold::threshold_analysis();
     } else {
         println!("Analyse app tracing");
     }
-    // monitor::analyse(opt.threshold);
     
+}
+
+fn install_ent() {
+    let ent_file = Path::new("/usr/bin/ent");
+    if !ent_file.exists() {
+        sudo::escalate_if_needed().expect("Failed to sudo");
+        let _install_ent = Command::new("sh")
+            .current_dir("source_files")
+            .arg("install_ent.sh")
+            .spawn()
+            .unwrap();
+    }
 }

@@ -149,9 +149,10 @@ tracepoint:syscalls:sys_enter_openat /comm=="file_sys"/
 {
     @openat_path[tid] = args->filename;
 }
-tracepoint:syscalls:sys_exit_openar /comm=="file_sys"/
+tracepoint:syscalls:sys_exit_openat /comm=="file_sys"/
 {
-    printf("open %d %d %s", @openat_path[tid], args->ret, str(openat_path[tid]));
+    printf("open %d %d %s", @openat_path[tid], args->ret, str(@openat_path[tid]));
+    clear(@openat_path);
 }
 
 
