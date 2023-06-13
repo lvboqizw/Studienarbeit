@@ -1,5 +1,5 @@
 use std::{fs, fs::{File, OpenOptions}, process::{Command, Output}, path::{Path, PathBuf}, 
-    io::{BufRead, Write, BufReader, BufWriter}, collections::HashMap, borrow::{Borrow, BorrowMut}};
+    io::{BufRead, Write, BufReader}, collections::HashMap};
 use serde::{Serialize, Deserialize};
 use serde_json;
 use encoding_rs_io::{self, DecodeReaderBytesBuilder};
@@ -55,7 +55,32 @@ pub fn threshold_analysis() {
         serial_correlation.push((tmp[0].to_string(),value.serial_correlation));
     }
 
-    draw(entropy);
+    // let mut file_name: Vec<String> = Vec::new();
+    let mut entropy_org: Vec<(String, f32)> = Vec::new();
+    let mut chi_sq_org: Vec<(String, f32)> = Vec::new();
+    let mut mean_org: Vec<(String, f32)> = Vec::new();
+    let mut monte_carlo_org: Vec<(String, f32)> = Vec::new();
+    let mut serial_correlation_org: Vec<(String, f32)> = Vec::new();
+
+    let original = Path::new("files/original");
+    let file = File::open(original).unwrap();
+    let lines = BufReader::new(file).lines();
+    for line in lines {
+        let value: Value = serde_json::from_str(line.unwrap().as_str()).unwrap();
+        let tmp: Vec<&str> = value.path.to_str().unwrap().rsplit("/").collect();
+        // file_name.push(tmp[0].to_string());
+        entropy_org.push((tmp[0].to_string(),value.entropy));
+        chi_sq_org.push((tmp[0].to_string(),value.chi_square));
+        mean_org.push((tmp[0].to_string(),value.mean));
+        monte_carlo_org.push((tmp[0].to_string(),value.monte_carlo_pi));
+        serial_correlation_org.push((tmp[0].to_string(),value.serial_correlation));
+    }
+
+    draw(entropy, entropy_org, "entropy.png");
+    draw(chi_sq, chi_sq_org, "chi_sq.png");
+    draw(mean, mean_org, "mean.png");
+    draw(monte_carlo, monte_carlo_org, "monte_carlo.png");
+    draw(serial_correlation, serial_correlation_org, "serial_correlation.png");
 
     clean_files()
 }
@@ -138,6 +163,7 @@ fn ent_threshold(dir: &Path, encrypt: bool) {
             .output()
             .unwrap();
         let value = get_ent_value(Box::new(entry.path()), &result);
+        
         let mut serialized = serde_json::to_string(&value).unwrap();
         serialized = serialized + "\n";
         if encrypt {
@@ -160,7 +186,10 @@ fn ent_threshold(dir: &Path, encrypt: bool) {
     }
 }
 
-fn draw(data: Vec<(String, f32)>) {
+fn draw(data: Vec<(String, f32)>, data_org: Vec<(String, f32)>, name: &str) {
+    let mut path = PathBuf::new();
+    path.push("files");
+    path.push(name);
 
     if data.is_empty() {
         panic!("The data for drawing is empty");
@@ -168,35 +197,61 @@ fn draw(data: Vec<(String, f32)>) {
 
     let labels: Vec<&str> = data.iter().map(|(label, _)| label.as_str()).collect();
 
-    let root_area = BitMapBackend::new("files/entropy.png", (640, 480))
+    let root_area = BitMapBackend::new(&path, (1080, 420))
         .into_drawing_area();
     root_area.fill(&WHITE).unwrap();
 
-    let mut min = f32::MAX;
-    let mut max = f32::MIN;
-    for d in &data {
-        if d.1 > max {
-            max = d.1;
-        }
-        if d.1 < min {
-            min = d.1;
-        }
-    }
+    let (x_min, x_max) = (0, data.len() as i32 - 1);
+    let (y_min, y_max) = (0.0, *data.iter().map(|(_, y)| y).max_by(|a, b| a.partial_cmp(b).unwrap()).unwrap());
+
+    let title = &name[0..name.len() - 4];
 
     let mut ctx = ChartBuilder::on(&root_area)
-        .set_label_area_size(LabelAreaPosition::Left, 30)
+        .set_label_area_size(LabelAreaPosition::Left, 40)
         .set_label_area_size(LabelAreaPosition::Bottom, 40)
-        .caption("Entropy", ("sans-serif", 30))
-        .build_cartesian_2d(labels.into_segmented(), 0.0 ..max + 5.0)
+        .margin(20)
+        .caption(title, ("sans-serif", 30))
+        .build_cartesian_2d(x_min..x_max, y_min..y_max)
         .unwrap();
 
     ctx
         .configure_mesh()
         .x_desc("Language")
+        .y_desc("Value")
+        .x_label_formatter(&|x| {labels[*x as usize].to_string()})
         .draw()
         .unwrap();
-
     // TODO Draw line or bar
+
+    ctx
+        .draw_series(
+            LineSeries::new(
+        data.iter().enumerate().map(|(i, (_x, y))| ((i as i32, *y))),
+        BLUE,
+        )).unwrap()
+        .label("Entrypted")
+        .legend(
+            |(x,y)| Rectangle::new([(x - 15, y + 1), (x, y)], BLUE)
+        );
+
+    ctx
+        .draw_series(
+            LineSeries::new(
+        data_org.iter().enumerate().map(|(i, (_x, y))| ((i as i32, *y))),
+        &RED)
+        ).unwrap()
+        .label("Original")
+        .legend(
+            |(x,y)| Rectangle::new([(x - 15, y + 1), (x, y)], RED)
+        );
+
+    ctx
+        .configure_series_labels()
+        .position(SeriesLabelPosition::LowerRight)
+        .margin(20)
+        .legend_area_size(5)
+        .border_style(&BLACK)
+        .draw().unwrap();
 }
 
 fn clean_files() {
@@ -212,22 +267,36 @@ fn clean_files() {
 
 fn get_ent_value(path: Box<PathBuf>, result: &Output) -> Value {
     let res = String::from_utf8(result.stdout.clone()).unwrap();
-    println!("{}", res);
     let v: Vec<&str> = res.split("\n").collect();
     let data = v[1].to_string();
     let v_data: Vec<&str> = data.split(",").collect();
 
     let _file_bytes_s = v_data[1].to_string();
     let entropy_s = v_data[2].to_string();
-    let entropy = entropy_s.parse::<f32>().unwrap();
+    let mut entropy = entropy_s.parse::<f32>().unwrap();
+    if entropy_s.contains("nan") {
+        entropy = 0.0;
+    }
     let chi_square_s = v_data[3].to_string();           // 5-10%, 90-95%
-    let chi_square = chi_square_s.parse::<f32>().unwrap();
+    let mut chi_square = chi_square_s.parse::<f32>().unwrap();
+    if chi_square_s.contains("nan") {
+        chi_square = 0.0;
+    }
     let mean_s = v_data[4].to_string();                 // 127.5 = random
-    let mean = mean_s.parse::<f32>().unwrap();
+    let mut mean = mean_s.parse::<f32>().unwrap();
+    if mean_s.contains("nan") {
+        mean = 0.0;
+    }
     let monte_carlo_pi_s = v_data[5].to_string();       // close to pi, approximation converges very slowly
-    let monte_carlo_pi = monte_carlo_pi_s.parse::<f32>().unwrap();
+    let mut monte_carlo_pi = monte_carlo_pi_s.parse::<f32>().unwrap();
+    if monte_carlo_pi_s.contains("nan") {
+        monte_carlo_pi = 0.0;
+    }
     let serial_correlation_s = v_data[6].to_string();   // close to zero -> random
-    let serial_correlation = serial_correlation_s.parse::<f32>().unwrap();
+    let mut serial_correlation = serial_correlation_s.parse::<f32>().unwrap();
+    if serial_correlation_s.contains("nan") {
+        serial_correlation = 0.0;
+    }
     let value = Value {
         path,
         entropy,
