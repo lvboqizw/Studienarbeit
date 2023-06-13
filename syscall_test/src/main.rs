@@ -7,97 +7,121 @@ mod monitor;
 mod tracer;
 mod threshold;
 
-
 #[derive(StructOpt, Debug)]
-struct Opt {
+enum Com {
     /// Use the system call generator to test the function of test
-    #[structopt(short = "t", long = "test")]
-    test: bool,
+    Test {
+        /// Algorithm: MEAN, ENTROPY, CHI_SQUARE, MONTE_CARLO, SERIAL_CORRELATION
+        #[structopt( long, default_value = "Mean")]
+        alg: String,
 
+        /// Threshold value: you can base on the output digram of Threshold mode
+        #[structopt( long, default_value = "100.0")]
+        value: f32,
+
+        /// What kind of value is random: G: greater than threshold value, NE: not equal, L: less than
+        #[structopt( long, default_value = "G")]
+        compare: String,
+    },
     /// Comparison mode, to find threshold. Should at test mode first
-    #[structopt(short = "h", long = "threshold")]
-    threshold: bool,
+    Threshold ,
+    /// Trace the target application with the given name
+    App {
+        /// Use program to trace the target application with the name of application
+        #[structopt(long)]
+        name: String,
+        /// Algorithm: MEAN, ENTROPY, CHI_SQUARE, MONTE_CARLO, SERIAL_CORRELATION
+        #[structopt( long, default_value = "Mean")]
+        alg: String,
 
-    /// Give the name of the target application
-    #[structopt(short, long)]
-    app: Option<String>,
+        /// Threshold value: you can base on the output digram of Threshold mode
+        #[structopt( long, default_value = "100.0")]
+        value: f32,
 
+        /// What kind of value is random: G: greater than threshold value, NE: not equal, L: less than
+        #[structopt( long, default_value = "G")]
+        compare: String,
+    },
     /// Clean up the generated files in the folder "files"
-    #[structopt(long = "clear")]
-    clear: bool,
+    Clear,
 }
 
 fn main()  {
-    // bpftrace need to run with root permission
-    sudo::escalate_if_needed().expect("Failed to sudo");
-    install_ent(); 
-    
-    let app_name: String;
-    let opt = Opt::from_args();
+    let cmd = Com::from_args();
+    match cmd {
+        Com::Test { alg, value, compare } => {
+            println!("Running in test mode.");
+            
+            sudo::escalate_if_needed().expect("Failed to sudo");
+            install_ent(); 
+            let source_path = "source_files/Dockerfile";
+            let path = "generator/Dockerfile";
+            std::fs::copy(source_path, path).unwrap();
+            let mut fs = OpenOptions::new()
+                    .write(true)
+                    .append(true)
+                    .open(path).unwrap();
+            let execution = "\n CMD [\"sh\", \"/operation/run_program.sh\"]";
+            fs.write_all(execution.as_bytes()).unwrap();
+            tracer::test_trace();
 
-    if !opt.app.is_none() {                                         // Trace application
-        println!("trace target program: {}", opt.app.as_ref().unwrap());
-        return;
-    } else if opt.test {                                            // Test
-        println!("Run test to verify the function");
-        let source_path = "source_files/Dockerfile";
-        let path = "generator/Dockerfile";
-        std::fs::copy(source_path, path).unwrap();
-        let mut fs = OpenOptions::new()
-                .write(true)
-                .append(true)
-                .open(path).unwrap();
-        let execution = "\n CMD [\"sh\", \"/operation/run_program.sh\"]";
-        fs.write_all(execution.as_bytes()).unwrap();
-        tracer::test_trace();
-    } else if opt.threshold {                                       // threshold
-        println!("Run test to find a fit threshold");
-        let source_path = "source_files/Dockerfile";
-        let path = "generator/Dockerfile";
-        std::fs::copy(source_path, path).unwrap();
-        let mut fs = OpenOptions::new()
-                .write(true)
-                .append(true)
-                .open(path).unwrap();
-        let execution = "\n CMD [\"sh\", \"/operation/threshold.sh\"]";
-        fs.write_all(execution.as_bytes()).unwrap();
-        app_name = "threshold".to_string();
-        tracer::trace(app_name);
-    } else if opt.clear {
-        let path = std::path::Path::new("files");
-        if path.exists() {
-            std::fs::remove_dir_all(path).unwrap();
-        }
-        std::fs::create_dir(path).unwrap();
-        return;
-    } else {
-        println!("Require a argument, use --help to get information");
-        return;
-    }
+            let container_name = executor::run_executor();
+            /* Check whether the container are finished and stopped */
+            let mut flag = String::from("true");
+            while !flag.eq("'false'\n") {
+                let is_running = Command::new("docker")
+                    .args(["inspect", "--format", "'{{.State.Running}}'", container_name.as_str()])
+                    .output()
+                    .unwrap();
+                flag = String::from_utf8(is_running.clone().stdout).unwrap();
+            }
+            tracer::stop_trace();
 
-    if opt.test || opt.threshold {
-        let container_name = executor::run_executor();
-        /* Check whether the container are finished and stopped */
-        let mut flag = String::from("true");
-        while !flag.eq("'false'\n") {
-            let is_running = Command::new("docker")
-                .args(["inspect", "--format", "'{{.State.Running}}'", container_name.as_str()])
-                .output()
-                .unwrap();
-            flag = String::from_utf8(is_running.clone().stdout).unwrap();
+            monitor::analysis(alg, value, compare);
+        },
+        Com::Threshold => {
+            println!("Running at threshold mode, generating the diagram.");
+
+            sudo::escalate_if_needed().expect("Failed to sudo");
+            install_ent(); 
+            let source_path = "source_files/Dockerfile";
+            let path = "generator/Dockerfile";
+            std::fs::copy(source_path, path).unwrap();
+            let mut fs = OpenOptions::new()
+                    .write(true)
+                    .append(true)
+                    .open(path).unwrap();
+            let execution = "\n CMD [\"sh\", \"/operation/threshold.sh\"]";
+            fs.write_all(execution.as_bytes()).unwrap();
+            let app_name = "threshold".to_string();
+            tracer::trace(app_name);
+
+            let container_name = executor::run_executor();
+            /* Check whether the container are finished and stopped */
+            let mut flag = String::from("true");
+            while !flag.eq("'false'\n") {
+                let is_running = Command::new("docker")
+                    .args(["inspect", "--format", "'{{.State.Running}}'", container_name.as_str()])
+                    .output()
+                    .unwrap();
+                flag = String::from_utf8(is_running.clone().stdout).unwrap();
+            }
+            tracer::stop_trace();
+
+            threshold::threshold_analysis();
+        },
+        Com::Clear => {
+            println!("Clear the \"files/\" folder");
+            let path = std::path::Path::new("files");
+            if path.exists() {
+                std::fs::remove_dir_all(path).unwrap();
+            }
+            std::fs::create_dir(path).unwrap();
         }
-        tracer::stop_trace();
+        Com::App { name, alg, value, compare } => {
+            println!("Analysing the program {}, with alg: {}, value:{} , compare:{} ", name, alg, value, compare);
+        },
     }
-    if opt.test {
-        println!("Analyse test");
-        monitor::analysis();
-    } else if opt.threshold {
-        println!("Analyse threshold");
-        threshold::threshold_analysis();
-    } else {
-        println!("Analyse app tracing");
-    }
-    
 }
 
 fn install_ent() {
