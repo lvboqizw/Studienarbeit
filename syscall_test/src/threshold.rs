@@ -202,7 +202,20 @@ fn draw(data: Vec<(String, f32)>, data_org: Vec<(String, f32)>, name: &str) {
     root_area.fill(&WHITE).unwrap();
 
     let (x_min, x_max) = (0, data.len() as i32 - 1);
-    let (y_min, y_max) = (0.0, *data.iter().map(|(_, y)| y).max_by(|a, b| a.partial_cmp(b).unwrap()).unwrap());
+    let (data_min, data_max) = (
+        *data.iter().map(|(_, y)| y).min_by(|a, b| a.partial_cmp(b).unwrap()).unwrap(),
+        *data.iter().map(|(_, y)| y).max_by(|a, b| a.partial_cmp(b).unwrap()).unwrap()
+    );
+    let (data_org_min, data_org_max) = (
+        *data_org.iter().map(|(_, y)| y).min_by(|a, b| a.partial_cmp(b).unwrap()).unwrap(),
+        *data_org.iter().map(|(_, y)| y).max_by(|a, b| a.partial_cmp(b).unwrap()).unwrap()
+    );
+
+    let (y_min, y_max) = (
+            // *data.iter().map(|(_, y)| y).min_by(|a, b| a.partial_cmp(b).unwrap()).unwrap(), 
+        data_min.min(data_org_min),
+        data_max.max(data_org_max)
+    );
 
     let title = &name[0..name.len() - 4];
 
@@ -211,38 +224,54 @@ fn draw(data: Vec<(String, f32)>, data_org: Vec<(String, f32)>, name: &str) {
         .set_label_area_size(LabelAreaPosition::Bottom, 40)
         .margin(20)
         .caption(title, ("sans-serif", 30))
-        .build_cartesian_2d(x_min..x_max, y_min..y_max)
+        .build_cartesian_2d((x_min..x_max).into_segmented(), y_min..y_max)
         .unwrap();
 
     ctx
         .configure_mesh()
         .x_desc("Language")
         .y_desc("Value")
-        .x_label_formatter(&|x| {labels[*x as usize].to_string()})
+        .x_label_formatter(&|x: &SegmentValue<i32>| {
+            let tmp = match *x {
+                SegmentValue::Exact(value) => value,
+                SegmentValue::CenterOf(value) => value,
+                SegmentValue::Last => 0,
+            };
+            labels[tmp as usize].to_string()
+        })
         .draw()
         .unwrap();
-    // TODO Draw line or bar
 
     ctx
         .draw_series(
-            LineSeries::new(
-        data.iter().enumerate().map(|(i, (_x, y))| ((i as i32, *y))),
-        BLUE,
-        )).unwrap()
+            Histogram::vertical(&ctx)
+                .style(RED.mix(0.5).filled())
+                .margin(20)
+                .data(
+                    data
+                        .iter()
+                        .enumerate()
+                        .map(|(i, (_x, y))| ((i as i32, *y)))),
+        ).unwrap()
         .label("Entrypted")
         .legend(
-            |(x,y)| Rectangle::new([(x - 15, y + 1), (x, y)], BLUE)
+            |(x,y)| Rectangle::new([(x - 15, y + 1), (x, y)], RED)
         );
 
     ctx
         .draw_series(
-            LineSeries::new(
-        data_org.iter().enumerate().map(|(i, (_x, y))| ((i as i32, *y))),
-        &RED)
+            Histogram::vertical(&ctx)
+                .style(BLUE.mix(0.5).filled())
+                .margin(20)
+                .data(
+                    data_org
+                    .iter()
+                    .enumerate()
+                    .map(|(i, (_x, y))| ((i as i32, *y)))),
         ).unwrap()
         .label("Original")
         .legend(
-            |(x,y)| Rectangle::new([(x - 15, y + 1), (x, y)], RED)
+            |(x,y)| Rectangle::new([(x - 15, y + 1), (x, y)], BLUE)
         );
 
     ctx
