@@ -20,7 +20,6 @@ fn create_trace_file(target: String) {
 
 pub fn trace(target: String) {
     create_trace_file(target);
-    
     env::set_var("BPFTRACE_STRLEN", "200");
     let _output_file = File::create("files/output.json").unwrap();
 

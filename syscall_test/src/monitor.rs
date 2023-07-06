@@ -24,7 +24,7 @@ struct Sys {
 }
 
 pub fn analysis(method: String, value: f32, compare: String) {
-    encryption_analysis(method, value, compare);
+    // encryption_analysis(method, value, compare);
     // clean_files();
 }
 

@@ -14,7 +14,7 @@ fn create_image(name: &String) {
 /// Generate a container with file
 fn create_container(image_name: & String) -> String{
     let container_name = "container_gen";
-    let _child = Command::new("docker")
+    let mut child = Command::new("docker")
         .args(["run", "-d", 
             "--rm", 
             "--device=/dev/isgx", 
@@ -22,8 +22,9 @@ fn create_container(image_name: & String) -> String{
             "--network=host",
             "--name", &container_name,
             image_name.as_str()])
-        .status()
+        .spawn()
         .unwrap();
+    let _result = child.wait().unwrap();
     container_name.to_string()
 }
 

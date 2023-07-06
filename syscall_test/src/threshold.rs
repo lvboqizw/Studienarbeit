@@ -151,8 +151,6 @@ fn syscall_separate_th() {
 }
 
 fn ent_threshold(dir: &Path, encrypt: bool) {
-    let f_encrypt = Path::new("files/encrypted");
-    let f_original = Path::new("files/original");
 
     let entries = fs::read_dir(dir).unwrap();
     
@@ -167,6 +165,7 @@ fn ent_threshold(dir: &Path, encrypt: bool) {
         let mut serialized = serde_json::to_string(&value).unwrap();
         serialized = serialized + "\n";
         if encrypt {
+            let f_encrypt = Path::new("files/encrypted");
             let mut f = OpenOptions::new()
                 .write(true)
                 .append(true)
@@ -175,6 +174,7 @@ fn ent_threshold(dir: &Path, encrypt: bool) {
                 .unwrap();
             let _result = f.write(serialized.as_bytes()).unwrap();
         } else {
+            let f_original = Path::new("files/original");
             let mut f = OpenOptions::new()
                 .write(true)
                 .append(true)
@@ -276,7 +276,7 @@ fn draw(data: Vec<(String, f32)>, data_org: Vec<(String, f32)>, name: &str) {
 
     ctx
         .configure_series_labels()
-        .position(SeriesLabelPosition::LowerRight)
+        .position(SeriesLabelPosition::UpperRight)
         .margin(20)
         .legend_area_size(5)
         .border_style(&BLACK)
