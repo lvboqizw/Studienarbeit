@@ -1,0 +1,5 @@
+{"path":"outfiles/PNG.png","entropy":4.344991,"chi_square":41463228.0,"mean":147.7369,"monte_carlo_pi":2.437276,"serial_correlation":0.475351}
+{"path":"outfiles/MP3.mp3","entropy":4.345944,"chi_square":352514750.0,"mean":147.90518,"monte_carlo_pi":2.428432,"serial_correlation":0.47456}
+{"path":"outfiles/TEXT_Chinese","entropy":4.360504,"chi_square":374867.4,"mean":147.27847,"monte_carlo_pi":2.461404,"serial_correlation":0.481335}
+{"path":"outfiles/MP4.mp4","entropy":4.344639,"chi_square":399959070.0,"mean":147.9547,"monte_carlo_pi":2.427462,"serial_correlation":0.474796}
+{"path":"outfiles/TEXT_English","entropy":4.335656,"chi_square":215337.2,"mean":147.08034,"monte_carlo_pi":2.418251,"serial_correlation":0.483095}

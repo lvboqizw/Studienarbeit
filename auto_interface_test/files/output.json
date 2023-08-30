@@ -1,0 +1,24 @@
+{"type": "attached_probes", "data": {"probes": 29}}
+{"type": "printf", "data": "sendto 7 30 ¿G\u0001"}
+{"type": "printf", "data": "recvfrom 7 46 ¿G€"}
+{"type": "printf", "data": "recvfrom 4 1608 \u0016\u0003\u0003"}
+{"type": "printf", "data": "recvfrom 4 103 \u0017\u0003\u0003"}
+{"type": "printf", "data": "recvfrom 0 25 "}
+{"type": "printf", "data": "recvfrom 4 2104 ¶\u0010\n³\u0010\rn\r"}
+{"type": "printf", "data": "sendto 5 30 {b\u0001"}
+{"type": "printf", "data": "sendto 5 30 {Æ\u0001"}
+{"type": "printf", "data": "recvfrom 5 46 {b€"}
+{"type": "printf", "data": "recvfrom 5 -11 {b€"}
+{"type": "printf", "data": "recvfrom 5 30 {Æ€"}
+{"type": "printf", "data": "recvfrom 5 1607 \u0016\u0003\u0003"}
+{"type": "printf", "data": "sendto 4 442 ¸\u0003\u0012µ\u0003\n°\u0003\u0004\u0004ÿÿÿ\u0001"}
+{"type": "printf", "data": "recvfrom 4 490 è\u0003\u001aå\u0003\u0008\u0001\u0012à\u0003\u0004\u0004ÿÿÿ\u0001"}
+{"type": "printf", "data": "recvfrom 5 103 \u0017\u0003\u0003"}
+{"type": "printf", "data": "recvfrom 5 60 \u0017\u0003\u0003"}
+{"type": "printf", "data": "sendto 4 34 !\"\u001f\n\u001d\n\u00102ÂÓ,ÔñÈsb[¾eÙs§\u0002\u0010\u0001\u0019¸´\u0003\u001c¼Õ&"}
+{"type": "printf", "data": "recvfrom 4 1127 å\u0008*â\u0008\nß\u0008\nÜ\u0008\u0002"}
+{"type": "printf", "data": "recvfrom 5 51 \u0017\u0003\u0003"}
+{"type": "printf", "data": "sendto 4 462 Ì\u0003\u0012É\u0003\n°\u0003\u0004\u0004ÿÿÿ\u0001"}
+{"type": "printf", "data": "recvfrom 4 1126 ä\u0008\u001aá\u0008\u0008\u0002\u0012Ü\u0008\u0002"}
+{"type": "printf", "data": "recvfrom 5 453 \u0017\u0003\u0003\u0001¨\u0018Ö\u0004—\u0016×DE£ûÌó5\u0019;E­4×Ø„û\u0008¥óÍjS"}
+{"type": "printf", "data": "sendto 4 3 \u0002\u001a"}

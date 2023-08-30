@@ -4,3 +4,10 @@ syscall_test/generator/server/target
 syscall_test/generator/file_sys/target
 syscall_test/generator/threshold/target
 syscall_test/source_files/ent
+
+auto_interface_test/target
+auto_interface_test/generator/threshold/target
+auto_interface_test/generator/file_sys/target
+auto_interface_test/generator/server/target
+auto_interface_test/generator/client/target
+draw_pics/target
