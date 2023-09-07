@@ -27,8 +27,8 @@ struct Sys {
 pub fn analyse() {
     syscall_separate();
 
-    // ent_analyse();
-    // clean_files();
+    ent_analyse();
+    clean_files();
 }
 
 fn syscall_separate() {
@@ -36,7 +36,7 @@ fn syscall_separate() {
     if !Path::new(dir.as_str()).exists() {
         fs::create_dir_all(dir.as_str()).unwrap();
     }
-    let mut opened_files: HashMap<String, String> = HashMap::new();
+    let mut used_fd: HashMap<String, String> = HashMap::new();
 
     let file = fs::File::open("files/output.json").unwrap();
     let mut lines = BufReader::new(
@@ -66,17 +66,22 @@ fn syscall_separate() {
             "open" => {
                 let count = sys.arg3.chars().filter(|&c| c == '/').count();
                 let tmp_filename = dir.clone() + "/" + sys.arg3.replacen("/", "\\", count).as_str();
-                opened_files.insert(sys.arg1.clone(), tmp_filename.to_string());
+                used_fd.insert(sys.arg1.clone(), tmp_filename.to_string());
+            },
+            "accept4" => {
+                let count = sys.arg3.chars().filter(|&c| c == '/').count();
+                let tmp_filename = dir.clone() + "/accept4_" + sys.arg3.replacen("/", "\\", count).as_str();
+                used_fd.insert(sys.arg2.clone(), tmp_filename.to_string());
             },
             "close" => {
-                if opened_files.contains_key(&sys.arg1) {
-                    opened_files.remove(&sys.arg1);
+                if used_fd.contains_key(&sys.arg1) {
+                    used_fd.remove(&sys.arg1);
                 }
             },
             _ => {
-                if opened_files.contains_key(&sys.arg1) {
-                    // let file_path = dir.clone() + "/" +  opened_files.get(&sys.arg1).unwrap().as_str() ;
-                    let file_path = opened_files.get(&sys.arg1).unwrap().as_str();
+                if used_fd.contains_key(&sys.arg1) {
+                    // let file_path = dir.clone() + "/" +  used_fd.get(&sys.arg1).unwrap().as_str() ;
+                    let file_path = used_fd.get(&sys.arg1).unwrap().as_str();
                     if !Path::new(file_path).exists() {
                         let _result = fs::File::create(file_path).unwrap();
                     }

@@ -13,7 +13,8 @@ fn handle_client(mut stream: TcpStream) -> Result<()> {
         }
         // println!("read {} bytes: {:?}", len, str::from_utf8(&buf[..len]));
     }
-    let file = File::open("/operation/ser_message.txt").unwrap();
+    // let file = File::open("/operation/ser_message.txt").unwrap();
+    let file = File::open("ser_message.txt").unwrap();
     let reader = BufReader::new(file);
 
     for line in reader.lines() {

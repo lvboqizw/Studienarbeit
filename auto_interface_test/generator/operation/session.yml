@@ -1,4 +1,4 @@
-name: $NS
+name: $SESSION_NAME
 version: "0.3"
 
 security:

@@ -35,7 +35,7 @@ fn main() {
     let mut monte_carlo_pi: Vec<(String, f32, f32)> = Vec::new();
     let mut serial_correlation: Vec<(String, f32, f32)> = Vec::new();
 
-    let entries = fs::read_dir("threshold_files/encrypted").unwrap();
+    let entries = fs::read_dir("diff_lag/encrypted").unwrap();
     for entry in entries {
         let entry = entry.unwrap();
         let file = fs::File::open(entry.path()).unwrap();
@@ -77,8 +77,7 @@ fn main() {
         }
     }
 
-    println!("chinese: {}", entropy_m.get("chinese").unwrap()/n);
-    let file_org = fs::File::open("threshold_files/original").unwrap();
+    let file_org = fs::File::open("diff_lag/original").unwrap();
     let lines = BufReader::new(file_org).lines();
     for line in lines {
         let value: Value = serde_json::from_str(line.unwrap().as_str()).unwrap();
@@ -114,7 +113,7 @@ fn draw(data: Vec<(String, f32, f32)>,  name: &str) {
 
     let labels: Vec<&str> = data.iter().map(|(label, _, _)| label.as_str()).collect();
 
-    let root_area = BitMapBackend::new(&path, (1080, 420))
+    let root_area = BitMapBackend::new(&path, (1200, 500))
         .into_drawing_area();
     root_area.fill(&WHITE).unwrap();
 
@@ -139,9 +138,9 @@ fn draw(data: Vec<(String, f32, f32)>,  name: &str) {
     let mut ctx = ChartBuilder::on(&root_area)
         .set_label_area_size(LabelAreaPosition::Left, 70)
         .set_label_area_size(LabelAreaPosition::Bottom, 40)
-        .margin(20)
+        .margin(15)
         // .caption(title, ("sans-serif", 30))
-        .build_cartesian_2d((x_min..x_max).into_segmented(), (y_min - y_min/7.0)..(y_max + y_max/3.0))
+        .build_cartesian_2d((x_min..x_max).into_segmented(), (y_min - y_min/7.0)..(y_max + y_max/2.0))
         .unwrap();
 
     ctx
@@ -163,7 +162,7 @@ fn draw(data: Vec<(String, f32, f32)>,  name: &str) {
         .draw_series(
             Histogram::vertical(&ctx)
                 .style(RED.mix(0.5).filled())
-                .margin(20)
+                .margin(15)
                 .data(
                     data
                         .iter()
@@ -179,7 +178,7 @@ fn draw(data: Vec<(String, f32, f32)>,  name: &str) {
         .draw_series(
             Histogram::vertical(&ctx)
                 .style(BLUE.mix(0.5).filled())
-                .margin(20)
+                .margin(15)
                 .data(
                     data
                     .iter()

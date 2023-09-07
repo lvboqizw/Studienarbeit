@@ -5,7 +5,8 @@ use std::fs::File;
 fn main() {
   let mut stream = TcpStream::connect("127.0.0.1:9000").expect("connect failed");
 
-  let file = File::open("/operation/message.txt").unwrap();
+  // let file = File::open("/operation/message.txt").unwrap();
+  let file = File::open("message.txt").unwrap();
   let reader = BufReader::new(file);
 
   for line in reader.lines() {

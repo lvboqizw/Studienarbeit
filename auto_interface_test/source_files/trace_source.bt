@@ -163,45 +163,6 @@ tracepoint:syscalls:sys_exit_recvmsg /comm==""/
     clear(@recvmsg_fd);
 }
 
-//----------------mq_timedreceive-----------
-//tracepoint:syscalls:sys_enter_mq_timedreceive /comm==""/
-//{
-//    @mq_timedreceive_buf[tid] = args->u_msg_ptr;
-//    @mq_timedreceive_count[tid] = args->msg_len;
-//}
-//tracepoint:syscalls:sys_exit_mq_timedreceive /comm==""/
-//{
-//    printf("mq_timedreceive %s", str(@mq_timedreceive_buf[tid], @mq_timedreceive_count[tid]));
-//    clear(@mq_timedreceive_buf);
-//    clear(@mq_timedreceive_count);
-//}
-
-//-----------------readlink------------------
-//tracepoint:syscalls:sys_enter_readlink /comm==""/
-//{
-//    @readlink_buf[tid] = args->buf;
-//    @readlink_count[tid] = args->bufsiz;
-//}
-//tracepoint:syscalls:sys_exit_readlink /comm==""/
-//{
-//    printf("readlink %d %s", args->ret, str(@readlink_buf[tid], @readlink_count[tid]));
-//    clear(@readlink_buf);
-//   clear(@readlink_count);
-//}
-
-//----------------readlinkat-----------------
-//tracepoint:syscalls:sys_enter_readlinkat /comm==""/
-//{
-//    @readlinkat_buf[tid] = args->buf;
-//    @readlinkat_count[tid] = args->bufsiz;
-//}
-//tracepoint:syscalls:sys_exit_readlinkat /comm==""/
-//{
-//    printf("readlinkat %s", str(@readlinkat_buf[tid], @readlinkat_count[tid]));
-//    clear(@readlinkat_buf);
-//    clear(@readlinkat_count);
-//}
-
 //---------------sendto----------------------
 tracepoint:syscalls:sys_enter_sendto /comm==""/
 {
@@ -259,4 +220,20 @@ tracepoint:syscalls:sys_exit_openat /comm==""/
 tracepoint:syscalls:sys_enter_close /comm==""/
 {
     printf("close %d _ _", args->fd);
+}
+
+//--------------accept4-----------
+tracepoint:syscalls:sys_enter_accept4 /comm==""/
+{
+    @accept4_fd[tid] = args->fd;
+    @accept4_addr[tid] = (args->upeer_sockaddr)->sa_data;
+    //print((args->upeer_sockaddr)->sa_data)
+}
+tracepoint:syscalls:sys_exit_accept4 /comm==""/
+{
+    //print(@accept4_addr[tid]);
+    printf("accept4 %d %d %s", @accept4_fd[tid], args->ret, str(@accept4_addr[tid]));
+    clear(@accept4_fd);
+    clear(@accept4_addr);
+
 }

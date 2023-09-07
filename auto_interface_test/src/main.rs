@@ -99,15 +99,18 @@ fn main()  {
             let path = "generator/Dockerfile";
             std::fs::copy(source_path, path).unwrap();
 
-            let container_name = executor::run_executor();
-            /* Check whether the container are finished and stopped */
-            let mut flag = String::from("true");
-            while !flag.eq("'false'\n") {
-                let is_running = Command::new("docker")
-                    .args(["inspect", "--format", "'{{.State.Running}}'", container_name.as_str()])
-                    .output()
-                    .unwrap();
-                flag = String::from_utf8(is_running.clone().stdout).unwrap();
+            let _container_name = executor::run_executor();
+
+            let pid = Command::new("pidof")
+                .arg("threshold")
+                .output()
+                .unwrap();
+            let mut pid_tmp = pid.clone();
+            while pid_tmp.eq(&pid) {
+                pid_tmp = Command::new("pidof")
+                .arg("threshold")
+                .output()
+                .unwrap();
             }
             tracer::stop_trace();
 

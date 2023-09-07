@@ -1,0 +1,32 @@
+{"type": "attached_probes", "data": {"probes": 47}}
+{"type": "printf", "data": "openat 1529502592 3 /etc/ld.so.cache"}
+{"type": "printf", "data": "close 3 _ _"}
+{"type": "printf", "data": "openat 1529544208 3 /lib/x86_64-linux-gnu/libgcc_s.so.1"}
+{"type": "printf", "data": "close 3 _ _"}
+{"type": "printf", "data": "openat 1529246944 3 /lib/x86_64-linux-gnu/libpthread.so.0"}
+{"type": "printf", "data": "close 3 _ _"}
+{"type": "printf", "data": "openat 1529248240 3 /lib/x86_64-linux-gnu/libdl.so.2"}
+{"type": "printf", "data": "close 3 _ _"}
+{"type": "printf", "data": "openat 1529249536 3 /lib/x86_64-linux-gnu/libc.so.6"}
+{"type": "printf", "data": "close 3 _ _"}
+{"type": "printf", "data": "openat 1529087104 3 /proc/self/maps"}
+{"type": "printf", "data": "close 3 _ _"}
+{"type": "value", "data": "#("}
+{"type": "printf", "data": "bind 3 _ #("}
+{"type": "printf", "data": "recvfrom_exit 4 128 John had always been fascinated by space and the mysteries of t"}
+{"type": "printf", "data": "recvfrom_exit 4 128 physics, trying to understand the complexities of our universe."}
+{"type": "printf", "data": "recvfrom_exit 4 128 plied to become an astronaut.After months of intense training, "}
+{"type": "printf", "data": "recvfrom_exit 4 128 out of the window of the spacecraft, he couldn't believe how sm"}
+{"type": "printf", "data": "recvfrom_exit 4 128 der as he gazed out into the endless expanse of space.During hi"}
+{"type": "printf", "data": "recvfrom_exit 4 128 ld help scientists better understand our universe. He also took"}
+{"type": "printf", "data": "recvfrom_exit 4 128 lors and patterns of distant galaxies.As his mission came to an"}
+{"type": "printf", "data": "recvfrom_exit 4 128 ience in space had changed him forever. He felt a newfound appr"}
+{"type": "printf", "data": "recvfrom_exit 4 15 n the universe.had changed him forever. He felt a newfound appr"}
+{"type": "printf", "data": "recvfrom_exit 4 0 n the universe.had changed him forever. He felt a newfound appr"}
+{"type": "printf", "data": "openat -912458200 5 ser_message.txt"}
+{"type": "printf", "data": "sendto 4 413 The sun was just starting to set over the horizon when Sarah ar"}
+{"type": "printf", "data": "sendto 4 336 After taking a quick dip in the ocean, Sarah decided to take a "}
+{"type": "printf", "data": "sendto 4 150 As the sun disappeared below the horizon, Sarah knew it was tim"}
+{"type": "printf", "data": "close 5 _ _"}
+{"type": "printf", "data": "close 4 _ _"}
+{"type": "printf", "data": "close 3 _ _"}
