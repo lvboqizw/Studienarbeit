@@ -1,0 +1,20 @@
+# FROM registry.scontain.com/scone.cloud/crosscompilers-ubuntu:5.8.0-rc.24
+FROM rust
+
+COPY operation /operation
+COPY client /work/client
+COPY server /work/server
+COPY file_sys /work/file_sys
+COPY data-original /data-original
+COPY volume /data
+
+RUN cd /work \
+    && cargo build --manifest-path file_sys/Cargo.toml \
+    && cp file_sys/target/debug/file_sys /operation/file_sys \
+    && cargo build --manifest-path server/Cargo.toml \
+    && cp server/target/debug/server /operation/server \
+    && cargo build --manifest-path client/Cargo.toml \
+    && cp client/target/debug/client /operation/client \
+    && cp -r /data-original/* /data
+
+CMD ["sh", "/operation/run_original.sh"]

@@ -1,0 +1,7 @@
+{"path":"outfiles/PNG.png","entropy":4.342093,"chi_square":41334948.0,"mean":147.98643,"monte_carlo_pi":2.426429,"serial_correlation":0.475698}
+{"path":"outfiles/MP3.mp3","entropy":4.345831,"chi_square":352391070.0,"mean":147.89345,"monte_carlo_pi":2.431535,"serial_correlation":0.475188}
+{"path":"outfiles/AVI.avi","entropy":4.346443,"chi_square":184914400.0,"mean":147.88509,"monte_carlo_pi":2.430902,"serial_correlation":0.475103}
+{"path":"outfiles/TEXT_Chinese","entropy":4.312032,"chi_square":369563.4,"mean":148.50928,"monte_carlo_pi":2.411684,"serial_correlation":0.481759}
+{"path":"outfiles/RMVB.rmvb","entropy":4.347893,"chi_square":91069310.0,"mean":148.0272,"monte_carlo_pi":2.427546,"serial_correlation":0.474294}
+{"path":"outfiles/MP4.mp4","entropy":4.34548,"chi_square":401306850.0,"mean":147.92392,"monte_carlo_pi":2.42952,"serial_correlation":0.474867}
+{"path":"outfiles/TEXT_English","entropy":4.321833,"chi_square":181921.11,"mean":146.14452,"monte_carlo_pi":2.480287,"serial_correlation":0.470165}

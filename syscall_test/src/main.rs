@@ -1,5 +1,7 @@
 use std::{fs::OpenOptions, io::Write, path::Path};
 use std::process::Command;
+use std::thread;
+use std::time::Duration;
 use structopt::StructOpt;
 
 mod executor;
@@ -84,6 +86,10 @@ fn main()  {
 
             sudo::escalate_if_needed().expect("Failed to sudo");
             install_ent(); 
+            let app_name = "threshold".to_string();
+            tracer::trace(app_name);
+            thread::sleep(Duration::from_nanos(800));
+
             let source_path = "source_files/Dockerfile";
             let path = "generator/Dockerfile";
             std::fs::copy(source_path, path).unwrap();
@@ -93,8 +99,7 @@ fn main()  {
                     .open(path).unwrap();
             let execution = "\n CMD [\"sh\", \"/operation/threshold.sh\"]";
             fs.write_all(execution.as_bytes()).unwrap();
-            let app_name = "threshold".to_string();
-            tracer::trace(app_name);
+            
 
             let container_name = executor::run_executor();
             /* Check whether the container are finished and stopped */

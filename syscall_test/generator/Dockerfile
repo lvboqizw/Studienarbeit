@@ -1,4 +1,5 @@
-FROM registry.scontain.com/sconecuratedimages/crosscompilers:ubuntu
+FROM registry.scontain.com/scone.cloud/crosscompilers-ubuntu:5.8.0-rc.24
+# FROM registry.scontain.com/sconecuratedimages/crosscompilers:ubuntu
 
 COPY operation /operation
 COPY client /work/client
@@ -18,13 +19,13 @@ ENV SCONE_LAS_ADDR=0.0.0.0
 RUN cd /work \
     && scone cargo build --manifest-path file_sys/Cargo.toml --target=x86_64-scone-linux-musl \
     && cp file_sys/target/x86_64-scone-linux-musl/debug/file_sys /operation/file_sys \
-    && scone cargo build --manifest-path threshold/Cargo.toml --target=x86_64-scone-linux-musl \
-    && cp threshold/target/x86_64-scone-linux-musl/debug/threshold /operation/threshold \
+    # && scone cargo build --manifest-path threshold/Cargo.toml --target=x86_64-scone-linux-musl \
+    # && cp threshold/target/x86_64-scone-linux-musl/debug/threshold /operation/threshold \
     && scone cargo build --manifest-path server/Cargo.toml --target=x86_64-scone-linux-musl \
     && cp server/target/x86_64-scone-linux-musl/debug/server /operation/server \
     && scone cargo build --manifest-path client/Cargo.toml --target=x86_64-scone-linux-musl \
     && cp client/target/x86_64-scone-linux-musl/debug/client /operation/client \
-    && cd /operation && ./fspf.sh \
-    && scone cas attest $SCONE_CAS_ADDR --only_for_testing-trust-any --only_for_testing-debug  --only_for_testing-ignore-signer -C -G -S
+    && cd /operation && ./fspf.sh 
+    # && scone cas attest $SCONE_CAS_ADDR --only_for_testing-trust-any --only_for_testing-debug  --only_for_testing-ignore-signer -C -G -S
 
- CMD ["sh", "/operation/threshold.sh"]
+#  CMD ["sh", "/operation/threshold.sh"]

@@ -1,12 +1,12 @@
 use std::io::{Write, BufRead, BufReader, Read};
 use std::net::TcpStream;
 use std::fs::File;
-use std::str;
 
 fn main() {
   let mut stream = TcpStream::connect("127.0.0.1:9000").expect("connect failed");
 
-  let file = File::open("/operation/message.txt").unwrap();
+  // let file = File::open("/operation/message.txt").unwrap();
+  let file = File::open("message.txt").unwrap();
   let reader = BufReader::new(file);
 
   for line in reader.lines() {
@@ -24,6 +24,6 @@ fn main() {
     if len == 0 {
         break;
     }
-    println!("read {} bytes: {:?}", len, str::from_utf8(&buf[..len]));
+    // println!("read {} bytes: {:?}", len, str::from_utf8(&buf[..len]));
   }
 }
