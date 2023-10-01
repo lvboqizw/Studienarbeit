@@ -151,8 +151,19 @@ tracepoint:syscalls:sys_enter_openat /comm=="file_sys"/
 }
 tracepoint:syscalls:sys_exit_openat /comm=="file_sys"/
 {
-    printf("open %d _ %s", args->ret, str(@openat_path[tid]));
+    printf("openat %d _ %s", args->ret, str(@openat_path[tid]));
     clear(@openat_path);
+}
+
+//-------------open------------
+tracepoint:syscalls:sys_enter_open /comm=="file_sys"/
+{
+    @open_path[tid] = args->filename;
+}
+tracepoint:syscalls:sys_exit_open /comm=="file_sys"/
+{
+    printf("open %d _ %s", args->ret, str(@open_path[tid]));
+    clear(@open_path);
 }
 
 //------------close--------------
@@ -251,19 +262,6 @@ tracepoint:syscalls:sys_exit_accept /comm=="server"/
     printf("accept %d %d %s", @accept_fd[tid], args->ret, @accept_addr[tid]);
     clear(@accept_fd);
     clear(@accept_addr);
-}
-
-//------------bind--------------------
-tracepoint:syscalls:sys_enter_bind /comm=="server"/
-{
-    @bind_fd[tid] = args->fd;
-    @bind_addr[tid] = (args->umyaddr)->sa_data;
-}
-tracepoint:syscalls:sys_exit_bind /comm=="server"/
-{
-    printf("bind %d _ %s", @bind_fd[tid], @bind_addr[tid]);
-    clear(@bind_fd);
-    clear(@bind_addr);
 }
 
 //------------close--------------

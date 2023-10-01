@@ -8,6 +8,7 @@
         "./auto_interface_test/Cargo.toml",
         "./draw_pics/Cargo.toml",
         "./auto_interface_test/generator/client/Cargo.toml",
-        "./auto_interface_test/generator/server/Cargo.toml"
+        "./auto_interface_test/generator/server/Cargo.toml",
+        "./auto_interface_test/generator/file_sys/Cargo.toml"
     ]
 }

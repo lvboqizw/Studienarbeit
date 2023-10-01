@@ -193,18 +193,6 @@ tracepoint:syscalls:sys_exit_sendmsg /comm==""/
     clear(@sendmsg_fd);
 }
 
-
-//--------------open-----------
-tracepoint:syscalls:sys_enter_open /comm==""/
-{
-    @open_path[tid] = args->filename;
-}
-tracepoint:syscalls:sys_exit_open /comm==""/
-{
-    printf("open _ %d %s", args->ret, str(@open_path[tid]));
-    clear(@open_path);
-}
-
 //-------------openat------------
 tracepoint:syscalls:sys_enter_openat /comm==""/
 {
@@ -212,7 +200,7 @@ tracepoint:syscalls:sys_enter_openat /comm==""/
 }
 tracepoint:syscalls:sys_exit_openat /comm==""/
 {
-    printf("open %d _ %s", args->ret, str(@openat_path[tid]));
+    printf("openat %d _ %s", args->ret, str(@openat_path[tid]));
     clear(@openat_path);
 }
 
@@ -232,7 +220,7 @@ tracepoint:syscalls:sys_enter_accept4 /comm==""/
 tracepoint:syscalls:sys_exit_accept4 /comm==""/
 {
     //print(@accept4_addr[tid]);
-    printf("accept4 %d %d %s", @accept4_fd[tid], args->ret, str(@accept4_addr[tid]));
+    printf("accept4 %d %d %s", @accept4_fd[tid], args->ret, @accept4_addr[tid]);
     clear(@accept4_fd);
     clear(@accept4_addr);
 

@@ -4,7 +4,7 @@ use serde::{Serialize, Deserialize};
 use serde_json;
 use encoding_rs_io::{self, DecodeReaderBytesBuilder};
 use encoding_rs;
-use plotters::prelude::*;
+
 
 #[derive(Debug, Deserialize, Serialize)]
 struct Value {
@@ -26,15 +26,14 @@ struct Sys {
 }
 
 pub fn threshold_analysis() {
+    println!("");
     syscall_separate_th();
-
     let dir_org = Path::new("generator/data-original/test_files");
     let dir_enc = Path::new("outfiles");
 
     ent_threshold(dir_enc, true);
     ent_threshold(dir_org, false);
 
-    // let mut file_name: Vec<String> = Vec::new();
     let mut entropy: Vec<(String, f32)> = Vec::new();
     let mut chi_sq: Vec<(String, f32)> = Vec::new();
     let mut mean: Vec<(String, f32)> = Vec::new();
@@ -55,7 +54,7 @@ pub fn threshold_analysis() {
         serial_correlation.push((tmp[0].to_string(),value.serial_correlation));
     }
 
-    // let mut file_name: Vec<String> = Vec::new();
+
     let mut entropy_org: Vec<(String, f32)> = Vec::new();
     let mut chi_sq_org: Vec<(String, f32)> = Vec::new();
     let mut mean_org: Vec<(String, f32)> = Vec::new();
@@ -76,9 +75,10 @@ pub fn threshold_analysis() {
         serial_correlation_org.push((tmp[0].to_string(),value.serial_correlation));
     }
 
-    clean_files()
+    clean_files();
 }
 
+/// Process bpftrace output files, consolidate Syscalls by fd into temporary files
 fn syscall_separate_th() {
     let dir = "outfiles".to_string();
     if !Path::new(dir.as_str()).exists() {
@@ -121,23 +121,36 @@ fn syscall_separate_th() {
                     opend_files.insert(sys.arg1.clone(), file_name.to_string());
                 }
             },
+            "openat" => {
+                if sys.arg3.contains("data/test_files/") {
+                    let len = "data/test_files/".len();
+                    let file_name = &sys.arg3[len..sys.arg3.len()];
+                    if file_name.len() == 0 {
+                        continue;
+                    }
+                    opend_files.insert(sys.arg1.clone(), file_name.to_string());
+                }
+            },
             "close" => {
                 if opend_files.contains_key(&sys.arg1) {
                     opend_files.remove(&sys.arg1);
                 }
             },
             _ => {
+                let buf_len = sys.arg2.parse::<u32>().unwrap();
                 if opend_files.contains_key(&sys.arg1) {
-                    let file_path = dir.clone() + "/" +  opend_files.get(&sys.arg1).unwrap().as_str() ;
-                    if !Path::new(file_path.as_str()).exists() {
-                        let _result = fs::File::create(file_path.as_str()).unwrap();
+                    if buf_len != 0 {
+                        let file_path = dir.clone() + "/" +  opend_files.get(&sys.arg1).unwrap().as_str() ;
+                        if !Path::new(file_path.as_str()).exists() {
+                            let _result = fs::File::create(file_path.as_str()).unwrap();
+                        }
+                        let mut file = fs::OpenOptions::new()
+                            .write(true)
+                            .append(true)
+                            .open(file_path.as_str())
+                            .unwrap();
+                        file.write(sys.arg3.as_bytes()).unwrap();
                     }
-                    let mut file = fs::OpenOptions::new()
-                        .write(true)
-                        .append(true)
-                        .open(file_path.as_str())
-                        .unwrap();
-                    file.write(sys.arg3.as_bytes()).unwrap();
                 }
             },
         }

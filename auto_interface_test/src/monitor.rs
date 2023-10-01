@@ -26,7 +26,6 @@ struct Sys {
 
 pub fn analyse() {
     syscall_separate();
-
     ent_analyse();
     clean_files();
 }
@@ -68,6 +67,11 @@ fn syscall_separate() {
                 let tmp_filename = dir.clone() + "/" + sys.arg3.replacen("/", "\\", count).as_str();
                 used_fd.insert(sys.arg1.clone(), tmp_filename.to_string());
             },
+            "openat" => {
+                let count = sys.arg3.chars().filter(|&c| c == '/').count();
+                let tmp_filename = dir.clone() + "/" + sys.arg3.replacen("/", "\\", count).as_str();
+                used_fd.insert(sys.arg1.clone(), tmp_filename.to_string());
+            },
             "accept4" => {
                 let count = sys.arg3.chars().filter(|&c| c == '/').count();
                 let tmp_filename = dir.clone() + "/accept4_" + sys.arg3.replacen("/", "\\", count).as_str();
@@ -79,22 +83,25 @@ fn syscall_separate() {
                 }
             },
             _ => {
+                let buf_len = sys.arg2.parse::<i64>().unwrap();
                 if used_fd.contains_key(&sys.arg1) {
                     // let file_path = dir.clone() + "/" +  used_fd.get(&sys.arg1).unwrap().as_str() ;
-                    let file_path = used_fd.get(&sys.arg1).unwrap().as_str();
-                    if !Path::new(file_path).exists() {
-                        let _result = fs::File::create(file_path).unwrap();
-                    }
-                    let f = fs::OpenOptions::new()
-                        .write(true)
-                        .append(true)
-                        .open(file_path);
-                    match f {
-                        Ok(mut file) => {
-                            file.write(sys.arg3.as_bytes()).unwrap();
-                        },
-                        Err(err) => {
-                            println!("file path: {}, get error: {}", file_path, err);
+                    if buf_len >= 0 {
+                        let file_path = used_fd.get(&sys.arg1).unwrap().as_str();
+                        if !Path::new(file_path).exists() {
+                            let _result = fs::File::create(file_path).unwrap();
+                        }
+                        let f = fs::OpenOptions::new()
+                            .write(true)
+                            .append(true)
+                            .open(file_path);
+                        match f {
+                            Ok(mut file) => {
+                                file.write(sys.arg3.as_bytes()).unwrap();
+                            },
+                            Err(err) => {
+                                println!("file path: {}, get error: {}", file_path, err);
+                            }
                         }
                     }
                 }
@@ -128,14 +135,13 @@ fn ent_analyse() {
             .unwrap();
         let value = get_ent_value(Box::new(entry.path()), &res);
 
-        if value.serial_correlation < 0.43 {
+        if value.serial_correlation < 0.44 {
             let tmp: Vec<&str> = value.path.rsplit("/").collect();
             let count = tmp[0].chars().filter(|&c| c == '\\').count();
             let tmp1 = tmp[0].to_string();
             let mut path = tmp1.replacen("\\", "/", count);
             path = path + "\n";
             result.write(path.as_bytes()).unwrap();
-            // println!("The file {:?} is not been encrypted.", path);
         }
     }
 }

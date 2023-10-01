@@ -322,13 +322,19 @@ tracepoint:syscalls:sys_enter_accept /comm=="server"/
 tracepoint:syscalls:sys_enter_accept4 /comm=="server"/
 {
     @accept4_fd[tid] = args->fd;
-    @accept4_addr[tid] = (args->upeer_sockaddr)->sa_data;
+    $tmp[0] = (args->upeer_sockaddr)->sa_data[0];
+    $tmp[1] = (args->upeer_sockaddr)->sa_data[0];
+    $tmp[2] = (args->upeer_sockaddr)->sa_data[0];
+    $tmp[3] = (args->upeer_sockaddr)->sa_data[0];
+
+    @accept4_addr[tid] = ntop($tmp);
+    
     //print((args->upeer_sockaddr)->sa_data)
 }
 tracepoint:syscalls:sys_exit_accept4 /comm=="server"/
 {
     //print(@accept4_addr[tid]);
-    printf("accept4 %d %d %s", @accept4_fd[tid], args->ret, str(@accept4_addr[tid]));
+    printf("accept4 %d %d %s", @accept4_fd[tid], args->ret, @accept4_addr[tid]);
     clear(@accept4_fd);
     clear(@accept4_addr);
 }
