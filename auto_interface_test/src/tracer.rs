@@ -23,6 +23,7 @@ pub fn trace(target: String) {
     env::set_var("BPFTRACE_STRLEN", "200");
     let _output_file = File::create("files/output.json").unwrap();
 
+    //TODO:: command path
     let _tracer = Command::new("/home/wei/bpftrace/bin/bpftrace")
         .args(["-f", "json", "-o", "files/output.json", "files/trace.bt"])
         .spawn()
@@ -31,6 +32,7 @@ pub fn trace(target: String) {
 
 pub fn test_trace() {
     env::set_var("BPFTRACE_STRLEN", "200");
+    //TODO:: command path
     let _output_file = File::create("files/output.json").unwrap();
     let _trace_status = Command::new("/home/wei/bpftrace/bin/bpftrace")
         .args(["-f", "json", "-o", "files/output.json", "source_files/test_trace.bt"])
