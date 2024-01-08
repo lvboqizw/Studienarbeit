@@ -9,6 +9,7 @@ mod monitor;
 mod tracer;
 mod threshold;
 mod interceptor;
+mod engine;
 
 #[derive(StructOpt, Debug)]
 enum Com {
@@ -36,7 +37,7 @@ fn main()  {
         fs::create_dir(dir.as_str()).unwrap();
     }
     sudo::escalate_if_needed().expect("Failed to sudo");
-    let _ = interceptor::trace("aaa".to_string(), interceptor::TraceMode::Application);
+    let _ = interceptor::trace("a".to_string(), interceptor::TraceMode::Application);
     interceptor::stop_trace();
     // match cmd {
     //     Com::TestEnc => {

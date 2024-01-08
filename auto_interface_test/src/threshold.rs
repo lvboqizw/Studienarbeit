@@ -26,7 +26,7 @@ struct Sys {
 }
 
 pub fn threshold_analysis() {
-    println!("");
+    // println!("");
     syscall_separate_th();
     let dir_org = Path::new("generator/data-original/test_files");
     let dir_enc = Path::new("outfiles");
@@ -111,17 +111,7 @@ fn syscall_separate_th() {
             
         };
         match sys.syscall.as_str() {
-            "open" => {
-                if sys.arg3.contains("data/test_files/") {
-                    let len = "data/test_files/".len();
-                    let file_name = &sys.arg3[len..sys.arg3.len()];
-                    if file_name.len() == 0 {
-                        continue;
-                    }
-                    opend_files.insert(sys.arg1.clone(), file_name.to_string());
-                }
-            },
-            "openat" => {
+            "open"|"openat"  => {
                 if sys.arg3.contains("data/test_files/") {
                     let len = "data/test_files/".len();
                     let file_name = &sys.arg3[len..sys.arg3.len()];

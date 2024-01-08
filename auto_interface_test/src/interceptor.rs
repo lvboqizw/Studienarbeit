@@ -1,17 +1,18 @@
 // use std::os::unix::prelude::PermissionsExt;
 use std::fs::File;
 use std::env;
-use std::process::Command;
-use std::io::{self, BufRead, BufReader, Write};
+use std::process::{Command, Stdio};
+use std::io::{self, BufRead, BufReader, Write, Read};
+
+use crate::engine;
 
 pub enum TraceMode {
-    Test = 0,
-    Application  = 1,
+    Test,
+    Application,
 }
 
-
 fn create_script_file(target: String) -> io::Result<()>{
-    let org_path = "source_files/trace_source.bt";
+    let org_path = "source_files/tmp_trace.bt";
     let org_file = File::open(&org_path)?;
 
     let output_path = "files/trace.bt";
@@ -36,7 +37,7 @@ fn create_script_file(target: String) -> io::Result<()>{
 pub fn trace(target: String, mode: TraceMode) -> io::Result<()>{
     
     env::set_var("BPFTRACE_STRLEN", "200");
-    let _output_file = File::create("files/output.json")?;
+    // let _output_file = File::create("files/output.json")?;
 
     let bpf = Command::new("which")
         .arg("bpftrace")
@@ -46,17 +47,28 @@ pub fn trace(target: String, mode: TraceMode) -> io::Result<()>{
 
     match mode {
         TraceMode::Test => {
-            let _tracer = Command::new(bpf_path)
+            let _child = Command::new(bpf_path)
                 .args(["-f", "json", "-o", "files/output.json", "source_files/test_trace.bt"])
                 .spawn()
                 .expect("Failed to run bpftrace");
         },
         TraceMode::Application => {
-            // let _ = create_script_file(target);
-            let _tracer = Command::new(bpf_path)
-                .args(["-f", "json", "-o", "files/output.json", "files/trace.bt"])
+            let _ = create_script_file(target);
+            let mut child = Command::new(bpf_path)
+                // .args(["-f", "json", "-o", "files/output.json", "files/trace.bt"])
+                .args(["-f", "json", "files/trace.bt"])
+                .stdout(Stdio::piped())
+                .stderr(Stdio::piped())
                 .spawn()
                 .expect("Failed to run bpftrace");
+
+                let child_out = BufReader::new(child.stdout.as_mut().unwrap());
+
+                for line in child_out.lines() {
+                    if let Ok(line) = line {
+                        engine::threshold_analysis(line);
+                    }
+                }
         }
     }
 
