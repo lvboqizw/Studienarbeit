@@ -1,5 +1,5 @@
-use std::{fs, fs::{File, OpenOptions}, process::{Command, Output}, path::{Path, PathBuf}, 
-    io::{BufRead, Write, BufReader}, collections::HashMap};
+use std::{fs, path::{Path, PathBuf}, collections::HashMap};
+use std::io::{BufRead, Write, BufReader};
 use serde::{Serialize, Deserialize};
 use serde_json;
 use encoding_rs_io::{self, DecodeReaderBytesBuilder};
@@ -7,15 +7,7 @@ use encoding_rs;
 use lazy_static::lazy_static;
 use std::sync::Mutex;
 
-#[derive(Debug, Deserialize, Serialize)]
-struct Value {
-    path: Box<PathBuf>,
-    entropy: f32,
-    chi_square: f32,
-    mean: f32,
-    monte_carlo_pi: f32,
-    serial_correlation: f32
-}
+use super::computer::ent_compute;
 
 #[derive(Deserialize, Serialize, Debug)]
 struct Sys {
@@ -27,10 +19,6 @@ struct Sys {
 
 lazy_static! {
     static ref OPEND_FILES: Mutex<HashMap<String, String>> = Mutex::new(HashMap::new());
-}
-
-fn ent_compute(file_path: &String) {
-    
 }
 
 fn syscall_separate_th(line: String) {
@@ -51,7 +39,7 @@ fn syscall_separate_th(line: String) {
         arg3: v[3].to_string()    // Data/Path 
     };
 
-    let dir = "files/tmp_files".to_string();
+    let dir = "build/tmp_files".to_string();
     if !Path::new(dir.as_str()).exists() {
         fs::create_dir_all(dir.as_str()).unwrap();
     }

@@ -1,0 +1,31 @@
+// -------------read---------------------
+tracepoint:syscalls:sys_enter_read /comm=="a"/ 
+{ 
+    @read_buf[tid] = args->buf;
+    @read_count[tid] = args->count;
+    @read_fd[tid] = args->fd;
+} 
+tracepoint:syscalls:sys_exit_read /comm=="a"/
+{
+    printf("read %d %d %s", @read_fd[tid], args->ret, str(@read_buf[tid], @read_count[tid]));
+    clear(@read_buf);
+    clear(@read_count);
+    clear(@read_fd);
+}
+
+//-------------openat------------
+tracepoint:syscalls:sys_enter_openat /comm=="a"/
+{
+    @openat_path[tid] = args->filename;
+}
+tracepoint:syscalls:sys_exit_openat /comm=="a"/
+{
+    printf("openat %d _ %s", args->ret, str(@openat_path[tid]));
+    clear(@openat_path);
+}
+
+//------------close--------------
+tracepoint:syscalls:sys_enter_close /comm=="a"/
+{
+    printf("close %d _ _", args->fd);
+}

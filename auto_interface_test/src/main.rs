@@ -1,6 +1,5 @@
 use std::{path::Path, fs};
-use std::process::Command;
-use std::thread;
+
 use std::time::Duration;
 use structopt::StructOpt;
 
@@ -32,13 +31,16 @@ enum Com {
 fn main()  {
     // let cmd = Com::from_args();
     // Create files folder to save result
-    let dir = "files".to_string();
-    if !Path::new(dir.as_str()).exists() {
-        fs::create_dir(dir.as_str()).unwrap();
-    }
+    let dir = "build";
+    fs::create_dir_all(dir).unwrap();
+
+    engine::install_ent();
+
+    // println!("out of install");
+
     sudo::escalate_if_needed().expect("Failed to sudo");
     let _ = interceptor::trace("a".to_string(), interceptor::TraceMode::Application);
-    interceptor::stop_trace();
+    // interceptor::stop_trace();
     // match cmd {
     //     Com::TestEnc => {
     //         println!("Running in test mode.");
@@ -176,16 +178,4 @@ fn main()  {
     //         monitor::analyse();
     //     },
     // }
-}
-
-fn install_ent() {
-    let ent_file = Path::new("/usr/bin/ent");
-    if !ent_file.exists() {
-        sudo::escalate_if_needed().expect("Failed to sudo");
-        let _install_ent = Command::new("sh")
-            .current_dir("source_files")
-            .arg("install_ent.sh")
-            .spawn()
-            .unwrap();
-    }
 }

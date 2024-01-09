@@ -2,7 +2,7 @@
 use std::fs::File;
 use std::env;
 use std::process::{Command, Stdio};
-use std::io::{self, BufRead, BufReader, Write, Read};
+use std::io::{self, BufRead, BufReader, Write, stderr, Read};
 
 use crate::engine;
 
@@ -15,7 +15,7 @@ fn create_script_file(target: String) -> io::Result<()>{
     let org_path = "source_files/tmp_trace.bt";
     let org_file = File::open(&org_path)?;
 
-    let output_path = "files/trace.bt";
+    let output_path = "build/trace.bt";
     let mut output_file = File::create(output_path).unwrap();
 
     let org_filter = "comm==\"";
@@ -56,19 +56,20 @@ pub fn trace(target: String, mode: TraceMode) -> io::Result<()>{
             let _ = create_script_file(target);
             let mut child = Command::new(bpf_path)
                 // .args(["-f", "json", "-o", "files/output.json", "files/trace.bt"])
-                .args(["-f", "json", "files/trace.bt"])
+                .args(["-f", "json", "build/trace.bt"])
                 .stdout(Stdio::piped())
                 .stderr(Stdio::piped())
                 .spawn()
                 .expect("Failed to run bpftrace");
+            
 
-                let child_out = BufReader::new(child.stdout.as_mut().unwrap());
+            let child_out = BufReader::new(child.stdout.as_mut().unwrap());
 
-                for line in child_out.lines() {
-                    if let Ok(line) = line {
-                        engine::threshold_analysis(line);
-                    }
+            for line in child_out.lines() {
+                if let Ok(line) = line {
+                    engine::threshold_analysis(line);
                 }
+            }
         }
     }
 
