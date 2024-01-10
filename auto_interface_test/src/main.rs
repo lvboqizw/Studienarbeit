@@ -7,8 +7,9 @@ mod executor;
 mod monitor;
 mod tracer;
 mod threshold;
-mod interceptor;
 mod engine;
+
+use engine::TraceMode;
 
 #[derive(StructOpt, Debug)]
 enum Com {
@@ -39,7 +40,7 @@ fn main()  {
     // println!("out of install");
 
     sudo::escalate_if_needed().expect("Failed to sudo");
-    let _ = interceptor::trace("a".to_string(), interceptor::TraceMode::Application);
+    let _ = engine::intercpet("a".to_string(), TraceMode::Threshold);
     // interceptor::stop_trace();
     // match cmd {
     //     Com::TestEnc => {

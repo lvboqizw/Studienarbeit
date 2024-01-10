@@ -1,15 +1,11 @@
 // use std::os::unix::prelude::PermissionsExt;
 use std::fs::File;
 use std::env;
-use std::process::{Command, Stdio};
-use std::io::{self, BufRead, BufReader, Write, stderr, Read};
+use std::process::{Command, Stdio, Child};
+use std::io::{self, BufRead, BufReader, Write};
 
-use crate::engine;
+use super::TraceMode;
 
-pub enum TraceMode {
-    Test,
-    Application,
-}
 
 fn create_script_file(target: String) -> io::Result<()>{
     let org_path = "source_files/tmp_trace.bt";
@@ -34,46 +30,37 @@ fn create_script_file(target: String) -> io::Result<()>{
     Ok(())
 }
 
-pub fn trace(target: String, mode: TraceMode) -> io::Result<()>{
+pub fn trace(target: String, mode: TraceMode) -> Child{
     
     env::set_var("BPFTRACE_STRLEN", "200");
-    // let _output_file = File::create("files/output.json")?;
 
     let bpf = Command::new("which")
         .arg("bpftrace")
-        .output()?;
+        .output()
+        .unwrap();
     let tmp = String::from_utf8(bpf.stdout).unwrap();
     let bpf_path = tmp.trim();
 
     match mode {
         TraceMode::Test => {
-            let _child = Command::new(bpf_path)
-                .args(["-f", "json", "-o", "files/output.json", "source_files/test_trace.bt"])
+            let child = Command::new(bpf_path)
+                .args(["-f", "json", "-o", "build/output.json", "source_files/test_trace.bt"])
                 .spawn()
                 .expect("Failed to run bpftrace");
+            return child;
         },
-        TraceMode::Application => {
+        TraceMode::Application | TraceMode::Threshold => {
             let _ = create_script_file(target);
-            let mut child = Command::new(bpf_path)
-                // .args(["-f", "json", "-o", "files/output.json", "files/trace.bt"])
+            let child = Command::new(bpf_path)
                 .args(["-f", "json", "build/trace.bt"])
                 .stdout(Stdio::piped())
                 .stderr(Stdio::piped())
                 .spawn()
                 .expect("Failed to run bpftrace");
-            
-
-            let child_out = BufReader::new(child.stdout.as_mut().unwrap());
-
-            for line in child_out.lines() {
-                if let Ok(line) = line {
-                    engine::threshold_analysis(line);
-                }
-            }
+            return child;
         }
     }
 
-    Ok(())
 }
 
 pub fn stop_trace() {

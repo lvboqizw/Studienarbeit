@@ -2,17 +2,32 @@ use std::fs;
 use std::path::Path;
 use std::process::{Command, Stdio};
 use std::thread;
+use std::io::{BufRead, BufReader};
+use strum::IntoEnumIterator;
+use strum_macros::EnumIter;
 
 mod threshold;
 mod computer;
+mod interceptor;
 
+use ValueType::*;
+
+#[derive(EnumIter, Debug, PartialEq)]
 enum ValueType {
-    Entropy           = 0,
-    ChiSquare         = 1,
-    Mean              = 2,
-    MontecarloPi      = 3,
-    SerialCorrelation = 4,
-    _LAST_            = 5
+    FileBytes,
+    Entropy,
+    ChiSquare,
+    Mean,
+    MontecarloPi,
+    SerialCorrelation,
+    _LAST_
+} 
+
+#[derive(Clone)]
+pub enum TraceMode {
+    Test,
+    Threshold,
+    Application,
 }
 
 pub fn install_ent() {
@@ -32,7 +47,20 @@ pub fn install_ent() {
     }
 }
 
-pub fn threshold_analysis(line: String) {
+pub fn intercpet(target: String, mode: TraceMode) {
+    let mut child = interceptor::trace(target, mode.clone());
 
-    threshold::threshold_analysis(line);
+    let child_out = BufReader::new(child.stdout.as_mut().unwrap());
+
+    for line in child_out.lines() {
+        if let Ok(line) = line {
+            match mode {
+                TraceMode::Test => {},
+                TraceMode::Threshold => {
+                    threshold::threshold_analysis(line);
+                },
+                TraceMode::Application => {},
+            }   
+        }
+    }
 }

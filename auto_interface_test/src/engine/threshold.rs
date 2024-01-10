@@ -3,11 +3,12 @@ use std::io::{BufRead, Write, BufReader};
 use serde::{Serialize, Deserialize};
 use serde_json;
 use encoding_rs_io::{self, DecodeReaderBytesBuilder};
-use encoding_rs;
 use lazy_static::lazy_static;
 use std::sync::Mutex;
+use strum::IntoEnumIterator;
 
 use super::computer::ent_compute;
+use super::ValueType;
 
 #[derive(Deserialize, Serialize, Debug)]
 struct Sys {
@@ -18,6 +19,7 @@ struct Sys {
 }
 
 lazy_static! {
+    #[derive(Debug)]
     static ref OPEND_FILES: Mutex<HashMap<String, String>> = Mutex::new(HashMap::new());
 }
 
@@ -47,6 +49,7 @@ fn syscall_separate_th(line: String) {
     match sys.syscall.as_str() {
         "open"|"openat" => {
             let file_name = sys.arg3.clone();
+            // println!("file name{}", file_name);
             if file_name.len() != 0 {
                 let v: Vec<&str> = file_name.split("/").collect();
                 let file_path = dir.clone() + "/" + v[v.len() - 1];
@@ -59,13 +62,14 @@ fn syscall_separate_th(line: String) {
         "close" => {
             if OPEND_FILES.lock().unwrap()
                 .contains_key(&sys.arg1) {
-                    let tmp = OPEND_FILES.lock().unwrap();
-                    let file_path = tmp.get(&sys.arg1).unwrap();
-
-                    ent_compute(file_path);
-
-                    OPEND_FILES.lock().unwrap()
-                        .remove(&sys.arg1);
+                    let mut tmp = OPEND_FILES.lock().unwrap();
+                    if let Some(file_path) = tmp.remove(&sys.arg1) {
+                        if Path::new(&file_path).exists() {
+                            let values: Vec<f32> = ent_compute(&file_path);
+                            output_to_files(values);
+                        }
+                        
+                    }        
             }
         },
         _ => {
@@ -87,7 +91,31 @@ fn syscall_separate_th(line: String) {
                     file.write(sys.arg3.as_bytes()).unwrap();
                 }
             }
+            // println!("other: {}", sys.arg3);
         }
+    }
+}
+
+fn output_to_files(values: Vec<f32>) {
+    let dir = "build/threshold_output".to_string();
+    if !Path::new(dir.as_str()).exists() {
+        fs::create_dir_all(dir.as_str()).unwrap();
+    }
+
+    let v_types: Vec<&str> = vec!("FileBytes", "Entropy", "ChiSquare", "Mean", 
+                                 "MontecarloPi", "SerialCorrelation", "_LAST_");
+    
+    for i in 0 .. values.len() {
+        let file_path = dir.clone() + "/" + v_types[i];
+        if !Path::new(file_path.as_str()).exists() {
+            let _result = fs::File::create(file_path.as_str()).unwrap();
+        }
+        let mut file = fs::OpenOptions::new()
+            .write(true)
+            .append(true)
+            .open(file_path.as_str())
+            .unwrap();
+        file.write((values[i].to_string() + "\n").as_bytes()).unwrap();
     }
 }
 
