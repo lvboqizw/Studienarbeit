@@ -1,0 +1,123 @@
+// -------------read---------------------
+tracepoint:syscalls:sys_enter_read /comm=="file_sys"/ 
+{ 
+    @read_buf[tid] = args->buf;
+    @read_count[tid] = args->count;
+    @read_fd[tid] = args->fd;
+} 
+tracepoint:syscalls:sys_exit_read /comm=="file_sys"/
+{
+    printf("read %d %d %s", @read_fd[tid], args->ret, str(@read_buf[tid], @read_count[tid]));
+    clear(@read_buf);
+    clear(@read_count);
+    clear(@read_fd);
+}
+
+//-------------pread64------------------
+tracepoint:syscalls:sys_enter_pread64 /comm=="file_sys"/ 
+{
+    @pread64_buf[tid] = args->buf;
+    @pread64_count[tid] = args->count;
+    @pread64_fd[tid] = args->fd;
+}
+tracepoint:syscalls:sys_exit_pread64 /comm=="file_sys"/ 
+{
+    printf("pread64 %d %d %s", @pread64_fd[tid], args->ret, str(@pread64_buf[tid], @pread64_count[tid]));
+    clear(@pread64_buf);
+    clear(@pread64_count);
+    clear(@pread64_fd);
+}
+
+//--------------write-------------------
+tracepoint:syscalls:sys_enter_write /comm=="file_sys"/ 
+{
+    @write_buf[tid] = args->buf;
+    @write_count[tid] = args->count;
+    @write_fd[tid] = args->fd;
+}
+tracepoint:syscalls:sys_exit_write /comm=="file_sys"/
+{
+    printf("write %d %d %s", @write_fd[tid], args->ret, str(@write_buf[tid], @write_count[tid]));
+    clear(@write_buf);
+    clear(@write_count);
+    clear(@write_fd);
+}
+
+//---------------pwrite64-----------------
+tracepoint:syscalls:sys_enter_pwrite64 /comm=="file_sys"/ 
+{ 
+    @pwrite64_buf[tid] = args->buf;
+    @pwrite64_count[tid] = args->count;
+    @pwrite64_fd[tid] = args->fd;
+}
+tracepoint:syscalls:sys_exit_pwrite64 /comm=="file_sys"/
+{
+    printf("pwrite %d %d %s", @pwrite64_fd[tid], args->ret, str(@pwrite64_buf[tid], @pwrite64_count[tid]));
+    clear(@pwrite64_buf);
+    clear(@pwrite64_count);
+    clear(@pwrite64_fd);
+}
+
+//-------------openat------------
+tracepoint:syscalls:sys_enter_openat /comm=="file_sys"/
+{
+    @openat_path[tid] = args->filename;
+}
+tracepoint:syscalls:sys_exit_openat /comm=="file_sys"/
+{
+    printf("openat %d _ %s", args->ret, str(@openat_path[tid]));
+    clear(@openat_path);
+}
+
+//---------------recvfrom------------------
+tracepoint:syscalls:sys_enter_recvfrom /comm=="server"/
+{
+    @recvfrom_buf[tid] = args->ubuf;
+    @recvfrom_count[tid] = args->size;
+    @recvfrom_fd[tid] = args->fd;
+}
+tracepoint:syscalls:sys_exit_recvfrom /comm=="server"/
+{
+    printf("recvfrom %d %d %s", @recvfrom_fd[tid], args->ret, str(@recvfrom_buf[tid], @recvfrom_count[tid]));
+    clear(@recvfrom_buf);
+    clear(@recvfrom_count);
+    clear(@recvfrom_fd);
+}
+
+//---------------sendto----------------------
+tracepoint:syscalls:sys_enter_sendto /comm=="server"/
+{
+    @sendto_buf[tid] = args->buff;
+    @sendto_count[tid] = args->len;
+    @sendto_fd[tid] = args->fd;
+}
+tracepoint:syscalls:sys_exit_sendto /comm=="server"/
+{
+    printf("sendto %d %d %s", @sendto_fd[tid], args->ret, str(@sendto_buf[tid], @sendto_count[tid]));
+    clear(@sendto_buf);
+    clear(@sendto_count);
+    clear(@sendto_fd);
+}
+
+//-------------open------------
+tracepoint:syscalls:sys_enter_open /comm=="file_sys"/
+{
+    @open_path[tid] = args->filename;
+}
+tracepoint:syscalls:sys_exit_open /comm=="file_sys"/
+{
+    printf("open %d _ %s", args->ret, str(@open_path[tid]));
+    clear(@open_path);
+}
+
+//------------close--------------
+tracepoint:syscalls:sys_enter_close /comm=="file_sys"/
+{
+    printf("close %d _ _", args->fd);
+}
+
+//------------close--------------
+tracepoint:syscalls:sys_enter_close /comm=="server"/
+{
+    printf("close %d _ _", args->fd);
+}

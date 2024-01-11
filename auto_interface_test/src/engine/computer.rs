@@ -1,5 +1,3 @@
-// use std::fs;
-use std::path::Path;
 use std::process::{Command, Output};
 
 use super::ValueType;
@@ -25,11 +23,6 @@ fn get_ent_value(values:&mut Vec<f32>, result: &Output) {
     for i in 1 .. v_data.len() {
         values[i - 1] = str_2_f32(v_data[i].to_string());
     }
-    // println!("*******************************");
-    // println!("res: {:?}", v[0]);
-    // println!("data: {:?}", v[1]);
-    // println!("values: {:?}", values);
-    // println!("*******************************");
 }
 
 fn str_2_f32(data: String) ->f32 {

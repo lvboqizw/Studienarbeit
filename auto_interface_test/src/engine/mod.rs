@@ -23,7 +23,7 @@ enum ValueType {
     _LAST_
 } 
 
-#[derive(Clone)]
+#[derive(Clone, PartialEq)]
 pub enum TraceMode {
     Test,
     Threshold,
@@ -47,10 +47,19 @@ pub fn install_ent() {
     }
 }
 
-pub fn intercpet(target: String, mode: TraceMode) {
-    let mut child = interceptor::trace(target, mode.clone());
+pub fn exec(target: String, mode: TraceMode) {
+    let res = interceptor::trace(target, mode.clone());
+    let child_out = match res {
+        Ok(mut child) => {
+            let stdout = child.stdout.take().unwrap();
+            let reader = BufReader::new(stdout);
+            reader
+        },
+        Err(err) => {
+            panic!("Failed to trace target: {}", err);
+        },
+    };
 
-    let child_out = BufReader::new(child.stdout.as_mut().unwrap());
 
     for line in child_out.lines() {
         if let Ok(line) = line {

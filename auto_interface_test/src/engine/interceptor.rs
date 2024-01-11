@@ -6,8 +6,58 @@ use std::io::{self, BufRead, BufReader, Write};
 
 use super::TraceMode;
 
+pub fn trace(target: String, mode: TraceMode) -> io::Result<Child> {
+    if target.len() == 0 && mode.eq(&TraceMode::Application)  {
+        panic!("The name of target application is request!");
+    }
+    
+    env::set_var("BPFTRACE_STRLEN", "200");
 
-fn create_script_file(target: String) -> io::Result<()>{
+    let bpf = Command::new("which")
+        .arg("bpftrace")
+        .output()
+        .unwrap();
+    let tmp = String::from_utf8(bpf.stdout).unwrap();
+    let bpf_path = tmp.trim();
+
+    let res = create_script_file(target);
+    let trace_fp = match res {
+        Ok(path) => path,
+        Err(err) => {
+            panic!("Failed to creat trace script file: {}", err);
+        },
+    };
+
+    match mode {
+        TraceMode::Test => {
+            let child = Command::new(bpf_path)
+                .args(["-f", "json", "source_files/trace_test.bt"])
+                .stdout(Stdio::piped())
+                .stderr(Stdio::piped())
+                .spawn()?;
+            return Ok(child);
+        },
+        TraceMode::Threshold => {
+            let child = Command::new(bpf_path)
+                .args(["-f", "json", &trace_fp])
+                .stdout(Stdio::piped())
+                .stderr(Stdio::piped())
+                .spawn()?;
+            return Ok(child);
+        },
+        TraceMode::Application => {
+            let child = Command::new(bpf_path)
+                .args(["-f", "json", &trace_fp])
+                .stdout(Stdio::piped())
+                .stderr(Stdio::piped())
+                .spawn()?;
+            return Ok(child);
+        }
+    }
+
+}
+
+fn create_script_file(target: String) -> io::Result<String>{
     let org_path = "source_files/tmp_trace.bt";
     let org_file = File::open(&org_path)?;
 
@@ -27,40 +77,7 @@ fn create_script_file(target: String) -> io::Result<()>{
         writeln!(&mut output_file, "{}", modified_line)?;
     }
 
-    Ok(())
-}
-
-pub fn trace(target: String, mode: TraceMode) -> Child{
-    
-    env::set_var("BPFTRACE_STRLEN", "200");
-
-    let bpf = Command::new("which")
-        .arg("bpftrace")
-        .output()
-        .unwrap();
-    let tmp = String::from_utf8(bpf.stdout).unwrap();
-    let bpf_path = tmp.trim();
-
-    match mode {
-        TraceMode::Test => {
-            let child = Command::new(bpf_path)
-                .args(["-f", "json", "-o", "build/output.json", "source_files/test_trace.bt"])
-                .spawn()
-                .expect("Failed to run bpftrace");
-            return child;
-        },
-        TraceMode::Application | TraceMode::Threshold => {
-            let _ = create_script_file(target);
-            let child = Command::new(bpf_path)
-                .args(["-f", "json", "build/trace.bt"])
-                .stdout(Stdio::piped())
-                .stderr(Stdio::piped())
-                .spawn()
-                .expect("Failed to run bpftrace");
-            return child;
-        }
-    }
-
+    Ok(output_path.to_string())
 }
 
 pub fn stop_trace() {

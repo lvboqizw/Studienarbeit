@@ -1,16 +1,14 @@
-use std::{fs, path::{Path, PathBuf}, collections::HashMap};
-use std::io::{BufRead, Write, BufReader};
-use serde::{Serialize, Deserialize};
-use serde_json;
-use encoding_rs_io::{self, DecodeReaderBytesBuilder};
-use lazy_static::lazy_static;
+use std::fs; 
 use std::sync::Mutex;
-use strum::IntoEnumIterator;
+use std::path::Path;
+use std::collections::HashMap;
+use std::io::Write;
+use serde_json;
+use lazy_static::lazy_static;
 
 use super::computer::ent_compute;
-use super::ValueType;
 
-#[derive(Deserialize, Serialize, Debug)]
+#[derive(Debug)]
 struct Sys {
     syscall: String,
     arg1: String,
@@ -23,7 +21,7 @@ lazy_static! {
     static ref OPEND_FILES: Mutex<HashMap<String, String>> = Mutex::new(HashMap::new());
 }
 
-fn syscall_separate_th(line: String) {
+pub fn threshold_analysis(line: String) {
     if line.contains("probes") {
         return;
     }
@@ -49,7 +47,6 @@ fn syscall_separate_th(line: String) {
     match sys.syscall.as_str() {
         "open"|"openat" => {
             let file_name = sys.arg3.clone();
-            // println!("file name{}", file_name);
             if file_name.len() != 0 {
                 let v: Vec<&str> = file_name.split("/").collect();
                 let file_path = dir.clone() + "/" + v[v.len() - 1];
@@ -91,7 +88,6 @@ fn syscall_separate_th(line: String) {
                     file.write(sys.arg3.as_bytes()).unwrap();
                 }
             }
-            // println!("other: {}", sys.arg3);
         }
     }
 }
@@ -117,8 +113,4 @@ fn output_to_files(values: Vec<f32>) {
             .unwrap();
         file.write((values[i].to_string() + "\n").as_bytes()).unwrap();
     }
-}
-
-pub fn threshold_analysis(line: String) {
-    syscall_separate_th(line);
 }
