@@ -17,7 +17,7 @@ fn create_container(image_name: & String) -> String{
     let mut child = Command::new("docker")
         .args(["run", "-d", 
             "--rm", 
-            "--device=/dev/isgx", 
+            "--device=/dev/sgx_enclave", 
             "--privileged", 
             "--network=host",
             "--name", &container_name,
