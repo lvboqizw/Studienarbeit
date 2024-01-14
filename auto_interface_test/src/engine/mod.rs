@@ -1,18 +1,14 @@
 use std::fs;
 use std::path::Path;
-use std::process::{Command, Stdio};
-use std::thread;
+use std::process::Command;
 use std::io::{BufRead, BufReader};
-use strum::IntoEnumIterator;
-use strum_macros::EnumIter;
 
 mod threshold;
 mod computer;
 mod interceptor;
+mod trigger;
 
-use ValueType::*;
-
-#[derive(EnumIter, Debug, PartialEq)]
+#[derive(Debug, PartialEq)]
 enum ValueType {
     FileBytes,
     Entropy,
@@ -45,6 +41,11 @@ pub fn install_ent() {
             .status().unwrap();
         assert!(exit_status.success());
     }
+}
+
+pub fn generator(mode: TraceMode) {
+    let image_name = String::from("generator");
+    trigger::run_trigger(image_name, mode).unwrap();
 }
 
 pub fn exec(target: String, mode: TraceMode) {

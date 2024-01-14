@@ -1,4 +1,3 @@
-// use std::os::unix::prelude::PermissionsExt;
 use std::fs::File;
 use std::env;
 use std::process::{Command, Stdio, Child};
@@ -13,12 +12,7 @@ pub fn trace(target: String, mode: TraceMode) -> io::Result<Child> {
     
     env::set_var("BPFTRACE_STRLEN", "200");
 
-    let bpf = Command::new("which")
-        .arg("bpftrace")
-        .output()
-        .unwrap();
-    let tmp = String::from_utf8(bpf.stdout).unwrap();
-    let bpf_path = tmp.trim();
+    let bpf_path = "source_files/bpftrace";
 
     let res = create_script_file(target);
     let trace_fp = match res {
@@ -31,7 +25,7 @@ pub fn trace(target: String, mode: TraceMode) -> io::Result<Child> {
     match mode {
         TraceMode::Test => {
             let child = Command::new(bpf_path)
-                .args(["-f", "json", "source_files/trace_test.bt"])
+                .args(["-f", "json", "source_files/trace_file/trace_test.bt"])
                 .stdout(Stdio::piped())
                 .stderr(Stdio::piped())
                 .spawn()?;
@@ -58,7 +52,7 @@ pub fn trace(target: String, mode: TraceMode) -> io::Result<Child> {
 }
 
 fn create_script_file(target: String) -> io::Result<String>{
-    let org_path = "source_files/tmp_trace.bt";
+    let org_path = "source_files/trace_file/tmp_trace.bt";
     let org_file = File::open(&org_path)?;
 
     let output_path = "build/trace.bt";

@@ -1,13 +1,11 @@
-use std::{path::Path, fs};
+use std::fs;
 
-use std::time::Duration;
 use structopt::StructOpt;
 
-mod executor;
-mod monitor;
-mod tracer;
-mod threshold;
+// mod executor;
+// mod tracer;
 mod engine;
+// mod trigger;
 
 use engine::TraceMode;
 
@@ -41,7 +39,8 @@ fn main()  {
             // engine::exec("".to_string(), TraceMode::Test);
         },
         Com::Threshold => {
-            engine::exec("a".to_string(), TraceMode::Threshold);
+            engine::generator(TraceMode::Threshold);
+            engine::exec("threshold".to_string(), TraceMode::Threshold);
         },
         Com::App { name } => {
             engine::exec(name, TraceMode::Threshold);

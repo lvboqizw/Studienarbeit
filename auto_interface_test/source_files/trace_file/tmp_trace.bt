@@ -1,0 +1,84 @@
+// -------------read---------------------
+tracepoint:syscalls:sys_enter_read /comm==""/ 
+{ 
+    @read_buf[tid] = args->buf;
+    @read_count[tid] = args->count;
+    @read_fd[tid] = args->fd;
+} 
+tracepoint:syscalls:sys_exit_read /comm==""/
+{
+    if (args->ret != 0) {
+        printf("read %d %d %s", @read_fd[tid], args->ret, str(@read_buf[tid], @read_count[tid]));
+    }
+    clear(@read_buf);
+    clear(@read_count);
+    clear(@read_fd);
+}
+
+//-------------pread64------------------
+tracepoint:syscalls:sys_enter_pread64 /comm==""/ 
+{
+    @pread64_buf[tid] = args->buf;
+    @pread64_count[tid] = args->count;
+    @pread64_fd[tid] = args->fd;
+}
+tracepoint:syscalls:sys_exit_pread64 /comm==""/ 
+{
+    if (args->ret != 0) {
+        printf("pread64 %d %d %s", @pread64_fd[tid], args->ret, str(@pread64_buf[tid], @pread64_count[tid]));
+    }
+    clear(@pread64_buf);
+    clear(@pread64_count);
+    clear(@pread64_fd);
+}
+
+//--------------readv-------------------
+tracepoint:syscalls:sys_enter_readv /comm==""/ 
+{ 
+    @readv_buf[tid] = (args->vec)->iov_base;
+    @readv_count[tid] = (args->vec)->iov_len;
+    @readv_fd[tid] = args->fd;
+}
+tracepoint:syscalls:sys_exit_readv /comm==""/
+{
+    if (args->ret != 0) {
+        printf("readv %d %d %s", @readv_fd[tid], args->ret,  str(@readv_buf[tid], @readv_count[tid]));
+    } 
+    clear(@readv_buf);
+    clear(@readv_count);
+    clear(@readv_fd);
+}
+
+//-------------preadv-------------------
+tracepoint:syscalls:sys_enter_preadv /comm==""/ 
+{
+    @preadv_buf[tid] = (args->vec)->iov_base;
+    @preadv_count[tid] = (args->vec)->iov_len;
+    @preadv_fd[tid] = args->fd;
+}
+tracepoint:syscalls:sys_exit_preadv /comm==""/
+{
+    printf("preadv %d %d %s", @preadv_fd[tid], args->ret, str(@preadv_buf[tid], @preadv_count[tid]));
+    clear(@preadv_buf);
+    clear(@preadv_count);
+    clear(@preadv_fd);
+} 
+
+//-------------openat------------
+tracepoint:syscalls:sys_enter_openat /comm==""/
+{
+    @openat_path[tid] = args->filename;
+}
+tracepoint:syscalls:sys_exit_openat /comm==""/
+{
+    if (args->ret != 0) {
+        printf("openat %d _ %s", args->ret, str(@openat_path[tid]));
+    }
+    clear(@openat_path);
+}
+
+//------------close--------------
+tracepoint:syscalls:sys_enter_close /comm==""/
+{
+    printf("close %d _ _", args->fd);
+}

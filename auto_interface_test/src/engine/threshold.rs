@@ -63,7 +63,7 @@ pub fn threshold_analysis(line: String) {
                     if let Some(file_path) = tmp.remove(&sys.arg1) {
                         if Path::new(&file_path).exists() {
                             let values: Vec<f32> = ent_compute(&file_path);
-                            output_to_files(values);
+                            output_to_files(values,file_path);
                         }
                         
                     }        
@@ -92,25 +92,28 @@ pub fn threshold_analysis(line: String) {
     }
 }
 
-fn output_to_files(values: Vec<f32>) {
-    let dir = "build/threshold_output".to_string();
-    if !Path::new(dir.as_str()).exists() {
-        fs::create_dir_all(dir.as_str()).unwrap();
+fn output_to_files(values: Vec<f32>, trace_file: String) {
+    let dir = "build/threshold_output";
+    if !Path::new(dir).exists() {
+        fs::create_dir_all(dir).unwrap();
     }
 
     let v_types: Vec<&str> = vec!("FileBytes", "Entropy", "ChiSquare", "Mean", 
                                  "MontecarloPi", "SerialCorrelation", "_LAST_");
     
     for i in 0 .. values.len() {
-        let file_path = dir.clone() + "/" + v_types[i];
-        if !Path::new(file_path.as_str()).exists() {
-            let _result = fs::File::create(file_path.as_str()).unwrap();
+        let output_path = dir.to_owned() + "/" + v_types[i];
+        if !Path::new(output_path.as_str()).exists() {
+            let _result = fs::File::create(output_path.as_str()).unwrap();
         }
         let mut file = fs::OpenOptions::new()
             .write(true)
             .append(true)
-            .open(file_path.as_str())
+            .open(output_path.as_str())
             .unwrap();
-        file.write((values[i].to_string() + "\n").as_bytes()).unwrap();
+        file.write((trace_file.clone() + ": " + 
+                        values[i].to_string().as_str() + "\n")
+                        .as_bytes())
+                    .unwrap();
     }
 }
