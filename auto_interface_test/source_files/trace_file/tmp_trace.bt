@@ -58,7 +58,9 @@ tracepoint:syscalls:sys_enter_preadv /comm==""/
 }
 tracepoint:syscalls:sys_exit_preadv /comm==""/
 {
-    printf("preadv %d %d %s", @preadv_fd[tid], args->ret, str(@preadv_buf[tid], @preadv_count[tid]));
+    if (args->ret != 0){
+        printf("preadv %d %d %s", @preadv_fd[tid], args->ret, str(@preadv_buf[tid], @preadv_count[tid]));
+    }
     clear(@preadv_buf);
     clear(@preadv_count);
     clear(@preadv_fd);

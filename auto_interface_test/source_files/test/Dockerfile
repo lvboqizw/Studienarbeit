@@ -4,8 +4,7 @@ COPY operation /operation
 COPY client /work/client
 COPY server /work/server
 COPY file_sys /work/file_sys
-COPY data-original /data-original
-COPY volume /data
+COPY data-original /R_ue
 
 ENV SCONE_MODE=hw
 ENV SCONE_NO_MMAP_ACCESS=1

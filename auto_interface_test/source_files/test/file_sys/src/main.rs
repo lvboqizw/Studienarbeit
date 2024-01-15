@@ -1,6 +1,8 @@
 mod rw;
 
 fn main() {
-    rw::read_write();
-    rw::read_write_v();
+    rw::re_we();
+    rw::re_wu();
+    rw::ru_we();
+    rw::ru_wu();
 }

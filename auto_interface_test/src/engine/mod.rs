@@ -7,16 +7,17 @@ mod threshold;
 mod computer;
 mod interceptor;
 mod trigger;
+mod application;
 
-#[derive(Debug, PartialEq)]
+#[derive(Debug, PartialEq, Clone, Copy)]
 enum ValueType {
-    FileBytes,
-    Entropy,
-    ChiSquare,
-    Mean,
-    MontecarloPi,
-    SerialCorrelation,
-    _LAST_
+    FileBytes           = 0,
+    Entropy             = 1,
+    ChiSquare           = 2,
+    Mean                = 3,
+    MontecarloPi        = 4,
+    SerialCorrelation   = 5,
+    _LAST_              = 6
 } 
 
 #[derive(Clone, PartialEq)]
@@ -61,15 +62,24 @@ pub fn exec(target: String, mode: TraceMode) {
         },
     };
 
+    if mode == TraceMode::Application || 
+        mode == TraceMode::Test {
+            println!("The files which might not be encrypted: \n");
+        }
+
 
     for line in child_out.lines() {
         if let Ok(line) = line {
             match mode {
-                TraceMode::Test => {},
+                TraceMode::Test => {
+                    application::analysis(line);
+                },
                 TraceMode::Threshold => {
                     threshold::threshold_analysis(line);
                 },
-                TraceMode::Application => {},
+                TraceMode::Application => {
+                    application::analysis(line);
+                },
             }   
         }
     }

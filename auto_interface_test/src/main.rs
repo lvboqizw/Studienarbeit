@@ -36,7 +36,8 @@ fn main()  {
 
     match cmd {
         Com::Test => {
-            // engine::exec("".to_string(), TraceMode::Test);
+            engine::generator(TraceMode::Test);
+            engine::exec("".to_string(), TraceMode::Test);
         },
         Com::Threshold => {
             engine::generator(TraceMode::Threshold);

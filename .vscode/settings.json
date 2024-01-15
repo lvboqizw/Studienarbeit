@@ -15,6 +15,11 @@
         "./auto_interface_test/Cargo.toml",
         "./auto_interface_test/Cargo.toml",
         "./auto_interface_test/Cargo.toml",
-        "./auto_interface_test/Cargo.toml"
+        "./auto_interface_test/Cargo.toml",
+        "./auto_interface_test/source_files/test/file_sys/Cargo.toml",
+        "./auto_interface_test/source_files/test/file_sys/Cargo.toml",
+        "./auto_interface_test/source_files/test/file_sys/Cargo.toml",
+        "./auto_interface_test/source_files/test/client/Cargo.toml",
+        "./auto_interface_test/source_files/test/server/Cargo.toml"
     ]
 }

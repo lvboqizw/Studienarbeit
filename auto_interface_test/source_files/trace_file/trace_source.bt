@@ -7,7 +7,9 @@ tracepoint:syscalls:sys_enter_read /comm==""/
 } 
 tracepoint:syscalls:sys_exit_read /comm==""/
 {
-    printf("read %d %d %s", @read_fd[tid], args->ret, str(@read_buf[tid], @read_count[tid]));
+    if (args->ret){
+        printf("read %d %d %s", @read_fd[tid], args->ret, str(@read_buf[tid], @read_count[tid]));
+    }
     clear(@read_buf);
     clear(@read_count);
     clear(@read_fd);
@@ -22,7 +24,9 @@ tracepoint:syscalls:sys_enter_pread64 /comm==""/
 }
 tracepoint:syscalls:sys_exit_pread64 /comm==""/ 
 {
-    printf("pread64 %d %d %s", @pread64_fd[tid], args->ret, str(@pread64_buf[tid], @pread64_count[tid]));
+    if (args->ret){
+        printf("pread64 %d %d %s", @pread64_fd[tid], args->ret, str(@pread64_buf[tid], @pread64_count[tid]));
+    }
     clear(@pread64_buf);
     clear(@pread64_count);
     clear(@pread64_fd);
@@ -37,7 +41,9 @@ tracepoint:syscalls:sys_enter_readv /comm==""/
 }
 tracepoint:syscalls:sys_exit_readv /comm==""/
 {
-    printf("readv %d %d %s", @readv_fd[tid], args->ret,  str(@readv_buf[tid], @readv_count[tid]));
+    if (args->ret){
+        printf("readv %d %d %s", @readv_fd[tid], args->ret,  str(@readv_buf[tid], @readv_count[tid]));
+    }
     clear(@readv_buf);
     clear(@readv_count);
     clear(@readv_fd);
@@ -52,7 +58,9 @@ tracepoint:syscalls:sys_enter_preadv /comm==""/
 }
 tracepoint:syscalls:sys_exit_preadv /comm==""/
 {
-    printf("preadv %d %d %s", @preadv_fd[tid], args->ret, str(@preadv_buf[tid], @preadv_count[tid]));
+    if (args->ret){
+        printf("preadv %d %d %s", @preadv_fd[tid], args->ret, str(@preadv_buf[tid], @preadv_count[tid]));
+    }
     clear(@preadv_buf);
     clear(@preadv_count);
     clear(@preadv_fd);
@@ -67,7 +75,9 @@ tracepoint:syscalls:sys_enter_write /comm==""/
 }
 tracepoint:syscalls:sys_exit_write /comm==""/
 {
-    printf("write %d %d %s", @write_fd[tid], args->ret, str(@write_buf[tid], @write_count[tid]));
+    if (args->ret){
+        printf("write %d %d %s", @write_fd[tid], args->ret, str(@write_buf[tid], @write_count[tid]));
+    }
     clear(@write_buf);
     clear(@write_count);
     clear(@write_fd);
@@ -82,7 +92,9 @@ tracepoint:syscalls:sys_enter_pwrite64 /comm==""/
 }
 tracepoint:syscalls:sys_exit_pwrite64 /comm==""/
 {
-    printf("pwrite %d %d %s", @pwrite64_fd[tid], args->ret, str(@pwrite64_buf[tid], @pwrite64_count[tid]));
+    if (args->ret){
+        printf("pwrite %d %d %s", @pwrite64_fd[tid], args->ret, str(@pwrite64_buf[tid], @pwrite64_count[tid]));
+    }
     clear(@pwrite64_buf);
     clear(@pwrite64_count);
     clear(@pwrite64_fd);
@@ -97,7 +109,9 @@ tracepoint:syscalls:sys_enter_pwritev /comm==""/
 }
 tracepoint:syscalls:sys_exit_pwritev /comm==""/ 
 {
-    printf("pwritev %d %d %s", @pwritev_fd[tid], args->ret, str(@pwritev_buf[tid], @pwritev_count[tid]));
+    if (args->ret){
+        printf("pwritev %d %d %s", @pwritev_fd[tid], args->ret, str(@pwritev_buf[tid], @pwritev_count[tid]));
+    }
     clear(@pwritev_buf);
     clear(@pwritev_count);
     clear(@pwritev_fd);
@@ -112,7 +126,9 @@ tracepoint:syscalls:sys_enter_writev /comm==""/
 }
 tracepoint:syscalls:sys_exit_writev /comm==""/ 
 {
-    printf("writev %d %d %s", @writev_fd[tid], args->ret, str(@writev_buf[tid], @writev_count[tid]));
+    if (args->ret){
+        printf("writev %d %d %s", @writev_fd[tid], args->ret, str(@writev_buf[tid], @writev_count[tid]));
+    }
     clear(@writev_buf);
     clear(@writev_count);
     clear(@writev_fd);
@@ -127,7 +143,9 @@ tracepoint:syscalls:sys_enter_pwritev2 /comm==""/
 }
 tracepoint:syscalls:sys_exit_pwritev2 /comm==""/ 
 {
-    printf("pwritev2 %d %d %s", @pwritev2_fd[tid], args->ret, str(@pwritev2_buf[tid], @pwritev2_count[tid]));
+    if (args->ret){
+        printf("pwritev2 %d %d %s", @pwritev2_fd[tid], args->ret, str(@pwritev2_buf[tid], @pwritev2_count[tid]));
+    }
     clear(@pwritev2_buf);
     clear(@pwritev2_count);
     clear(@pwritev2_fd);
@@ -142,7 +160,9 @@ tracepoint:syscalls:sys_enter_recvfrom /comm==""/
 }
 tracepoint:syscalls:sys_exit_recvfrom /comm==""/
 {
-    printf("recvfrom %d %d %s", @recvfrom_fd[tid], args->ret, str(@recvfrom_buf[tid], @recvfrom_count[tid]));
+    if (args->ret){
+        printf("recvfrom %d %d %s", @recvfrom_fd[tid], args->ret, str(@recvfrom_buf[tid], @recvfrom_count[tid]));
+    }
     clear(@recvfrom_buf);
     clear(@recvfrom_count);
     clear(@recvfrom_fd);
@@ -157,7 +177,9 @@ tracepoint:syscalls:sys_enter_recvmsg /comm==""/
 }
 tracepoint:syscalls:sys_exit_recvmsg /comm==""/
 {
-    printf("recvmsg %d %d %s", @recvmsg_fd[tid], args->ret, str(@recvmsg_buf[tid], @recvmsg_count[tid]));
+    if (args->ret){
+        printf("recvmsg %d %d %s", @recvmsg_fd[tid], args->ret, str(@recvmsg_buf[tid], @recvmsg_count[tid]));
+    }
     clear(@recvmsg_buf);
     clear(@recvmsg_count);
     clear(@recvmsg_fd);
@@ -172,7 +194,9 @@ tracepoint:syscalls:sys_enter_sendto /comm==""/
 }
 tracepoint:syscalls:sys_exit_sendto /comm==""/
 {
-    printf("sendto %d %d %s", @sendto_fd[tid], args->ret, str(@sendto_buf[tid], @sendto_count[tid]));
+    if (args->ret){
+        printf("sendto %d %d %s", @sendto_fd[tid], args->ret, str(@sendto_buf[tid], @sendto_count[tid]));
+    }
     clear(@sendto_buf);
     clear(@sendto_count);
     clear(@sendto_fd);
@@ -187,7 +211,9 @@ tracepoint:syscalls:sys_enter_sendmsg /comm==""/
 }
 tracepoint:syscalls:sys_exit_sendmsg /comm==""/
 {
-    printf("sendmsg %d %d %s", @sendmsg_fd[tid], args->ret, str(@sendmsg_buf[tid], @sendmsg_count[tid]));
+    if (args->ret){
+        printf("sendmsg %d %d %s", @sendmsg_fd[tid], args->ret, str(@sendmsg_buf[tid], @sendmsg_count[tid]));
+    }
     clear(@sendmsg_buf);
     clear(@sendmsg_count);
     clear(@sendmsg_fd);
@@ -219,8 +245,9 @@ tracepoint:syscalls:sys_enter_accept4 /comm==""/
 }
 tracepoint:syscalls:sys_exit_accept4 /comm==""/
 {
-    //print(@accept4_addr[tid]);
-    printf("accept4 %d %d %s", @accept4_fd[tid], args->ret, @accept4_addr[tid]);
+    if (args->ret){
+        printf("accept4 %d %d %s", @accept4_fd[tid], args->ret, @accept4_addr[tid]);
+    }
     clear(@accept4_fd);
     clear(@accept4_addr);
 
