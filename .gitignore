@@ -11,5 +11,8 @@ auto_interface_test/generator/file_sys/target
 auto_interface_test/generator/server/target
 auto_interface_test/generator/client/target
 draw_pics/target
+auto_interface_test/source_files/test/file_sys/target
+auto_interface_test/source_files/test/server/target
+auto_interface_test/source_files/test/client/target
 
 build/
