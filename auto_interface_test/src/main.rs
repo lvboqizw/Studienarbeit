@@ -36,11 +36,11 @@ fn main()  {
 
     match cmd {
         Com::Test => {
-            engine::generator(TraceMode::Test);
+            engine::trigger(TraceMode::Test);
             engine::exec("".to_string(), TraceMode::Test);
         },
         Com::Threshold => {
-            engine::generator(TraceMode::Threshold);
+            engine::trigger(TraceMode::Threshold);
             engine::exec("threshold".to_string(), TraceMode::Threshold);
         },
         Com::App { name } => {

@@ -75,7 +75,7 @@ pub fn re_wu() {
 
 pub fn ru_wu() {
     let re_p = "/R_ue";
-    let we_p = "/W_ue/Re_Wu".to_string();
+    let we_p = "/W_ue/Ru_Wu".to_string();
     let entries = fs::read_dir(re_p).unwrap();
     for entry in entries {
         if let Ok(entry) = entry {

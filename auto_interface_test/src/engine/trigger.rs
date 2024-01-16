@@ -49,6 +49,7 @@ pub fn run_trigger(image_name: String, mode: TraceMode) -> io::Result<()>{
         panic!("The program panic with error {:?} by creating image", status);
     }
     // create the container command with base on the created image file, to run the traced traget program
-    create_container(&image_name);
+    // create_container(&image_name);
+    println!("Run command in a new terminal to test: \ndocker run -d --rm --device=/dev/sgx_enclave --network=host {}\n", image_name);
     Ok(())
 }

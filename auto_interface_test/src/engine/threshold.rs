@@ -6,7 +6,10 @@ use std::io::Write;
 use serde_json;
 use lazy_static::lazy_static;
 
-use super::computer::ent_compute;
+use super::{computer::ent_compute, ValueType};
+use serde::{Serialize, Deserialize};
+use serde_json::Result;
+
 
 #[derive(Debug)]
 struct Sys {
@@ -15,6 +18,18 @@ struct Sys {
     arg2: String,
     arg3: String,
 }
+
+#[derive(Serialize, Deserialize)]
+struct Res {
+    file: String,
+    entropy: f32,
+    chisquare: f32,
+    mean: f32,
+    montecarlo: f32,
+    serial: f32,
+}
+
+static mut _N: i32 = 0;
 
 lazy_static! {
     #[derive(Debug)]
@@ -63,7 +78,7 @@ pub fn threshold_analysis(line: String) {
                     if let Some(file_path) = tmp.remove(&sys.arg1) {
                         if Path::new(&file_path).exists() {
                             let values: Vec<f32> = ent_compute(&file_path);
-                            output_to_files(values,file_path);
+                            output_to_files(values,file_path, true);
                         }
                         
                     }        
@@ -92,28 +107,62 @@ pub fn threshold_analysis(line: String) {
     }
 }
 
-fn output_to_files(values: Vec<f32>, trace_file: String) {
+pub fn ent_org(){
+    let org_dir = "source_files/th/data-original";
+    let entries = fs::read_dir(org_dir).unwrap();
+    for entry in entries {
+        if let Ok(entry) = entry {
+            let path = entry.path();
+            let path = path.to_str().unwrap().to_string();
+            let values: Vec<f32> = ent_compute(&path);
+            output_to_files(values, path, false);
+        }
+    }
+}
+
+fn output_to_files(values: Vec<f32>, trace_file: String, encrypt: bool) {
+
+    let res= Res {
+        file: trace_file,
+        entropy: values[ValueType::_Entropy as usize],
+        chisquare: values[ValueType::_ChiSquare as usize],
+        mean: values[ValueType::_Mean as usize],
+        montecarlo: values[ValueType::_MontecarloPi as usize],
+        serial: values[ValueType::_SerialCorrelation as usize],
+    };
+
     let dir = "build/threshold_output";
     if !Path::new(dir).exists() {
         fs::create_dir_all(dir).unwrap();
     }
 
-    let v_types: Vec<&str> = vec!("FileBytes", "Entropy", "ChiSquare", "Mean", 
-                                 "MontecarloPi", "SerialCorrelation", "_LAST_");
-    
-    for i in 0 .. values.len() {
-        let output_path = dir.to_owned() + "/" + v_types[i];
-        if !Path::new(output_path.as_str()).exists() {
-            let _result = fs::File::create(output_path.as_str()).unwrap();
+    let output_path: String;
+    if encrypt {
+        output_path = unsafe {dir.to_owned()+ "/encrypted_" + &_N.to_string()};
+    } else {
+        output_path = unsafe {dir.to_owned()+ "/original"};
+    }
+    if !Path::new(output_path.as_str()).exists() {
+        let _result = fs::File::create(output_path.as_str()).unwrap();
+    }
+    let mut file = fs::OpenOptions::new()
+        .write(true)
+        .append(true)
+        .open(output_path.as_str())
+        .unwrap();
+
+    let buf = serde_json::to_string(&res).unwrap() + "\n";
+
+    if !buf.contains("fspf") &&
+        !buf.contains("sgx-musl.conf") &&
+        !buf.contains("mmap_min_addr") &&
+        !buf.contains("mounts") &&
+        !buf.contains("os-release") {
+            file.write(buf.as_bytes()).unwrap();
         }
-        let mut file = fs::OpenOptions::new()
-            .write(true)
-            .append(true)
-            .open(output_path.as_str())
-            .unwrap();
-        file.write((trace_file.clone() + ": " + 
-                        values[i].to_string().as_str() + "\n")
-                        .as_bytes())
-                    .unwrap();
+    if buf.contains("fspf") {
+        unsafe{
+            _N += 1;
+        }
     }
 }

@@ -9,8 +9,8 @@ use lazy_static::lazy_static;
 use super::computer::ent_compute;
 use super::ValueType;
 
-static THRESHOLD: f32 = 0.45;
-static METHOD: ValueType = ValueType::SerialCorrelation;
+static THRESHOLD: f32 = 145.0;
+static METHOD: ValueType = ValueType::_Mean;
 
 #[derive(Debug)]
 struct Sys {
@@ -37,7 +37,7 @@ pub fn analysis(line: String) {
     
     let v: Vec<&str> = data.splitn(4, " ").collect();
     if v.len() < 4 {
-        println!("v len < 4: {:?}", data);
+        println!("Exception: {:?}", line);
         return;
     }
     let sys = Sys {
@@ -58,7 +58,7 @@ pub fn analysis(line: String) {
             if file_name.len() != 0 {
                 let true_p = file_name.replace("/", "\\");
                 let file_path = dir.clone() + "/" + &true_p;
-                println!("true_p: {:?}, file_path:{:?}", true_p, file_path);
+                // println!("true_p: {:?}, file_path:{:?}", true_p, file_path);
                 OPEND_FILES.lock().unwrap()
                     .insert(
                         sys.arg1.clone(), 
@@ -84,7 +84,7 @@ pub fn analysis(line: String) {
                 .contains_key(&sys.arg1) {
                 if buf_len != 0 {
                     let tmp = OPEND_FILES.lock().unwrap();
-                    let file_path = tmp.get(&sys.arg1).unwrap();
+                    let file_path = tmp.get(&sys.arg1).unwrap().to_owned();
     
                     if !Path::new(file_path.as_str()).exists() {
                         let _result = fs::File::create(file_path.as_str()).unwrap();
@@ -102,13 +102,14 @@ pub fn analysis(line: String) {
 }
 
 fn judge(values: Vec<f32>, trace_file: String) {
+    println!("values: {:?}\n trace_file: {}\n", values, trace_file);
     let v: Vec<&str> = trace_file.split("/").collect();
     let tmp = v[v.len() - 1].to_string();
-    let true_p = tmp.replace("\\", "/");
+    let _true_p = tmp.replace("\\", "/");
 
-    let res = values[METHOD as usize];
-    println!("res: {}", res);
-    if res < THRESHOLD {
-        println!("{}", true_p);
-    }
+    let _res = values[METHOD as usize];
+    // println!("res: {}", res);
+    // if _res < (THRESHOLD - 5.0) || _res > (THRESHOLD + 5.0) {
+    //     println!("{}: {}", true_p, _res);
+    // }
 }
