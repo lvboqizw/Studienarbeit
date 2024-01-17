@@ -1,7 +1,0 @@
-{"path":"outfiles/PNG.png","entropy":4.34219,"chi_square":41328430.0,"mean":147.98251,"monte_carlo_pi":2.426714,"serial_correlation":0.475716}
-{"path":"outfiles/MP3.mp3","entropy":4.345945,"chi_square":352665920.0,"mean":147.88977,"monte_carlo_pi":2.429662,"serial_correlation":0.4752}
-{"path":"outfiles/AVI.avi","entropy":4.346589,"chi_square":185220910.0,"mean":147.88742,"monte_carlo_pi":2.428922,"serial_correlation":0.475095}
-{"path":"outfiles/TEXT_Chinese","entropy":4.312112,"chi_square":382973.6,"mean":148.42097,"monte_carlo_pi":2.420775,"serial_correlation":0.481296}
-{"path":"outfiles/RMVB.rmvb","entropy":4.347978,"chi_square":91188744.0,"mean":148.03075,"monte_carlo_pi":2.425716,"serial_correlation":0.474296}
-{"path":"outfiles/MP4.mp4","entropy":4.345463,"chi_square":401514500.0,"mean":147.92216,"monte_carlo_pi":2.427666,"serial_correlation":0.474869}
-{"path":"outfiles/TEXT_English","entropy":4.321833,"chi_square":181921.11,"mean":146.14452,"monte_carlo_pi":2.480287,"serial_correlation":0.470165}

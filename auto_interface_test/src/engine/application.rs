@@ -9,8 +9,8 @@ use lazy_static::lazy_static;
 use super::computer::ent_compute;
 use super::ValueType;
 
-static THRESHOLD: f32 = 145.0;
-static METHOD: ValueType = ValueType::_Mean;
+static THRESHOLD: f32 = 3.25;
+static METHOD: ValueType = ValueType::_MontecarloPi;
 
 #[derive(Debug)]
 struct Sys {
@@ -102,14 +102,14 @@ pub fn analysis(line: String) {
 }
 
 fn judge(values: Vec<f32>, trace_file: String) {
-    println!("values: {:?}\n trace_file: {}\n", values, trace_file);
+    // println!("values: {:?}\n trace_file: {}\n", values, trace_file);
     let v: Vec<&str> = trace_file.split("/").collect();
     let tmp = v[v.len() - 1].to_string();
     let _true_p = tmp.replace("\\", "/");
 
     let _res = values[METHOD as usize];
-    // println!("res: {}", res);
-    // if _res < (THRESHOLD - 5.0) || _res > (THRESHOLD + 5.0) {
-    //     println!("{}: {}", true_p, _res);
-    // }
+    // println!("res: {}", _res);
+    if _res < (THRESHOLD - 0.05) || _res > (THRESHOLD + 0.05) {
+        println!("{}: {}", _true_p, _res);
+    }
 }
