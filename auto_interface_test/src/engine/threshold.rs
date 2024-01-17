@@ -47,6 +47,10 @@ pub fn threshold_analysis(line: String) {
     data.remove(data.len() - 1);    // remove \" at the end of the line
     
     let v: Vec<&str> = data.splitn(4, " ").collect();
+    if v.len() < 4 {
+        println!("{}", line);
+        return;
+    }
     let sys = Sys {
         syscall: v[0].to_string(),
         arg1: v[1].to_string(),   // fd
@@ -78,7 +82,8 @@ pub fn threshold_analysis(line: String) {
                     if let Some(file_path) = tmp.remove(&sys.arg1) {
                         if Path::new(&file_path).exists() {
                             let values: Vec<f32> = ent_compute(&file_path);
-                            output_to_files(values,file_path, true);
+                            output_to_files(values,file_path.clone(), true);
+                            fs::remove_file(&file_path).expect("Failed to remove template files");
                         }
                         
                     }        

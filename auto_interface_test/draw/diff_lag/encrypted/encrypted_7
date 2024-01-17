@@ -1,0 +1,11 @@
+{"file":"build/tmp_files/Greek","entropy":3.965289,"chisquare":1264580.9,"mean":125.085724,"montecarlo":3.275758,"serial":0.3951}
+{"file":"build/tmp_files/Sanskrit","entropy":3.94847,"chisquare":1749779.2,"mean":125.48127,"montecarlo":3.244395,"serial":0.391634}
+{"file":"build/tmp_files/Hebrew","entropy":3.975764,"chisquare":865337.9,"mean":124.61454,"montecarlo":3.266901,"serial":0.396897}
+{"file":"build/tmp_files/Chinese","entropy":3.919963,"chisquare":841690.25,"mean":126.12787,"montecarlo":3.210353,"serial":0.385925}
+{"file":"build/tmp_files/Japanese","entropy":3.932733,"chisquare":872190.5,"mean":125.684555,"montecarlo":3.246858,"serial":0.390318}
+{"file":"build/tmp_files/Russian","entropy":3.929793,"chisquare":1415252.4,"mean":125.75884,"montecarlo":3.242286,"serial":0.38741}
+{"file":"build/tmp_files/Arabic","entropy":3.941337,"chisquare":832892.44,"mean":125.3539,"montecarlo":3.264486,"serial":0.393064}
+{"file":"build/tmp_files/Korean","entropy":3.912272,"chisquare":972479.56,"mean":126.26179,"montecarlo":3.20409,"serial":0.383355}
+{"file":"build/tmp_files/Thai","entropy":3.945973,"chisquare":1173252.6,"mean":125.54688,"montecarlo":3.255351,"serial":0.388541}
+{"file":"build/tmp_files/Amharic","entropy":3.950417,"chisquare":801890.6,"mean":125.177414,"montecarlo":3.252579,"serial":0.391268}
+{"file":"build/tmp_files/English","entropy":3.943226,"chisquare":889648.7,"mean":125.199936,"montecarlo":3.244531,"serial":0.393742}

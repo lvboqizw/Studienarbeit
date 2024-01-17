@@ -66,7 +66,7 @@ pub fn exec(target: String, mode: TraceMode) {
             println!("Might not encrypted files: \n");
         }
 
-
+    let mut once = false;
     for line in child_out.lines() {
         if let Ok(line) = line {
             match mode {
@@ -74,7 +74,10 @@ pub fn exec(target: String, mode: TraceMode) {
                     application::analysis(line);
                 },
                 TraceMode::Threshold => {
-                    threshold::ent_org();
+                    if !once {
+                        once = true;
+                        threshold::ent_org();
+                    }
                     threshold::threshold_analysis(line);
                 },
                 TraceMode::Application => {
