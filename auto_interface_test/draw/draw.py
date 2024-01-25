@@ -5,8 +5,8 @@ import json
 import matplotlib.pyplot as plt
 import numpy as np
 
-enc_path = "diff_type/encrypted"
-ori_path = "diff_type/original"
+enc_path = "diff_len/encrypted"
+ori_path = "diff_len/original"
 
 ori_file = open(ori_path)
 
@@ -95,13 +95,16 @@ bar_positions_e = np.arange(len(label))
 bar_positions_o = bar_positions_e + bar_width
 
 for i in range(0, len(values)) :
-    plt.bar(bar_positions_e, values[i], width=bar_width, color='orange', label='encrypted')
-    plt.bar(bar_positions_o, values_o[i], width=bar_width, color='blue', label='plain')
-    
-    plt.title('Different text length')
-    plt.xlabel('Length')
-    plt.ylabel(name[i])
+    plt.figure(figsize=(24, 12))
+    bar_enc = plt.bar(bar_positions_e, values[i], width=bar_width, color='orange', label='encrypted')
+    plt.bar_label(bar_enc, label_type='edge', fmt='%.3f')
+    bar_org = plt.bar(bar_positions_o, values_o[i], width=bar_width, color='blue', label='plain')
+    plt.bar_label(bar_org, label_type='edge', fmt='%.3f')
 
+    plt.title('Different file size')
+    # plt.xlabel('Length')
+    plt.ylabel(name[i])
+    
     plt.legend()
     plt.xticks(bar_positions_e + bar_width / 2, label)
     
@@ -109,10 +112,3 @@ for i in range(0, len(values)) :
     plt.savefig(filename)
 
     plt.clf()
-
-
-
-
-
-
-

@@ -63,7 +63,8 @@ pub fn exec(target: String, mode: TraceMode) {
 
     if mode == TraceMode::Application || 
         mode == TraceMode::Test {
-            println!("Might not encrypted files: \n");
+            println!("Run the docker or start the target program.\n
+                        The files might not be encrypted will show bellow: \n");
         }
 
     let mut once = false;
