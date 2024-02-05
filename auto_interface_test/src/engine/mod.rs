@@ -63,8 +63,7 @@ pub fn exec(target: String, mode: TraceMode) {
 
     if mode == TraceMode::Application || 
         mode == TraceMode::Test {
-            println!("Run the docker or start the target program.\n
-                        The files might not be encrypted will show bellow: \n");
+            println!("Run the docker or start the target program.\nThe files might not be encrypted will show bellow: \n");
         }
 
     let mut once = false;
@@ -72,7 +71,7 @@ pub fn exec(target: String, mode: TraceMode) {
         if let Ok(line) = line {
             match mode {
                 TraceMode::Test => {
-                    application::analysis(line);
+                    application::analysis(line, mode.clone());
                 },
                 TraceMode::Threshold => {
                     if !once {
@@ -82,7 +81,7 @@ pub fn exec(target: String, mode: TraceMode) {
                     threshold::threshold_analysis(line);
                 },
                 TraceMode::Application => {
-                    application::analysis(line);
+                    application::analysis(line, mode.clone());
                 },
             }   
         }

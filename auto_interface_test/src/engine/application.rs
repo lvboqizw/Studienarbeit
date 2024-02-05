@@ -7,10 +7,10 @@ use serde_json;
 use lazy_static::lazy_static;
 
 use super::computer::ent_compute;
-use super::ValueType;
+use super::{TraceMode, ValueType};
 
-static THRESHOLD: f32 = 3.25;
-static METHOD: ValueType = ValueType::_MontecarloPi;
+static THRESHOLD: f32 = 0.3;
+static METHOD: ValueType = ValueType::_SerialCorrelation;
 
 #[derive(Debug)]
 struct Sys {
@@ -25,7 +25,7 @@ lazy_static! {
     static ref OPEND_FILES: Mutex<HashMap<String, String>> = Mutex::new(HashMap::new());
 }
 
-pub fn analysis(line: String) {
+pub fn analysis(line: String, mode: TraceMode) {
     if line.contains("probes") {
         return;
     }
@@ -58,7 +58,17 @@ pub fn analysis(line: String) {
             if file_name.len() != 0 {
                 let true_p = file_name.replace("/", "\\");
                 let file_path = dir.clone() + "/" + &true_p;
-                // println!("true_p: {:?}, file_path:{:?}", true_p, file_path);
+                OPEND_FILES.lock().unwrap()
+                    .insert(
+                        sys.arg1.clone(), 
+                        file_path);
+            }
+        },
+        "accept4"|"accept"|"connect" => {
+            // println!("get {}, fd:{}, ret: {} addr: {:?}", sys.syscall, sys.arg1, sys.arg2, sys.arg3);
+            let sockaddr = sys.arg3.clone();
+            if sockaddr.len() != 0 {
+                let file_path = dir.clone() + "/" + &sockaddr;
                 OPEND_FILES.lock().unwrap()
                     .insert(
                         sys.arg1.clone(), 
@@ -72,14 +82,18 @@ pub fn analysis(line: String) {
                     if let Some(file_path) = tmp.remove(&sys.arg1) {
                         if Path::new(&file_path).exists() {
                             let values: Vec<f32> = ent_compute(&file_path);
-                            judge(values,file_path);
+                            judge(values,file_path, mode);
                         }
-                        
-                    }        
+                    }       
             }
         },
         _ => {
-            let buf_len = sys.arg2.parse::<u32>().unwrap();
+            let buf_len =  match sys.arg2.parse::<i32>() {
+                Ok(res) => res,
+                Err(err) => {
+                    println!("syscall: {}, sys.arg2: {:?} error:{}", sys.syscall, sys.arg2, err);
+                    panic!();}
+            };
             if OPEND_FILES.lock().unwrap()
                 .contains_key(&sys.arg1) {
                 if buf_len != 0 {
@@ -101,15 +115,22 @@ pub fn analysis(line: String) {
     }
 }
 
-fn judge(values: Vec<f32>, trace_file: String) {
-    // println!("values: {:?}\n trace_file: {}\n", values, trace_file);
+fn judge(values: Vec<f32>, trace_file: String, mode: TraceMode) {
     let v: Vec<&str> = trace_file.split("/").collect();
     let tmp = v[v.len() - 1].to_string();
-    let _true_p = tmp.replace("\\", "/");
+    let _true_p;
+    if tmp.contains("\\") {
+        _true_p = tmp.replace("\\", "/");
+    } else {
+        _true_p = tmp;
+    }
 
     let _res = values[METHOD as usize];
-    // println!("res: {}", _res);
-    if _res < (THRESHOLD - 0.05) || _res > (THRESHOLD + 0.05) {
-        println!("{}: {}", _true_p, _res);
+    if _res < THRESHOLD {
+        println!("Unencrypted: {}, {}", _true_p, _res);
+    } else {
+        if mode == TraceMode::Test {
+            println!("Encrypted: {}, {}", _true_p, _res);
+        }
     }
 }

@@ -13,7 +13,7 @@ services:
       #  SCONE_LOG: debug
        SCONE_NETWORK_SHIELD: "protected"
        SCONE_NETWORK_SHIELD_SERVER_1: "protected"
-       SCONE_NETWORK_SHIELD_SERVER_1_PORT: "TCP:9000"
+       SCONE_NETWORK_SHIELD_SERVER_1_PORT: "TCP:8087"
        SCONE_NETWORK_SHIELD_SERVER_1_IDENTITY: |
          $$SCONE::server:privatekey$$
          $$SCONE::server:crt$$
@@ -26,7 +26,7 @@ services:
       #  SCONE_LOG: debug
        SCONE_NETWORK_SHIELD: "protected"
        SCONE_NETWORK_SHIELD_CLIENT_1: "protected"
-       SCONE_NETWORK_SHIELD_CLIENT_1_DESTINATION: "TCP:localhost:9000"
+       SCONE_NETWORK_SHIELD_CLIENT_1_DESTINATION: "TCP:localhost:8087"
        SCONE_NETWORK_SHIELD_CLIENT_1_DESTINATION_IP: "127.0.0.1"
        SCONE_NETWORK_SHIELD_CLIENT_1_IDENTITY: |
          $$SCONE::client:privatekey$$

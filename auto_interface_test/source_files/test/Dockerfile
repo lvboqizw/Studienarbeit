@@ -22,4 +22,4 @@ RUN cd /work \
     && cp client/target/x86_64-scone-linux-musl/debug/client /operation/client \
     && cd /operation && ./fspf.sh 
 
-CMD ["sh", "/operation/run_encrypted.sh"]
+# CMD ["sh", "/operation/run_encrypted.sh"]

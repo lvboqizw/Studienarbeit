@@ -247,5 +247,36 @@ tracepoint:syscalls:sys_exit_accept4 /comm=="server"/
     }
     clear(@accept4_fd);
     clear(@accept4_addr);
+}
 
+//--------------accept-----------
+tracepoint:syscalls:sys_enter_accept /comm=="server"/
+{
+    @accept_fd[tid] = args->fd;
+    @accept_addr[tid] = (args->upeer_sockaddr)->sa_data;
+    //print((args->upeer_sockaddr)->sa_data)
+}
+tracepoint:syscalls:sys_exit_accept /comm=="server"/
+{
+    if (args->ret){
+        printf("accept %d %d %s", @accept_fd[tid], args->ret, @accept_addr[tid]);
+    }
+    clear(@accept_fd);
+    clear(@accept_addr);
+}
+
+//--------------connect-----------
+ tracepoint:syscalls:sys_enter_connect /comm=="server"/
+{
+    @connect_fd[tid] = args->fd;
+    @connect_addr[tid] = (args->uservaddr)->sa_data;
+    //print((args->upeer_sockaddr)->sa_data)
+}
+ tracepoint:syscalls:sys_exit_connect /comm=="server"/
+{
+    if (args->ret){
+        printf("connect %d %d %s", @connect_fd[tid], args->ret, @connect_addr[tid]);
+    }
+    clear(@connect_fd);
+    clear(@connect_addr);
 }
